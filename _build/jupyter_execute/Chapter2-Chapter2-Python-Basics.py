@@ -768,12 +768,21 @@ while i< 8:
 # ### How to Break a Loop
 # Even if the condition is met, you can stop the loop from executing. Use the break statement in both while and for loops to accomplish this:
 
-# In[ ]:
+# In[176]:
 
 
-#print as long as x is less than 8 but skipping 4
+#print if x is less than 8, but skip four
+
 i=1 
 while i< 8:
     print(i)
+    if i == 4:
+        break
     i += 1
+
+
+# In[177]:
+
+
+print(i)
 
