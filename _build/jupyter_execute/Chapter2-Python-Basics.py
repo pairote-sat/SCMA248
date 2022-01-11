@@ -467,7 +467,7 @@ print(squared_evens)
 
 
 
-# ## Python booleans
+# ## Python Booleans
 # 
 # Booleans represent one of two values: `True` or `False`. It is useful to perform a filtering operation on a data.
 # 

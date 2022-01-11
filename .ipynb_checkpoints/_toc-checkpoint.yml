@@ -9,4 +9,5 @@ chapters:
 # - file: markdown
 # - file: notebooks
 - file: Chapter1-Introduction-to-Data-Science.ipynb  
-- file: Chapter2-Chapter2-Python-Basics.ipynb  
+- file: Chapter2-Python-Basics.ipynb  
+- file: Chapter3-Data-Preparation.ipynb
