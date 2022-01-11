@@ -338,8 +338,8 @@ The following are some of the aspects of preprocessing:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">------------------------------------------------------------------</span>
-<span class="ne">SSLCertVerificationError</span><span class="g g-Whitespace">         </span>Traceback (most recent call last)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">------------------------------------------------------------</span>
+<span class="ne">SSLCertVerificationError</span><span class="g g-Whitespace">   </span>Traceback (most recent call last)
 <span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py</span> in <span class="ni">do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1349</span>                 <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
 <span class="ne">-&gt; </span><span class="mi">1350</span>                           <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
@@ -394,8 +394,8 @@ The following are some of the aspects of preprocessing:</p>
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
-<span class="ne">URLError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4726</span><span class="o">/</span><span class="mf">16525021.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">URLError</span><span class="g g-Whitespace">                   </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_2060</span><span class="o">/</span><span class="mf">16525021.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
 <span class="ne">----&gt; </span><span class="mi">2</span>                 <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">])</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -1654,10 +1654,16 @@ Name: sepal_width, dtype: float64
 <section id="problem-in-setting-index-in-pandas-dataframe">
 <h3><span class="section-number">3.3.1. </span>Problem in setting index in pandas DataFrame<a class="headerlink" href="#problem-in-setting-index-in-pandas-dataframe" title="Permalink to this headline">¶</a></h3>
 <p>It may happen that the dataset contains an index column. How to import it correctly with Pandas?</p>
-<p>We will use a very simple dataset, namely demo_df.csv, that contains an index column (this is just a counter and not a feature).”</p>
+<p>We will use a very simple dataset, namely demo_df.csv (the file can be download from my github repository), that contains an index column (this is just a counter and not a feature).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/demo_df.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># How to read CSV file from GitHub using pandas</span>
+<span class="c1"># https://stackoverflow.com/questions/55240330/how-to-read-csv-file-from-github-using-pandas</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/pairote-sat/SCMA248/main/demo_df&#39;</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df1</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 <span class="n">df1</span><span class="o">.</span><span class="n">columns</span>
 </pre></div>
@@ -1665,9 +1671,9 @@ Name: sepal_width, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Unnamed: 0     dates  status
-0           0  20210305  Opened
-1           1  20210316  Opened
-2           2  20210328  Closed
+0           0   5032021  Opened
+1           1  16032021  Opened
+2           2  28032021  Closed
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Unnamed: 0&#39;, &#39;dates&#39;, &#39;status&#39;], dtype=&#39;object&#39;)
@@ -1675,10 +1681,21 @@ Name: sepal_width, dtype: float64
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Uncomment these commands if the CSV dateset is stored locally.</span>
+
+<span class="c1"># df1 = pd.read_csv(&#39;/Users/Kaemyuijang/SCMA248/demo_df.csv&#39;)</span>
+<span class="c1"># print(df1.head())</span>
+<span class="c1"># df1.columns</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>We want to specify that ‘Unnamed: 0’ is the index column  while loading this data set with the following command (with the parameter <code class="docutils literal notranslate"><span class="pre">index_col</span></code>):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/demo_df.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">df1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1709,17 +1726,17 @@ Name: sepal_width, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>20210305</td>
+      <td>5032021</td>
       <td>Opened</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>20210316</td>
+      <td>16032021</td>
       <td>Opened</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>20210328</td>
+      <td>28032021</td>
       <td>Closed</td>
     </tr>
   </tbody>
@@ -1730,128 +1747,64 @@ Name: sepal_width, dtype: float64
 </section>
 <section id="convert-strings-to-datetime">
 <h3><span class="section-number">3.3.2. </span>Convert Strings to Datetime<a class="headerlink" href="#convert-strings-to-datetime" title="Permalink to this headline">¶</a></h3>
-<p>However, we see an issue right away: all of the data, including dates, has been parsed as integers (or, in other cases, as string). If the dates do not have a particularly unusual format, you can use the autodetection routines to identify the column that contains the date data. It works nicely with the following arguments in this case:”</p>
+<p>However, we see an issue right away: all of the data, including dates, has been parsed as integers (or, in other cases, as string). If the dates do not have a particularly unusual format, you can use the autodetection routines to identify the column that contains the date data. It works nicely with the following arguments when the data file is stored locally.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/demo_df.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dates&#39;</span><span class="p">])</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df2 = pd.read_csv(&#39;/Users/Kaemyuijang/SCMA248/demo_df.csv&#39;, index_col = 0, parse_dates = [&#39;dates&#39;])</span>
+<span class="c1"># print(df2.head())</span>
+<span class="c1"># df2.dtypes</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>dates</th>
-      <th>status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2021-03-05</td>
-      <td>Opened</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2021-03-16</td>
-      <td>Opened</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2021-03-28</td>
-      <td>Closed</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
-<p>Alternatively, you can apply the following command to convert the integers to datetime:</p>
+<p>For the same dataset downloaded from Github, if a column or index contains an unparseable date, the entire column or index will be returned unaltered as an object data type. For non-standard datetime parsing, use pd.to_datetime after pd.read_csv:</p>
 <p><code class="docutils literal notranslate"><span class="pre">pd.to_datetime(df['DataFrame</span> <span class="pre">Column'],</span> <span class="pre">format=specify</span> <span class="pre">your</span> <span class="pre">format)</span></code></p>
 <p>Remember that the date format for our example is yyyymmdd.</p>
-<p>The following is a representation of this date format <code class="docutils literal notranslate"><span class="pre">format</span> <span class="pre">=</span>&#160; <span class="pre">'%Y%m%d'</span></code></p>
+<p>The following is a representation of this date format <code class="docutils literal notranslate"><span class="pre">format</span> <span class="pre">=</span>&#160; <span class="pre">'%d%m%Y'</span></code> (or <code class="docutils literal notranslate"><span class="pre">format</span> <span class="pre">=</span>&#160; <span class="pre">'%Y%m%d'</span></code>).</p>
 <p>See <a class="reference external" href="https://datatofish.com/strings-to-datetime-pandas/">https://datatofish.com/strings-to-datetime-pandas/</a> for more details.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/demo_df.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df3</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-
-<span class="n">df3</span><span class="p">[</span><span class="s1">&#39;dates&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df3</span><span class="p">[</span><span class="s1">&#39;dates&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dates&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span>
+<span class="n">df2</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      dates  status
-0  20210305  Opened
-1  20210316  Opened
-2  20210328  Closed
+0  05032021  Opened
+1  16032021  Opened
+2  28032021  Closed
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dates     object
+status    object
+dtype: object
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df3</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;dates&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;dates&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">%m%Y&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span>
+<span class="n">df2</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>dates</th>
-      <th>status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2021-03-05</td>
-      <td>Opened</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2021-03-16</td>
-      <td>Opened</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2021-03-28</td>
-      <td>Closed</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       dates  status
+0 2021-03-05  Opened
+1 2021-03-16  Opened
+2 2021-03-28  Closed
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dates     datetime64[ns]
+status            object
+dtype: object
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="missing-values">
@@ -1865,11 +1818,13 @@ Name: sepal_width, dtype: float64
 <li><p>Is there any evident data missing (values that Pandas can detect)?</p></li>
 <li><p>Is there any other type of missing data that isn’t as clear (and that Pandas can’t easily detect)?</p></li>
 </ul>
-<p>Let’s have a look at an example by using a small sample data namely property_data.csv.</p>
+<p>Let’s have a look at an example by using a small sample data namely property_data.csv. The file can be obtained from Github: <a class="reference external" href="https://raw.githubusercontent.com/pairote-sat/SCMA248/main/property_data.csv">https://raw.githubusercontent.com/pairote-sat/SCMA248/main/property_data.csv</a>.</p>
 <p>In what follows, we also specify that ‘PID’ (personal indentifier) is the index column while loading this data set with the following command (with the parameter index_col):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/property_data.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/pairote-sat/SCMA248/main/property_data.csv&#39;</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
 </div>
@@ -1979,7 +1934,7 @@ Name: sepal_width, dtype: float64
       <td>213.0</td>
       <td>Rama 1</td>
       <td>Y</td>
-      <td>1</td>
+      <td>--</td>
       <td>1</td>
       <td>NaN</td>
     </tr>
@@ -2027,7 +1982,7 @@ Name: ST_NUM, dtype: float64
 <p>Alternatively, one can use Numpy to produce the same result. Simply run the following commands. Here we use <code class="docutils literal notranslate"><span class="pre">.astype()</span></code> method to convert the type of an array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/property_data.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">df</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -2136,7 +2091,7 @@ Name: NUM_BEDROOMS, dtype: object
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Making a list of missing value types</span>
 <span class="n">missing_values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;na&quot;</span><span class="p">,</span> <span class="s2">&quot;--&quot;</span><span class="p">]</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/property_data.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">na_values</span> <span class="o">=</span> <span class="n">missing_values</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">na_values</span> <span class="o">=</span> <span class="n">missing_values</span><span class="p">)</span>
 
 <span class="n">df</span>
 </pre></div>
@@ -2303,7 +2258,7 @@ Because this example is a little more complicated, we will need to find a plan f
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/property_data.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">df</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -2471,9 +2426,7 @@ Name: OWN_OCCUPIED, dtype: object
 </div>
 </div>
 </div>
-<p>In the code, we loop through each entry in the “Owner Occupied” column. To try to change the entry to an integer, we use int(row).</p>
-<p>If the value can be changed to an integer, we change the entry to a missing value using np.nan from Numpy.</p>
-<p>On the other hand, if the value cannot be changed to an integer, we pass it and continue.</p>
+<p>In the code, we loop through each entry in the “Owner Occupied” column. To try to change the entry to an integer, we use int(row). If the value can be changed to an integer, we change the entry to a missing value using np.nan from Numpy. On the other hand, if the value cannot be changed to an integer, we pass it and continue.</p>
 <p>You will notice that I have used try and except ValueError. This is called exception handling, and we use this to handle errors.</p>
 <p>If we tried to change an entry to an integer and it could not be changed, a ValueError would be returned and the code would terminate. To deal with this, we use exception handling to detect these errors and continue.</p>
 </section>
