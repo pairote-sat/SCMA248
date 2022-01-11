@@ -284,22 +284,38 @@ iris.loc[lambda iris: iris['sepal_width'] > 3.5, :]
 # 
 # It may happen that the dataset contains an index column. How to import it correctly with Pandas? 
 # 
-# We will use a very simple dataset, namely demo_df.csv, that contains an index column (this is just a counter and not a feature)."
+# We will use a very simple dataset, namely demo_df.csv (the file can be download from my github repository), that contains an index column (this is just a counter and not a feature).
 
-# In[116]:
+# In[68]:
 
 
-df1 = pd.read_csv('/Users/Kaemyuijang/SCMA248/demo_df.csv')
+import pandas as pd
+
+# How to read CSV file from GitHub using pandas
+# https://stackoverflow.com/questions/55240330/how-to-read-csv-file-from-github-using-pandas
+
+url = 'https://raw.githubusercontent.com/pairote-sat/SCMA248/main/demo_df'
+df1 = pd.read_csv(url)
 print(df1.head())
 df1.columns
 
 
+# In[69]:
+
+
+## Uncomment these commands if the CSV dateset is stored locally.
+
+# df1 = pd.read_csv('/Users/Kaemyuijang/SCMA248/demo_df.csv')
+# print(df1.head())
+# df1.columns
+
+
 # We want to specify that 'Unnamed: 0' is the index column  while loading this data set with the following command (with the parameter `index_col`):
 
-# In[100]:
+# In[70]:
 
 
-df1 = pd.read_csv('/Users/Kaemyuijang/SCMA248/demo_df.csv', index_col = 0)
+df1 = pd.read_csv(url, index_col = 0)
 df1.head()
 
 
@@ -307,38 +323,40 @@ df1.head()
 # 
 # ### Convert Strings to Datetime
 # 
-# However, we see an issue right away: all of the data, including dates, has been parsed as integers (or, in other cases, as string). If the dates do not have a particularly unusual format, you can use the autodetection routines to identify the column that contains the date data. It works nicely with the following arguments in this case:"
+# However, we see an issue right away: all of the data, including dates, has been parsed as integers (or, in other cases, as string). If the dates do not have a particularly unusual format, you can use the autodetection routines to identify the column that contains the date data. It works nicely with the following arguments when the data file is stored locally.
 
-# In[117]:
-
-
-df2 = pd.read_csv('/Users/Kaemyuijang/SCMA248/demo_df.csv', index_col = 0, parse_dates = ['dates'])
-df2.head()
+# In[71]:
 
 
-# Alternatively, you can apply the following command to convert the integers to datetime:
+# df2 = pd.read_csv('/Users/Kaemyuijang/SCMA248/demo_df.csv', index_col = 0, parse_dates = ['dates'])
+# print(df2.head())
+# df2.dtypes
+
+
+# For the same dataset downloaded from Github, if a column or index contains an unparseable date, the entire column or index will be returned unaltered as an object data type. For non-standard datetime parsing, use pd.to_datetime after pd.read_csv:
 # 
 # `pd.to_datetime(df['DataFrame Column'], format=specify your format)` 
 # 
 # Remember that the date format for our example is yyyymmdd.
 # 
-# The following is a representation of this date format `format =  '%Y%m%d'` 
+# The following is a representation of this date format `format =  '%d%m%Y'` (or `format =  '%Y%m%d'`). 
 # 
 # See https://datatofish.com/strings-to-datetime-pandas/ for more details.
 
-# In[121]:
+# In[75]:
 
 
-df3 = pd.read_csv('/Users/Kaemyuijang/SCMA248/demo_df.csv', index_col = 0)
-print(df3.head())
-
-df3['dates'] = pd.to_datetime(df3['dates'], format='%Y%m%d')
-
-
-# In[122]:
+df2 = pd.read_csv(url, index_col = 0, parse_dates = ['dates'])
+print(df2)
+df2.dtypes
 
 
-df3.head()
+# In[76]:
+
+
+df2['dates'] = pd.to_datetime(df2['dates'], format='%d%m%Y')
+print(df2)
+df2.dtypes
 
 
 # ### Missing values
@@ -356,21 +374,23 @@ df3.head()
 # * Is there any evident data missing (values that Pandas can detect)?
 # * Is there any other type of missing data that isn't as clear (and that Pandas can't easily detect)?
 # 
-# Let's have a look at an example by using a small sample data namely property_data.csv. 
+# Let's have a look at an example by using a small sample data namely property_data.csv. The file can be obtained from Github: https://raw.githubusercontent.com/pairote-sat/SCMA248/main/property_data.csv.
 # 
 # In what follows, we also specify that 'PID' (personal indentifier) is the index column while loading this data set with the following command (with the parameter index_col):
 # 
 
-# In[139]:
+# In[82]:
 
 
-df = pd.read_csv('/Users/Kaemyuijang/SCMA248/property_data.csv', index_col = 0)
+url = 'https://raw.githubusercontent.com/pairote-sat/SCMA248/main/property_data.csv'
+
+df = pd.read_csv(url, index_col = 0)
 df
 
 
 # We notice that the PID (personal identifiers) as the index name has a missing value, i.e. NaN  (not any number). We will replace this missing PID with 10105 and also convert from floats to integers. 
 
-# In[137]:
+# In[80]:
 
 
 rowindex = df.index.tolist()
@@ -384,10 +404,10 @@ print(df.loc[:,'ST_NUM'])
 
 # Alternatively, one can use Numpy to produce the same result. Simply run the following commands. Here we use `.astype()` method to convert the type of an array. 
 
-# In[181]:
+# In[83]:
 
 
-df = pd.read_csv('/Users/Kaemyuijang/SCMA248/property_data.csv', index_col = 0)
+df = pd.read_csv(url, index_col = 0)
 df
 
 import numpy as np
@@ -458,13 +478,13 @@ df['NUM_BEDROOMS']
 # 
 # Putting this different format in a list is a simple approach to detect them. When we import the data, Pandas will immediately recognize them. Here's an example of how we might go about it.
 
-# In[191]:
+# In[84]:
 
 
 # Making a list of missing value types
 missing_values = ["na", "--"]
 
-df = pd.read_csv('/Users/Kaemyuijang/SCMA248/property_data.csv', index_col = 0, na_values = missing_values)
+df = pd.read_csv(url, index_col = 0, na_values = missing_values)
 
 df
 
@@ -496,10 +516,10 @@ df['OWN_OCCUPIED']
 # 
 # 4. We know the number cannot be an integer if it cannott be an integer.
 
-# In[219]:
+# In[85]:
 
 
-df = pd.read_csv('/Users/Kaemyuijang/SCMA248/property_data.csv', index_col = 0)
+df = pd.read_csv(url, index_col = 0)
 df
 
 import numpy as np
@@ -510,13 +530,13 @@ rowindex[4] = 10105.0
 df.index = rowindex.astype(int)
 
 
-# In[220]:
+# In[86]:
 
 
 df
 
 
-# In[221]:
+# In[87]:
 
 
 # Detecting numbers 
@@ -530,18 +550,20 @@ for row in df['OWN_OCCUPIED']:
     cnt+=1
 
 
-# In[222]:
+# In[88]:
 
 
 df['OWN_OCCUPIED']
 
 
-# In the code, we loop through each entry in the "Owner Occupied" column. To try to change the entry to an integer, we use int(row).
-# 
-# If the value can be changed to an integer, we change the entry to a missing value using np.nan from Numpy.
-# 
-# On the other hand, if the value cannot be changed to an integer, we pass it and continue.
+# In the code, we loop through each entry in the "Owner Occupied" column. To try to change the entry to an integer, we use int(row). If the value can be changed to an integer, we change the entry to a missing value using np.nan from Numpy. On the other hand, if the value cannot be changed to an integer, we pass it and continue.
 # 
 # You will notice that I have used try and except ValueError. This is called exception handling, and we use this to handle errors.
 # 
 # If we tried to change an entry to an integer and it could not be changed, a ValueError would be returned and the code would terminate. To deal with this, we use exception handling to detect these errors and continue.
+
+# In[ ]:
+
+
+
+
