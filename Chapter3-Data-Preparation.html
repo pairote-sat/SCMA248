@@ -265,26 +265,24 @@
      3.3.2. Convert Strings to Datetime
     </a>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#missing-values">
-   3.4. Missing values
-  </a>
-  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#missing-values">
+     3.3.3. Missing values
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#standard-missing-values">
-     3.4.1. Standard Missing Values
+     3.3.4. Standard Missing Values
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#missing-values-that-aren-t-standard">
-     3.4.2. Missing Values That Aren’t Standard
+     3.3.5. Missing Values That Aren’t Standard
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#unexpected-missing-values">
-     3.4.3. Unexpected Missing Values
+     3.3.6. Unexpected Missing Values
     </a>
    </li>
   </ul>
@@ -332,25 +330,16 @@ The following are some of the aspects of preprocessing:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Without Column Names</span>
-<span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
                 <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">])</span>
 
 <span class="nb">type</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
-
-<span class="c1">#names = pd.read_csv(&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.names&#39;, sep=&quot;\t&quot;)</span>
-<span class="c1">#    print(f.read())</span>
-
-
-<span class="c1"># Generating Column Name manually.</span>
-<span class="c1">#names=[ &#39;buying&#39;,&#39;maint&#39;,&#39;doors&#39;,&#39;persons&#39;,&#39;lug_boot&#39;,&#39;safety&#39;,&#39;class&#39;]</span>
-<span class="c1">#df2 = pd.read_csv(&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/car/car.data&#39;, names = names)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">----------------------------------------------------------------</span>
-<span class="ne">SSLCertVerificationError</span><span class="g g-Whitespace">       </span>Traceback (most recent call last)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">------------------------------------------------------------------</span>
+<span class="ne">SSLCertVerificationError</span><span class="g g-Whitespace">         </span>Traceback (most recent call last)
 <span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py</span> in <span class="ni">do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1349</span>                 <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
 <span class="ne">-&gt; </span><span class="mi">1350</span>                           <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
@@ -405,13 +394,12 @@ The following are some of the aspects of preprocessing:</p>
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
-<span class="ne">URLError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4459</span><span class="o">/</span><span class="mf">3238525879.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Without Column Names</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span>                 <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">type</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
+<span class="ne">URLError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_4726</span><span class="o">/</span><span class="mf">16525021.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+<span class="ne">----&gt; </span><span class="mi">2</span>                 <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">type</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
 
 <span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
@@ -1866,9 +1854,8 @@ Name: sepal_width, dtype: float64
 </div></div></div>
 </div>
 </section>
-</section>
 <section id="missing-values">
-<h2><span class="section-number">3.4. </span>Missing values<a class="headerlink" href="#missing-values" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.3.3. </span>Missing values<a class="headerlink" href="#missing-values" title="Permalink to this headline">¶</a></h3>
 <p>We will concentrate on missing values, which is perhaps the most challenging data cleaning operation.</p>
 <p>It’s a good idea to have an overall sense of a data set before you start cleaning it. After that, you can develop a plan for cleaning the data.</p>
 <p>To begin, I like to ask the following questions:</p>
@@ -2083,8 +2070,9 @@ Name: ST_NUM, dtype: float64
 <li><p>OWN_OCCUPIED: string; OWN_OCCUPIED: string; OWN _OCCUPIED N (“No”) or Y (“Yes”)</p></li>
 <li><p>NUM_BEDROOMS is a numeric type that can be either float or int.</p></li>
 </ul>
+</section>
 <section id="standard-missing-values">
-<h3><span class="section-number">3.4.1. </span>Standard Missing Values<a class="headerlink" href="#standard-missing-values" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.4. </span>Standard Missing Values<a class="headerlink" href="#standard-missing-values" title="Permalink to this headline">¶</a></h3>
 <p>So, what exactly do I mean when I say “standard missing values?” These are missing values that Pandas can detect.</p>
 <p>Let’s return to our initial dataset and examine the “Street Number” column.</p>
 <p>There are an empty cell in the third row (from the original file). A value of “NaN” appears in the seventh row.</p>
@@ -2135,7 +2123,7 @@ Name: NUM_BEDROOMS, dtype: object
 </div>
 </section>
 <section id="missing-values-that-aren-t-standard">
-<h3><span class="section-number">3.4.2. </span>Missing Values That Aren’t Standard<a class="headerlink" href="#missing-values-that-aren-t-standard" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.5. </span>Missing Values That Aren’t Standard<a class="headerlink" href="#missing-values-that-aren-t-standard" title="Permalink to this headline">¶</a></h3>
 <p>It is possible that there are missing values with different formats in some cases.</p>
 <p>There are two other missing values in this column of different formats</p>
 <ul class="simple">
@@ -2278,7 +2266,7 @@ Name: NUM_BEDROOMS, dtype: object
 </div>
 </section>
 <section id="unexpected-missing-values">
-<h3><span class="section-number">3.4.3. </span>Unexpected Missing Values<a class="headerlink" href="#unexpected-missing-values" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.6. </span>Unexpected Missing Values<a class="headerlink" href="#unexpected-missing-values" title="Permalink to this headline">¶</a></h3>
 <p>We have observed both standard and non-standard missing data so far. What if we have a type that is not expected?</p>
 <p>For instance, if our feature is supposed to be a string but it’s a numeric type, it’s technically a missing value.</p>
 <p>Take a look at the column labeled “OWN_OCCUPIED” to understand what I’m talking about.</p>
