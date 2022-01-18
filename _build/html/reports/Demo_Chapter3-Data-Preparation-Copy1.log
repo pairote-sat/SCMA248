@@ -17,10 +17,19 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
+# Without Column Names
 iris = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None, 
                 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
 
 type(iris)
+
+#names = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.names', sep="\t")
+#    print(f.read())
+
+
+# Generating Column Name manually.
+#names=[ 'buying','maint','doors','persons','lug_boot','safety','class']
+#df2 = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/car/car.data', names = names)
 ------------------
 
 [0;31m--------------------------------------------------------------------------[0m
@@ -80,11 +89,12 @@ type(iris)
 During handling of the above exception, another exception occurred:
 
 [0;31mURLError[0m                                 Traceback (most recent call last)
-[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_3376/16525021.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m iris = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None, 
-[0;32m----> 2[0;31m                 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
-[0m[1;32m      3[0m [0;34m[0m[0m
-[1;32m      4[0m [0mtype[0m[0;34m([0m[0miris[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_3312/3238525879.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;31m# Without Column Names[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m iris = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None, 
+[0;32m----> 3[0;31m                 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
+[0m[1;32m      4[0m [0;34m[0m[0m
+[1;32m      5[0m [0mtype[0m[0;34m([0m[0miris[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/util/_decorators.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
 [1;32m    309[0m                     [0mstacklevel[0m[0;34m=[0m[0mstacklevel[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m

@@ -1,0 +1,1892 @@
+﻿Trans_Number,Name,Date,Product,Units,Dollars,Location
+1,Betsy,1/4/2004,lip gloss,45,137.20,south
+2,Hallagan,10/3/2004,foundation,50,152.01,midwest
+3,Ashley,25/2/2005,lipstick,9,28.72,midwest
+4,Hallagan,22/5/2006,lip gloss,55,167.08,west
+5,Zaret,17/6/2004,lip gloss,43,130.60,midwest
+6,Colleen,27/11/2005,eye liner,58,175.99,midwest
+7,Cristina,21/3/2004,eye liner,8,25.80,midwest
+8,Colleen,17/12/2006,lip gloss,72,217.84,midwest
+9,Ashley,5/7/2006,eye liner,75,226.64,south
+10,Betsy,7/8/2006,lip gloss,24,73.50,east
+11,Ashley,29/11/2004,mascara,43,130.84,east
+12,Ashley,18/11/2004,lip gloss,23,71.03,west
+13,Emilee,31/8/2005,lip gloss,49,149.59,west
+14,Hallagan,1/1/2005,eye liner,18,56.47,south
+15,Zaret,20/9/2006,foundation,-8,-21.99,east
+16,Emilee,12/4/2004,mascara,45,137.39,east
+17,Colleen,30/4/2006,mascara,66,199.65,south
+18,Jen,31/8/2005,lip gloss,88,265.19,midwest
+19,Jen,27/10/2004,eye liner,78,236.15,south
+20,Zaret,27/11/2005,lip gloss,57,173.12,midwest
+21,Zaret,2/6/2006,mascara,12,38.08,west
+22,Betsy,24/9/2004,eye liner,28,86.51,midwest
+23,Colleen,1/2/2006,mascara,25,77.31,midwest
+26,Emilee,6/12/2006,lip gloss,24,74.62,west
+27,Jen,12/4/2004,lipstick,38,115.99,midwest
+28,Cristina,22/9/2005,foundation,77,233.05,midwest
+32,Cristina,28/3/2006,lip gloss,53,161.46,midwest
+33,Cici,17/6/2004,mascara,41,125.27,west
+34,Zaret,9/9/2006,mascara,19,59.15,west
+39,Cici,23/2/2006,foundation,-9,-24.63,west
+40,Hallagan,24/6/2006,foundation,38,115.58,south
+41,Emilee,6/2/2004,eye liner,25,76.56,south
+42,Emilee,10/4/2005,mascara,19,59.38,midwest
+43,Betsy,1/4/2004,foundation,86,259.86,west
+44,Colleen,6/6/2004,lip gloss,55,167.12,midwest
+45,Emilee,20/9/2006,lip gloss,2,7.85,east
+46,Ashley,9/8/2005,mascara,93,280.69,east
+47,Zaret,24/9/2004,eye liner,14,43.93,west
+48,Emilee,24/5/2005,eye liner,37,113.03,south
+49,Betsy,18/11/2004,foundation,63,190.70,west
+50,Zaret,18/11/2004,lip gloss,1,5.60,west
+51,Zaret,15/6/2005,eye liner,24,73.60,midwest
+52,Hallagan,4/1/2004,eye liner,83,250.33,midwest
+53,Cici,7/7/2005,eye liner,49,148.51,midwest
+54,Cristina,10/4/2005,lip gloss,26,80.20,west
+55,Jen,22/5/2006,lip gloss,35,107.99,west
+56,Cristina,12/4/2004,lip gloss,8,26.91,south
+57,Cici,28/6/2004,mascara,49,148.78,midwest
+58,Cristina,12/4/2004,foundation,34,104.09,east
+59,Cristina,8/12/2005,lip gloss,8,26.24,midwest
+60,Jen,27/10/2004,mascara,89,269.09,east
+61,Colleen,16/11/2005,foundation,62,189.25,midwest
+62,Emilee,11/8/2004,foundation,23,71.31,south
+63,Cici,17/6/2004,eye liner,95,287.76,midwest
+64,Emilee,11/5/2006,eye liner,41,125.00,south
+65,Ashley,10/4/2005,lip gloss,-6,-15.94,midwest
+66,Betsy,1/1/2005,mascara,84,253.99,south
+67,Hallagan,5/11/2005,foundation,63,191.37,south
+68,Zaret,16/7/2006,lip gloss,0,2.37,west
+69,Cristina,23/1/2005,eye liner,73,221.41,east
+70,Emilee,21/12/2004,eye liner,95,287.05,midwest
+71,Ashley,16/11/2005,lipstick,93,280.77,west
+72,Zaret,17/6/2004,lipstick,54,163.87,south
+73,Cristina,26/6/2005,foundation,33,101.37,south
+74,Ashley,12/4/2004,mascara,48,145.84,west
+75,Jen,23/1/2005,eye liner,-7,-18.53,midwest
+76,Colleen,6/3/2006,foundation,-2,-3.94,west
+77,Cristina,15/1/2004,mascara,27,83.29,east
+78,Emilee,17/12/2006,foundation,56,170.24,south
+79,Cristina,14/2/2005,mascara,70,212.29,south
+80,Jen,30/3/2005,mascara,16,49.46,west
+81,Jen,10/1/2006,lip gloss,69,208.69,east
+82,Colleen,29/7/2005,foundation,67,203.01,midwest
+83,Cici,7/11/2004,foundation,82,248.10,west
+84,Ashley,1/10/2006,eye liner,73,221.48,west
+85,Cici,17/2/2004,foundation,80,241.26,south
+86,Jen,9/8/2005,eye liner,-2,-4.24,east
+87,Emilee,31/8/2005,eye liner,5,17.03,east
+88,Zaret,19/12/2005,eye liner,26,80.30,south
+89,Cici,19/3/2005,foundation,1,5.01,midwest
+90,Cici,13/6/2006,lipstick,-3,-7.62,south
+91,Betsy,18/8/2006,eye liner,83,251.18,south
+92,Jen,26/5/2004,mascara,33,100.33,midwest
+93,Zaret,12/4/2004,foundation,62,188.06,west
+94,Colleen,11/5/2006,eye liner,58,176.47,midwest
+95,Emilee,20/8/2005,foundation,28,85.54,south
+96,Jen,17/12/2006,lip gloss,33,100.69,west
+97,Cristina,25/11/2006,foundation,92,278.16,south
+98,Jen,12/4/2004,lip gloss,92,277.54,east
+99,Colleen,21/1/2006,lip gloss,75,226.74,south
+100,Betsy,3/10/2005,eye liner,74,224.23,west
+101,Zaret,15/1/2004,foundation,67,202.45,west
+102,Cristina,11/8/2004,foundation,16,49.45,south
+103,Hallagan,13/5/2005,foundation,90,272.34,west
+104,Jen,17/3/2006,lipstick,-8,-22.11,west
+105,Cristina,13/9/2004,lipstick,51,155.30,midwest
+106,Jen,30/3/2005,foundation,-7,-19.53,south
+107,Emilee,21/3/2004,lip gloss,9,29.28,midwest
+108,Cici,31/8/2005,lip gloss,-10,-28.41,east
+109,Ashley,16/7/2006,foundation,10,32.11,south
+110,Ashley,8/3/2005,mascara,35,107.59,midwest
+111,Cici,5/10/2004,mascara,81,244.46,west
+112,Cici,18/11/2004,mascara,38,115.86,south
+113,Emilee,6/12/2006,mascara,26,80.49,west
+114,Betsy,22/9/2005,lipstick,77,233.33,east
+115,Emilee,21/1/2006,foundation,39,118.63,south
+116,Zaret,24/6/2006,eye liner,22,68.07,east
+117,Zaret,2/6/2006,foundation,68,205.77,midwest
+118,Cici,24/5/2005,foundation,59,178.71,midwest
+119,Colleen,22/5/2006,eye liner,20,62.37,east
+120,Hallagan,25/10/2005,mascara,61,184.56,south
+121,Zaret,6/3/2006,foundation,30,92.43,south
+122,Jen,27/7/2006,mascara,10,32.30,west
+123,Zaret,30/4/2006,eye liner,72,217.45,south
+124,Ashley,10/1/2006,eye liner,57,173.36,west
+125,Hallagan,16/11/2005,lip gloss,41,124.39,midwest
+126,Zaret,23/4/2004,eye liner,54,163.75,west
+127,Emilee,7/7/2005,lipstick,9,29.26,midwest
+128,Cici,13/5/2005,lip gloss,1,5.01,south
+129,Zaret,12/2/2006,mascara,-10,-28.89,west
+130,Ashley,14/11/2006,foundation,-9,-25.06,west
+131,Jen,29/11/2004,mascara,56,168.87,east
+132,Cici,21/3/2004,lipstick,28,85.60,midwest
+133,Betsy,9/7/2004,mascara,11,34.42,east
+134,Cristina,17/12/2006,lip gloss,11,34.91,south
+135,Cristina,14/2/2005,eye liner,67,202.87,west
+136,Colleen,30/3/2005,lip gloss,10,31.43,west
+137,Emilee,27/10/2004,foundation,40,121.95,west
+138,Colleen,7/7/2005,mascara,77,233.08,west
+139,Betsy,24/5/2005,lipstick,50,152.04,south
+140,Jen,28/6/2004,eye liner,80,242.50,east
+141,Jen,28/12/2006,eye liner,83,250.79,south
+142,Betsy,1/2/2006,lip gloss,-4,-9.50,west
+143,Colleen,3/2/2005,foundation,46,139.76,south
+144,Ashley,23/10/2006,mascara,55,167.19,south
+145,Cici,24/9/2004,mascara,89,269.40,east
+146,Emilee,7/7/2005,eye liner,59,179.12,west
+147,Emilee,8/3/2005,lipstick,90,271.75,east
+148,Ashley,3/11/2006,lipstick,17,53.67,midwest
+149,Cici,8/3/2005,lipstick,37,113.65,east
+150,Cristina,17/3/2006,foundation,-4,-9.42,south
+151,Emilee,7/7/2005,lip gloss,-8,-22.38,west
+152,Zaret,2/9/2004,lipstick,6,20.32,midwest
+153,Cici,16/10/2004,lipstick,63,191.68,west
+154,Jen,11/8/2004,lipstick,16,49.94,south
+155,Betsy,3/2/2005,mascara,22,67.81,south
+156,Emilee,30/12/2005,foundation,81,244.97,west
+157,Emilee,11/9/2005,lip gloss,85,256.56,south
+158,Jen,15/5/2004,foundation,-3,-7.08,midwest
+159,Emilee,23/1/2005,lip gloss,51,154.49,south
+160,Cici,1/1/2005,lip gloss,72,217.42,south
+161,Cristina,17/2/2004,lip gloss,46,139.93,midwest
+162,Hallagan,25/2/2005,mascara,-10,-28.00,south
+163,Cici,9/8/2005,foundation,-5,-12.20,south
+164,Hallagan,12/10/2006,eye liner,16,49.92,east
+165,Hallagan,19/12/2005,foundation,25,76.99,east
+166,Emilee,30/3/2005,eye liner,49,148.91,midwest
+167,Betsy,21/3/2004,lip gloss,21,64.33,west
+168,Cristina,22/5/2006,lip gloss,29,88.98,south
+169,Ashley,17/2/2004,lip gloss,63,191.11,east
+170,Jen,13/6/2006,lip gloss,21,64.60,south
+171,Betsy,14/10/2005,foundation,93,280.17,west
+172,Colleen,28/2/2004,foundation,55,167.55,south
+173,Emilee,16/7/2006,foundation,14,43.90,south
+174,Jen,10/3/2004,lipstick,91,275.24,south
+175,Emilee,23/4/2004,eye liner,80,242.45,south
+176,Betsy,27/11/2005,eye liner,70,211.76,south
+177,Cici,20/7/2004,mascara,54,164.30,west
+178,Ashley,19/12/2005,mascara,19,58.36,east
+179,Hallagan,22/9/2005,foundation,38,115.83,south
+180,Colleen,26/5/2004,lipstick,60,182.02,east
+181,Hallagan,14/10/2005,lipstick,51,155.74,midwest
+182,Ashley,4/5/2004,lip gloss,78,236.14,midwest
+183,Hallagan,29/11/2004,foundation,17,52.47,west
+184,Jen,22/8/2004,eye liner,13,40.81,midwest
+185,Emilee,7/7/2005,mascara,2,8.04,south
+186,Betsy,25/11/2006,mascara,74,223.88,east
+187,Colleen,17/3/2006,foundation,57,172.92,south
+188,Jen,4/5/2004,mascara,79,239.34,west
+189,Colleen,15/6/2005,foundation,82,247.46,west
+190,Cici,1/10/2006,lip gloss,28,85.96,south
+191,Jen,6/2/2004,mascara,63,191.03,midwest
+192,Cristina,3/10/2005,foundation,72,217.59,west
+193,Cristina,10/1/2006,lipstick,68,205.93,midwest
+194,Emilee,21/1/2006,eye liner,8,26.14,west
+195,Hallagan,10/12/2004,lipstick,62,188.52,midwest
+196,Jen,19/3/2005,eye liner,5,16.35,east
+197,Colleen,6/2/2004,mascara,-5,-12.90,east
+198,Colleen,22/5/2006,mascara,-4,-10.00,west
+199,Cristina,25/11/2006,mascara,81,244.68,west
+200,Cristina,17/3/2006,eye liner,21,64.74,south
+201,Cici,26/6/2005,eye liner,21,64.86,east
+202,Hallagan,30/12/2005,foundation,-3,-7.15,south
+203,Cici,28/12/2006,lip gloss,57,173.64,west
+204,Cici,18/8/2006,lip gloss,86,259.31,west
+205,Jen,19/4/2006,foundation,14,44.14,west
+206,Hallagan,6/12/2006,lipstick,20,61.96,midwest
+207,Colleen,6/2/2004,mascara,60,181.94,east
+208,Jen,5/7/2006,eye liner,45,137.16,west
+209,Jen,1/4/2004,eye liner,7,23.00,midwest
+210,Betsy,6/3/2006,lip gloss,-6,-16.33,midwest
+211,Jen,30/4/2006,lip gloss,35,106.90,south
+212,Colleen,11/5/2006,foundation,31,95.13,east
+213,Jen,16/11/2005,lip gloss,19,59.08,west
+214,Zaret,12/2/2006,eye liner,35,106.64,west
+215,Betsy,1/1/2005,lipstick,51,154.60,east
+216,Hallagan,23/2/2006,mascara,1,5.39,east
+217,Cici,24/9/2004,foundation,67,203.36,midwest
+218,Cici,30/3/2005,mascara,23,71.41,midwest
+219,Colleen,3/2/2005,foundation,41,125.23,east
+220,Ashley,15/1/2004,mascara,27,83.20,west
+221,Cristina,20/9/2006,foundation,56,170.18,midwest
+222,Ashley,20/7/2004,mascara,67,203.35,west
+223,Betsy,13/9/2004,foundation,94,283.74,west
+224,Cristina,5/10/2004,eye liner,52,158.30,west
+225,Zaret,6/2/2004,lipstick,24,74.24,west
+226,Jen,6/6/2004,lip gloss,-1,-0.92,south
+227,Hallagan,21/1/2006,eye liner,37,112.52,south
+228,Betsy,23/2/2006,foundation,63,191.45,south
+229,Cici,12/4/2004,lip gloss,13,41.01,west
+230,Hallagan,25/11/2006,lip gloss,7,22.33,west
+231,Zaret,21/3/2004,lip gloss,64,193.84,west
+232,Ashley,6/6/2004,lip gloss,63,190.91,midwest
+233,Emilee,11/8/2004,mascara,57,173.59,midwest
+234,Emilee,7/11/2004,mascara,59,178.93,east
+235,Jen,21/12/2004,foundation,-3,-7.26,midwest
+236,Cici,1/10/2006,lip gloss,86,260.33,south
+237,Cristina,24/9/2004,eye liner,-4,-9.99,east
+238,Ashley,1/1/2005,lip gloss,7,23.65,west
+239,Cici,1/10/2006,lip gloss,43,131.68,east
+240,Emilee,5/11/2005,lip gloss,2,7.63,south
+241,Emilee,2/5/2005,mascara,85,256.88,midwest
+242,Emilee,21/4/2005,eye liner,52,158.19,midwest
+243,Colleen,9/7/2004,lipstick,-3,-7.40,south
+244,Cristina,25/2/2005,eye liner,8,25.55,east
+245,Cici,9/7/2004,mascara,5,17.20,east
+246,Hallagan,29/8/2006,mascara,90,272.10,south
+247,Betsy,14/11/2006,mascara,36,110.34,east
+248,Zaret,20/8/2005,mascara,25,77.01,west
+249,Betsy,19/3/2005,mascara,7,23.13,east
+250,Colleen,3/11/2006,mascara,64,194.25,east
+251,Colleen,4/5/2004,mascara,71,215.49,west
+252,Ashley,10/4/2005,eye liner,41,124.81,east
+253,Ashley,24/9/2004,foundation,84,253.29,east
+254,Emilee,30/3/2005,eye liner,3,10.70,east
+255,Ashley,1/4/2004,foundation,15,46.76,west
+256,Hallagan,6/2/2004,eye liner,1,4.88,south
+257,Hallagan,7/7/2005,mascara,10,32.47,east
+258,Emilee,12/1/2005,eye liner,77,233.40,west
+259,Colleen,14/2/2005,lipstick,65,196.49,south
+260,Zaret,15/1/2004,eye liner,25,77.33,midwest
+261,Cici,16/7/2006,mascara,-1,-1.93,south
+262,Jen,29/8/2006,foundation,2,7.97,midwest
+263,Zaret,3/11/2006,lip gloss,62,187.62,midwest
+264,Colleen,13/5/2005,foundation,28,86.79,west
+265,Hallagan,18/7/2005,eye liner,55,167.05,south
+266,Colleen,15/6/2005,lip gloss,28,86.64,south
+267,Cristina,29/7/2005,foundation,5,16.67,south
+268,Cristina,7/11/2004,eye liner,1,4.77,east
+269,Cristina,15/6/2005,foundation,26,80.01,east
+270,Zaret,6/6/2004,foundation,47,142.85,south
+271,Hallagan,2/5/2005,eye liner,74,224.75,east
+272,Cici,11/5/2006,lip gloss,22,68.71,midwest
+273,Ashley,24/6/2006,lipstick,70,212.26,south
+274,Cici,27/11/2005,foundation,83,251.31,midwest
+275,Hallagan,8/12/2005,eye liner,59,179.39,west
+276,Cici,9/8/2005,mascara,0,1.58,midwest
+277,Hallagan,12/1/2005,eye liner,82,247.58,west
+278,Betsy,8/3/2005,eye liner,29,89.05,west
+279,Cici,15/5/2004,foundation,63,191.09,east
+280,Jen,1/10/2006,lip gloss,67,203.11,east
+281,Cristina,29/7/2005,eye liner,3,10.78,east
+282,Hallagan,10/12/2004,eye liner,65,197.41,east
+283,Emilee,26/5/2004,lipstick,75,227.46,west
+284,Emilee,22/8/2004,lip gloss,79,239.90,west
+285,Jen,18/8/2006,mascara,-5,-12.92,midwest
+286,Jen,30/3/2005,foundation,31,95.51,south
+287,Ashley,17/12/2006,mascara,21,65.34,south
+288,Ashley,11/9/2005,lipstick,-8,-21.91,east
+289,Jen,7/7/2005,lipstick,88,266.05,west
+290,Emilee,16/11/2005,foundation,94,283.85,midwest
+291,Zaret,1/10/2006,mascara,83,251.50,midwest
+292,Ashley,11/8/2004,mascara,16,49.96,south
+293,Betsy,7/8/2006,mascara,33,100.52,midwest
+294,Betsy,28/2/2004,eye liner,-1,-0.91,midwest
+295,Betsy,27/7/2006,mascara,94,284.14,west
+296,Jen,21/4/2005,foundation,76,230.26,midwest
+297,Betsy,6/3/2006,foundation,71,215.16,east
+298,Zaret,26/5/2004,lipstick,56,169.19,south
+299,Hallagan,31/8/2005,lip gloss,81,245.59,south
+300,Zaret,28/6/2004,eye liner,3,11.16,south
+301,Zaret,21/4/2005,lip gloss,60,182.21,east
+302,Jen,23/10/2006,foundation,81,245.54,south
+303,Colleen,4/5/2004,foundation,70,211.43,midwest
+304,Cici,22/5/2006,mascara,18,56.27,midwest
+305,Hallagan,14/2/2005,lipstick,73,221.17,west
+306,Zaret,25/2/2005,foundation,-7,-18.78,east
+307,Zaret,20/8/2005,foundation,55,166.61,midwest
+308,Cici,15/5/2004,lip gloss,7,23.39,east
+309,Cici,18/11/2004,eye liner,63,191.45,midwest
+310,Zaret,7/7/2005,lip gloss,83,251.63,west
+311,Betsy,28/2/2004,lip gloss,43,130.97,east
+312,Zaret,31/7/2004,eye liner,67,203.30,south
+313,Colleen,30/12/2005,eye liner,-9,-24.97,midwest
+314,Cici,28/6/2004,foundation,-1,-1.48,midwest
+315,Betsy,12/1/2005,foundation,21,65.20,south
+316,Cristina,5/11/2005,mascara,6,20.10,east
+317,Cristina,15/1/2004,eye liner,0,1.61,east
+318,Jen,16/10/2004,eye liner,20,61.99,east
+319,Ashley,7/11/2004,foundation,70,212.50,south
+320,Jen,15/5/2004,eye liner,94,283.88,east
+321,Hallagan,16/10/2004,lip gloss,9,28.83,west
+322,Jen,26/6/2005,mascara,27,83.64,east
+323,Colleen,17/3/2006,lipstick,43,130.95,south
+324,Emilee,20/9/2006,foundation,84,254.39,east
+325,Hallagan,6/6/2004,eye liner,83,251.63,midwest
+326,Hallagan,11/8/2004,lipstick,89,268.67,midwest
+327,Emilee,12/10/2006,lip gloss,7,22.67,south
+328,Hallagan,9/7/2004,foundation,68,205.76,south
+329,Emilee,14/10/2005,eye liner,38,116.14,west
+330,Cici,26/1/2004,eye liner,90,271.33,midwest
+331,Cici,11/8/2004,eye liner,10,31.74,west
+332,Cristina,3/11/2006,foundation,13,40.18,east
+333,Jen,17/6/2004,lip gloss,68,206.38,west
+334,Zaret,6/6/2004,foundation,40,122.17,south
+335,Jen,4/6/2005,foundation,17,52.58,west
+336,Cristina,29/11/2004,foundation,6,19.23,west
+337,Cristina,11/5/2006,foundation,27,83.79,west
+338,Zaret,27/7/2006,foundation,80,242.19,midwest
+339,Colleen,11/8/2004,mascara,-1,-0.93,west
+340,Hallagan,28/3/2006,mascara,89,269.26,south
+341,Hallagan,30/3/2005,eye liner,21,65.22,midwest
+342,Cristina,17/12/2006,lip gloss,37,113.12,east
+343,Colleen,14/2/2005,lipstick,15,46.64,east
+344,Ashley,26/5/2004,mascara,94,283.62,midwest
+345,Cici,18/7/2005,mascara,85,257.29,south
+346,Colleen,18/11/2004,lip gloss,95,286.86,west
+347,Emilee,24/5/2005,lipstick,25,76.37,south
+348,Hallagan,19/4/2006,mascara,69,208.61,west
+349,Jen,31/8/2005,foundation,72,218.67,midwest
+350,Zaret,12/2/2006,lipstick,-4,-9.50,west
+351,Colleen,26/6/2005,lipstick,21,64.85,west
+352,Colleen,12/1/2005,eye liner,85,256.97,east
+353,Emilee,11/9/2005,eye liner,85,257.10,south
+354,Ashley,14/10/2005,lip gloss,79,239.76,south
+355,Jen,9/9/2006,lip gloss,81,245.01,south
+356,Ashley,29/8/2006,eye liner,76,229.58,east
+357,Ashley,15/6/2005,lip gloss,31,95.41,east
+358,Zaret,22/9/2005,eye liner,44,133.84,south
+359,Betsy,17/12/2006,lipstick,44,133.91,west
+360,Cristina,26/5/2004,mascara,70,211.69,south
+361,Cristina,29/11/2004,foundation,-4,-9.45,east
+362,Jen,16/11/2005,lip gloss,28,86.33,midwest
+363,Ashley,12/10/2006,mascara,83,250.61,south
+364,Cici,5/7/2006,lip gloss,46,140.48,south
+365,Jen,22/5/2006,lip gloss,88,266.35,west
+366,Emilee,14/10/2005,lip gloss,-9,-24.54,east
+367,Hallagan,9/8/2005,foundation,-8,-21.83,west
+368,Colleen,5/7/2006,foundation,37,113.01,midwest
+369,Hallagan,28/2/2004,foundation,20,61.68,east
+370,Cristina,11/9/2005,lip gloss,2,7.75,west
+371,Ashley,20/8/2005,eye liner,36,110.59,south
+372,Ashley,3/10/2005,mascara,34,103.89,west
+373,Cici,30/4/2006,eye liner,84,253.89,midwest
+374,Hallagan,18/8/2006,mascara,89,268.48,east
+375,Zaret,1/2/2006,lip gloss,31,95.68,south
+376,Cici,21/3/2004,lip gloss,7,22.55,west
+377,Hallagan,6/2/2004,lip gloss,7,22.94,west
+378,Emilee,23/2/2006,eye liner,76,229.89,east
+379,Zaret,31/7/2004,foundation,6,19.56,west
+380,Cristina,23/10/2006,lip gloss,43,130.29,west
+381,Cici,15/1/2004,mascara,20,62.18,west
+382,Zaret,17/3/2006,lipstick,11,35.08,south
+383,Jen,26/6/2005,eye liner,35,107.05,east
+384,Emilee,17/3/2006,foundation,72,218.15,south
+385,Cici,26/5/2004,foundation,49,148.93,west
+386,Jen,6/3/2006,foundation,88,266.65,midwest
+387,Ashley,28/3/2006,foundation,45,136.01,midwest
+388,Ashley,21/3/2004,lip gloss,37,112.93,midwest
+389,Colleen,10/4/2005,lip gloss,12,38.62,midwest
+390,Jen,15/5/2004,mascara,18,55.93,midwest
+391,Hallagan,21/1/2006,lip gloss,75,227.00,south
+392,Jen,25/2/2005,foundation,8,26.31,south
+393,Betsy,1/4/2004,lip gloss,37,112.54,east
+394,Ashley,21/12/2004,lip gloss,-6,-16.41,south
+395,Betsy,15/5/2004,lipstick,56,169.28,midwest
+396,Jen,10/12/2004,eye liner,53,161.33,midwest
+397,Cristina,26/5/2004,lip gloss,62,187.72,south
+398,Ashley,30/3/2005,mascara,90,271.31,midwest
+399,Ashley,15/1/2004,eye liner,30,92.29,midwest
+400,Colleen,14/2/2005,foundation,36,110.39,east
+401,Cristina,8/3/2005,eye liner,76,230.12,west
+402,Emilee,10/4/2005,lip gloss,-4,-10.05,south
+403,Colleen,10/12/2004,lipstick,26,80.07,midwest
+404,Cristina,13/5/2005,lip gloss,-5,-12.80,west
+405,Zaret,4/5/2004,foundation,44,133.92,midwest
+406,Colleen,17/2/2004,mascara,91,274.81,south
+407,Emilee,10/3/2004,lip gloss,78,235.99,west
+408,Jen,22/5/2006,lip gloss,69,208.59,midwest
+409,Betsy,16/10/2004,mascara,74,224.04,east
+410,Zaret,29/7/2005,foundation,71,215.12,south
+411,Betsy,9/9/2006,lipstick,34,103.85,midwest
+412,Jen,4/6/2005,mascara,93,281.17,south
+413,Hallagan,25/2/2005,foundation,60,182.61,west
+414,Cici,23/4/2004,foundation,37,112.43,midwest
+415,Jen,28/6/2004,eye liner,26,79.91,south
+416,Zaret,7/7/2005,eye liner,2,8.54,east
+417,Cristina,3/10/2005,foundation,-9,-25.92,east
+418,Betsy,23/2/2006,foundation,46,139.69,west
+419,Cristina,10/3/2004,mascara,0,2.35,midwest
+420,Hallagan,29/11/2004,foundation,79,239.22,east
+421,Ashley,12/1/2005,foundation,48,146.51,midwest
+422,Zaret,21/1/2006,eye liner,77,233.08,west
+423,Jen,12/2/2006,foundation,-10,-26.97,east
+424,Betsy,9/8/2005,lipstick,45,137.23,west
+425,Colleen,23/1/2005,foundation,17,53.57,east
+426,Jen,20/8/2005,eye liner,-4,-10.36,south
+427,Zaret,17/12/2006,mascara,43,130.80,west
+428,Colleen,5/10/2004,eye liner,41,125.19,west
+429,Jen,24/6/2006,lipstick,-4,-9.88,midwest
+430,Emilee,13/9/2004,foundation,6,20.39,south
+431,Ashley,11/5/2006,foundation,8,25.12,east
+432,Hallagan,9/7/2004,eye liner,43,131.20,west
+433,Betsy,6/6/2004,eye liner,47,142.67,south
+434,Hallagan,18/8/2006,lip gloss,13,41.34,south
+435,Jen,1/2/2006,foundation,9,28.80,west
+436,Betsy,28/2/2004,eye liner,22,67.51,east
+437,Zaret,17/3/2006,eye liner,87,263.07,south
+438,Cristina,23/10/2006,foundation,15,46.30,west
+439,Cici,23/10/2006,eye liner,27,83.41,west
+440,Colleen,30/4/2006,lipstick,78,236.44,midwest
+441,Cici,19/3/2005,mascara,27,83.00,south
+442,Cici,26/1/2004,foundation,19,59.62,east
+443,Ashley,17/2/2004,mascara,0,2.37,west
+444,Betsy,10/12/2004,eye liner,30,91.97,south
+445,Cristina,7/8/2006,lipstick,17,52.94,midwest
+446,Hallagan,4/6/2005,lip gloss,36,109.95,south
+447,Hallagan,21/1/2006,foundation,-4,-10.24,south
+448,Cici,15/1/2004,mascara,4,14.17,east
+449,Ashley,6/6/2004,eye liner,81,244.97,east
+450,Cristina,21/12/2004,eye liner,87,263.83,south
+451,Betsy,6/2/2004,eye liner,13,40.51,south
+452,Zaret,4/5/2004,lip gloss,48,145.85,east
+453,Betsy,3/10/2005,lipstick,2,7.10,west
+454,Jen,17/6/2004,lip gloss,32,98.37,east
+455,Ashley,31/8/2005,lip gloss,13,41.17,west
+456,Cici,1/10/2006,mascara,94,283.45,west
+457,Jen,6/3/2006,mascara,63,190.84,east
+458,Zaret,13/6/2006,foundation,45,136.98,west
+459,Colleen,10/4/2005,mascara,71,214.77,south
+460,Colleen,23/4/2004,mascara,74,224.18,east
+461,Ashley,26/1/2004,mascara,48,145.65,west
+462,Cristina,28/2/2004,lip gloss,63,191.19,east
+463,Colleen,21/4/2005,lip gloss,48,145.69,west
+464,Hallagan,29/8/2006,mascara,26,80.61,midwest
+465,Ashley,13/6/2006,eye liner,58,176.27,south
+466,Zaret,12/2/2006,lip gloss,2,8.75,midwest
+467,Colleen,7/8/2006,lip gloss,36,109.68,midwest
+468,Cici,26/6/2005,mascara,22,68.36,east
+469,Cici,9/8/2005,lip gloss,92,277.67,midwest
+470,Betsy,5/10/2004,foundation,29,88.71,east
+471,Ashley,12/10/2006,lip gloss,42,128.17,south
+472,Cristina,23/4/2004,lip gloss,25,77.32,south
+473,Colleen,19/3/2005,foundation,40,122.54,midwest
+474,Cici,4/5/2004,lip gloss,3,10.57,south
+475,Betsy,18/7/2005,foundation,-1,-0.82,south
+476,Ashley,9/9/2006,foundation,12,37.69,east
+477,Cici,17/6/2004,eye liner,0,2.00,south
+478,Hallagan,12/2/2006,lip gloss,35,106.26,south
+479,Emilee,24/5/2005,foundation,2,7.68,east
+480,Zaret,22/5/2006,lipstick,10,31.79,east
+481,Jen,14/10/2005,eye liner,6,19.73,midwest
+482,Jen,10/3/2004,lip gloss,4,14.10,west
+483,Cici,12/10/2006,mascara,91,274.92,east
+484,Jen,5/7/2006,lip gloss,12,37.88,east
+485,Zaret,7/11/2004,foundation,21,65.28,west
+486,Jen,30/3/2005,mascara,44,134.31,west
+487,Betsy,23/1/2005,eye liner,75,227.10,west
+488,Betsy,20/7/2004,eye liner,37,113.00,south
+489,Zaret,27/7/2006,eye liner,58,176.07,midwest
+490,Jen,12/2/2006,eye liner,74,223.61,south
+491,Hallagan,6/6/2004,foundation,64,193.55,south
+492,Betsy,27/11/2005,lipstick,53,160.46,south
+493,Ashley,23/4/2004,eye liner,-1,-0.45,midwest
+494,Ashley,6/3/2006,mascara,21,65.07,west
+495,Jen,23/2/2006,mascara,90,271.34,east
+496,Jen,25/10/2005,lipstick,61,184.83,midwest
+497,Betsy,13/5/2005,mascara,64,193.98,east
+498,Zaret,6/3/2006,eye liner,79,238.61,east
+499,Zaret,11/5/2006,foundation,11,34.58,west
+500,Colleen,13/6/2006,mascara,17,52.99,midwest
+501,Colleen,12/10/2006,lip gloss,-10,-28.51,east
+502,Cristina,4/5/2004,mascara,61,185.38,south
+503,Ashley,7/7/2005,eye liner,81,245.19,west
+504,Colleen,21/12/2004,mascara,86,259.65,east
+505,Cristina,28/6/2004,eye liner,-6,-16.60,east
+506,Jen,22/9/2005,lipstick,75,226.29,west
+507,Zaret,18/7/2005,mascara,87,262.50,west
+508,Cici,16/7/2006,foundation,15,47.14,west
+509,Jen,19/3/2005,lipstick,6,20.04,east
+510,Zaret,28/2/2004,eye liner,4,14.01,east
+511,Jen,8/4/2006,eye liner,56,169.25,west
+512,Betsy,4/5/2004,foundation,76,230.18,south
+513,Hallagan,7/7/2005,lipstick,27,82.60,south
+514,Betsy,19/12/2005,foundation,58,175.77,south
+515,Jen,17/2/2004,lipstick,67,202.62,east
+516,Colleen,11/9/2005,lip gloss,79,238.79,south
+517,Cristina,13/9/2004,mascara,38,116.69,south
+518,Betsy,1/4/2004,mascara,4,13.64,south
+519,Zaret,17/3/2006,eye liner,45,137.07,south
+520,Betsy,15/5/2004,foundation,10,32.19,west
+521,Hallagan,5/11/2005,foundation,86,260.40,midwest
+522,Cici,11/5/2006,foundation,75,226.71,west
+523,Emilee,19/3/2005,eye liner,77,232.50,west
+524,Emilee,21/3/2004,eye liner,10,31.82,west
+525,Cristina,5/10/2004,foundation,62,188.38,west
+526,Betsy,26/1/2004,lip gloss,73,221.29,east
+527,Jen,15/1/2004,foundation,62,187.23,south
+528,Zaret,24/6/2006,mascara,11,35.72,east
+529,Hallagan,19/12/2005,mascara,28,86.08,south
+530,Hallagan,22/8/2004,mascara,57,172.36,west
+531,Cici,10/12/2004,eye liner,34,103.49,south
+532,Jen,14/10/2005,eye liner,89,267.86,west
+533,Hallagan,24/9/2004,lip gloss,32,97.89,midwest
+534,Zaret,25/11/2006,eye liner,38,116.04,east
+535,Cristina,20/8/2005,lip gloss,82,248.05,east
+536,Jen,26/5/2004,foundation,29,89.29,south
+537,Emilee,1/10/2006,lipstick,17,52.25,west
+538,Hallagan,11/8/2004,eye liner,50,151.87,east
+539,Colleen,1/4/2004,lipstick,7,22.96,east
+540,Ashley,19/3/2005,lip gloss,50,151.36,east
+541,Cristina,25/2/2005,lipstick,20,61.88,midwest
+542,Jen,25/2/2005,foundation,37,112.83,east
+543,Zaret,2/9/2004,mascara,58,176.61,east
+544,Colleen,21/1/2006,foundation,25,76.92,south
+545,Hallagan,1/4/2004,eye liner,34,103.18,midwest
+546,Betsy,23/10/2006,foundation,3,11.58,midwest
+547,Betsy,1/10/2006,lipstick,63,190.59,east
+548,Betsy,10/1/2006,eye liner,44,133.62,midwest
+549,Cici,12/4/2004,eye liner,87,263.16,midwest
+550,Jen,25/2/2005,lipstick,4,14.19,south
+551,Ashley,19/4/2006,foundation,93,281.17,midwest
+552,Cristina,29/11/2004,lipstick,10,32.07,east
+553,Zaret,17/12/2006,mascara,19,58.97,east
+554,Hallagan,18/7/2005,eye liner,30,92.53,south
+555,Ashley,14/11/2006,mascara,-1,-1.28,south
+556,Jen,30/4/2006,eye liner,46,139.41,east
+557,Cristina,2/9/2004,foundation,44,133.51,midwest
+558,Betsy,27/10/2004,eye liner,47,143.21,midwest
+559,Jen,9/9/2006,eye liner,86,260.39,east
+560,Jen,27/7/2006,foundation,76,229.96,midwest
+561,Zaret,1/4/2004,mascara,55,166.99,west
+562,Ashley,26/5/2004,eye liner,-1,-0.79,south
+563,Ashley,20/7/2004,mascara,62,187.63,west
+564,Ashley,26/1/2004,foundation,73,220.97,midwest
+565,Hallagan,7/11/2004,lipstick,12,38.44,west
+566,Emilee,22/8/2004,mascara,0,1.60,west
+567,Cici,18/8/2006,eye liner,23,71.40,west
+568,Cici,23/1/2005,eye liner,73,220.81,midwest
+569,Jen,4/6/2005,lip gloss,73,221.78,west
+570,Emilee,19/3/2005,foundation,43,131.06,south
+571,Hallagan,27/7/2006,lipstick,60,182.29,east
+572,Emilee,6/12/2006,lip gloss,40,121.87,midwest
+573,Jen,29/7/2005,lip gloss,-7,-18.92,midwest
+574,Betsy,24/9/2004,foundation,39,118.37,midwest
+575,Colleen,1/1/2005,mascara,84,253.79,west
+576,Jen,30/4/2006,lipstick,92,277.81,west
+577,Hallagan,3/10/2005,mascara,68,206.08,south
+578,Hallagan,7/11/2004,lip gloss,7,23.19,east
+579,Zaret,12/10/2006,eye liner,-9,-24.84,south
+580,Cici,14/10/2005,mascara,51,154.40,midwest
+581,Hallagan,27/11/2005,lip gloss,59,178.90,south
+582,Cristina,5/11/2005,mascara,64,194.44,west
+583,Cici,16/11/2005,lip gloss,0,2.52,east
+584,Jen,14/2/2005,mascara,81,243.82,midwest
+585,Emilee,10/4/2005,lipstick,93,280.80,midwest
+586,Cici,1/2/2006,lip gloss,20,61.97,south
+587,Ashley,4/6/2005,eye liner,39,119.91,east
+588,Cristina,27/10/2004,foundation,6,20.02,south
+589,Cristina,17/2/2004,foundation,34,103.68,south
+590,Hallagan,1/2/2006,lip gloss,33,101.31,west
+591,Ashley,15/1/2004,lipstick,-10,-28.46,west
+592,Cici,7/8/2006,eye liner,47,141.97,midwest
+593,Emilee,15/1/2004,foundation,94,284.61,east
+594,Hallagan,2/6/2006,foundation,92,278.23,midwest
+595,Colleen,12/1/2005,lip gloss,68,205.96,south
+596,Jen,21/3/2004,lip gloss,37,112.85,midwest
+597,Emilee,20/7/2004,eye liner,78,235.37,south
+598,Hallagan,6/12/2006,eye liner,14,43.76,east
+599,Cici,3/11/2006,foundation,33,100.55,east
+600,Emilee,17/6/2004,eye liner,64,194.18,west
+601,Zaret,7/8/2006,lip gloss,6,20.23,south
+602,Cici,2/6/2006,lipstick,65,197.49,west
+603,Betsy,15/1/2004,mascara,24,74.28,south
+604,Colleen,19/12/2005,lipstick,89,269.01,midwest
+605,Colleen,3/10/2005,mascara,94,284.25,east
+606,Zaret,8/12/2005,foundation,67,203.71,south
+607,Colleen,11/8/2004,mascara,7,23.43,south
+608,Colleen,24/9/2004,foundation,58,176.00,east
+609,Jen,17/6/2004,mascara,77,232.67,midwest
+610,Zaret,11/9/2005,eye liner,50,151.12,east
+611,Betsy,7/8/2006,lip gloss,10,32.14,south
+612,Hallagan,31/8/2005,mascara,2,7.78,west
+613,Ashley,27/7/2006,mascara,17,53.69,east
+614,Cristina,2/5/2005,mascara,90,272.41,midwest
+615,Hallagan,25/11/2006,foundation,58,175.59,south
+616,Cristina,21/1/2006,mascara,66,199.93,midwest
+617,Jen,28/6/2004,eye liner,6,20.24,midwest
+618,Colleen,19/4/2006,lip gloss,90,272.59,south
+619,Colleen,22/5/2006,lip gloss,38,115.86,west
+620,Cristina,5/10/2004,mascara,3,10.91,midwest
+621,Emilee,12/4/2004,foundation,-4,-10.39,midwest
+622,Ashley,17/6/2004,eye liner,8,25.90,west
+623,Colleen,1/4/2004,mascara,-8,-22.23,west
+624,Hallagan,24/9/2004,mascara,72,218.69,midwest
+625,Jen,21/1/2006,eye liner,83,250.67,west
+626,Zaret,2/6/2006,foundation,12,38.98,west
+627,Colleen,22/5/2006,foundation,-8,-21.53,south
+628,Betsy,12/2/2006,eye liner,22,68.13,west
+629,Cristina,3/11/2006,mascara,-2,-3.83,west
+630,Hallagan,10/1/2006,foundation,55,166.77,south
+631,Jen,24/6/2006,eye liner,40,122.55,west
+632,Betsy,26/6/2005,foundation,61,183.96,midwest
+633,Hallagan,15/6/2005,eye liner,40,122.54,south
+634,Jen,9/9/2006,eye liner,31,94.68,midwest
+635,Betsy,23/4/2004,mascara,6,20.45,midwest
+636,Hallagan,25/10/2005,foundation,-6,-16.10,south
+637,Hallagan,7/7/2005,eye liner,14,43.40,midwest
+638,Hallagan,31/7/2004,mascara,94,283.88,east
+639,Jen,29/7/2005,mascara,70,212.27,east
+640,Emilee,7/11/2004,lip gloss,-8,-21.44,south
+641,Emilee,3/11/2006,lip gloss,-8,-21.91,south
+642,Ashley,30/12/2005,mascara,2,7.64,midwest
+643,Hallagan,4/1/2004,lipstick,10,31.84,south
+644,Cici,2/5/2005,eye liner,51,154.53,south
+645,Cici,1/4/2004,eye liner,5,16.85,south
+646,Emilee,2/6/2006,eye liner,39,119.49,south
+647,Ashley,21/3/2004,eye liner,20,61.93,west
+648,Emilee,29/11/2004,foundation,29,88.79,south
+649,Zaret,1/2/2006,foundation,43,130.60,midwest
+650,Ashley,2/9/2004,mascara,40,122.34,midwest
+651,Emilee,12/2/2006,foundation,36,109.41,south
+652,Emilee,23/1/2005,eye liner,88,265.70,south
+653,Betsy,3/2/2005,mascara,55,166.43,south
+654,Jen,21/12/2004,eye liner,65,196.86,west
+655,Jen,7/7/2005,lip gloss,6,19.49,west
+656,Cici,22/5/2006,foundation,-1,-1.23,midwest
+657,Jen,20/9/2006,foundation,32,97.81,south
+658,Hallagan,21/1/2006,mascara,17,53.06,south
+659,Zaret,9/7/2004,eye liner,25,76.38,east
+660,Zaret,30/3/2005,eye liner,11,35.75,east
+661,Zaret,17/2/2004,mascara,51,155.02,south
+662,Emilee,3/11/2006,lipstick,25,78.07,west
+663,Hallagan,14/11/2006,eye liner,27,82.45,east
+664,Betsy,15/6/2005,lip gloss,38,116.79,west
+665,Cristina,20/9/2006,foundation,27,82.57,midwest
+666,Jen,13/6/2006,eye liner,59,178.63,west
+667,Cici,12/2/2006,foundation,73,220.45,west
+668,Colleen,31/8/2005,eye liner,43,131.45,midwest
+669,Cristina,5/7/2006,mascara,51,154.78,west
+670,Betsy,13/9/2004,lip gloss,32,98.01,midwest
+671,Zaret,8/4/2006,lip gloss,89,268.59,midwest
+672,Jen,27/11/2005,mascara,-1,-0.61,east
+673,Hallagan,17/3/2006,eye liner,26,81.09,east
+674,Jen,25/2/2005,foundation,56,170.29,midwest
+675,Betsy,22/8/2004,lip gloss,10,32.45,midwest
+676,Hallagan,6/2/2004,lipstick,8,25.64,east
+677,Colleen,2/5/2005,eye liner,75,226.81,south
+678,Jen,3/2/2005,foundation,79,239.48,east
+679,Colleen,13/5/2005,foundation,25,75.94,south
+680,Cristina,12/10/2006,lip gloss,22,68.81,east
+681,Betsy,13/9/2004,lipstick,88,265.64,west
+682,Emilee,7/11/2004,foundation,94,284.33,midwest
+683,Jen,3/10/2005,mascara,58,176.73,south
+684,Emilee,4/6/2005,lip gloss,66,200.21,south
+685,Jen,7/8/2006,eye liner,82,247.94,west
+686,Hallagan,1/10/2006,foundation,94,283.77,south
+687,Ashley,28/12/2006,lip gloss,27,82.88,west
+688,Betsy,12/4/2004,lipstick,56,169.96,midwest
+689,Emilee,19/4/2006,mascara,82,247.80,south
+690,Emilee,11/9/2005,mascara,7,23.07,south
+691,Betsy,10/1/2006,lip gloss,25,77.37,west
+692,Ashley,28/12/2006,foundation,15,46.81,south
+693,Jen,5/10/2004,foundation,39,118.82,south
+694,Betsy,3/10/2005,lip gloss,22,67.92,midwest
+695,Zaret,19/3/2005,lipstick,0,1.58,west
+696,Betsy,20/7/2004,mascara,47,142.63,south
+697,Jen,6/3/2006,lipstick,36,110.26,east
+698,Jen,13/9/2004,eye liner,46,139.53,west
+699,Emilee,30/4/2006,eye liner,84,253.68,east
+700,Cristina,21/3/2004,lip gloss,38,115.77,east
+701,Betsy,26/5/2004,lip gloss,13,40.47,east
+702,Emilee,19/4/2006,foundation,40,122.42,midwest
+703,Colleen,17/6/2004,lipstick,46,139.41,midwest
+704,Cici,31/7/2004,eye liner,11,35.11,east
+705,Ashley,15/6/2005,lip gloss,-1,-0.90,west
+706,Ashley,10/3/2004,lip gloss,32,98.62,east
+707,Cici,15/1/2004,foundation,78,235.38,midwest
+708,Ashley,23/1/2005,lipstick,71,215.14,east
+709,Colleen,23/4/2004,lip gloss,36,109.80,midwest
+710,Jen,22/8/2004,mascara,79,238.75,west
+711,Ashley,9/8/2005,lipstick,92,278.34,west
+712,Hallagan,15/1/2004,foundation,38,116.20,midwest
+713,Betsy,6/12/2006,mascara,50,152.08,east
+714,Cristina,23/2/2006,foundation,31,93.73,west
+715,Jen,13/6/2006,lip gloss,9,29.39,east
+716,Hallagan,25/2/2005,eye liner,24,73.28,west
+717,Ashley,12/1/2005,lip gloss,50,152.59,west
+718,Jen,12/2/2006,lipstick,32,98.19,west
+719,Cici,13/9/2004,foundation,71,214.93,south
+720,Cristina,3/11/2006,mascara,28,86.11,south
+721,Ashley,23/10/2006,lip gloss,40,121.83,east
+722,Cristina,15/1/2004,eye liner,75,226.99,east
+723,Zaret,22/8/2004,lip gloss,30,92.03,midwest
+724,Jen,8/12/2005,lip gloss,78,235.90,south
+725,Colleen,9/8/2005,mascara,15,47.10,south
+726,Cristina,7/11/2004,lipstick,30,91.80,west
+727,Zaret,3/10/2005,foundation,27,83.56,west
+728,Hallagan,13/6/2006,lip gloss,95,286.68,midwest
+729,Jen,17/2/2004,foundation,62,188.70,south
+730,Cristina,17/3/2006,lip gloss,-4,-10.15,west
+731,Betsy,20/7/2004,mascara,-3,-7.23,west
+732,Hallagan,7/7/2005,mascara,62,187.71,midwest
+733,Betsy,11/8/2004,lipstick,92,277.68,midwest
+734,Zaret,17/12/2006,foundation,35,107.10,south
+735,Betsy,2/5/2005,eye liner,91,274.96,west
+736,Cristina,9/7/2004,mascara,21,64.32,south
+737,Colleen,21/1/2006,mascara,49,148.74,south
+738,Zaret,19/3/2005,foundation,34,103.35,midwest
+739,Hallagan,23/1/2005,lip gloss,56,170.12,east
+740,Cristina,26/5/2004,eye liner,81,244.85,west
+741,Betsy,12/4/2004,eye liner,63,191.25,west
+742,Cristina,2/5/2005,foundation,-3,-7.37,midwest
+743,Colleen,7/7/2005,foundation,8,25.81,east
+744,Jen,1/4/2004,lip gloss,46,139.62,west
+745,Colleen,14/2/2005,lip gloss,3,10.88,south
+746,Colleen,22/5/2006,foundation,68,205.86,west
+747,Betsy,19/4/2006,foundation,83,251.06,east
+748,Cristina,14/2/2005,eye liner,51,155.12,west
+749,Cici,19/4/2006,foundation,16,50.20,west
+750,Cici,11/5/2006,eye liner,-2,-3.91,south
+751,Cristina,29/11/2004,lip gloss,6,20.37,south
+752,Colleen,25/10/2005,lip gloss,-5,-12.57,east
+753,Betsy,21/1/2006,eye liner,42,127.71,south
+754,Cristina,12/1/2005,eye liner,47,143.38,midwest
+755,Hallagan,27/7/2006,mascara,16,50.19,west
+756,Cici,15/5/2004,lip gloss,11,35.36,west
+757,Betsy,29/11/2004,eye liner,-10,-27.90,east
+758,Ashley,10/3/2004,eye liner,21,65.38,south
+759,Cici,25/10/2005,mascara,52,157.73,east
+760,Cristina,12/4/2004,lipstick,5,17.01,south
+761,Cristina,29/7/2005,eye liner,52,158.43,midwest
+762,Colleen,30/3/2005,mascara,38,115.39,south
+763,Emilee,11/5/2006,mascara,84,254.26,east
+764,Cici,6/12/2006,lipstick,18,55.34,south
+765,Jen,4/5/2004,lip gloss,-6,-15.74,west
+766,Cici,1/4/2004,lip gloss,5,16.91,west
+767,Colleen,6/12/2006,foundation,59,178.90,south
+768,Colleen,26/6/2005,mascara,-1,-1.43,east
+769,Jen,23/1/2005,lipstick,12,37.85,east
+770,Colleen,21/3/2004,lipstick,25,76.81,east
+771,Cristina,26/6/2005,mascara,33,101.42,east
+772,Betsy,28/2/2004,mascara,12,37.89,west
+773,Emilee,9/8/2005,eye liner,52,158.31,east
+774,Jen,30/3/2005,eye liner,34,103.62,west
+775,Cristina,29/7/2005,foundation,66,200.66,south
+776,Cristina,31/7/2004,lipstick,10,31.85,south
+777,Cici,28/2/2004,foundation,-5,-12.55,midwest
+778,Ashley,9/8/2005,mascara,89,269.49,south
+779,Cici,10/4/2005,foundation,5,16.82,south
+780,Jen,12/10/2006,mascara,48,145.99,midwest
+781,Betsy,6/12/2006,mascara,36,109.92,midwest
+782,Cristina,14/11/2006,mascara,80,242.00,west
+783,Betsy,25/11/2006,lip gloss,64,193.89,west
+784,Betsy,14/10/2005,foundation,51,155.50,east
+785,Ashley,10/4/2005,eye liner,92,278.34,east
+786,Cici,21/4/2005,eye liner,93,280.86,midwest
+787,Jen,3/2/2005,foundation,36,110.48,west
+788,Ashley,12/10/2006,lip gloss,-9,-24.83,midwest
+789,Jen,24/5/2005,lip gloss,48,146.23,west
+790,Cici,16/11/2005,eye liner,11,34.55,east
+791,Cici,20/7/2004,lipstick,8,25.45,west
+792,Colleen,12/4/2004,foundation,36,110.09,east
+793,Cici,5/11/2005,mascara,93,280.78,west
+794,Hallagan,12/4/2004,lip gloss,39,119.20,east
+795,Hallagan,26/5/2004,eye liner,72,218.08,south
+796,Emilee,6/3/2006,lip gloss,3,10.42,midwest
+797,Zaret,1/1/2005,mascara,47,142.84,east
+798,Cristina,28/12/2006,mascara,72,217.32,west
+799,Colleen,6/12/2006,mascara,26,79.75,midwest
+800,Zaret,5/10/2004,eye liner,47,142.49,south
+801,Cristina,10/1/2006,lip gloss,14,43.40,east
+802,Zaret,26/6/2005,mascara,71,215.08,south
+803,Hallagan,18/8/2006,foundation,95,287.80,midwest
+804,Cici,6/3/2006,mascara,37,112.78,south
+805,Hallagan,8/12/2005,lip gloss,-1,-0.39,east
+806,Emilee,18/8/2006,eye liner,26,80.21,midwest
+807,Zaret,4/1/2004,eye liner,67,203.54,east
+808,Emilee,17/2/2004,lip gloss,15,47.20,midwest
+809,Jen,23/2/2006,lip gloss,73,221.34,south
+810,Jen,5/10/2004,mascara,13,40.90,west
+811,Emilee,21/3/2004,foundation,76,229.56,east
+812,Cici,6/6/2004,eye liner,-9,-24.93,south
+813,Colleen,4/6/2005,lipstick,36,109.53,west
+814,Ashley,26/5/2004,foundation,11,35.52,south
+815,Colleen,21/1/2006,lip gloss,73,220.50,east
+816,Jen,16/10/2004,lipstick,93,280.27,south
+817,Betsy,8/4/2006,foundation,69,209.32,east
+818,Hallagan,12/4/2004,eye liner,86,259.48,midwest
+819,Betsy,2/6/2006,mascara,54,164.38,south
+820,Cristina,21/4/2005,mascara,-2,-4.04,midwest
+821,Zaret,20/9/2006,foundation,83,250.17,west
+822,Cici,14/10/2005,mascara,2,8.00,west
+823,Colleen,18/8/2006,eye liner,54,164.15,midwest
+824,Hallagan,1/4/2004,foundation,76,230.42,east
+825,Betsy,31/8/2005,eye liner,10,32.25,midwest
+826,Jen,12/10/2006,foundation,81,245.04,west
+827,Jen,20/9/2006,eye liner,83,251.14,midwest
+828,Zaret,3/11/2006,foundation,6,19.52,south
+829,Colleen,14/11/2006,mascara,77,233.16,east
+830,Jen,28/3/2006,mascara,41,125.28,west
+831,Ashley,6/12/2006,lip gloss,80,241.71,south
+832,Zaret,22/5/2006,eye liner,20,62.21,east
+833,Emilee,26/1/2004,eye liner,31,95.33,midwest
+834,Hallagan,10/1/2006,foundation,34,103.90,east
+835,Ashley,31/8/2005,foundation,2,8.03,west
+836,Jen,12/2/2006,foundation,17,53.33,south
+837,Emilee,2/6/2006,eye liner,16,50.31,south
+838,Cristina,6/3/2006,foundation,54,163.70,west
+839,Zaret,17/2/2004,lip gloss,-9,-24.92,east
+840,Zaret,30/4/2006,eye liner,94,284.54,west
+841,Jen,2/9/2004,foundation,-3,-7.45,midwest
+842,Cristina,7/11/2004,mascara,9,28.83,west
+843,Hallagan,21/3/2004,foundation,25,77.11,east
+844,Ashley,23/10/2006,lip gloss,29,89.31,south
+845,Cici,22/8/2004,eye liner,37,113.21,east
+846,Zaret,26/6/2005,foundation,19,59.00,west
+847,Cristina,12/4/2004,lip gloss,28,86.05,midwest
+848,Jen,6/6/2004,eye liner,18,55.86,west
+849,Ashley,2/6/2006,lipstick,84,254.04,south
+850,Emilee,16/10/2004,foundation,79,238.83,west
+851,Cici,7/11/2004,foundation,31,94.97,midwest
+852,Jen,27/7/2006,lipstick,34,103.40,east
+853,Cici,16/11/2005,mascara,66,201.26,south
+854,Emilee,22/5/2006,mascara,44,134.45,east
+855,Betsy,23/1/2005,eye liner,94,284.42,south
+856,Colleen,12/4/2004,foundation,11,35.30,east
+857,Hallagan,22/8/2004,lip gloss,74,223.97,east
+858,Jen,6/12/2006,mascara,28,86.49,west
+859,Cristina,4/6/2005,lip gloss,40,121.92,west
+860,Cristina,6/2/2004,lip gloss,34,104.17,south
+861,Betsy,11/9/2005,eye liner,38,115.85,south
+862,Hallagan,15/6/2005,mascara,69,209.14,midwest
+863,Ashley,20/8/2005,eye liner,34,103.97,midwest
+864,Betsy,9/8/2005,mascara,29,89.38,midwest
+865,Colleen,17/2/2004,foundation,-10,-27.72,midwest
+866,Cici,27/10/2004,lipstick,42,128.43,midwest
+867,Zaret,17/3/2006,mascara,58,175.97,west
+868,Emilee,10/3/2004,foundation,27,83.02,midwest
+869,Cici,5/7/2006,eye liner,47,143.27,east
+870,Emilee,6/2/2004,foundation,29,88.70,south
+871,Cici,11/5/2006,mascara,28,86.23,south
+872,Betsy,20/9/2006,eye liner,79,239.06,south
+873,Ashley,7/11/2004,eye liner,41,124.82,east
+874,Emilee,7/7/2005,lipstick,57,172.96,midwest
+875,Cici,16/7/2006,lip gloss,45,137.62,west
+876,Jen,17/3/2006,mascara,91,274.91,west
+877,Emilee,23/1/2005,mascara,49,149.04,west
+878,Betsy,24/9/2004,lip gloss,68,206.16,west
+879,Colleen,14/2/2005,lipstick,38,116.64,west
+880,Ashley,20/9/2006,foundation,4,15.21,south
+881,Emilee,10/4/2005,mascara,45,137.05,east
+882,Cristina,10/12/2004,mascara,85,256.66,midwest
+883,Emilee,7/7/2005,lipstick,57,173.06,midwest
+884,Zaret,16/11/2005,mascara,-3,-6.36,east
+885,Cici,7/8/2006,foundation,-9,-24.86,midwest
+886,Zaret,23/4/2004,eye liner,86,260.29,midwest
+887,Jen,8/3/2005,foundation,11,35.04,east
+888,Colleen,15/1/2004,mascara,87,262.76,midwest
+889,Colleen,31/7/2004,eye liner,86,260.01,south
+890,Betsy,1/2/2006,lip gloss,62,187.81,west
+891,Emilee,16/7/2006,mascara,80,241.86,west
+892,Colleen,20/7/2004,lipstick,11,34.78,south
+893,Colleen,8/12/2005,lipstick,11,34.68,midwest
+894,Cici,5/11/2005,eye liner,-4,-9.79,south
+895,Cristina,10/12/2004,lipstick,42,128.03,west
+896,Cristina,28/6/2004,lip gloss,51,154.72,south
+897,Colleen,20/7/2004,foundation,91,274.77,south
+898,Emilee,18/8/2006,lip gloss,24,73.41,west
+899,Emilee,26/1/2004,eye liner,19,59.12,midwest
+900,Colleen,21/3/2004,lip gloss,80,241.75,midwest
+901,Betsy,6/12/2006,foundation,0,1.68,east
+902,Jen,1/10/2006,foundation,69,209.14,east
+903,Emilee,16/7/2006,mascara,84,253.78,midwest
+904,Hallagan,20/8/2005,lipstick,31,94.75,west
+905,Zaret,31/8/2005,eye liner,11,35.27,south
+906,Ashley,30/3/2005,lip gloss,79,239.34,midwest
+907,Jen,24/6/2006,eye liner,22,68.55,midwest
+908,Betsy,3/2/2005,foundation,76,231.13,east
+909,Ashley,5/10/2004,eye liner,0,2.74,midwest
+910,Emilee,19/3/2005,lip gloss,94,283.56,west
+911,Zaret,7/11/2004,foundation,14,44.25,south
+912,Emilee,5/7/2006,mascara,57,172.70,west
+913,Jen,21/4/2005,lip gloss,3,11.08,east
+914,Cici,5/7/2006,lip gloss,50,151.96,west
+915,Ashley,13/6/2006,eye liner,25,76.62,east
+916,Cristina,31/8/2005,foundation,46,140.27,south
+917,Zaret,16/7/2006,lip gloss,19,58.74,east
+918,Emilee,22/5/2006,eye liner,6,20.10,west
+919,Jen,5/7/2006,lipstick,8,26.08,midwest
+920,Emilee,10/1/2006,mascara,-2,-3.73,midwest
+921,Zaret,10/4/2005,lip gloss,80,240.69,east
+922,Jen,2/5/2005,foundation,19,58.90,south
+923,Betsy,10/4/2005,lipstick,27,82.99,south
+924,Ashley,6/2/2004,mascara,79,239.45,west
+925,Jen,10/1/2006,foundation,57,173.33,south
+926,Cici,19/12/2005,lip gloss,47,143.60,east
+927,Cici,7/11/2004,lip gloss,9,28.83,south
+928,Jen,27/11/2005,lip gloss,65,196.86,midwest
+929,Zaret,10/3/2004,foundation,58,175.22,west
+930,Cici,13/9/2004,mascara,48,145.94,south
+931,Zaret,14/10/2005,foundation,75,226.61,east
+932,Cici,21/1/2006,foundation,59,179.37,west
+933,Jen,23/1/2005,mascara,34,104.45,midwest
+934,Zaret,1/4/2004,lipstick,57,173.07,east
+935,Emilee,28/3/2006,lip gloss,62,187.89,south
+936,Cristina,5/7/2006,lipstick,17,53.05,south
+937,Ashley,29/7/2005,foundation,83,250.82,west
+938,Ashley,20/7/2004,lip gloss,56,169.84,east
+939,Hallagan,28/2/2004,lip gloss,14,44.19,west
+940,Colleen,1/1/2005,lipstick,-9,-24.56,west
+941,Betsy,18/7/2005,foundation,44,134.50,south
+942,Zaret,6/2/2004,eye liner,32,97.65,east
+943,Jen,12/1/2005,eye liner,85,256.97,east
+944,Betsy,24/9/2004,lip gloss,-2,-3.72,west
+945,Emilee,3/2/2005,lipstick,31,94.44,south
+946,Cici,22/8/2004,eye liner,-7,-19.82,south
+947,Colleen,26/1/2004,lipstick,-1,-0.29,midwest
+948,Ashley,25/11/2006,lip gloss,6,20.40,east
+949,Cristina,6/6/2004,foundation,13,41.83,west
+950,Ashley,27/10/2004,lip gloss,70,212.46,south
+951,Colleen,17/6/2004,foundation,15,47.75,west
+952,Cristina,19/4/2006,mascara,18,56.26,south
+953,Cristina,23/2/2006,eye liner,30,92.20,south
+954,Zaret,3/11/2006,mascara,17,53.07,east
+955,Zaret,12/1/2005,eye liner,-1,-1.45,midwest
+956,Jen,19/3/2005,foundation,50,152.32,south
+957,Ashley,30/12/2005,lip gloss,83,251.09,east
+958,Emilee,4/5/2004,mascara,54,164.08,midwest
+959,Ashley,21/4/2005,lip gloss,16,49.97,south
+960,Emilee,20/9/2006,lip gloss,53,160.96,east
+961,Cristina,10/1/2006,eye liner,95,286.72,west
+962,Ashley,4/1/2004,mascara,74,224.13,south
+963,Colleen,20/8/2005,mascara,11,35.13,midwest
+964,Hallagan,20/9/2006,foundation,63,191.00,west
+965,Betsy,31/8/2005,eye liner,53,161.24,east
+966,Zaret,27/7/2006,lip gloss,1,5.28,south
+967,Cristina,18/11/2004,foundation,24,74.31,midwest
+968,Zaret,8/4/2006,lipstick,5,16.42,west
+969,Betsy,25/2/2005,lip gloss,35,107.34,east
+970,Betsy,22/5/2006,eye liner,33,100.62,south
+971,Emilee,1/2/2006,mascara,65,196.64,south
+972,Cici,12/2/2006,mascara,52,158.34,east
+973,Cici,18/8/2006,mascara,44,133.42,east
+974,Ashley,12/10/2006,lipstick,72,218.06,east
+975,Emilee,13/9/2004,mascara,13,41.14,east
+976,Zaret,9/9/2006,foundation,16,50.16,south
+977,Cici,12/2/2006,foundation,19,59.27,west
+978,Zaret,13/5/2005,mascara,67,203.43,west
+979,Emilee,12/2/2006,lip gloss,2,8.31,midwest
+980,Zaret,2/6/2006,mascara,28,85.79,south
+981,Colleen,20/8/2005,foundation,-6,-15.85,midwest
+982,Ashley,30/3/2005,mascara,70,212.03,midwest
+983,Hallagan,23/2/2006,lip gloss,65,197.19,south
+984,Emilee,28/12/2006,foundation,39,119.05,east
+985,Hallagan,29/8/2006,foundation,72,218.19,west
+986,Betsy,2/5/2005,lipstick,47,142.54,west
+987,Emilee,11/5/2006,lip gloss,94,283.58,east
+988,Betsy,13/5/2005,lip gloss,58,175.82,west
+989,Jen,15/5/2004,eye liner,-6,-17.29,east
+990,Colleen,17/2/2004,eye liner,38,115.96,south
+991,Cristina,15/1/2004,eye liner,-1,-1.02,midwest
+992,Jen,16/11/2005,eye liner,34,104.58,west
+993,Zaret,1/4/2004,lip gloss,30,91.72,west
+994,Colleen,26/5/2004,foundation,62,187.43,south
+995,Betsy,12/2/2006,lip gloss,24,74.21,east
+996,Colleen,13/9/2004,eye liner,4,13.65,west
+997,Emilee,6/6/2004,lip gloss,88,265.29,west
+998,Emilee,3/10/2005,eye liner,78,235.69,east
+999,Ashley,14/10/2005,eye liner,82,248.12,west
+1000,Cristina,13/5/2005,lip gloss,68,206.87,east
+1001,Cristina,17/2/2004,foundation,20,61.60,midwest
+1002,Colleen,5/10/2004,lip gloss,-10,-28.33,south
+1003,Zaret,24/9/2004,eye liner,94,283.99,south
+1004,Zaret,8/4/2006,foundation,62,188.00,east
+1005,Emilee,9/7/2004,mascara,71,215.02,west
+1006,Ashley,21/3/2004,lipstick,70,211.52,west
+1007,Cici,12/4/2004,foundation,17,52.01,east
+1008,Ashley,8/12/2005,eye liner,51,154.87,east
+1009,Betsy,30/4/2006,mascara,70,212.19,midwest
+1010,Zaret,24/6/2006,eye liner,94,283.92,west
+1011,Colleen,10/12/2004,mascara,70,211.85,midwest
+1012,Ashley,13/5/2005,lip gloss,89,269.19,west
+1013,Colleen,14/10/2005,lip gloss,26,79.31,midwest
+1014,Cici,8/12/2005,eye liner,8,26.10,midwest
+1015,Ashley,1/2/2006,foundation,8,26.08,midwest
+1016,Cici,12/10/2006,eye liner,62,187.69,east
+1017,Jen,18/8/2006,eye liner,-9,-24.82,south
+1018,Zaret,22/8/2004,foundation,55,166.82,east
+1019,Hallagan,2/9/2004,lipstick,71,215.35,midwest
+1020,Emilee,17/3/2006,mascara,5,17.43,south
+1021,Colleen,31/8/2005,foundation,28,86.32,east
+1022,Emilee,11/5/2006,lipstick,95,286.93,south
+1023,Betsy,22/9/2005,eye liner,56,169.67,south
+1024,Cici,25/10/2005,foundation,79,238.72,south
+1025,Cici,29/7/2005,eye liner,10,32.24,south
+1026,Hallagan,24/9/2004,lipstick,69,208.62,west
+1027,Colleen,17/3/2006,lip gloss,15,46.77,midwest
+1028,Cici,1/2/2006,eye liner,0,1.78,west
+1029,Cici,7/7/2005,lipstick,78,236.10,east
+1030,Hallagan,24/5/2005,mascara,89,268.45,south
+1031,Cici,14/2/2005,mascara,94,284.11,east
+1032,Betsy,17/2/2004,mascara,-5,-13.09,west
+1033,Hallagan,6/12/2006,lip gloss,42,127.95,midwest
+1034,Emilee,20/9/2006,eye liner,9,29.03,west
+1035,Emilee,10/4/2005,foundation,8,26.40,east
+1036,Betsy,11/8/2004,foundation,69,209.15,south
+1037,Cristina,12/10/2006,mascara,2,7.73,south
+1038,Cici,24/9/2004,eye liner,3,10.49,midwest
+1039,Emilee,15/6/2005,lipstick,76,230.14,midwest
+1040,Cristina,28/6/2004,eye liner,-7,-18.43,west
+1041,Colleen,5/7/2006,mascara,24,74.04,west
+1042,Jen,9/9/2006,foundation,35,106.67,west
+1043,Cici,21/3/2004,foundation,23,71.10,west
+1044,Zaret,30/4/2006,eye liner,32,97.98,east
+1045,Cristina,2/9/2004,mascara,46,139.82,midwest
+1046,Cici,6/2/2004,lip gloss,28,85.91,midwest
+1047,Cici,3/2/2005,lipstick,58,176.38,south
+1048,Emilee,16/11/2005,lip gloss,19,59.08,south
+1049,Colleen,11/8/2004,lip gloss,79,238.64,east
+1050,Betsy,10/12/2004,mascara,31,94.12,midwest
+1051,Cici,16/11/2005,eye liner,4,14.29,south
+1052,Colleen,28/3/2006,foundation,91,275.51,midwest
+1053,Hallagan,15/6/2005,lip gloss,51,154.75,south
+1054,Emilee,15/1/2004,eye liner,2,8.34,south
+1055,Jen,7/7/2005,lipstick,42,127.68,west
+1056,Betsy,18/11/2004,lip gloss,57,173.10,east
+1057,Colleen,24/9/2004,foundation,63,190.21,east
+1058,Betsy,4/5/2004,mascara,37,112.97,midwest
+1059,Betsy,10/3/2004,lip gloss,30,92.61,south
+1060,Hallagan,28/3/2006,foundation,31,95.22,east
+1061,Cristina,10/3/2004,eye liner,55,167.33,east
+1062,Jen,19/12/2005,eye liner,-5,-12.64,south
+1063,Zaret,23/4/2004,lip gloss,28,85.46,east
+1064,Emilee,20/8/2005,eye liner,93,280.15,midwest
+1065,Jen,14/10/2005,lipstick,13,40.97,midwest
+1066,Betsy,6/3/2006,foundation,94,283.90,east
+1067,Jen,19/3/2005,foundation,1,4.86,east
+1068,Cici,3/10/2005,foundation,5,16.49,west
+1069,Colleen,2/6/2006,mascara,60,181.33,south
+1070,Hallagan,20/7/2004,lip gloss,67,203.02,south
+1071,Hallagan,10/12/2004,foundation,87,263.52,south
+1072,Hallagan,18/11/2004,mascara,53,161.07,west
+1073,Jen,9/8/2005,lip gloss,74,224.20,south
+1074,Betsy,14/11/2006,lip gloss,83,251.40,east
+1075,Cici,14/10/2005,mascara,45,136.79,midwest
+1076,Jen,28/6/2004,lip gloss,36,109.96,east
+1077,Hallagan,19/12/2005,foundation,82,248.20,midwest
+1078,Ashley,29/8/2006,foundation,18,56.51,east
+1079,Emilee,12/4/2004,foundation,21,64.57,south
+1080,Colleen,26/6/2005,foundation,56,170.17,south
+1081,Cici,30/4/2006,eye liner,51,154.96,east
+1082,Cristina,6/3/2006,foundation,88,266.15,west
+1083,Emilee,21/4/2005,eye liner,93,280.96,east
+1084,Ashley,24/9/2004,lip gloss,-4,-9.80,west
+1085,Colleen,21/4/2005,eye liner,30,91.84,south
+1086,Jen,19/12/2005,foundation,81,245.62,south
+1087,Colleen,21/4/2005,foundation,58,175.79,midwest
+1088,Ashley,4/1/2004,mascara,50,151.96,midwest
+1089,Zaret,28/6/2004,lip gloss,92,277.65,south
+1090,Ashley,14/11/2006,foundation,27,82.12,south
+1091,Zaret,22/8/2004,foundation,61,184.45,south
+1092,Colleen,27/7/2006,mascara,7,23.20,south
+1093,Betsy,10/12/2004,lip gloss,25,76.52,midwest
+1094,Ashley,22/8/2004,lip gloss,84,254.21,south
+1095,Betsy,1/4/2004,eye liner,66,199.92,west
+1096,Emilee,4/5/2004,eye liner,89,269.23,east
+1097,Cristina,13/5/2005,foundation,32,97.88,midwest
+1098,Cristina,5/7/2006,lip gloss,78,236.26,midwest
+1099,Emilee,17/3/2006,lipstick,56,169.99,west
+1100,Colleen,28/12/2006,foundation,80,241.54,midwest
+1101,Cici,3/2/2005,mascara,72,218.33,midwest
+1102,Zaret,16/11/2005,lip gloss,23,71.30,east
+1103,Cici,6/3/2006,mascara,-2,-3.69,west
+1104,Colleen,5/10/2004,lip gloss,81,245.37,south
+1105,Emilee,5/11/2005,lipstick,-4,-10.63,west
+1106,Betsy,1/1/2005,mascara,81,245.47,south
+1107,Colleen,10/3/2004,lipstick,-9,-24.90,midwest
+1108,Hallagan,8/3/2005,eye liner,67,203.39,west
+1109,Betsy,3/2/2005,mascara,27,83.26,west
+1110,Colleen,6/3/2006,mascara,-1,-1.45,east
+1111,Ashley,31/8/2005,mascara,24,74.45,east
+1112,Hallagan,1/2/2006,eye liner,80,241.97,east
+1113,Zaret,5/10/2004,lip gloss,82,248.21,south
+1114,Jen,30/12/2005,foundation,1,5.55,east
+1115,Cristina,12/4/2004,foundation,11,35.28,west
+1116,Betsy,16/7/2006,mascara,12,37.33,east
+1117,Cici,10/12/2004,eye liner,54,164.38,east
+1118,Jen,3/11/2006,mascara,78,236.66,west
+1119,Cici,6/2/2004,mascara,-8,-21.77,west
+1120,Betsy,17/2/2004,eye liner,6,19.84,south
+1121,Zaret,5/10/2004,foundation,30,91.75,west
+1122,Colleen,1/2/2006,lip gloss,55,166.81,south
+1123,Cici,28/3/2006,eye liner,53,161.24,east
+1124,Ashley,14/2/2005,mascara,29,88.93,east
+1125,Betsy,12/4/2004,lip gloss,75,227.04,midwest
+1126,Ashley,29/11/2004,foundation,78,235.68,south
+1127,Zaret,20/9/2006,foundation,6,20.39,south
+1128,Colleen,29/7/2005,lip gloss,57,172.67,west
+1129,Hallagan,10/4/2005,eye liner,35,106.53,south
+1130,Cici,14/11/2006,eye liner,72,217.37,midwest
+1131,Jen,17/6/2004,mascara,79,238.32,south
+1132,Cici,21/4/2005,lip gloss,89,269.02,west
+1133,Jen,2/5/2005,eye liner,84,252.58,east
+1134,Cristina,9/9/2006,mascara,43,130.66,west
+1135,Emilee,21/1/2006,lip gloss,-4,-9.97,midwest
+1136,Emilee,12/1/2005,foundation,51,154.66,west
+1137,Betsy,22/5/2006,lip gloss,17,53.07,west
+1138,Hallagan,14/11/2006,mascara,51,155.24,west
+1139,Jen,6/3/2006,eye liner,14,44.20,west
+1140,Ashley,17/12/2006,lip gloss,60,181.87,east
+1141,Cici,18/11/2004,mascara,-8,-21.98,west
+1142,Colleen,26/6/2005,foundation,95,286.66,south
+1143,Zaret,1/2/2006,foundation,66,199.59,east
+1144,Zaret,21/12/2004,lip gloss,77,232.63,midwest
+1145,Hallagan,10/12/2004,eye liner,65,197.33,east
+1146,Hallagan,21/4/2005,mascara,29,89.18,midwest
+1147,Zaret,9/7/2004,lipstick,8,26.09,east
+1148,Ashley,10/1/2006,lipstick,42,127.87,east
+1149,Betsy,28/2/2004,foundation,93,280.72,midwest
+1150,Zaret,6/6/2004,foundation,69,209.15,south
+1151,Colleen,5/7/2006,mascara,91,274.80,south
+1152,Hallagan,3/2/2005,eye liner,11,34.52,south
+1153,Hallagan,1/1/2005,lip gloss,-1,-1.56,midwest
+1154,Jen,21/12/2004,mascara,52,158.21,south
+1155,Betsy,6/3/2006,lipstick,-10,-28.64,south
+1156,Zaret,25/11/2006,mascara,33,100.51,south
+1157,Betsy,5/10/2004,lipstick,-1,-1.12,west
+1158,Colleen,29/8/2006,mascara,24,73.54,west
+1159,Jen,15/5/2004,foundation,71,214.70,midwest
+1160,Hallagan,18/11/2004,lip gloss,88,265.86,south
+1161,Betsy,29/7/2005,lip gloss,16,49.99,west
+1162,Cici,15/6/2005,foundation,7,23.19,east
+1163,Emilee,24/9/2004,mascara,46,140.48,south
+1164,Ashley,29/11/2004,foundation,-10,-27.58,midwest
+1165,Hallagan,24/6/2006,lip gloss,83,251.13,west
+1166,Jen,17/3/2006,lip gloss,85,256.23,south
+1167,Zaret,11/9/2005,eye liner,18,56.22,midwest
+1168,Cristina,24/9/2004,lipstick,83,251.40,midwest
+1169,Cici,25/11/2006,lip gloss,71,214.72,south
+1170,Emilee,2/9/2004,eye liner,2,7.93,east
+1171,Betsy,14/11/2006,foundation,71,215.03,west
+1172,Zaret,22/9/2005,lipstick,68,206.21,south
+1173,Emilee,7/11/2004,eye liner,30,92.33,east
+1174,Hallagan,1/2/2006,lipstick,72,217.81,west
+1175,Jen,22/8/2004,eye liner,73,221.37,east
+1176,Betsy,21/1/2006,lip gloss,28,86.47,east
+1177,Cici,17/3/2006,mascara,40,122.64,midwest
+1178,Emilee,6/12/2006,foundation,-8,-22.30,west
+1179,Ashley,10/4/2005,lipstick,70,211.69,east
+1180,Betsy,19/12/2005,eye liner,3,10.72,midwest
+1181,Betsy,10/12/2004,eye liner,33,100.68,midwest
+1182,Colleen,22/8/2004,lip gloss,88,265.75,east
+1183,Emilee,1/1/2005,mascara,39,119.17,east
+1184,Cici,26/6/2005,lipstick,64,193.64,midwest
+1185,Jen,24/6/2006,lip gloss,0,2.13,east
+1186,Cristina,21/3/2004,lipstick,26,80.37,south
+1187,Ashley,10/3/2004,lip gloss,0,1.49,west
+1188,Betsy,13/6/2006,foundation,76,229.77,east
+1189,Emilee,27/10/2004,eye liner,75,227.62,midwest
+1190,Emilee,17/6/2004,lip gloss,61,184.47,south
+1191,Cici,18/7/2005,eye liner,-2,-4.28,midwest
+1192,Hallagan,6/2/2004,lipstick,40,122.55,east
+1193,Colleen,14/2/2005,eye liner,5,17.38,west
+1194,Colleen,20/9/2006,eye liner,57,172.52,south
+1195,Jen,28/3/2006,eye liner,86,259.82,midwest
+1196,Betsy,17/6/2004,lipstick,15,46.53,east
+1197,Cici,9/9/2006,eye liner,39,118.84,east
+1198,Betsy,4/5/2004,foundation,94,284.28,midwest
+1199,Betsy,28/3/2006,lip gloss,78,235.95,south
+1200,Cici,21/1/2006,eye liner,65,196.95,east
+1201,Ashley,17/12/2006,eye liner,66,199.89,south
+1202,Emilee,13/5/2005,mascara,84,254.10,east
+1203,Betsy,17/3/2006,mascara,35,107.42,south
+1204,Cristina,6/6/2004,mascara,94,284.45,west
+1205,Colleen,10/4/2005,lip gloss,26,80.01,midwest
+1206,Jen,27/7/2006,eye liner,80,242.69,east
+1207,Cristina,26/5/2004,lip gloss,7,22.75,west
+1208,Hallagan,27/7/2006,mascara,47,142.45,midwest
+1209,Colleen,13/9/2004,lip gloss,32,98.67,west
+1210,Hallagan,27/11/2005,lip gloss,8,25.40,west
+1211,Ashley,31/7/2004,mascara,33,100.91,midwest
+1212,Jen,2/9/2004,eye liner,22,68.44,east
+1213,Cici,25/10/2005,lip gloss,81,244.70,south
+1214,Cici,13/6/2006,lipstick,81,244.87,midwest
+1215,Ashley,31/7/2004,foundation,30,91.74,south
+1216,Zaret,13/9/2004,lip gloss,-1,-1.15,west
+1217,Hallagan,22/5/2006,mascara,35,106.85,midwest
+1218,Cici,17/3/2006,mascara,78,235.96,west
+1219,Betsy,7/8/2006,lip gloss,15,47.23,south
+1220,Jen,23/1/2005,mascara,75,226.88,east
+1221,Emilee,12/10/2006,eye liner,12,38.14,south
+1222,Cristina,16/11/2005,mascara,30,91.98,midwest
+1223,Cristina,13/5/2005,eye liner,42,128.05,west
+1224,Emilee,4/1/2004,eye liner,-8,-22.15,east
+1225,Jen,12/4/2004,lipstick,93,280.74,west
+1226,Hallagan,29/8/2006,eye liner,55,167.58,east
+1227,Ashley,25/2/2005,lip gloss,53,161.17,south
+1228,Emilee,5/7/2006,eye liner,20,61.77,west
+1229,Zaret,21/4/2005,lipstick,19,58.72,midwest
+1230,Cici,23/1/2005,mascara,23,70.87,south
+1231,Betsy,6/3/2006,foundation,68,205.91,south
+1232,Colleen,21/1/2006,lipstick,52,157.86,east
+1233,Ashley,18/7/2005,eye liner,40,121.96,south
+1234,Colleen,23/2/2006,mascara,22,67.71,west
+1235,Colleen,10/4/2005,lipstick,5,16.99,west
+1236,Colleen,8/4/2006,mascara,30,92.28,south
+1237,Colleen,1/4/2004,eye liner,6,20.24,west
+1238,Jen,24/9/2004,lipstick,92,277.63,east
+1239,Zaret,22/5/2006,mascara,-5,-12.43,midwest
+1240,Cristina,11/5/2006,lip gloss,20,61.84,west
+1241,Emilee,28/12/2006,mascara,54,163.09,midwest
+1242,Colleen,10/4/2005,eye liner,9,29.21,east
+1243,Zaret,13/5/2005,eye liner,6,19.96,south
+1244,Emilee,4/5/2004,lip gloss,47,142.83,east
+1245,Ashley,16/11/2005,mascara,-10,-27.09,south
+1246,Cici,15/5/2004,mascara,90,272.34,midwest
+1247,Betsy,6/2/2004,foundation,48,146.43,midwest
+1248,Emilee,10/4/2005,foundation,55,167.33,south
+1249,Betsy,24/6/2006,mascara,42,128.48,east
+1250,Cici,1/2/2006,eye liner,39,119.43,west
+1251,Colleen,16/11/2005,mascara,26,79.64,south
+1252,Betsy,12/2/2006,mascara,26,79.50,east
+1253,Betsy,19/12/2005,eye liner,52,158.28,east
+1254,Colleen,18/11/2004,foundation,19,58.77,south
+1255,Ashley,11/8/2004,mascara,18,55.68,east
+1256,Hallagan,25/11/2006,mascara,87,263.04,east
+1257,Colleen,16/10/2004,eye liner,46,139.94,midwest
+1258,Betsy,16/7/2006,mascara,54,163.69,midwest
+1259,Zaret,28/2/2004,mascara,21,64.70,south
+1260,Colleen,6/2/2004,foundation,-6,-16.24,west
+1261,Cristina,18/11/2004,foundation,47,142.41,east
+1262,Jen,23/4/2004,foundation,14,44.24,west
+1263,Jen,1/10/2006,foundation,73,220.50,west
+1264,Jen,17/12/2006,lip gloss,14,44.42,south
+1265,Hallagan,8/4/2006,lip gloss,95,286.76,midwest
+1266,Cristina,17/2/2004,eye liner,64,193.37,south
+1267,Cici,5/10/2004,eye liner,47,143.14,midwest
+1268,Cristina,29/11/2004,foundation,20,61.94,west
+1269,Zaret,21/12/2004,lip gloss,71,215.33,west
+1270,Cristina,14/10/2005,eye liner,66,199.50,west
+1271,Hallagan,5/10/2004,foundation,79,239.44,west
+1272,Hallagan,25/10/2005,mascara,-7,-18.40,east
+1273,Betsy,3/10/2005,foundation,72,217.35,west
+1274,Hallagan,5/10/2004,lipstick,91,275.37,midwest
+1275,Colleen,10/3/2004,mascara,57,173.48,south
+1276,Cici,24/9/2004,foundation,-8,-21.83,south
+1277,Cristina,11/9/2005,foundation,45,136.96,east
+1278,Zaret,27/10/2004,eye liner,92,278.05,south
+1279,Colleen,2/9/2004,mascara,28,86.46,midwest
+1280,Betsy,23/1/2005,lipstick,79,238.99,west
+1281,Jen,23/1/2005,foundation,92,277.54,west
+1282,Cristina,23/4/2004,mascara,11,34.46,midwest
+1283,Colleen,23/1/2005,eye liner,23,70.70,east
+1284,Betsy,19/4/2006,eye liner,2,8.80,midwest
+1285,Emilee,1/1/2005,eye liner,-2,-3.45,east
+1286,Hallagan,4/6/2005,lip gloss,33,100.69,west
+1287,Emilee,24/6/2006,mascara,10,31.30,midwest
+1288,Ashley,29/11/2004,lipstick,84,254.12,east
+1289,Hallagan,21/12/2004,mascara,88,266.39,midwest
+1290,Betsy,7/7/2005,eye liner,95,286.61,east
+1291,Zaret,14/2/2005,mascara,3,11.90,midwest
+1292,Betsy,30/4/2006,lip gloss,72,217.58,west
+1293,Cici,8/3/2005,eye liner,58,176.65,midwest
+1294,Ashley,6/6/2004,eye liner,19,59.64,west
+1295,Betsy,21/4/2005,mascara,35,106.51,south
+1296,Hallagan,29/11/2004,foundation,80,242.63,west
+1297,Cristina,26/1/2004,eye liner,26,80.05,south
+1298,Zaret,7/7/2005,lip gloss,93,280.93,west
+1299,Colleen,5/11/2005,eye liner,29,90.06,midwest
+1300,Colleen,23/4/2004,foundation,88,266.37,midwest
+1301,Jen,18/8/2006,eye liner,5,16.87,east
+1302,Colleen,9/8/2005,mascara,64,194.03,west
+1303,Emilee,30/12/2005,lip gloss,38,116.03,east
+1304,Jen,16/10/2004,foundation,21,65.60,west
+1305,Hallagan,18/7/2005,eye liner,61,184.44,west
+1306,Zaret,4/5/2004,eye liner,53,160.80,west
+1307,Betsy,1/2/2006,mascara,28,86.32,east
+1308,Zaret,29/8/2006,mascara,39,119.49,east
+1309,Zaret,3/11/2006,lip gloss,89,268.72,west
+1310,Betsy,23/4/2004,foundation,72,218.16,south
+1311,Colleen,22/8/2004,lip gloss,63,191.08,south
+1312,Cristina,28/12/2006,foundation,47,142.15,west
+1313,Ashley,7/7/2005,mascara,8,25.62,midwest
+1314,Betsy,7/11/2004,lip gloss,88,265.57,east
+1315,Ashley,22/8/2004,lip gloss,12,37.82,midwest
+1316,Jen,27/11/2005,mascara,79,239.18,midwest
+1317,Colleen,17/6/2004,lipstick,39,118.94,south
+1318,Jen,12/2/2006,mascara,61,185.06,west
+1319,Jen,20/9/2006,lip gloss,12,38.28,west
+1320,Zaret,7/11/2004,mascara,25,76.65,east
+1321,Cici,27/11/2005,foundation,82,248.26,south
+1322,Ashley,21/12/2004,mascara,4,14.48,west
+1323,Ashley,17/12/2006,lipstick,22,68.23,south
+1324,Ashley,1/10/2006,mascara,81,244.62,midwest
+1325,Zaret,25/2/2005,eye liner,34,103.85,south
+1326,Ashley,18/11/2004,mascara,89,269.74,east
+1327,Zaret,3/2/2005,mascara,6,20.31,midwest
+1328,Jen,26/6/2005,eye liner,78,236.00,south
+1329,Cici,13/5/2005,lip gloss,9,28.85,south
+1330,Cristina,28/12/2006,mascara,9,29.72,east
+1331,Cristina,19/4/2006,foundation,73,221.18,east
+1332,Betsy,15/1/2004,lip gloss,13,41.92,midwest
+1333,Colleen,8/3/2005,eye liner,14,44.00,midwest
+1334,Betsy,24/5/2005,lipstick,33,100.31,midwest
+1335,Betsy,1/4/2004,foundation,17,53.12,east
+1336,Hallagan,5/7/2006,lip gloss,9,29.50,south
+1337,Jen,23/2/2006,mascara,15,47.31,midwest
+1338,Ashley,9/9/2006,lipstick,50,152.31,east
+1339,Jen,7/11/2004,lipstick,13,40.56,west
+1340,Hallagan,13/9/2004,lip gloss,24,74.73,west
+1341,Betsy,30/12/2005,lip gloss,77,232.89,south
+1342,Hallagan,11/5/2006,mascara,21,65.21,east
+1343,Cici,7/7/2005,mascara,80,240.76,midwest
+1344,Hallagan,7/11/2004,mascara,56,170.51,south
+1345,Cristina,10/4/2005,foundation,28,86.00,west
+1346,Jen,27/11/2005,lipstick,50,151.57,midwest
+1347,Cristina,10/4/2005,eye liner,23,71.41,east
+1348,Jen,6/6/2004,lip gloss,77,232.85,midwest
+1349,Betsy,17/2/2004,mascara,56,170.26,east
+1350,Cici,19/4/2006,lip gloss,26,79.76,east
+1351,Ashley,17/2/2004,foundation,18,55.93,south
+1352,Cristina,17/2/2004,lip gloss,40,121.10,south
+1353,Hallagan,17/2/2004,mascara,75,227.07,south
+1354,Colleen,25/2/2005,lipstick,61,184.75,midwest
+1355,Ashley,21/12/2004,lipstick,35,106.74,west
+1356,Cici,29/7/2005,foundation,42,127.74,west
+1357,Hallagan,18/11/2004,eye liner,47,142.59,south
+1358,Ashley,16/10/2004,mascara,74,225.02,south
+1359,Ashley,24/5/2005,mascara,55,166.25,west
+1360,Zaret,22/9/2005,lip gloss,87,263.11,west
+1361,Ashley,28/6/2004,foundation,75,227.33,south
+1362,Emilee,13/6/2006,foundation,91,274.61,west
+1363,Ashley,19/12/2005,lip gloss,79,238.21,south
+1364,Cici,17/6/2004,mascara,31,94.92,midwest
+1365,Hallagan,5/10/2004,eye liner,36,109.87,midwest
+1366,Jen,28/6/2004,mascara,80,242.06,south
+1367,Betsy,17/3/2006,lip gloss,32,98.11,east
+1368,Zaret,28/6/2004,lipstick,29,89.17,west
+1369,Hallagan,13/5/2005,foundation,64,193.52,west
+1370,Cristina,10/3/2004,lip gloss,27,83.67,west
+1371,Cici,24/9/2004,lip gloss,36,109.81,west
+1372,Betsy,6/12/2006,mascara,36,109.46,west
+1373,Jen,23/10/2006,mascara,32,97.34,south
+1374,Cristina,29/8/2006,mascara,9,29.17,east
+1375,Zaret,22/5/2006,foundation,78,235.64,east
+1376,Zaret,23/1/2005,lipstick,55,167.69,west
+1377,Hallagan,22/8/2004,mascara,79,239.26,south
+1378,Hallagan,4/1/2004,eye liner,9,29.37,south
+1379,Betsy,17/12/2006,foundation,4,14.28,west
+1380,Hallagan,19/4/2006,mascara,6,20.17,midwest
+1381,Cici,24/5/2005,eye liner,18,55.92,midwest
+1382,Zaret,25/10/2005,eye liner,14,44.49,west
+1383,Cristina,18/8/2006,lip gloss,91,275.50,east
+1384,Zaret,8/12/2005,eye liner,74,224.07,south
+1385,Betsy,31/7/2004,lip gloss,47,143.86,west
+1386,Colleen,3/11/2006,foundation,28,86.47,south
+1387,Colleen,20/9/2006,eye liner,21,64.78,west
+1388,Cristina,30/3/2005,foundation,52,157.69,south
+1389,Zaret,28/6/2004,lipstick,33,101.09,south
+1390,Colleen,6/2/2004,mascara,-7,-19.44,east
+1391,Cristina,1/4/2004,lip gloss,12,38.24,south
+1392,Zaret,28/2/2004,eye liner,1,4.50,south
+1393,Betsy,26/1/2004,mascara,56,169.76,south
+1394,Cristina,26/6/2005,foundation,34,104.48,south
+1395,Cici,25/2/2005,foundation,83,250.39,midwest
+1396,Colleen,19/3/2005,eye liner,-4,-10.16,south
+1397,Cristina,3/2/2005,foundation,9,29.70,south
+1398,Hallagan,15/5/2004,eye liner,64,193.99,west
+1399,Cici,15/5/2004,lip gloss,13,40.95,south
+1400,Zaret,23/4/2004,lip gloss,9,28.68,south
+1401,Emilee,20/9/2006,lip gloss,6,19.55,west
+1402,Ashley,22/5/2006,foundation,55,167.09,midwest
+1403,Jen,2/6/2006,lipstick,64,194.83,south
+1404,Betsy,15/6/2005,lip gloss,27,82.65,east
+1405,Jen,16/10/2004,lip gloss,4,14.36,west
+1406,Cici,5/11/2005,lip gloss,17,53.45,midwest
+1407,Ashley,18/8/2006,lip gloss,24,74.29,east
+1408,Emilee,8/12/2005,lip gloss,87,262.88,west
+1409,Zaret,18/11/2004,mascara,10,31.76,east
+1410,Cristina,16/10/2004,mascara,0,1.83,midwest
+1411,Cristina,23/1/2005,lip gloss,73,221.01,midwest
+1412,Hallagan,21/3/2004,lip gloss,66,200.12,midwest
+1413,Betsy,18/8/2006,lip gloss,70,211.75,west
+1414,Zaret,10/12/2004,foundation,78,235.91,east
+1415,Jen,5/11/2005,mascara,22,66.97,east
+1416,Emilee,5/10/2004,mascara,21,65.22,south
+1417,Betsy,16/10/2004,lip gloss,8,25.82,east
+1418,Ashley,17/2/2004,mascara,62,187.80,west
+1419,Colleen,11/5/2006,mascara,81,244.51,east
+1420,Zaret,21/12/2004,lip gloss,72,218.17,east
+1421,Hallagan,12/10/2006,eye liner,13,41.36,west
+1422,Betsy,31/8/2005,lipstick,52,157.42,south
+1423,Cristina,21/1/2006,eye liner,49,148.11,west
+1424,Cristina,21/3/2004,eye liner,82,248.17,south
+1425,Zaret,8/4/2006,eye liner,5,17.02,midwest
+1426,Jen,22/9/2005,mascara,45,136.86,west
+1427,Emilee,8/12/2005,mascara,-10,-27.35,midwest
+1428,Ashley,6/12/2006,eye liner,53,160.85,midwest
+1429,Hallagan,30/3/2005,lipstick,24,73.62,east
+1430,Cristina,16/7/2006,lip gloss,27,83.23,midwest
+1431,Jen,30/4/2006,foundation,52,158.63,west
+1432,Zaret,23/10/2006,foundation,0,1.78,east
+1433,Cristina,17/6/2004,mascara,92,278.65,east
+1434,Emilee,23/10/2006,mascara,22,67.71,east
+1435,Cici,30/4/2006,eye liner,67,202.90,west
+1436,Zaret,14/10/2005,mascara,7,23.03,west
+1437,Cici,15/5/2004,eye liner,-10,-27.96,south
+1438,Colleen,18/8/2006,mascara,10,31.67,midwest
+1439,Cristina,26/6/2005,foundation,15,46.48,midwest
+1440,Ashley,26/6/2005,lipstick,0,2.13,south
+1441,Zaret,17/3/2006,foundation,93,280.91,east
+1442,Hallagan,21/1/2006,foundation,57,172.62,west
+1443,Cristina,24/9/2004,lip gloss,69,208.77,west
+1444,Cici,30/12/2005,foundation,53,161.65,south
+1445,Ashley,23/10/2006,lipstick,67,203.57,south
+1446,Cici,1/4/2004,eye liner,23,70.71,east
+1447,Colleen,17/6/2004,mascara,43,131.16,west
+1448,Jen,23/10/2006,lip gloss,69,209.40,west
+1449,Hallagan,1/10/2006,lipstick,45,136.50,midwest
+1450,Zaret,5/11/2005,eye liner,70,211.70,west
+1451,Colleen,23/10/2006,mascara,91,274.50,east
+1452,Emilee,17/12/2006,mascara,33,100.48,midwest
+1453,Colleen,7/8/2006,foundation,90,272.36,midwest
+1454,Colleen,21/12/2004,mascara,17,52.52,east
+1455,Zaret,31/7/2004,eye liner,-7,-18.92,east
+1456,Ashley,2/9/2004,mascara,21,64.91,west
+1457,Jen,9/8/2005,foundation,14,44.33,midwest
+1458,Zaret,19/4/2006,lipstick,84,254.27,east
+1459,Cristina,21/1/2006,lipstick,92,278.13,west
+1460,Zaret,23/10/2006,lip gloss,-1,-0.13,west
+1461,Zaret,13/5/2005,lip gloss,73,222.09,south
+1462,Cici,10/1/2006,foundation,48,146.42,east
+1463,Cici,10/12/2004,eye liner,72,217.08,south
+1464,Betsy,5/7/2006,foundation,42,127.61,east
+1465,Zaret,21/12/2004,foundation,80,242.21,west
+1466,Zaret,31/8/2005,foundation,56,170.86,south
+1467,Jen,26/1/2004,mascara,46,140.58,east
+1468,Betsy,2/6/2006,eye liner,45,136.77,west
+1469,Ashley,4/6/2005,foundation,53,160.40,east
+1470,Ashley,3/10/2005,eye liner,51,155.05,west
+1471,Cristina,19/12/2005,mascara,64,193.30,east
+1472,Betsy,7/11/2004,eye liner,15,47.09,west
+1473,Zaret,1/4/2004,lipstick,33,101.70,east
+1474,Emilee,11/5/2006,eye liner,31,95.05,west
+1475,Ashley,19/12/2005,lipstick,51,155.18,east
+1476,Cristina,18/8/2006,foundation,-7,-18.64,east
+1477,Ashley,13/5/2005,eye liner,37,112.07,east
+1478,Betsy,15/6/2005,foundation,43,130.97,south
+1479,Cici,22/5/2006,mascara,63,190.69,south
+1480,Colleen,9/7/2004,eye liner,29,89.59,west
+1481,Cici,8/12/2005,mascara,20,61.94,midwest
+1482,Emilee,28/3/2006,eye liner,48,146.44,west
+1483,Betsy,29/7/2005,eye liner,94,284.31,midwest
+1484,Betsy,9/9/2006,foundation,41,124.88,midwest
+1485,Betsy,23/1/2005,eye liner,45,137.55,south
+1486,Jen,13/5/2005,lip gloss,69,208.61,west
+1487,Ashley,1/4/2004,mascara,48,146.17,south
+1488,Cristina,23/1/2005,mascara,38,115.70,west
+1489,Betsy,21/1/2006,lip gloss,49,149.11,south
+1490,Colleen,2/9/2004,foundation,79,239.15,west
+1491,Ashley,18/7/2005,foundation,93,281.34,south
+1492,Colleen,21/12/2004,foundation,67,202.44,west
+1493,Betsy,22/5/2006,foundation,13,41.32,east
+1494,Ashley,14/10/2005,lip gloss,71,215.36,west
+1495,Betsy,23/10/2006,foundation,15,46.39,west
+1496,Zaret,11/9/2005,eye liner,89,269.12,south
+1497,Zaret,25/10/2005,mascara,65,197.50,midwest
+1498,Zaret,21/12/2004,eye liner,16,49.98,midwest
+1499,Betsy,2/6/2006,lip gloss,48,146.13,east
+1500,Hallagan,31/8/2005,eye liner,78,235.94,midwest
+1501,Cici,26/1/2004,lip gloss,5,17.19,west
+1502,Emilee,10/1/2006,lip gloss,33,101.71,west
+1503,Ashley,28/3/2006,foundation,73,220.63,midwest
+1504,Betsy,20/7/2004,mascara,93,280.86,south
+1505,Betsy,30/12/2005,foundation,37,113.24,east
+1506,Colleen,29/7/2005,lip gloss,23,70.34,south
+1507,Colleen,27/11/2005,lip gloss,-3,-7.21,west
+1508,Jen,23/2/2006,eye liner,39,118.96,south
+1509,Betsy,30/4/2006,eye liner,83,251.40,midwest
+1510,Emilee,29/8/2006,foundation,65,197.81,south
+1511,Betsy,29/11/2004,lip gloss,13,41.74,east
+1512,Emilee,16/11/2005,foundation,9,28.86,east
+1513,Cristina,17/12/2006,eye liner,-4,-10.35,south
+1514,Ashley,27/10/2004,mascara,22,67.75,south
+1515,Hallagan,30/3/2005,mascara,-3,-6.89,south
+1516,Colleen,31/7/2004,mascara,58,176.20,south
+1517,Cristina,22/8/2004,eye liner,65,196.64,south
+1518,Colleen,28/6/2004,eye liner,9,28.46,midwest
+1519,Emilee,23/10/2006,lipstick,18,56.30,south
+1520,Hallagan,4/5/2004,foundation,55,166.78,east
+1521,Cristina,12/1/2005,eye liner,69,209.57,south
+1522,Zaret,12/4/2004,eye liner,51,155.56,west
+1523,Ashley,21/1/2006,lipstick,23,71.15,south
+1524,Betsy,19/4/2006,lip gloss,38,115.81,west
+1525,Zaret,29/11/2004,lipstick,-8,-22.29,midwest
+1526,Hallagan,23/10/2006,eye liner,20,61.78,west
+1527,Cristina,7/7/2005,lip gloss,25,76.80,west
+1528,Betsy,23/10/2006,eye liner,-6,-16.11,west
+1529,Zaret,27/7/2006,lip gloss,88,266.77,midwest
+1530,Jen,22/5/2006,eye liner,62,187.54,south
+1531,Hallagan,4/1/2004,lipstick,80,242.16,south
+1532,Cici,10/3/2004,lipstick,66,199.70,west
+1533,Emilee,7/11/2004,foundation,34,104.45,west
+1534,Hallagan,10/12/2004,eye liner,49,149.82,midwest
+1535,Cici,20/7/2004,lip gloss,45,136.92,south
+1536,Cristina,19/12/2005,foundation,16,49.65,west
+1537,Jen,20/8/2005,lipstick,45,136.64,west
+1538,Ashley,17/6/2004,eye liner,1,5.73,midwest
+1539,Cici,29/7/2005,mascara,33,100.97,south
+1540,Hallagan,31/8/2005,lipstick,37,113.04,south
+1541,Ashley,7/7/2005,eye liner,46,139.34,west
+1542,Betsy,6/2/2004,foundation,71,215.35,south
+1543,Zaret,29/11/2004,mascara,59,179.12,west
+1544,Zaret,21/4/2005,lipstick,84,253.54,west
+1545,Zaret,24/6/2006,eye liner,91,274.23,west
+1546,Cristina,10/3/2004,lip gloss,33,100.23,west
+1547,Cici,21/12/2004,eye liner,34,104.04,east
+1548,Zaret,23/10/2006,lip gloss,1,5.32,west
+1549,Hallagan,28/2/2004,eye liner,42,128.73,west
+1550,Cici,19/12/2005,eye liner,45,137.93,east
+1551,Emilee,16/10/2004,lip gloss,26,80.03,east
+1552,Ashley,26/1/2004,eye liner,72,218.33,south
+1553,Zaret,27/7/2006,eye liner,-5,-13.39,west
+1554,Colleen,21/3/2004,foundation,31,94.66,south
+1555,Cici,4/1/2004,lip gloss,48,145.91,south
+1556,Colleen,3/11/2006,mascara,84,253.60,midwest
+1557,Zaret,23/2/2006,eye liner,54,163.90,south
+1558,Colleen,15/1/2004,mascara,44,134.19,west
+1559,Cristina,27/10/2004,lip gloss,40,122.05,south
+1560,Betsy,31/8/2005,lip gloss,25,76.90,west
+1561,Emilee,28/2/2004,lip gloss,-8,-21.48,south
+1562,Cristina,11/5/2006,eye liner,59,178.70,west
+1563,Zaret,21/12/2004,eye liner,59,179.10,east
+1564,Emilee,16/11/2005,foundation,34,103.72,midwest
+1565,Emilee,29/11/2004,mascara,27,82.68,midwest
+1566,Cici,23/10/2006,foundation,3,10.70,south
+1567,Hallagan,20/8/2005,mascara,89,269.12,west
+1568,Hallagan,13/5/2005,eye liner,58,175.98,south
+1569,Cici,12/1/2005,lipstick,52,158.05,west
+1570,Cici,27/7/2006,mascara,32,98.05,east
+1571,Cristina,11/9/2005,mascara,3,10.58,south
+1572,Zaret,18/11/2004,eye liner,45,137.08,west
+1573,Colleen,29/11/2004,eye liner,91,275.56,east
+1574,Zaret,12/2/2006,foundation,-8,-21.45,south
+1575,Betsy,19/3/2005,mascara,-7,-19.14,midwest
+1576,Hallagan,5/11/2005,foundation,33,100.89,west
+1577,Colleen,13/5/2005,lip gloss,-7,-18.81,south
+1578,Colleen,12/10/2006,foundation,82,248.43,east
+1579,Ashley,6/6/2004,eye liner,87,262.85,east
+1580,Cici,14/2/2005,mascara,93,281.53,midwest
+1581,Cristina,14/10/2005,foundation,72,218.17,south
+1582,Jen,16/10/2004,mascara,11,35.12,east
+1583,Colleen,16/7/2006,lip gloss,18,55.78,south
+1584,Betsy,18/8/2006,foundation,93,281.26,east
+1585,Hallagan,20/8/2005,foundation,56,170.43,west
+1586,Ashley,24/9/2004,lip gloss,66,199.70,midwest
+1587,Ashley,12/1/2005,lip gloss,95,286.76,west
+1588,Zaret,7/7/2005,mascara,61,184.84,midwest
+1589,Colleen,16/7/2006,lip gloss,26,79.32,east
+1590,Emilee,8/12/2005,mascara,29,89.12,west
+1591,Emilee,14/2/2005,lip gloss,61,184.79,east
+1592,Hallagan,13/6/2006,mascara,-3,-7.01,south
+1593,Cici,10/1/2006,foundation,40,122.05,south
+1594,Hallagan,16/7/2006,foundation,86,260.37,west
+1595,Cici,4/6/2005,lipstick,58,176.58,midwest
+1596,Hallagan,14/2/2005,eye liner,13,41.16,west
+1597,Cici,28/12/2006,eye liner,14,44.43,south
+1598,Emilee,21/4/2005,mascara,85,256.68,south
+1599,Cristina,1/2/2006,lip gloss,42,127.60,midwest
+1600,Cici,14/11/2006,lipstick,11,35.43,west
+1601,Jen,26/1/2004,lip gloss,32,98.41,south
+1602,Hallagan,23/1/2005,lip gloss,79,239.26,south
+1603,Emilee,17/6/2004,lip gloss,25,77.05,west
+1604,Cristina,27/11/2005,foundation,94,284.06,west
+1605,Colleen,14/11/2006,eye liner,6,20.06,midwest
+1606,Zaret,15/6/2005,lipstick,15,46.57,west
+1607,Cristina,28/6/2004,eye liner,15,47.25,east
+1608,Emilee,10/3/2004,foundation,81,244.71,east
+1609,Betsy,10/4/2005,eye liner,94,283.46,east
+1610,Zaret,15/1/2004,mascara,11,35.19,midwest
+1611,Colleen,1/4/2004,eye liner,12,38.18,west
+1612,Hallagan,31/8/2005,eye liner,85,257.14,midwest
+1613,Zaret,25/11/2006,eye liner,39,119.06,south
+1614,Zaret,9/7/2004,foundation,9,29.11,east
+1615,Zaret,3/2/2005,mascara,25,77.54,west
+1616,Jen,6/6/2004,eye liner,79,239.89,midwest
+1617,Hallagan,26/5/2004,eye liner,83,250.62,midwest
+1618,Hallagan,8/12/2005,foundation,-3,-6.44,south
+1619,Cici,23/2/2006,mascara,62,188.24,midwest
+1620,Cici,6/2/2004,eye liner,6,19.32,east
+1621,Ashley,8/4/2006,mascara,13,41.39,midwest
+1622,Emilee,22/9/2005,eye liner,88,266.15,west
+1623,Emilee,12/4/2004,eye liner,35,106.70,west
+1624,Cristina,16/10/2004,eye liner,61,185.38,midwest
+1625,Hallagan,29/7/2005,eye liner,95,287.15,west
+1626,Emilee,1/1/2005,eye liner,30,92.42,east
+1627,Emilee,16/7/2006,eye liner,-1,-1.64,east
+1628,Betsy,1/1/2005,lipstick,5,16.93,midwest
+1629,Betsy,8/3/2005,foundation,42,127.32,east
+1630,Zaret,2/5/2005,eye liner,14,44.54,midwest
+1631,Cristina,9/8/2005,eye liner,-4,-10.01,south
+1632,Cici,21/1/2006,foundation,27,82.26,south
+1633,Cici,4/5/2004,mascara,5,17.11,east
+1634,Ashley,19/3/2005,mascara,57,173.30,south
+1635,Hallagan,5/10/2004,lip gloss,78,235.61,west
+1636,Cici,9/9/2006,mascara,11,35.30,midwest
+1637,Cristina,5/10/2004,lip gloss,55,166.93,south
+1638,Ashley,5/10/2004,mascara,15,46.99,east
+1639,Cristina,6/2/2004,eye liner,53,161.39,midwest
+1640,Zaret,20/8/2005,lip gloss,70,212.01,midwest
+1641,Cici,18/8/2006,foundation,56,170.03,east
+1642,Zaret,22/5/2006,eye liner,91,275.47,east
+1643,Jen,21/12/2004,lipstick,55,167.81,midwest
+1644,Cristina,25/10/2005,mascara,1,4.71,south
+1645,Cristina,3/2/2005,eye liner,23,70.74,west
+1646,Hallagan,19/12/2005,lip gloss,0,2.30,east
+1647,Cristina,21/12/2004,mascara,86,259.96,west
+1648,Colleen,1/4/2004,eye liner,13,40.99,midwest
+1649,Ashley,19/4/2006,mascara,54,163.69,west
+1650,Colleen,10/3/2004,mascara,82,247.66,east
+1651,Emilee,14/2/2005,foundation,27,82.65,midwest
+1652,Zaret,12/10/2006,lipstick,84,254.58,west
+1653,Ashley,4/5/2004,eye liner,56,170.25,east
+1654,Betsy,28/2/2004,lipstick,92,277.27,south
+1655,Betsy,15/1/2004,lip gloss,25,77.55,west
+1656,Betsy,1/1/2005,eye liner,67,203.00,east
+1657,Cici,12/4/2004,lipstick,75,226.86,west
+1658,Emilee,22/9/2005,eye liner,14,44.14,midwest
+1659,Cristina,19/12/2005,lip gloss,48,145.81,west
+1660,Colleen,15/5/2004,foundation,73,221.17,west
+1661,Hallagan,4/6/2005,foundation,28,85.65,east
+1662,Ashley,27/11/2005,eye liner,12,38.54,west
+1663,Cici,2/5/2005,lip gloss,50,152.11,south
+1664,Cristina,1/10/2006,foundation,-5,-12.64,midwest
+1665,Hallagan,23/1/2005,lip gloss,6,19.48,east
+1666,Hallagan,25/2/2005,foundation,63,190.57,east
+1667,Emilee,13/6/2006,foundation,33,100.75,midwest
+1668,Cici,24/9/2004,eye liner,61,185.17,south
+1669,Colleen,10/12/2004,foundation,16,50.71,east
+1670,Jen,2/6/2006,eye liner,15,47.14,midwest
+1671,Colleen,27/7/2006,eye liner,-1,-0.60,south
+1672,Hallagan,4/6/2005,lip gloss,28,85.36,west
+1673,Jen,1/10/2006,foundation,74,223.54,east
+1674,Emilee,12/4/2004,lip gloss,60,182.53,east
+1675,Cristina,2/5/2005,mascara,26,79.64,midwest
+1676,Hallagan,28/2/2004,foundation,41,124.81,east
+1677,Ashley,15/5/2004,lip gloss,-1,-0.73,south
+1678,Ashley,5/7/2006,lip gloss,89,268.72,east
+1679,Hallagan,6/6/2004,mascara,12,38.03,east
+1680,Cristina,16/10/2004,eye liner,21,65.91,south
+1681,Jen,24/6/2006,mascara,23,71.52,west
+1682,Cici,30/3/2005,foundation,-7,-18.64,south
+1683,Betsy,10/3/2004,foundation,35,106.65,south
+1684,Ashley,13/9/2004,mascara,94,283.80,midwest
+1685,Ashley,5/11/2005,eye liner,88,265.96,south
+1686,Ashley,10/3/2004,lipstick,26,79.80,south
+1687,Cici,9/7/2004,foundation,83,250.99,south
+1688,Emilee,2/6/2006,mascara,11,34.68,west
+1689,Colleen,20/9/2006,foundation,18,56.57,east
+1690,Zaret,19/3/2005,eye liner,90,272.36,east
+1691,Colleen,3/10/2005,mascara,12,38.36,east
+1692,Colleen,26/1/2004,lip gloss,39,118.64,midwest
+1693,Colleen,17/2/2004,lipstick,45,137.71,midwest
+1694,Zaret,6/12/2006,foundation,74,223.24,east
+1695,Colleen,18/7/2005,foundation,95,286.98,south
+1696,Hallagan,6/6/2004,lip gloss,48,145.48,west
+1697,Betsy,16/10/2004,mascara,-3,-7.06,midwest
+1698,Cristina,24/5/2005,lipstick,92,278.52,midwest
+1699,Zaret,8/3/2005,mascara,17,53.28,east
+1700,Hallagan,27/10/2004,lip gloss,45,136.31,south
+1701,Cristina,12/10/2006,lipstick,62,187.97,south
+1702,Zaret,27/10/2004,foundation,52,158.05,midwest
+1703,Hallagan,26/5/2004,lipstick,73,221.24,south
+1704,Cici,18/7/2005,lipstick,38,116.54,south
+1705,Hallagan,19/12/2005,eye liner,0,1.71,west
+1706,Jen,16/10/2004,eye liner,70,211.81,south
+1707,Cici,13/5/2005,foundation,-8,-22.16,midwest
+1708,Cici,30/4/2006,eye liner,65,196.95,west
+1709,Cici,25/11/2006,lip gloss,-5,-12.24,east
+1710,Cici,29/7/2005,foundation,34,104.46,east
+1711,Colleen,28/3/2006,lip gloss,72,217.89,west
+1712,Jen,3/2/2005,eye liner,-1,-0.65,south
+1713,Emilee,8/12/2005,lip gloss,40,122.14,west
+1714,Hallagan,9/9/2006,mascara,65,196.70,east
+1715,Cici,5/7/2006,lip gloss,77,232.42,midwest
+1716,Jen,19/4/2006,mascara,51,155.00,south
+1717,Zaret,10/4/2005,foundation,-9,-25.10,east
+1718,Jen,30/3/2005,mascara,17,52.73,midwest
+1719,Ashley,10/4/2005,eye liner,11,34.81,midwest
+1720,Emilee,24/6/2006,lip gloss,40,121.65,east
+1721,Ashley,20/8/2005,foundation,67,202.72,west
+1722,Cici,29/7/2005,lipstick,79,239.25,south
+1723,Zaret,15/5/2004,foundation,-7,-19.16,south
+1724,Zaret,24/5/2005,mascara,72,218.06,east
+1725,Colleen,29/7/2005,eye liner,53,160.77,west
+1726,Emilee,5/7/2006,eye liner,35,107.41,east
+1727,Ashley,3/11/2006,lip gloss,39,118.67,midwest
+1728,Colleen,9/7/2004,mascara,-7,-19.35,south
+1729,Cristina,17/6/2004,eye liner,68,206.34,east
+1730,Emilee,27/10/2004,eye liner,86,260.29,midwest
+1731,Betsy,31/8/2005,lipstick,84,254.78,east
+1732,Cristina,25/11/2006,mascara,6,19.97,west
+1733,Betsy,10/1/2006,lipstick,-5,-12.77,south
+1734,Cristina,8/4/2006,lip gloss,22,67.94,midwest
+1735,Betsy,8/12/2005,eye liner,29,89.11,east
+1736,Cici,7/11/2004,lip gloss,3,10.89,south
+1737,Ashley,28/3/2006,eye liner,88,265.53,east
+1738,Emilee,25/2/2005,eye liner,41,124.99,midwest
+1739,Jen,14/2/2005,foundation,59,178.84,east
+1740,Jen,5/10/2004,mascara,29,89.26,south
+1741,Ashley,17/2/2004,mascara,43,130.30,west
+1742,Cici,19/4/2006,lip gloss,75,227.52,east
+1743,Betsy,22/8/2004,mascara,40,121.71,east
+1744,Cici,18/11/2004,mascara,78,235.89,south
+1745,Zaret,19/3/2005,eye liner,38,115.80,midwest
+1746,Emilee,4/6/2005,mascara,-3,-6.35,west
+1747,Hallagan,23/4/2004,foundation,34,103.90,west
+1748,Ashley,4/5/2004,eye liner,85,256.45,east
+1749,Cristina,16/11/2005,foundation,70,212.03,west
+1750,Emilee,3/11/2006,eye liner,86,259.76,midwest
+1751,Cici,17/12/2006,foundation,47,142.93,east
+1752,Colleen,13/6/2006,lipstick,20,62.60,south
+1753,Jen,15/5/2004,mascara,33,101.42,west
+1754,Cristina,7/11/2004,mascara,-10,-27.87,midwest
+1755,Cici,6/12/2006,lip gloss,40,122.40,south
+1756,Emilee,20/7/2004,foundation,13,40.44,south
+1757,Ashley,29/8/2006,lip gloss,20,62.16,south
+1758,Emilee,28/2/2004,eye liner,22,68.78,west
+1759,Zaret,11/9/2005,foundation,91,275.56,midwest
+1760,Betsy,11/5/2006,lip gloss,17,53.54,midwest
+1761,Zaret,7/11/2004,lip gloss,77,232.78,south
+1762,Cristina,6/12/2006,mascara,8,25.17,midwest
+1763,Ashley,20/8/2005,eye liner,-1,-0.69,south
+1764,Hallagan,4/6/2005,lip gloss,52,158.07,midwest
+1765,Cici,31/8/2005,mascara,50,152.60,midwest
+1766,Cici,24/6/2006,foundation,69,209.27,south
+1767,Emilee,2/6/2006,mascara,-10,-28.43,midwest
+1768,Zaret,13/9/2004,foundation,-10,-27.79,east
+1769,Jen,25/10/2005,mascara,90,272.47,midwest
+1770,Ashley,14/11/2006,foundation,-4,-9.80,south
+1771,Betsy,18/8/2006,lip gloss,14,44.07,west
+1772,Emilee,19/12/2005,lip gloss,13,41.65,east
+1773,Colleen,20/7/2004,foundation,-10,-27.45,midwest
+1774,Cici,14/2/2005,foundation,81,244.96,east
+1775,Betsy,1/1/2005,foundation,91,274.02,west
+1776,Cristina,21/12/2004,lip gloss,7,23.10,south
+1777,Betsy,19/12/2005,eye liner,95,286.41,midwest
+1778,Colleen,17/3/2006,mascara,7,23.46,east
+1779,Emilee,10/4/2005,mascara,9,29.50,east
+1780,Emilee,4/5/2004,foundation,16,50.32,south
+1781,Ashley,25/2/2005,lip gloss,37,112.64,east
+1782,Cici,1/10/2006,lip gloss,38,115.87,west
+1783,Betsy,20/9/2006,lipstick,43,130.38,east
+1784,Cici,5/7/2006,mascara,-5,-12.65,midwest
+1785,Emilee,14/11/2006,eye liner,9,28.95,west
+1786,Betsy,10/1/2006,lip gloss,-9,-24.65,east
+1787,Jen,31/8/2005,lipstick,24,74.61,east
+1788,Cici,4/5/2004,lip gloss,30,91.37,midwest
+1789,Cristina,8/12/2005,lip gloss,83,250.85,west
+1790,Emilee,21/3/2004,lip gloss,90,271.87,east
+1791,Colleen,30/3/2005,eye liner,82,248.23,south
+1792,Hallagan,25/10/2005,eye liner,51,155.23,midwest
+1793,Cici,4/1/2004,lip gloss,66,200.13,west
+1794,Emilee,30/12/2005,mascara,29,89.02,south
+1795,Ashley,3/10/2005,lip gloss,93,280.87,east
+1796,Jen,12/10/2006,eye liner,-3,-6.54,midwest
+1797,Ashley,9/9/2006,lip gloss,-2,-3.64,south
+1798,Cristina,5/10/2004,lipstick,79,239.25,midwest
+1799,Betsy,28/12/2006,lip gloss,31,94.72,east
+1800,Hallagan,13/5/2005,foundation,46,140.22,south
+1801,Emilee,28/12/2006,foundation,93,281.79,west
+1802,Emilee,10/3/2004,lip gloss,82,247.02,midwest
+1803,Cici,6/12/2006,lipstick,87,263.72,south
+1804,Ashley,10/12/2004,foundation,62,187.57,east
+1805,Cristina,21/12/2004,foundation,31,94.57,south
+1806,Ashley,11/8/2004,mascara,43,131.33,east
+1807,Cristina,7/11/2004,lip gloss,78,236.44,midwest
+1808,Cristina,31/7/2004,lip gloss,-1,-0.44,south
+1809,Zaret,10/3/2004,lipstick,5,17.47,south
+1810,Cristina,22/5/2006,lipstick,30,92.31,south
+1811,Hallagan,19/4/2006,eye liner,65,197.18,west
+1812,Cici,11/5/2006,mascara,14,43.80,south
+1813,Cici,27/11/2005,foundation,10,31.26,west
+1814,Betsy,10/3/2004,lipstick,31,94.73,midwest
+1815,Betsy,19/4/2006,mascara,25,77.10,south
+1816,Betsy,19/3/2005,lipstick,11,35.30,south
+1817,Betsy,15/1/2004,foundation,62,187.51,west
+1818,Ashley,26/1/2004,foundation,4,14.19,west
+1819,Zaret,9/9/2006,eye liner,4,13.71,midwest
+1820,Cristina,27/11/2005,lip gloss,71,215.12,east
+1821,Jen,22/5/2006,lipstick,67,203.18,east
+1822,Emilee,21/4/2005,lip gloss,19,59.45,west
+1823,Cici,26/6/2005,lip gloss,12,37.63,south
+1824,Zaret,24/6/2006,lip gloss,50,151.67,midwest
+1825,Betsy,12/2/2006,lipstick,73,221.23,east
+1826,Cici,18/8/2006,lipstick,30,91.69,east
+1827,Ashley,13/9/2004,mascara,19,59.10,south
+1828,Jen,4/6/2005,eye liner,48,145.22,east
+1829,Hallagan,22/5/2006,mascara,-8,-21.60,east
+1830,Cici,18/8/2006,lip gloss,-8,-22.14,south
+1831,Cici,30/3/2005,lip gloss,28,85.91,south
+1832,Zaret,22/9/2005,mascara,81,245.21,west
+1833,Zaret,12/1/2005,lip gloss,12,37.99,east
+1834,Zaret,6/3/2006,eye liner,54,164.03,east
+1835,Zaret,24/5/2005,foundation,70,212.31,south
+1836,Zaret,9/8/2005,eye liner,89,269.07,east
+1837,Cristina,11/9/2005,foundation,10,32.27,east
+1838,Betsy,4/1/2004,foundation,52,158.18,east
+1839,Cristina,7/7/2005,mascara,85,257.82,west
+1840,Ashley,26/6/2005,foundation,31,93.98,south
+1841,Emilee,17/3/2006,mascara,36,110.03,south
+1842,Colleen,12/4/2004,lip gloss,80,241.83,midwest
+1843,Colleen,29/7/2005,mascara,27,82.46,west
+1844,Cristina,4/5/2004,foundation,46,140.39,south
+1845,Cristina,20/7/2004,foundation,29,89.58,south
+1846,Jen,12/2/2006,lip gloss,55,167.04,midwest
+1847,Emilee,13/9/2004,mascara,2,7.32,south
+1848,Betsy,24/6/2006,foundation,60,182.39,west
+1849,Zaret,29/7/2005,lip gloss,12,37.85,east
+1850,Jen,15/5/2004,mascara,52,157.88,south
+1851,Ashley,23/4/2004,lip gloss,37,113.27,midwest
+1852,Ashley,24/9/2004,lipstick,36,110.52,south
+1853,Cici,23/4/2004,lip gloss,87,262.81,east
+1854,Cristina,1/2/2006,mascara,16,50.28,midwest
+1855,Emilee,18/7/2005,lip gloss,50,152.13,east
+1856,Hallagan,1/2/2006,mascara,53,160.63,south
+1857,Cici,26/5/2004,foundation,61,184.76,midwest
+1858,Ashley,7/7/2005,foundation,95,286.83,south
+1859,Colleen,22/8/2004,lipstick,-6,-16.59,south
+1860,Emilee,11/8/2004,lip gloss,-9,-24.76,east
+1861,Cristina,17/3/2006,eye liner,74,223.83,midwest
+1862,Hallagan,8/12/2005,lip gloss,18,55.52,south
+1863,Zaret,6/3/2006,eye liner,73,220.67,east
+1864,Emilee,10/12/2004,eye liner,62,188.43,west
+1865,Colleen,5/7/2006,foundation,-2,-3.59,south
+1866,Cristina,1/10/2006,foundation,-7,-18.94,south
+1867,Cristina,18/8/2006,mascara,73,220.77,east
+1868,Hallagan,10/4/2005,eye liner,24,73.59,south
+1869,Betsy,3/10/2005,lipstick,18,56.08,east
+1870,Hallagan,25/11/2006,mascara,49,149.40,west
+1871,Cici,1/1/2005,mascara,21,64.68,midwest
+1872,Colleen,15/5/2004,foundation,2,7.99,south
+1873,Cici,18/11/2004,foundation,83,250.88,south
+1874,Colleen,1/1/2005,lip gloss,63,191.15,south
+1875,Cristina,28/2/2004,lipstick,54,163.87,midwest
+1876,Colleen,13/9/2004,lip gloss,19,59.72,west
+1877,Cici,13/9/2004,eye liner,66,199.36,east
+1878,Betsy,26/5/2004,lip gloss,60,182.28,south
+1879,Ashley,18/8/2006,eye liner,90,271.85,midwest
+1880,Emilee,17/12/2006,lip gloss,59,178.65,south
+1881,Emilee,3/10/2005,foundation,0,2.66,east
+1882,Jen,21/3/2004,foundation,72,217.90,midwest
+1883,Betsy,20/7/2004,lip gloss,-6,-15.74,east
+1884,Hallagan,22/5/2006,lip gloss,89,269.40,west
+1885,Ashley,11/5/2006,lip gloss,12,37.84,west
+1886,Cristina,9/8/2005,mascara,89,269.15,south
+1887,Zaret,21/4/2005,lip gloss,61,185.31,midwest
+1888,Colleen,18/7/2005,eye liner,24,73.81,west
+1889,Emilee,25/11/2006,eye liner,76,229.92,west
+1890,Cici,15/6/2005,foundation,16,49.75,east
+1891,Betsy,10/4/2005,foundation,39,119.19,east
+1892,Cici,23/2/2006,mascara,92,278.43,west
+1893,Cici,31/7/2004,foundation,20,61.92,midwest
+1894,Colleen,15/5/2004,lip gloss,60,181.87,east
+1895,Emilee,27/11/2005,eye liner,15,47.16,east
+1896,Ashley,14/2/2005,foundation,36,109.84,east
+1897,Colleen,5/11/2005,lip gloss,46,140.41,west
+1898,Zaret,15/1/2004,lipstick,72,217.84,west
+1899,Hallagan,3/11/2006,eye liner,28,85.66,south
+1900,Cristina,13/6/2006,eye liner,54,164.49,midwest
