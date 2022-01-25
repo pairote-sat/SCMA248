@@ -54,6 +54,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Data Visualization" href="Chapter4_Data_Visualization.html" />
     <link rel="prev" title="2. Python Basics" href="Chapter2-Python-Basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -112,6 +113,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    3. Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter4_Data_Visualization.html">
+   4. Data Visualization
   </a>
  </li>
 </ul>
@@ -341,6 +347,11 @@
      3.4.6. Exercise
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solutions-to-exercise">
+     3.4.7. Solutions to Exercise
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -394,8 +405,8 @@ The following are some of the aspects of preprocessing:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">--------------------------------------------------------------------------</span>
-<span class="ne">SSLCertVerificationError</span><span class="g g-Whitespace">                 </span>Traceback (most recent call last)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">--------------------------------------------------------------------</span>
+<span class="ne">SSLCertVerificationError</span><span class="g g-Whitespace">           </span>Traceback (most recent call last)
 <span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py</span> in <span class="ni">do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1349</span>                 <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
 <span class="ne">-&gt; </span><span class="mi">1350</span>                           <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
@@ -450,8 +461,8 @@ The following are some of the aspects of preprocessing:</p>
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
-<span class="ne">URLError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3376</span><span class="o">/</span><span class="mf">16525021.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">URLError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_6048</span><span class="o">/</span><span class="mf">16525021.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
 <span class="ne">----&gt; </span><span class="mi">2</span>                 <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">])</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -5447,6 +5458,65 @@ dtype: object
 </table>
 </div></div></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sales</span><span class="p">[[</span><span class="s1">&#39;Location&#39;</span><span class="p">,</span><span class="s1">&#39;Dollars&#39;</span><span class="p">,</span><span class="s1">&#39;Units&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Location&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dollars</th>
+      <th>Units</th>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>east</th>
+      <td>125.815965</td>
+      <td>41.267544</td>
+    </tr>
+    <tr>
+      <th>midwest</th>
+      <td>129.258113</td>
+      <td>42.417453</td>
+    </tr>
+    <tr>
+      <th>south</th>
+      <td>123.409616</td>
+      <td>40.466411</td>
+    </tr>
+    <tr>
+      <th>west</th>
+      <td>129.467082</td>
+      <td>42.491837</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 </section>
 <section id="rearranging-data">
 <h3><span class="section-number">3.4.5. </span>Rearranging Data<a class="headerlink" href="#rearranging-data" title="Permalink to this headline">¶</a></h3>
@@ -6238,6 +6308,562 @@ dtype: object
 <li><p>Total revenue by the salesperson and the given year</p></li>
 </ol>
 </section>
+<section id="solutions-to-exercise">
+<h3><span class="section-number">3.4.7. </span>Solutions to Exercise<a class="headerlink" href="#solutions-to-exercise" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>The number of sales transactions for the given salesperson</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sales</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Name&#39;, &#39;Date&#39;, &#39;Product&#39;, &#39;Units&#39;, &#39;Dollars&#39;, &#39;Location&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sales</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">],</span>
+                 <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Dollars&#39;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dollars</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ashley</th>
+      <td>197</td>
+    </tr>
+    <tr>
+      <th>Hallagan</th>
+      <td>200</td>
+    </tr>
+    <tr>
+      <th>Emilee</th>
+      <td>203</td>
+    </tr>
+    <tr>
+      <th>Colleen</th>
+      <td>206</td>
+    </tr>
+    <tr>
+      <th>Cristina</th>
+      <td>207</td>
+    </tr>
+    <tr>
+      <th>Zaret</th>
+      <td>214</td>
+    </tr>
+    <tr>
+      <th>Betsy</th>
+      <td>217</td>
+    </tr>
+    <tr>
+      <th>Jen</th>
+      <td>217</td>
+    </tr>
+    <tr>
+      <th>Cici</th>
+      <td>230</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sales</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">],</span>
+                 <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Dollars&#39;</span><span class="p">],</span> <span class="n">aggfunc</span> <span class="o">=</span> <span class="s1">&#39;count&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Dollars&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dollars</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ashley</th>
+      <td>197</td>
+    </tr>
+    <tr>
+      <th>Hallagan</th>
+      <td>200</td>
+    </tr>
+    <tr>
+      <th>Emilee</th>
+      <td>203</td>
+    </tr>
+    <tr>
+      <th>Colleen</th>
+      <td>206</td>
+    </tr>
+    <tr>
+      <th>Cristina</th>
+      <td>207</td>
+    </tr>
+    <tr>
+      <th>Zaret</th>
+      <td>214</td>
+    </tr>
+    <tr>
+      <th>Betsy</th>
+      <td>217</td>
+    </tr>
+    <tr>
+      <th>Jen</th>
+      <td>217</td>
+    </tr>
+    <tr>
+      <th>Cici</th>
+      <td>230</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ol class="simple">
+<li><p>For the given salesperson, the total revenue by the given product</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sales</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span>
+                 <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Dollars&#39;</span><span class="p">,</span>
+                  <span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Product&#39;</span><span class="p">,</span> <span class="n">aggfunc</span> <span class="o">=</span> <span class="s1">&#39;sum&#39;</span><span class="p">,</span>  <span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Product</th>
+      <th>eye liner</th>
+      <th>foundation</th>
+      <th>lip gloss</th>
+      <th>lipstick</th>
+      <th>mascara</th>
+      <th>All</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ashley</th>
+      <td>5844.95</td>
+      <td>4186.06</td>
+      <td>6053.67</td>
+      <td>3245.46</td>
+      <td>6617.10</td>
+      <td>25947.24</td>
+    </tr>
+    <tr>
+      <th>Betsy</th>
+      <td>6046.51</td>
+      <td>8043.48</td>
+      <td>5675.65</td>
+      <td>3968.62</td>
+      <td>4827.22</td>
+      <td>28561.48</td>
+    </tr>
+    <tr>
+      <th>Cici</th>
+      <td>5982.83</td>
+      <td>6198.22</td>
+      <td>5199.96</td>
+      <td>3148.83</td>
+      <td>7060.71</td>
+      <td>27590.55</td>
+    </tr>
+    <tr>
+      <th>Colleen</th>
+      <td>3389.61</td>
+      <td>6834.76</td>
+      <td>5573.35</td>
+      <td>2346.39</td>
+      <td>6746.54</td>
+      <td>24890.65</td>
+    </tr>
+    <tr>
+      <th>Cristina</th>
+      <td>5397.30</td>
+      <td>5290.97</td>
+      <td>5298.00</td>
+      <td>2401.68</td>
+      <td>5461.64</td>
+      <td>23849.59</td>
+    </tr>
+    <tr>
+      <th>Emilee</th>
+      <td>7587.37</td>
+      <td>5313.82</td>
+      <td>5270.26</td>
+      <td>2189.15</td>
+      <td>4719.34</td>
+      <td>25079.94</td>
+    </tr>
+    <tr>
+      <th>Hallagan</th>
+      <td>6964.64</td>
+      <td>6985.80</td>
+      <td>5603.10</td>
+      <td>3177.88</td>
+      <td>5703.32</td>
+      <td>28434.74</td>
+    </tr>
+    <tr>
+      <th>Jen</th>
+      <td>7010.45</td>
+      <td>5628.65</td>
+      <td>5461.65</td>
+      <td>3953.28</td>
+      <td>6887.21</td>
+      <td>28941.24</td>
+    </tr>
+    <tr>
+      <th>Zaret</th>
+      <td>8166.73</td>
+      <td>6451.66</td>
+      <td>5670.33</td>
+      <td>2448.71</td>
+      <td>3879.94</td>
+      <td>26617.37</td>
+    </tr>
+    <tr>
+      <th>All</th>
+      <td>56390.39</td>
+      <td>54933.42</td>
+      <td>49805.97</td>
+      <td>26880.00</td>
+      <td>51903.02</td>
+      <td>239912.80</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The result above also show the total. In Panda pivot_table(), we can simply pass <code class="docutils literal notranslate"><span class="pre">margins=True</span></code>.</p>
+<ol class="simple">
+<li><p>Total revenue generated by the given salesperson broken down by the given location</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sales</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span><span class="s1">&#39;Location&#39;</span><span class="p">],</span>
+                 <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Dollars&#39;</span><span class="p">,</span> <span class="n">aggfunc</span> <span class="o">=</span> <span class="s1">&#39;sum&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>Dollars</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="4" valign="top">Ashley</th>
+      <th>east</th>
+      <td>7772.70</td>
+    </tr>
+    <tr>
+      <th>midwest</th>
+      <td>4985.90</td>
+    </tr>
+    <tr>
+      <th>south</th>
+      <td>7398.58</td>
+    </tr>
+    <tr>
+      <th>west</th>
+      <td>5790.06</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">Betsy</th>
+      <th>east</th>
+      <td>8767.41</td>
+    </tr>
+    <tr>
+      <th>midwest</th>
+      <td>4878.07</td>
+    </tr>
+    <tr>
+      <th>south</th>
+      <td>7732.04</td>
+    </tr>
+    <tr>
+      <th>west</th>
+      <td>7183.96</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Cici</th>
+      <th>east</th>
+      <td>5956.31</td>
+    </tr>
+    <tr>
+      <th>midwest</th>
+      <td>8129.60</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<ol class="simple">
+<li><p>Total revenue by the salesperson and the given year.</p></li>
+</ol>
+<p>To generate a yearly report with Panda pivot_table(), here are the steps:</p>
+<ol class="simple">
+<li><p>Defines a groupby instruction using Grouper() with key=’Date’ and freq=’Y’.</p></li>
+<li><p>Applies pivot_table.</p></li>
+</ol>
+<p><strong>Note</strong> To group our data depending on the specified frequency for the specified column, we’ll use <code class="docutils literal notranslate"><span class="pre">pd.Grouper(key=INPUT</span> <span class="pre">COLUMN&gt;,</span> <span class="pre">freq=DESIRED</span> <span class="pre">FREQUENCY&gt;)</span></code>. The frequency in our situation is ‘Y’ and the relevant column is ‘Date.’</p>
+<p>Different standard frequencies, such as ‘D’,’W’,’M’, or ‘Q’, can be used instead of ‘Y.’ Check out the following for a list of less common useable frequencies, <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#offset-aliases">https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#offset-aliases</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year_gp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span><span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">year_gp</span><span class="p">)</span>
+
+<span class="n">sales</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">year_gp</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Dollars&#39;</span><span class="p">,</span><span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TimeGrouper(key=&#39;Date&#39;, freq=&lt;YearEnd: month=12&gt;, axis=0, sort=True, closed=&#39;right&#39;, label=&#39;right&#39;, how=&#39;mean&#39;, convention=&#39;e&#39;, origin=&#39;start_day&#39;)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Date</th>
+      <th>2004-12-31</th>
+      <th>2005-12-31</th>
+      <th>2006-12-31</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ashley</th>
+      <td>9495.09</td>
+      <td>9547.53</td>
+      <td>6904.62</td>
+    </tr>
+    <tr>
+      <th>Betsy</th>
+      <td>9420.24</td>
+      <td>9788.70</td>
+      <td>9352.54</td>
+    </tr>
+    <tr>
+      <th>Cici</th>
+      <td>8965.25</td>
+      <td>9024.96</td>
+      <td>9600.34</td>
+    </tr>
+    <tr>
+      <th>Colleen</th>
+      <td>9361.37</td>
+      <td>7996.81</td>
+      <td>7532.47</td>
+    </tr>
+    <tr>
+      <th>Cristina</th>
+      <td>9132.12</td>
+      <td>7976.34</td>
+      <td>6741.13</td>
+    </tr>
+    <tr>
+      <th>Emilee</th>
+      <td>7805.66</td>
+      <td>9326.44</td>
+      <td>7947.84</td>
+    </tr>
+    <tr>
+      <th>Hallagan</th>
+      <td>10676.88</td>
+      <td>9102.52</td>
+      <td>8655.34</td>
+    </tr>
+    <tr>
+      <th>Jen</th>
+      <td>9049.31</td>
+      <td>8920.30</td>
+      <td>10971.63</td>
+    </tr>
+    <tr>
+      <th>Zaret</th>
+      <td>9078.51</td>
+      <td>8639.68</td>
+      <td>8899.18</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Exercise</p>
+<p>Apply pivot_table (in new worksheets) to answer the following questions.</p>
+<ol class="simple">
+<li><p>How many saleperson are there? Hint: use <code class="docutils literal notranslate"><span class="pre">groupby</span></code> to create a grouped DataFrame grouped by salepersons and then call <code class="docutils literal notranslate"><span class="pre">groups</span></code> on the grouped object, which will returns the list of indices for every group.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped_person</span> <span class="o">=</span> <span class="n">sales</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">grouped_person</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">grouped_person</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;Ashley&#39;, &#39;Betsy&#39;, &#39;Cici&#39;, &#39;Colleen&#39;, &#39;Cristina&#39;, &#39;Emilee&#39;, &#39;Hallagan&#39;, &#39;Jen&#39;, &#39;Zaret&#39;])
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped_person</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name
+Ashley      197
+Betsy       217
+Cici        230
+Colleen     206
+Cristina    207
+Emilee      203
+Hallagan    200
+Jen         217
+Zaret       214
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -6272,6 +6898,13 @@ dtype: object
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title"><span class="section-number">2. </span>Python Basics</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="Chapter4_Data_Visualization.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Data Visualization</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
         

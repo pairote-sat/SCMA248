@@ -1,0 +1,1398 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Exercise for Chapter 3 &#8212; SCMA248 Introduction to Data Science</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SCMA248 Introduction to Data Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to SCMA248 Introduction to Data Science
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter1-Introduction-to-Data-Science.html">
+   1. Introduction to Data Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter2-Python-Basics.html">
+   2. Python Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter3-Data-Preparation.html">
+   3. Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter4_Data_Visualization.html">
+   4. Data Visualization
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Demo/ClaimsData.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDemo/ClaimsData.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Demo/ClaimsData.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Exercise for Chapter 3
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#description-of-rating-variables">
+   Description of Rating Variables
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hard-cording">
+   Hard cording
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#part-2">
+     Part 2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="exercise-for-chapter-3">
+<h1>Exercise for Chapter 3<a class="headerlink" href="#exercise-for-chapter-3" title="Permalink to this headline">¶</a></h1>
+<p>This exercises is design to assist you how to use the pandas package to import, preprocess data and perform basic statistical analysis. Later we should see how data generating events can produce data of interest to insurance analysts.</p>
+<p>We will look at the Local Government Property Insurance Fund in this chapter. The fund insures property owned by municipal governments, such as schools and libraries.</p>
+<ul class="simple">
+<li><p>government buildings,</p></li>
+<li><p>educational institutions,</p></li>
+<li><p>public libraries, and</p></li>
+<li><p>motor vehicles.</p></li>
+</ul>
+<p>Over a thousand local government units are covered by the fund, which charges about $25 million in annual premiums and provides insurance coverage of about $75 billion.</p>
+<p><strong>Example 1</strong> Import the claim dataset namely ClaimsExperienceData.csv from my Github repository. Then write Python commands to answer the following questions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">claims</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/Data/ClaimsExperienceData.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>How many claims observations are there in this dataset?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claims</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5639
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>How many variables (features) are there in this dataset? List (print out) all the features.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claims</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">claims</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;PolicyNum&#39;, &#39;Year&#39;, &#39;LnCoverage&#39;, &#39;BCcov&#39;, &#39;Premium&#39;, &#39;Freq&#39;, &#39;Deduct&#39;,
+       &#39;y&#39;, &#39;lny&#39;, &#39;yAvg&#39;, &#39;lnDeduct&#39;, &#39;Fire5&#39;, &#39;NoClaimCredit&#39;, &#39;TypeCity&#39;,
+       &#39;TypeCounty&#39;, &#39;TypeMisc&#39;, &#39;TypeSchool&#39;, &#39;TypeTown&#39;, &#39;TypeVillage&#39;,
+       &#39;AC00&#39;, &#39;AC05&#39;, &#39;AC10&#39;, &#39;AC15&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="description-of-rating-variables">
+<h1>Description of Rating Variables<a class="headerlink" href="#description-of-rating-variables" title="Permalink to this headline">¶</a></h1>
+<p>One of the important tasks of insurance analysts is to develop models to represent and manage the two outcome variables, <strong>frequency</strong> and <strong>severity</strong>.</p>
+<p>However, when actuaries and other financial analysts use those models, they do so in the context of external variables.</p>
+<p>In general statistical terminology, one might call these explanatory or predictor variables.</p>
+<p>Because of our insurance focus, we call them <strong>rating variables</strong> as they are useful in setting insurance rates and premiums.</p>
+<p>The following table describes the rating variables considered.</p>
+<p>These are variables that you think might naturally be related to claims outcomes.</p>
+<!-- To handle the skewness, we henceforth focus on logarithmic transformations of coverage and deductibles. -->
+<!-- For our immediate purposes, the coverage is our first rating variable. Other things being equal, we would expect that policyholders with larger coverage have larger claims. We will make this vague idea much more precise as we proceed, and also justify this expectation with data. -->
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Variable</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>EntityType</p></td>
+<td><p>Categorical variable that is one of six types: (Village, City, County, Misc, School, or Town)</p></td>
+</tr>
+<tr class="row-odd"><td><p>LnCoverage</p></td>
+<td><p>Total building and content coverage, in logarithmic millions of dollars</p></td>
+</tr>
+<tr class="row-even"><td><p>LnDeduct</p></td>
+<td><p>Deductible, in logarithmic dollars</p></td>
+</tr>
+<tr class="row-odd"><td><p>AlarmCredit</p></td>
+<td><p>Categorical variable that is one of four types: (0, 5, 10, or 15) for automatic smoke alarms in main rooms</p></td>
+</tr>
+<tr class="row-even"><td><p>NoClaimCredit</p></td>
+<td><p>Binary variable to indicate no claims in the past two years</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fire5</p></td>
+<td><p>Binary variable to indicate the fire class is below 5 (The range of fire class is 0 to 10)</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>In what follows, for illustrate, we will consider claims data in year 2010.</strong></p>
+<ol class="simple">
+<li><p>How many policies are there in 2010?</p></li>
+</ol>
+<p>Name the answer with the variable name <strong>num_policies</strong>.</p>
+<p>Hint: one may use <code class="docutils literal notranslate"><span class="pre">.value_counts</span></code> method that return a Series containing counts of unique values. Alternatively, you want to count False and True separately you can use <code class="docutils literal notranslate"><span class="pre">pd.Series.sum()</span></code> + <code class="docutils literal notranslate"><span class="pre">~</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span>  <span class="o">==</span> <span class="mi">2010</span>
+<span class="n">temp</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False    4529
+True     1110
+Name: Year, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_policies</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="o">~</span><span class="n">temp</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4529
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>How many claims are there in 2010? Assign the result to the variable <strong>num_claims</strong>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claims2010</span> <span class="o">=</span> <span class="n">claims</span><span class="p">[</span><span class="n">temp</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claims2010</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;PolicyNum&#39;, &#39;Year&#39;, &#39;LnCoverage&#39;, &#39;BCcov&#39;, &#39;Premium&#39;, &#39;Freq&#39;, &#39;Deduct&#39;,
+       &#39;y&#39;, &#39;lny&#39;, &#39;yAvg&#39;, &#39;lnDeduct&#39;, &#39;Fire5&#39;, &#39;NoClaimCredit&#39;, &#39;TypeCity&#39;,
+       &#39;TypeCounty&#39;, &#39;TypeMisc&#39;, &#39;TypeSchool&#39;, &#39;TypeTown&#39;, &#39;TypeVillage&#39;,
+       &#39;AC00&#39;, &#39;AC05&#39;, &#39;AC10&#39;, &#39;AC15&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claims2010</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PolicyNum        1.652057e+08
+Year             2.231100e+06
+LnCoverage       2.488480e+03
+BCcov            4.577870e+10
+Premium          1.590532e+07
+Freq             1.377000e+03
+Deduct           3.994500e+06
+y                3.665931e+07
+lny              3.736787e+03
+yAvg             2.270177e+07
+lnDeduct         8.013576e+03
+Fire5            6.220000e+02
+NoClaimCredit    6.270000e+02
+TypeCity         1.560000e+02
+TypeCounty       7.100000e+01
+TypeMisc         1.230000e+02
+TypeSchool       3.110000e+02
+TypeTown         1.850000e+02
+TypeVillage      2.640000e+02
+AC00             3.460000e+02
+AC05             8.200000e+01
+AC10             9.000000e+01
+AC15             5.920000e+02
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_claims</span> <span class="o">=</span> <span class="n">claims2010</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">num_claims</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1377
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Which policy number has the maximum number of claims and what is this claims number?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claims2010</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Freq&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PolicyNum</th>
+      <th>Year</th>
+      <th>LnCoverage</th>
+      <th>BCcov</th>
+      <th>Premium</th>
+      <th>Freq</th>
+      <th>Deduct</th>
+      <th>y</th>
+      <th>lny</th>
+      <th>yAvg</th>
+      <th>...</th>
+      <th>TypeCity</th>
+      <th>TypeCounty</th>
+      <th>TypeMisc</th>
+      <th>TypeSchool</th>
+      <th>TypeTown</th>
+      <th>TypeVillage</th>
+      <th>AC00</th>
+      <th>AC05</th>
+      <th>AC10</th>
+      <th>AC15</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1406</th>
+      <td>138109</td>
+      <td>2010</td>
+      <td>6.338472</td>
+      <td>5.659308e+08</td>
+      <td>124504</td>
+      <td>239</td>
+      <td>25000.0</td>
+      <td>223784.65</td>
+      <td>12.318439</td>
+      <td>936.337448</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>120030</td>
+      <td>2010</td>
+      <td>7.801717</td>
+      <td>2.444797e+09</td>
+      <td>391168</td>
+      <td>103</td>
+      <td>50000.0</td>
+      <td>4920530.65</td>
+      <td>15.408927</td>
+      <td>47772.142230</td>
+      <td>...</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 23 columns</p>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hard-cording">
+<h1>Hard cording<a class="headerlink" href="#hard-cording" title="Permalink to this headline">¶</a></h1>
+<p>claims2010.loc[1406,’Freq’]</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">.idxmax()</span></code>, we can return the index at which maximum weight value is present.</p>
+<p>See <a class="reference external" href="https://www.geeksforgeeks.org/get-the-index-of-maximum-value-in-dataframe-column/">https://www.geeksforgeeks.org/get-the-index-of-maximum-value-in-dataframe-column/</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">claims2010</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">())</span>
+
+<span class="n">ind_freq_max</span> <span class="o">=</span> <span class="n">claims2010</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+
+<span class="n">max_claims</span> <span class="o">=</span> <span class="n">claims2010</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ind_freq_max</span><span class="p">,</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1406
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Calculate the proportion of policyholders who did not have any claims (use the name <strong>num_policies_no_claims</strong> for your output).</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using value_count() and .sort_index to obtain the number of </span>
+<span class="c1"># policies by claim numbers.</span>
+
+<span class="p">(</span><span class="n">claims2010</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+
+<span class="n">num_policies_no_claims</span> <span class="o">=</span> <span class="p">(</span><span class="n">claims2010</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the proportion of policyholders who did not have any claims.</span>
+
+<span class="nb">round</span><span class="p">(</span><span class="n">num_policies_no_claims</span> <span class="o">/</span> <span class="n">num_policies</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6369
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">claims2010</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">claims2010</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5134350036310821
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Calculate the proportion of policyholders who had only one claim.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_policies_one_claims</span> <span class="o">=</span> <span class="p">(</span><span class="n">claims2010</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="n">num_policies_one_claims</span> <span class="o">/</span> <span class="n">num_policies</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1883
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Calculate the average number of claims for this sample.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_claims</span><span class="o">/</span><span class="n">num_policies</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.2405405405405405
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">describe()</span></code> method is used for calculating some statistical data like percentile, mean and std of the numerical values of the Series or DataFrame.</p></li>
+</ol>
+<p>Applying to year 2010, what do we get when we run the command claims.describe()?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claims2010</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PolicyNum</th>
+      <th>Year</th>
+      <th>LnCoverage</th>
+      <th>BCcov</th>
+      <th>Premium</th>
+      <th>Freq</th>
+      <th>Deduct</th>
+      <th>y</th>
+      <th>lny</th>
+      <th>yAvg</th>
+      <th>...</th>
+      <th>TypeCity</th>
+      <th>TypeCounty</th>
+      <th>TypeMisc</th>
+      <th>TypeSchool</th>
+      <th>TypeTown</th>
+      <th>TypeVillage</th>
+      <th>AC00</th>
+      <th>AC05</th>
+      <th>AC10</th>
+      <th>AC15</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>1110.000000</td>
+      <td>1110.0</td>
+      <td>1110.000000</td>
+      <td>1.110000e+03</td>
+      <td>1110.000000</td>
+      <td>1110.000000</td>
+      <td>1110.000000</td>
+      <td>1.110000e+03</td>
+      <td>1110.000000</td>
+      <td>1.110000e+03</td>
+      <td>...</td>
+      <td>1110.000000</td>
+      <td>1110.000000</td>
+      <td>1110.000000</td>
+      <td>1110.00000</td>
+      <td>1110.000000</td>
+      <td>1110.000000</td>
+      <td>1110.000000</td>
+      <td>1110.000000</td>
+      <td>1110.000000</td>
+      <td>1110.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>148833.995495</td>
+      <td>2010.0</td>
+      <td>2.241874</td>
+      <td>4.124207e+07</td>
+      <td>14329.113514</td>
+      <td>1.240541</td>
+      <td>3598.648649</td>
+      <td>3.302640e+04</td>
+      <td>3.366475</td>
+      <td>2.045205e+04</td>
+      <td>...</td>
+      <td>0.140541</td>
+      <td>0.063964</td>
+      <td>0.110811</td>
+      <td>0.28018</td>
+      <td>0.166667</td>
+      <td>0.237838</td>
+      <td>0.311712</td>
+      <td>0.073874</td>
+      <td>0.081081</td>
+      <td>0.533333</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>16131.790893</td>
+      <td>0.0</td>
+      <td>1.962844</td>
+      <td>1.142432e+08</td>
+      <td>24663.572338</td>
+      <td>8.154437</td>
+      <td>8787.925562</td>
+      <td>4.287782e+05</td>
+      <td>4.573141</td>
+      <td>3.927241e+05</td>
+      <td>...</td>
+      <td>0.347704</td>
+      <td>0.244799</td>
+      <td>0.314039</td>
+      <td>0.44929</td>
+      <td>0.372846</td>
+      <td>0.425951</td>
+      <td>0.463402</td>
+      <td>0.261683</td>
+      <td>0.273083</td>
+      <td>0.499113</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>120002.000000</td>
+      <td>2010.0</td>
+      <td>-4.575223</td>
+      <td>1.030400e+04</td>
+      <td>9.000000</td>
+      <td>0.000000</td>
+      <td>500.000000</td>
+      <td>0.000000e+00</td>
+      <td>0.000000</td>
+      <td>0.000000e+00</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>138104.250000</td>
+      <td>2010.0</td>
+      <td>0.900512</td>
+      <td>2.460876e+06</td>
+      <td>1633.500000</td>
+      <td>0.000000</td>
+      <td>500.000000</td>
+      <td>0.000000e+00</td>
+      <td>0.000000</td>
+      <td>0.000000e+00</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>150302.000000</td>
+      <td>2010.0</td>
+      <td>2.523816</td>
+      <td>1.247615e+07</td>
+      <td>6365.000000</td>
+      <td>0.000000</td>
+      <td>1000.000000</td>
+      <td>0.000000e+00</td>
+      <td>0.000000</td>
+      <td>0.000000e+00</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>160628.750000</td>
+      <td>2010.0</td>
+      <td>3.705105</td>
+      <td>4.065431e+07</td>
+      <td>17923.750000</td>
+      <td>1.000000</td>
+      <td>2500.000000</td>
+      <td>4.139750e+03</td>
+      <td>8.328310</td>
+      <td>2.818750e+03</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>180791.000000</td>
+      <td>2010.0</td>
+      <td>7.801717</td>
+      <td>2.444797e+09</td>
+      <td>391168.000000</td>
+      <td>239.000000</td>
+      <td>100000.000000</td>
+      <td>1.292222e+07</td>
+      <td>16.374459</td>
+      <td>1.292222e+07</td>
+      <td>...</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.00000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>8 rows × 23 columns</p>
+</div></div></div>
+</div>
+<ol class="simple">
+<li><p>A common method for determining the severity distribution is to look at the distribution of the sample of 1,377 claims. Another typical strategy is to look at the <strong>distribution of average claims among policyholders who have made claims</strong>.</p></li>
+</ol>
+<p>In our 2010 sample, how many such policyholders who have made claims?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_policies</span> <span class="o">-</span> <span class="n">num_policies_no_claims</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>403
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>The average claim for the 209 policyholders who had only one claim is the same as the single claim they had.</p></li>
+</ol>
+<p>Write the command(s) to list the average claim of such 209 policyholders.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">claims2010</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">claims2010</span><span class="p">[</span><span class="n">selected_index</span><span class="p">][[</span><span class="s1">&#39;Freq&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Freq</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>6838.87</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1</td>
+      <td>9711.28</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>1</td>
+      <td>10323.50</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>1</td>
+      <td>3469.79</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>1</td>
+      <td>35000.00</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>5534</th>
+      <td>1</td>
+      <td>1851.48</td>
+    </tr>
+    <tr>
+      <th>5568</th>
+      <td>1</td>
+      <td>3405.00</td>
+    </tr>
+    <tr>
+      <th>5603</th>
+      <td>1</td>
+      <td>20679.58</td>
+    </tr>
+    <tr>
+      <th>5635</th>
+      <td>1</td>
+      <td>168304.05</td>
+    </tr>
+    <tr>
+      <th>5636</th>
+      <td>1</td>
+      <td>1034.33</td>
+    </tr>
+  </tbody>
+</table>
+<p>209 rows × 2 columns</p>
+</div></div></div>
+</div>
+<ol class="simple">
+<li><p>Calculate the average claim of the policyholder with the maximum number of claims.</p></li>
+</ol>
+<p>ind_freq_max = claims2010[‘Freq’].idxmax()</p>
+<p>max_claims = claims2010.loc[ind_freq_max,’Freq’]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claims2010</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ind_freq_max</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">claims2010</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ind_freq_max</span><span class="p">,</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>936.3374476987448
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claims</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PolicyNum</th>
+      <th>Year</th>
+      <th>LnCoverage</th>
+      <th>BCcov</th>
+      <th>Premium</th>
+      <th>Freq</th>
+      <th>Deduct</th>
+      <th>y</th>
+      <th>lny</th>
+      <th>yAvg</th>
+      <th>...</th>
+      <th>TypeCity</th>
+      <th>TypeCounty</th>
+      <th>TypeMisc</th>
+      <th>TypeSchool</th>
+      <th>TypeTown</th>
+      <th>TypeVillage</th>
+      <th>AC00</th>
+      <th>AC05</th>
+      <th>AC10</th>
+      <th>AC15</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+      <td>5.639000e+03</td>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+      <td>5.639000e+03</td>
+      <td>5639.000000</td>
+      <td>5.639000e+03</td>
+      <td>...</td>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+      <td>5639.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>148880.491222</td>
+      <td>2007.979784</td>
+      <td>2.132881</td>
+      <td>3.728085e+07</td>
+      <td>14796.029793</td>
+      <td>1.109239</td>
+      <td>3364.869658</td>
+      <td>1.728730e+04</td>
+      <td>2.753088</td>
+      <td>9.291565e+03</td>
+      <td>...</td>
+      <td>0.140628</td>
+      <td>0.058166</td>
+      <td>0.107998</td>
+      <td>0.283206</td>
+      <td>0.172194</td>
+      <td>0.237808</td>
+      <td>0.463025</td>
+      <td>0.042383</td>
+      <td>0.057989</td>
+      <td>0.436602</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>15911.165649</td>
+      <td>1.415949</td>
+      <td>1.977179</td>
+      <td>1.034020e+08</td>
+      <td>25520.718048</td>
+      <td>8.549179</td>
+      <td>8273.670512</td>
+      <td>2.304627e+05</td>
+      <td>4.311270</td>
+      <td>1.975141e+05</td>
+      <td>...</td>
+      <td>0.347668</td>
+      <td>0.234078</td>
+      <td>0.310405</td>
+      <td>0.450596</td>
+      <td>0.377582</td>
+      <td>0.425779</td>
+      <td>0.498675</td>
+      <td>0.201480</td>
+      <td>0.233743</td>
+      <td>0.496008</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>120002.000000</td>
+      <td>2006.000000</td>
+      <td>-4.717555</td>
+      <td>8.937000e+03</td>
+      <td>9.000000</td>
+      <td>0.000000</td>
+      <td>500.000000</td>
+      <td>0.000000e+00</td>
+      <td>0.000000</td>
+      <td>0.000000e+00</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>138112.000000</td>
+      <td>2007.000000</td>
+      <td>0.785066</td>
+      <td>2.192556e+06</td>
+      <td>1612.500000</td>
+      <td>0.000000</td>
+      <td>500.000000</td>
+      <td>0.000000e+00</td>
+      <td>0.000000</td>
+      <td>0.000000e+00</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>150350.000000</td>
+      <td>2008.000000</td>
+      <td>2.429532</td>
+      <td>1.135357e+07</td>
+      <td>6578.000000</td>
+      <td>0.000000</td>
+      <td>1000.000000</td>
+      <td>0.000000e+00</td>
+      <td>0.000000</td>
+      <td>0.000000e+00</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>160619.000000</td>
+      <td>2009.000000</td>
+      <td>3.606218</td>
+      <td>3.682654e+07</td>
+      <td>18184.000000</td>
+      <td>1.000000</td>
+      <td>2500.000000</td>
+      <td>2.181825e+03</td>
+      <td>7.687917</td>
+      <td>1.519706e+03</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>180791.000000</td>
+      <td>2010.000000</td>
+      <td>7.801717</td>
+      <td>2.444797e+09</td>
+      <td>412328.000000</td>
+      <td>263.000000</td>
+      <td>100000.000000</td>
+      <td>1.292222e+07</td>
+      <td>16.374459</td>
+      <td>1.292222e+07</td>
+      <td>...</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>8 rows × 23 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claims</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PolicyNum        1.488805e+05
+Year             2.007980e+03
+LnCoverage       2.132881e+00
+BCcov            3.728085e+07
+Premium          1.479603e+04
+Freq             1.109239e+00
+Deduct           3.364870e+03
+y                1.728730e+04
+lny              2.753088e+00
+yAvg             9.291565e+03
+lnDeduct         7.157236e+00
+Fire5            5.552403e-01
+NoClaimCredit    3.286044e-01
+TypeCity         1.406278e-01
+TypeCounty       5.816634e-02
+TypeMisc         1.079979e-01
+TypeSchool       2.832062e-01
+TypeTown         1.721937e-01
+TypeVillage      2.378081e-01
+AC00             4.630254e-01
+AC05             4.238340e-02
+AC10             5.798901e-02
+AC15             4.366022e-01
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<section id="part-2">
+<h2>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Create a table that shows the 2010 claims frequency distribution. The table should contain the number of policies, the number of claims and the proportion (broken down by the number of claims).</p></li>
+</ol>
+<p>1.1. How many policyholders in the 2010 claims data have 9 or more claims?</p>
+<p>1.2. What is the percentage proportion of policyholders having exactly 3 claims?</p>
+<p>Goal: the table should tell us the (percentage) proportion of policyholders who did not have any claims, only one claim and so on.</p>
+<ol class="simple">
+<li><p>From those 403 policyholders who made at least one claim, create a table that provides information about the distribution of sample claims in year 2010.</p></li>
+</ol>
+<p>2.1. What is the mean of claims amounts?</p>
+<p>2.2. What is the third quartile of the claims amounts?</p>
+<ol class="simple">
+<li><p>Consider the claims data over the 5 years between 2006-2010 inclusive. Create a table that show the average claim varies over time, average frequency, average coverage and the number of policyholders.</p></li>
+</ol>
+<p>3.1 What can you say about the number of policyholders over this period?</p>
+<p>3.2 How does the average coverage change over this period?</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Demo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Pairote Satiracoo<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
