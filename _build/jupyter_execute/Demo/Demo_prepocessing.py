@@ -216,6 +216,26 @@ mydoubler = myfunc(2)
 print(mydoubler(11))
 
 
+# In[5]:
+
+
+import pandas as pd
+
+df = pd.DataFrame( [[4, 7, 10], [5, 7, 11],[6, 9, 12]],index=[1, 2, 3], columns=['a', 'b', 'c'])
+
+
+# In[6]:
+
+
+df
+
+
+# In[7]:
+
+
+df['b'].value_counts()
+
+
 # In[ ]:
 
 

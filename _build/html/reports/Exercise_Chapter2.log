@@ -23,9 +23,9 @@ for i in range(int((len(f)+1)/2)):
     print(f[2*i])
 ------------------
 
-[0;31m--------------------------------------------------------------------------[0m
-[0;31mStdinNotImplementedError[0m                 Traceback (most recent call last)
-[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_3343/1701742263.py[0m in [0;36m<module>[0;34m[0m
+[0;31m--------------------------------------------------------------------[0m
+[0;31mStdinNotImplementedError[0m           Traceback (most recent call last)
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_6144/1701742263.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0;31m#Enfant01or44[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 2[0;31m [0mf[0m [0;34m=[0m [0minput[0m[0;34m([0m[0;34m"Enter something : "[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      3[0m [0;32mfor[0m [0mi[0m [0;32min[0m [0mrange[0m[0;34m([0m[0mint[0m[0;34m([0m[0;34m([0m[0mlen[0m[0;34m([0m[0mf[0m[0;34m)[0m[0;34m+[0m[0;36m1[0m[0;34m)[0m[0;34m/[0m[0;36m2[0m[0;34m)[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
