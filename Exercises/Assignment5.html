@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Assignment 4 (Exercise for Chapter 6) &#8212; SCMA248 Introduction to Data Science</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SCMA248 Introduction to Data Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to SCMA248 Introduction to Data Science
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter1_Introduction_to_Data_Science.html">
+   1. Introduction to Data Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter2_Python_Basics.html">
+   2. Python Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter3_Data_Preparation.html">
+   3. Data Selection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter4_Data_Visualization.html">
+   6. Data Visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter5_Practical_Statistics.html">
+   7. Practical Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter6_Regression.html">
+   8. Regression Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter7_Introduction_Machine_Learning.html">
+   9. Machine learning: Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter8_Unsupervised_Learning.html">
+   10. Unsupervised Machine Learning: K-means Clustering
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Exercises/Assignment5.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FExercises/Assignment5.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Exercises/Assignment5.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-statement">
+   Problem Statement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regression-problems">
+   Regression problems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-import-the-packages">
+     Step 1: Import the packages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-provide-data-to-work-with-and-possibly-perform-appropriate-transformations">
+     Step 2: Provide data to work with and possibly perform appropriate transformations.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-preprocessing-and-feature-engineering">
+       2.1 Data Preprocessing and Feature Engineering
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#missing-values">
+       2.2 Missing values
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#handling-outliers">
+       2.3 Handling Outliers
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#scaling">
+       2.4 Scaling
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#correlation-analysis">
+       2.5 Correlation Analysis
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploratory-data-analysis">
+       2.6 Exploratory data analysis
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-create-a-regression-model-and-fit-it-with-the-available-data">
+     Step 3: Create a regression model and fit it with the available data.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#split-the-data-into-training-and-test-subset">
+       3.1 Split the data into training and test subset
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-get-results">
+     Step 4: Get results
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-5-predict-response">
+     Step 5: Predict response
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="assignment-4-exercise-for-chapter-6">
+<h1>Assignment 4 (Exercise for Chapter 6)<a class="headerlink" href="#assignment-4-exercise-for-chapter-6" title="Permalink to this headline">¶</a></h1>
+<p>Due date: 31 March 2022 before 4 pm.</p>
+<p>Points: 10 (+ 5 extra points)</p>
+<p>Do not alter this file.</p>
+<ol class="simple">
+<li><p>Form a group of two members. The group member must be different from the previous Assignments 1, 2, 3 and 4.</p></li>
+<li><p>Duplicate this file and move it into the Personal folder (you may share access to your team member). Rename the file as Assignment5_id1_id2 (id1 and id2 are student ID numbers in ascending order, e.g. Assignment5_6305001_6305001).</p></li>
+<li><p>Write Python commands to answer each of the questions. For each question that requires numerical values (not list, table or dataframe), you also need to assign the variable e.g. ans1 to store the numerical answer for question 1. If there is more than 1 answer required, you must create more variables e.g. ans1_1, ans1_2 to store the values of the answers.</p></li>
+<li><p>When you want to submit your file, you simply share access with me using my email <a class="reference external" href="mailto:pairote&#46;sat&#37;&#52;&#48;mahidol&#46;edu">pairote<span>&#46;</span>sat<span>&#64;</span>mahidol<span>&#46;</span>edu</a> and my TA <a class="reference external" href="mailto:p&#46;pooy&#46;pui&#46;i&#37;&#52;&#48;gmail&#46;com">p<span>&#46;</span>pooy<span>&#46;</span>pui<span>&#46;</span>i<span>&#64;</span>gmail<span>&#46;</span>com</a>. Do not move your file into the DS&#64;MathMahidol team.</p></li>
+</ol>
+<section id="problem-statement">
+<h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
+<p>An automobile company wants to enter the U.S. market by setting up a manufacturing plant there and producing cars locally to compete with its American and European competitors.</p>
+<p>The company has hired an automotive consulting firm to understand the factors on which car pricing depends. Specifically, the company wants to understand the factors that affect car pricing in the U.S. market, as these can be very different from those in the Chinese market. The company wants to know:</p>
+<p>What variables are important in predicting the price of a car.
+How well these variables describe the price of a car
+Based on various market surveys, the consulting firm has gathered a large data set on different types of cars in the American market.</p>
+</section>
+<section id="regression-problems">
+<h2>Regression problems<a class="headerlink" href="#regression-problems" title="Permalink to this headline">¶</a></h2>
+<p>There are five basic steps when you implement linear regression:</p>
+<ol class="simple">
+<li><p>Import the packages and classes you need.</p></li>
+<li><p>Provide data to work with and possibly perform appropriate transformations.</p></li>
+<li><p>Create a regression model and fit it with the available data.</p></li>
+<li><p>Review the results of the model fit to know if the model is satisfactory.</p></li>
+<li><p>Apply the model for predictions.</p></li>
+</ol>
+<p>These steps are more or less general to most regression approaches and implementations.</p>
+<section id="step-1-import-the-packages">
+<h3>Step 1: Import the packages<a class="headerlink" href="#step-1-import-the-packages" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">m</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span><span class="p">,</span><span class="n">mean_absolute_error</span><span class="p">,</span><span class="n">r2_score</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">pearsonr</span><span class="p">,</span><span class="n">spearmanr</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
+<span class="kn">from</span> <span class="nn">sklearn.base</span> <span class="kn">import</span> <span class="n">TransformerMixin</span>
+
+<span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_5858</span><span class="o">/</span><span class="mf">1890615696.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;statsmodels&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-provide-data-to-work-with-and-possibly-perform-appropriate-transformations">
+<h3>Step 2: Provide data to work with and possibly perform appropriate transformations.<a class="headerlink" href="#step-2-provide-data-to-work-with-and-possibly-perform-appropriate-transformations" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Enter student IDs of your group.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Download the following dataset, CarPrice_Assignment.csv, from this Kaggle link (save this data frame as Pandas DataFrame):</p></li>
+</ol>
+<p><a class="reference external" href="https://www.kaggle.com/datasets/hellbuoy/car-price-prediction">https://www.kaggle.com/datasets/hellbuoy/car-price-prediction</a></p>
+<p>or from my personal Github page.</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/CarPrice_Assignment.csv">https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/CarPrice_Assignment.csv</a></p>
+<section id="data-preprocessing-and-feature-engineering">
+<h4>2.1 Data Preprocessing and Feature Engineering<a class="headerlink" href="#data-preprocessing-and-feature-engineering" title="Permalink to this headline">¶</a></h4>
+<p><strong>What is data preprocessing?</strong></p>
+<p>It is a technique used to transform raw data into more meaningful data, or data that can be understood by a machine learning model. Real-world data is often incomplete, inconsistent, and/or lacks certain behaviors or trends and is likely to contain many errors. To address this problem, data preprocessing techniques are introduced. We will talk about some of the data preprocessing techniques, namely :
+Vectorization
+Normalization
+Treatment of missing values</p>
+<p><strong>What is Feature engineering?</strong></p>
+<p>Feature engineering is the process of selecting, manipulating, and transforming raw data into features that can be used in supervised learning.</p>
+<p>In order for machine learning to work well on new tasks, it may be necessary to develop and train better features.</p>
+<p>Feature engineering, in simple terms, is the transformation of raw data into desired features using statistical or machine learning techniques.</p>
+</section>
+<section id="missing-values">
+<h4>2.2 Missing values<a class="headerlink" href="#missing-values" title="Permalink to this headline">¶</a></h4>
+<p>When it comes to preparing your data for machine learning, missing values are one of the most typical problems. Human error, data flow interruptions, privacy concerns, and other factors can lead to missing values. Missing values, for whatever reason, affect the performance of machine learning models.</p>
+<ol class="simple">
+<li><p>Write python code to check whether any missing values are there in the dataset.</p></li>
+</ol>
+</section>
+<section id="handling-outliers">
+<h4>2.3 Handling Outliers<a class="headerlink" href="#handling-outliers" title="Permalink to this headline">¶</a></h4>
+<p>Outlier treatment is a technique for removing outliers from a data set. This method can be used on a variety of scales to obtain a more accurate representation of data. This has an impact on the performance of the model. Depending on the model, the impact can be large or minimal. For example, linear regression is particularly susceptible to outliers. This procedure should be completed prior to model training.</p>
+<ol class="simple">
+<li><p>Write Python code to plot the distribution of the car prices.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Complete the following tasks:</p></li>
+</ol>
+<p>4.1 Identify (or list) all values that are outliers.</p>
+<p>4.2 How many outliers are there?</p>
+<p>4.3 What can you say about the shape of this distribution?</p>
+<ol class="simple">
+<li><p>We will use the log transformation to convert a skewed distribution to a normal or less skewed distribution. Write Python code to add a new column called ‘log_price’ that contains the logarithmic base 10 of the car prices.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Write Python code to plot the distribution of the values of the <code class="docutils literal notranslate"><span class="pre">log_</span> <span class="pre">price</span></code> variable.</p></li>
+</ol>
+<p>6.1 After log transformation, identify (or list) all values that are outliers the values of the <code class="docutils literal notranslate"><span class="pre">log_</span> <span class="pre">price</span></code> variable.</p>
+</section>
+<section id="scaling">
+<h4>2.4 Scaling<a class="headerlink" href="#scaling" title="Permalink to this headline">¶</a></h4>
+<p><strong>Feature scaling</strong> is one of the most common and difficult problems in machine learning, but also one of the most important if you want to do it right.</p>
+<p>To train a predictive model, we need data with a known set of features that must be scaled up or down as appropriate.</p>
+<p>If we do not have comparable scales, some of the coefficients obtained by fitting the regression model could be very large or very small compared to the other coefficients. There are two common methods of rescaling:</p>
+<ul class="simple">
+<li><p>Min-Max scaling</p></li>
+<li><p>Standardisation (mean-0, sigma-1).</p></li>
+</ul>
+<p>After scaling, continuous features become similar in terms of range. Although this step is not required for many algorithms, it is still a good idea to perform it.</p>
+<p>Distance-based algorithms such as k-NN and k-Means, on the other hand, require scaled continuous features as model input.</p>
+<p>Here we will use the standardisation scaling.</p>
+<p>See the following link for more details:
+<a class="reference external" href="https://hersanyagci.medium.com/feature-scaling-with-scikit-learn-for-data-science-8c4cbcf2daff">https://hersanyagci.medium.com/feature-scaling-with-scikit-learn-for-data-science-8c4cbcf2daff</a></p>
+<ol class="simple">
+<li><p>Perform the standardisation scaling to all numeric feature variables (not the target (or response) variable, namely <code class="docutils literal notranslate"><span class="pre">price</span></code> and <code class="docutils literal notranslate"><span class="pre">log_price</span></code>.</p></li>
+</ol>
+</section>
+<section id="correlation-analysis">
+<h4>2.5 Correlation Analysis<a class="headerlink" href="#correlation-analysis" title="Permalink to this headline">¶</a></h4>
+<p>The linear correlation between variable pairs is investigated using correlation analysis. This may be accomplished by combining the <code class="docutils literal notranslate"><span class="pre">corr()</span></code> and <code class="docutils literal notranslate"><span class="pre">sns.heatmap()</span></code> functions.</p>
+<ol class="simple">
+<li><p>Write Python code to create the correlation matrix of the dataset which has been completely preprocessed.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Identify (list) which numeric variables have a significant positive correlation with <code class="docutils literal notranslate"><span class="pre">log_price</span></code>.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Identify (list) which numeric variables have a significant negative correlation with <code class="docutils literal notranslate"><span class="pre">log_price</span></code>.</p></li>
+</ol>
+</section>
+<section id="exploratory-data-analysis">
+<h4>2.6 Exploratory data analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h4>
+<p>It is now time to experiment with the data and make some visualizations.</p>
+<p>In our dataset, a <strong>pairplot</strong> plots pairwise relationships. The pairplot function creates a grid of Axes in which each variable in the data is shared across a single row and a single column on the y-axis.</p>
+<p>A pairs plot shows the distribution of single variables as well as the relationships between them. Pair plots are a great way to detect trends for further study, and they’re simple to create in Python!</p>
+<ol class="simple">
+<li><p>Write Python code to create pair plots of the feature and target variables (you may choose to include only features which have a significant correlation (as obtained from questions 9 and 10).</p></li>
+</ol>
+<ol class="simple">
+<li><p>Explain the results you obtained.</p></li>
+</ol>
+</section>
+</section>
+<section id="step-3-create-a-regression-model-and-fit-it-with-the-available-data">
+<h3>Step 3: Create a regression model and fit it with the available data.<a class="headerlink" href="#step-3-create-a-regression-model-and-fit-it-with-the-available-data" title="Permalink to this headline">¶</a></h3>
+<p>Let us start with the simplest case, simple linear regression. We will use <code class="docutils literal notranslate"><span class="pre">log_price</span></code> as the dependent variable and the feature variable with highest correlation to the output <code class="docutils literal notranslate"><span class="pre">log_price</span></code> as an independent variable.</p>
+<ol class="simple">
+<li><p>What is the variable with the highest correlation to the output <code class="docutils literal notranslate"><span class="pre">log_price</span></code>?</p></li>
+</ol>
+<section id="split-the-data-into-training-and-test-subset">
+<h4>3.1 Split the data into training and test subset<a class="headerlink" href="#split-the-data-into-training-and-test-subset" title="Permalink to this headline">¶</a></h4>
+<p>To check the performance of a model, you should test it with new (test) data, that is with observations not used to fit (train) the model.</p>
+<ol class="simple">
+<li><p>Use scikit-learn’s <code class="docutils literal notranslate"><span class="pre">train_test_split()</span></code> to split your dataset into the training and test subsets. You must specifiy the arguements <code class="docutils literal notranslate"><span class="pre">random_state=id1</span></code> and <code class="docutils literal notranslate"><span class="pre">test_size=</span> <span class="pre">0.3</span></code> for the <code class="docutils literal notranslate"><span class="pre">train_test_split()</span></code> function.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Use scikit-learn’s <code class="docutils literal notranslate"><span class="pre">train_test_split()</span></code> to split your dataset into the training and test subsets. You must specifiy the arguements <code class="docutils literal notranslate"><span class="pre">random_state=id1</span></code> and <code class="docutils literal notranslate"><span class="pre">test_size=</span> <span class="pre">0.3</span></code> for the <code class="docutils literal notranslate"><span class="pre">train_test_split()</span></code> function.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Use either <code class="docutils literal notranslate"><span class="pre">statsmodel</span></code> or <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> libraries to create the simple linear regression model and fit it with the <strong>training data</strong>.</p></li>
+</ol>
+</section>
+</section>
+<section id="step-4-get-results">
+<h3>Step 4: Get results<a class="headerlink" href="#step-4-get-results" title="Permalink to this headline">¶</a></h3>
+<p>Once you have fitted your model, you can get the results to verify that the model is working satisfactorily and interpret it.</p>
+<p>We will obtain the following properties of the model.</p>
+<ol class="simple">
+<li><p>Write Python to print out the coefficient of determination (R-squared).</p></li>
+</ol>
+<ol class="simple">
+<li><p>Write Python to print out the intercept of the model.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Write Python to print out the slope (coefficient of the chosen feature) of the model.</p></li>
+</ol>
+</section>
+<section id="step-5-predict-response">
+<h3>Step 5: Predict response<a class="headerlink" href="#step-5-predict-response" title="Permalink to this headline">¶</a></h3>
+<p>Once you have a satisfactory model, you can use it for predictions with new data.</p>
+<ol class="simple">
+<li><p>Make predictions for the test set. Add a new column of prediction values to the test set. Show the first five rows of the test set of the following columns:</p></li>
+</ol>
+<ul class="simple">
+<li><p>the feature column that used for the model,</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">log_price</span></code>, and</p></li>
+<li><p>the predictions.</p></li>
+</ul>
+<ol class="simple">
+<li><p>For model evaluation, write Python to calculate the following quantitative measurements on <strong>the test set</strong></p></li>
+</ol>
+<p>20.1 MAE,</p>
+<p>20.2 MSE, and</p>
+<p>20.3 R squared.</p>
+<ol class="simple">
+<li><p>(5 extra points) Write Python code to visualize the predictions of the linear regression. These may include:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Scatter plot of actual vs predicted Values</p></li>
+<li><p>Density plot of actual vs Predicted Values</p></li>
+<li><p>Residual plot (prediction Error)</p></li>
+</ul>
+<p>Give the graphs appropriate labels and titles.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Exercises"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Pairote Satiracoo<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

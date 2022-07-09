@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4. Data Visualization &#8212; SCMA248 Introduction to Data Science</title>
+    <title>6. Data Visualization &#8212; SCMA248 Introduction to Data Science</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -43,6 +43,8 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -52,7 +54,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="3. Data Preparation" href="Chapter3-Data-Preparation.html" />
+    <link rel="next" title="7. Practical Statistics" href="Chapter5_Practical_Statistics.html" />
+    <link rel="prev" title="3. Data Selection" href="Chapter3_Data_Preparation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -98,23 +101,43 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Chapter1-Introduction-to-Data-Science.html">
+  <a class="reference internal" href="Chapter1_Introduction_to_Data_Science.html">
    1. Introduction to Data Science
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Chapter2-Python-Basics.html">
+  <a class="reference internal" href="Chapter2_Python_Basics.html">
    2. Python Basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Chapter3-Data-Preparation.html">
-   3. Data Preparation
+  <a class="reference internal" href="Chapter3_Data_Preparation.html">
+   3. Data Selection
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   4. Data Visualization
+   6. Data Visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter5_Practical_Statistics.html">
+   7. Practical Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter6_Regression.html">
+   8. Regression Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter7_Introduction_Machine_Learning.html">
+   9. Machine learning: Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter8_Unsupervised_Learning.html">
+   10. Unsupervised Machine Learning: K-means Clustering
   </a>
  </li>
 </ul>
@@ -223,37 +246,37 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-pandas-to-plot-line-bar-charts-and-histogram-in-python">
-   4.1. Using pandas to plot line, bar charts and Histogram in Python
+   6.1. Using pandas to plot line, bar charts and Histogram in Python
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plot-a-histogram-in-python-using-matplotlib">
-   4.2. Plot a Histogram in Python using Matplotlib
+   6.2. Plot a Histogram in Python using Matplotlib
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-ggplot-and-python-to-create-your-first-plot">
-   4.3. Using ggplot and Python to Create Your First Plot
+   6.3. Using ggplot and Python to Create Your First Plot
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#building-your-first-plot-with-ggplot-and-python">
-     4.3.1. Building Your First Plot With ggplot and Python
+     6.3.1. Building Your First Plot With ggplot and Python
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#geometries">
-       4.3.1.1. Geometries
+       6.3.1.1. Geometries
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#aesthetic-mappings">
-       4.3.1.2. Aesthetic mappings
+       6.3.1.2. Aesthetic mappings
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#adding-more-arguments">
-       4.3.1.3. Adding more arguments
+       6.3.1.3. Adding more arguments
       </a>
      </li>
     </ul>
@@ -262,25 +285,81 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#global-and-local-aesthetic-mappings">
-   4.4. Global and local aesthetic mappings
+   6.4. Global and local aesthetic mappings
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#scales">
-     4.4.1. Scales
+     6.4.1. Scales
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#labels-and-titles">
-   4.5. Labels and titles
+   6.5. Labels and titles
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#categories-as-colors">
-   4.6. Categories as colors
+   6.6. Categories as colors
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-visualization-in-practice">
+   6.7. Data visualization in practice
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualization-with-bubble-plot">
+     6.7.1. Visualization with bubble plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pandas-pipe">
+     6.7.2. Pandas Pipe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applying-pandas-pipes-to-gapminder">
+     6.7.3. Applying Pandas pipes to gapminder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#faceting">
+     6.7.4. Faceting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-transformations">
+     6.7.5. Data transformations
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#logging-the-values">
+       6.7.5.1. Logging the values
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#scaling-the-axis">
+       6.7.5.2. Scaling the axis
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-regional-classfication-into-gapminder-dataset">
+   6.8. Adding regional classfication into Gapminder dataset
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-python-plot-a-ridgeline-plot">
+     6.8.1. In Python, plot a ridgeline plot.
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -294,7 +373,7 @@
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="data-visualization">
-<h1><span class="section-number">4. </span>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this headline">¶</a></h1>
 <p>In this section, you will learn how to use Python to create your first data visualization. The phrase “a picture is worth a thousand words” comes to mind. Data visualization is a valuable tool for communicating a data-driven conclusion. In certain circumstances, the visualization is so persuasive that there is no need for further investigation.</p>
 <p>Python’s most powerful feature is probably exploratory data visualization. With a unique blend of flexibility and ease, one may go from idea to data to plot quickly.</p>
 <p>Excel may be easier than Python, but it lacks the flexibility of Python. Although D3.js is more powerful and flexible than Python, it takes substantially longer to create a plot.</p>
@@ -332,14 +411,14 @@
 </div>
 </div>
 <section id="using-pandas-to-plot-line-bar-charts-and-histogram-in-python">
-<h2><span class="section-number">4.1. </span>Using pandas to plot line, bar charts and Histogram in Python<a class="headerlink" href="#using-pandas-to-plot-line-bar-charts-and-histogram-in-python" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>Using pandas to plot line, bar charts and Histogram in Python<a class="headerlink" href="#using-pandas-to-plot-line-bar-charts-and-histogram-in-python" title="Permalink to this headline">¶</a></h2>
 <p>To give you an example, the property fund had 1,110 policyholders in 2010 who had a total of 1,377 claims.</p>
 <p>First we will create a table reporting the <strong>2010 claims frequency distribution</strong>.</p>
 <p><strong>Note:</strong> In a dataset, a histogram displays the amount of occurrences of certain values. It looks a lot like a bar chart at first glance.</p>
 <p>First we will explore how to make a line chart and a bar chart that indicate the frequency of different values in the data set before plotting the histogram. As a result, you will be able to compare the various ways.</p>
 <p>Of course, if you have never plotted anything in Pandas before, it is a good idea to start with a simple line chart.</p>
-<p>Simply type the <code class="docutils literal notranslate"><span class="pre">plot</span></code> method after the pandas dataframe you wish to visualize to put your data on a chart. By default <code class="docutils literal notranslate"><span class="pre">plot</span></code> provides a line chart.</p>
-<p>If you plot the <code class="docutils literal notranslate"><span class="pre">Freq</span></code> column of the claims2010 dataframe as is, you will get the following results.</p>
+<p>Simply type the <code class="docutils literal notranslate"><span class="pre">plot</span></code> method after the pandas data frame you wish to visualize to put your data on a chart. By default <code class="docutils literal notranslate"><span class="pre">plot</span></code> provides a line chart.</p>
+<p>If you plot the <code class="docutils literal notranslate"><span class="pre">Freq</span></code> column of the claims2010 data frame as is, you will get the following results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claims2010</span> <span class="o">=</span> <span class="n">claims</span><span class="p">[(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2010</span><span class="p">)]</span>
@@ -469,12 +548,12 @@ Name: Freq, dtype: int64
 </div>
 </div>
 <p>However, there is one more step before plotting a histogram: these unique values will be clustered into ranges. Bins or buckets are the names for these ranges, and the default number of bins in Python is 10. As a result of the grouping, your histogram should now look like this:</p>
-<p>We will use the <code class="docutils literal notranslate"><span class="pre">hist</span></code> function that is built into pandas. It is very simple to turn your pandas dataframe into a histogram once you have the values in it.</p>
+<p>We will use the <code class="docutils literal notranslate"><span class="pre">hist</span></code> function that is built into pandas. It is very simple to turn your pandas data frame into a histogram once you have the values in it.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">hist</span></code> function automatically does several of the useful tasks:</p>
 <ol class="simple">
 <li><p>It does the grouping.</p></li>
 <li><p>It does the counting.</p></li>
-<li><p>It plots a histogram for each column in your dataframe that has numerical values in it.</p></li>
+<li><p>It plots a histogram for each column in your data frame that has numerical values in it.</p></li>
 </ol>
 <p><strong>Note:</strong> You can change the number of bins/buckets from the default of 10 by setting a parameter, for example <code class="docutils literal notranslate"><span class="pre">bins=20</span></code>.</p>
 <div class="cell docutils container">
@@ -539,7 +618,7 @@ Name: Freq, dtype: int64
 </ul>
 </section>
 <section id="plot-a-histogram-in-python-using-matplotlib">
-<h2><span class="section-number">4.2. </span>Plot a Histogram in Python using Matplotlib<a class="headerlink" href="#plot-a-histogram-in-python-using-matplotlib" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2. </span>Plot a Histogram in Python using Matplotlib<a class="headerlink" href="#plot-a-histogram-in-python-using-matplotlib" title="Permalink to this headline">¶</a></h2>
 <p>To plot a histogram in Python using Matplotlib, use the following command:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -582,7 +661,7 @@ Name: Freq, dtype: int64
 </div>
 </section>
 <section id="using-ggplot-and-python-to-create-your-first-plot">
-<h2><span class="section-number">4.3. </span>Using ggplot and Python to Create Your First Plot<a class="headerlink" href="#using-ggplot-and-python-to-create-your-first-plot" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.3. </span>Using ggplot and Python to Create Your First Plot<a class="headerlink" href="#using-ggplot-and-python-to-create-your-first-plot" title="Permalink to this headline">¶</a></h2>
 <p>You will learn how to construct data visualizations using <strong>ggplot</strong> in Python using a <strong>grammar of graphics</strong>. A grammar of graphics is a high-level tool for creating data displays in a consistent and efficient manner. It abstracts the majority of low-level details, <strong>allowing you to concentrate on producing useful and beautiful data visualizations</strong>.</p>
 <p>A graphics grammar is provided by a number of Python libraries. We focus on <strong>plotnine</strong> since it is the most developed.</p>
 <p>Plotnine is based on the R programming language’s <strong>ggplot2</strong>, thus if you are familiar with R, you may think of plotnine as the Python counterpart of ggplot2.</p>
@@ -616,9 +695,9 @@ Name: Freq, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">--------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_6368</span><span class="o">/</span><span class="mf">476494641.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_5490</span><span class="o">/</span><span class="mf">476494641.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="p">(</span>
@@ -631,7 +710,7 @@ Name: Freq, dtype: int64
 </div>
 </div>
 <section id="building-your-first-plot-with-ggplot-and-python">
-<h3><span class="section-number">4.3.1. </span>Building Your First Plot With ggplot and Python<a class="headerlink" href="#building-your-first-plot-with-ggplot-and-python" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.1. </span>Building Your First Plot With ggplot and Python<a class="headerlink" href="#building-your-first-plot-with-ggplot-and-python" title="Permalink to this headline">¶</a></h3>
 <p>You will learn how to use ggplot in Python to create your first data visualization.</p>
 <p>The approach of making visuals with ggplot2 is intuitively based on <strong>The Grammar of Graphics</strong> (where the gg comes from).</p>
 <p>This is comparable to how understanding grammar can help a beginner build hundreds of distinct sentences without having to memorize each one.</p>
@@ -654,7 +733,7 @@ Name: Freq, dtype: int64
 <p><a class="reference external" href="https://plotnine.readthedocs.io/en/stable/">https://plotnine.readthedocs.io/en/stable/</a></p>
 <p>The claims dataset is plotted in this short code sample. Here’s a brief breakdown of what’s going on:</p>
 <ul class="simple">
-<li><p>Line 1: You use ggplot() to build a plot object and feed the claims DataFrame to the constructor.</p></li>
+<li><p>Line 1: You use ggplot() to build a plot object and feed the claims data frame to the constructor.</p></li>
 <li><p>Line 2: The variable to utilize for each axis, in this case <strong>lnyAvg</strong>, is set with aes().</p></li>
 <li><p>Line 3: You use the geom_histogram() function to tell the chart to draw as a histogram.</p></li>
 </ul>
@@ -670,7 +749,7 @@ Name: Freq, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/Chapter4_Data_Visualization_32_0.png" src="_images/Chapter4_Data_Visualization_32_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (311587285)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (311511861)&gt;
 </pre></div>
 </div>
 </div>
@@ -685,7 +764,7 @@ Name: Freq, dtype: int64
 </ol>
 <p>Do not worry if you are not sure what each component means right now. Throughout this chapter, you will learn more about them.</p>
 <section id="geometries">
-<h4><span class="section-number">4.3.1.1. </span>Geometries<a class="headerlink" href="#geometries" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.3.1.1. </span>Geometries<a class="headerlink" href="#geometries" title="Permalink to this headline">¶</a></h4>
 <p>In plotnine we create graphs by adding layers. Layers can define geometries, compute summary statistics, define what scales to use, or even change styles.</p>
 <p>To add layers, we use the symbol <code class="docutils literal notranslate"><span class="pre">+</span></code>. In general, a line of code will look like this:</p>
 <p><code class="docutils literal notranslate"><span class="pre">ggplot(data)</span> <span class="pre">+</span> <span class="pre">LAYER</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">LAYER</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">LAYER</span> <span class="pre">N</span></code></p>
@@ -710,22 +789,22 @@ this geometry is <code class="docutils literal notranslate"><span class="pre">ge
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/Chapter4_Data_Visualization_35_0.png" src="_images/Chapter4_Data_Visualization_35_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (306193581)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (311808725)&gt;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="aesthetic-mappings">
-<h4><span class="section-number">4.3.1.2. </span>Aesthetic mappings<a class="headerlink" href="#aesthetic-mappings" title="Permalink to this headline">¶</a></h4>
-<p>The next step is to decide which variable you’ll use for each axis in your graph. You must tell plotnine which variables you want to include in the visual because each row in a DataFrame can have several fields.</p>
+<h4><span class="section-number">6.3.1.2. </span>Aesthetic mappings<a class="headerlink" href="#aesthetic-mappings" title="Permalink to this headline">¶</a></h4>
+<p>The next step is to decide which variable you’ll use for each axis in your graph. You must tell plotnine which variables you want to include in the visual because each row in a data frame can have several fields.</p>
 <p>Data variables are mapped to graphical features such as 2D position and color by aesthetics.</p>
 <p>In other words, aesthetic mappings describe how properties of the data (variables) connect with features of the graph, such as distance along an axis, size, or colour.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">aes</span></code> function connects data with what we see on the graph by defining aesthetic mappings.</p>
 <p>The code, for example, creates a graph with <strong>BCcov</strong> (coverages (in millions)) on the x-axis and <strong>claims</strong> on the y-axis:</p>
 </section>
 <section id="adding-more-arguments">
-<h4><span class="section-number">4.3.1.3. </span>Adding more arguments<a class="headerlink" href="#adding-more-arguments" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.3.1.3. </span>Adding more arguments<a class="headerlink" href="#adding-more-arguments" title="Permalink to this headline">¶</a></h4>
 <p>A second layer in the plot we wish to make involves adding a label to each point to identify the entity type.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">geom_label</span></code> and <code class="docutils literal notranslate"><span class="pre">geom_text</span></code> functions permit us to add text to the plot <strong>with</strong> and <strong>without</strong> a rectangle behind the text, respectively.</p>
 <p>Because each point (each claim in this case) has a label (type of local government entities), we need an aesthetic mapping to make the connection between points and labels.</p>
@@ -742,7 +821,7 @@ this geometry is <code class="docutils literal notranslate"><span class="pre">ge
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/Chapter4_Data_Visualization_38_0.png" src="_images/Chapter4_Data_Visualization_38_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (306227937)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (303583217)&gt;
 </pre></div>
 </div>
 </div>
@@ -761,7 +840,7 @@ this geometry is <code class="docutils literal notranslate"><span class="pre">ge
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/Chapter4_Data_Visualization_40_0.png" src="_images/Chapter4_Data_Visualization_40_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (320597253)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (303610161)&gt;
 </pre></div>
 </div>
 </div>
@@ -770,7 +849,7 @@ this geometry is <code class="docutils literal notranslate"><span class="pre">ge
 </section>
 </section>
 <section id="global-and-local-aesthetic-mappings">
-<h2><span class="section-number">4.4. </span>Global and local aesthetic mappings<a class="headerlink" href="#global-and-local-aesthetic-mappings" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4. </span>Global and local aesthetic mappings<a class="headerlink" href="#global-and-local-aesthetic-mappings" title="Permalink to this headline">¶</a></h2>
 <p>In the previous line of code, we define the mapping <code class="docutils literal notranslate"><span class="pre">aes(x</span> <span class="pre">=</span> <span class="pre">'BCcov',</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">'y')</span></code> twice, once in each geometry.</p>
 <p>We can avoid this by using a global aesthetic mapping.</p>
 <p>We can do this when we define the blank slate ggplot object.</p>
@@ -790,7 +869,7 @@ We redefine p:</p>
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/Chapter4_Data_Visualization_42_0.png" src="_images/Chapter4_Data_Visualization_42_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (321703573)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (312462793)&gt;
 </pre></div>
 </div>
 </div>
@@ -798,8 +877,28 @@ We redefine p:</p>
 <p>In the code above, we keep the <code class="docutils literal notranslate"><span class="pre">size</span></code> and <code class="docutils literal notranslate"><span class="pre">nudge_x</span></code> arguments in <code class="docutils literal notranslate"><span class="pre">geom_point</span></code> and <code class="docutils literal notranslate"><span class="pre">geom_text</span></code>, respectively, because we want to only increase the size of points and only nudge the labels.</p>
 <p>If we put those arguments in <code class="docutils literal notranslate"><span class="pre">aes</span></code> then they would apply to both plots.
 Also note that the <code class="docutils literal notranslate"><span class="pre">geom_point</span></code> function does not need a label argument and therefore ignores that aesthetic.</p>
+<p>If necessary, we can override the global mapping by defining a new mapping within each layer. These local definitions override the global.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">claims2010</span><span class="p">)</span> <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;BCcov&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Type&#39;</span><span class="p">)</span>
+
+<span class="p">(</span>
+    <span class="n">p</span> 
+    <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span> 
+    <span class="o">+</span> <span class="n">geom_text</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">5000000</span><span class="p">),</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;We are Data Science team at MU&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_45_0.png" src="_images/Chapter4_Data_Visualization_45_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (312850877)&gt;
+</pre></div>
+</div>
+</div>
+</div>
 <section id="scales">
-<h3><span class="section-number">4.4.1. </span>Scales<a class="headerlink" href="#scales" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.1. </span>Scales<a class="headerlink" href="#scales" title="Permalink to this headline">¶</a></h3>
 <p>First, our desired scale in claims is in log-scale. This is not the default, so this change needs to be added through a scales layer.</p>
 <p>A quick look at the cheat sheet reveals the <code class="docutils literal notranslate"><span class="pre">scale_y_continuous</span></code> function lets us control the behavior of scale. We use it like this:</p>
 <div class="cell docutils container">
@@ -816,8 +915,8 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Chapter4_Data_Visualization_45_0.png" src="_images/Chapter4_Data_Visualization_45_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (309737009)&gt;
+<img alt="_images/Chapter4_Data_Visualization_47_0.png" src="_images/Chapter4_Data_Visualization_47_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (300296569)&gt;
 </pre></div>
 </div>
 </div>
@@ -835,8 +934,8 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Chapter4_Data_Visualization_47_0.png" src="_images/Chapter4_Data_Visualization_47_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (320855017)&gt;
+<img alt="_images/Chapter4_Data_Visualization_49_0.png" src="_images/Chapter4_Data_Visualization_49_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (313462709)&gt;
 </pre></div>
 </div>
 </div>
@@ -844,7 +943,7 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 </section>
 </section>
 <section id="labels-and-titles">
-<h2><span class="section-number">4.5. </span>Labels and titles<a class="headerlink" href="#labels-and-titles" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.5. </span>Labels and titles<a class="headerlink" href="#labels-and-titles" title="Permalink to this headline">¶</a></h2>
 <p>Similarly, the cheat sheet quickly reveals that to change labels and add a title, we use the following functions:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -861,15 +960,15 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Chapter4_Data_Visualization_49_0.png" src="_images/Chapter4_Data_Visualization_49_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (321717417)&gt;
+<img alt="_images/Chapter4_Data_Visualization_51_0.png" src="_images/Chapter4_Data_Visualization_51_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (313816497)&gt;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="categories-as-colors">
-<h2><span class="section-number">4.6. </span>Categories as colors<a class="headerlink" href="#categories-as-colors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.6. </span>Categories as colors<a class="headerlink" href="#categories-as-colors" title="Permalink to this headline">¶</a></h2>
 <p>We can change the color of the points using the <code class="docutils literal notranslate"><span class="pre">colour</span></code> argument in the <code class="docutils literal notranslate"><span class="pre">geom_point</span></code> function.</p>
 <p>To facilitate demonstration of new features, we will redefine <code class="docutils literal notranslate"><span class="pre">p</span></code> to be everything except the points layer:</p>
 <div class="cell docutils container">
@@ -887,8 +986,8 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Chapter4_Data_Visualization_53_0.png" src="_images/Chapter4_Data_Visualization_53_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (321056149)&gt;
+<img alt="_images/Chapter4_Data_Visualization_55_0.png" src="_images/Chapter4_Data_Visualization_55_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (300294321)&gt;
 </pre></div>
 </div>
 </div>
@@ -904,12 +1003,1877 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Chapter4_Data_Visualization_55_0.png" src="_images/Chapter4_Data_Visualization_55_0.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (311056725)&gt;
+<img alt="_images/Chapter4_Data_Visualization_57_0.png" src="_images/Chapter4_Data_Visualization_57_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (312026033)&gt;
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Comment:</strong> The above data visualization should provide insight into the relationship between claims and Coverage, and also claims and entity type.</p>
+</section>
+<section id="data-visualization-in-practice">
+<h2><span class="section-number">6.7. </span>Data visualization in practice<a class="headerlink" href="#data-visualization-in-practice" title="Permalink to this headline">¶</a></h2>
+<p>In this section, we will show how to use plotnine (ggplot2) to make plots that are both informative and visually appealing. We will use plots to help us better comprehend global health and economic patterns as motivation.</p>
+<p>We will put what we learned in this chapter into practice and learn how to improve the plots by augmenting the code. We will go through general data visualization principles and ideas like faceting, time series plots, transformations, and ridge plots as we go through our case study.</p>
+<p>Here is an example that uses an abstract from the Gapminder dataset, which became popular after <strong>Hans Rosling’s Ted Talk</strong>. For more than 100 countries, it provides average life expectancy, GDP per capita, and population size.</p>
+<p>In addition, according to the research result <strong>Socioeconomic development and life expectancy relationship: evidence from the EU accession candidate countries</strong> by Goran Miladinov in Journal of Population Sciences, Genus volume 76, Article number: 2 (2020), the results show that</p>
+<ul class="simple">
+<li><p>a country’s population health and socioeconomic development have a significant impact on life expectancy at birth;</p></li>
+<li><p>in other words, as a country’s population health and socioeconomic development improves, infant mortality rates decrease, and life expectancy at birth appears to rise.</p></li>
+<li><p>Through increased economic growth and development in a country, <strong>GDP per capita raises life expectancy at birth, resulting in a longer lifespan</strong>.</p></li>
+</ul>
+<p><a class="reference external" href="https://genus.springeropen.com/articles/10.1186/s41118-019-0071-0#:~:text=GDP%20per%20capita%20increases%20the,to%20the%20prolongation%20of%20longevity.)">https://genus.springeropen.com/articles/10.1186/s41118-019-0071-0#:~:text=GDP per capita increases the,to the prolongation of longevity.)</a></p>
+<section id="visualization-with-bubble-plot">
+<h3><span class="section-number">6.7.1. </span>Visualization with bubble plot<a class="headerlink" href="#visualization-with-bubble-plot" title="Permalink to this headline">¶</a></h3>
+<p>The link between world countries’ life expectancy (y) and GDP per capita (x) is depicted by a bubble plot below. Each country’s population is indicated by the size of its circles.</p>
+<p>A <strong>bubble plot</strong> is a scatterplot with a third dimension: the size of the dots represents the value of an additional numeric variable. (source: data-to-viz).</p>
+<p>As input, you will need three numerical variables: one for the X axis, one for the Y axis, and one for the dot size.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/Data/gapminder_full.csv&#39;</span><span class="p">)</span>
+
+<span class="c1">#url = &#39;https://raw.githubusercontent.com/STLinde/Anvendt-Statistik/main/gapminder_full.csv&#39;</span>
+<span class="c1">#gapminder = pd.read_csv(url)</span>
+<span class="c1">#gapminder[&#39;year&#39;].unique()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Note</strong>: The gapminder data frames include six variables:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>country</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>continent</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>year</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>life_exp</p></td>
+<td><p>life expectancy at birth</p></td>
+</tr>
+<tr class="row-even"><td><p>population</p></td>
+<td><p>total population</p></td>
+</tr>
+<tr class="row-odd"><td><p>gdp_cap</p></td>
+<td><p>per-capita GDP</p></td>
+</tr>
+</tbody>
+</table>
+<p>The per-capita GDP is expressed in international dollars, which are “a hypothetical unit of money with the same purchasing power parity as the United States dollar at a specific point in time”.</p>
+<p>As the dataset covers the period between 1952 and 2007, we start by looking at 1957 about 50 years ago.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beginning_year</span> <span class="o">=</span> <span class="mi">1957</span>
+<span class="n">latest_year</span> <span class="o">=</span> <span class="n">gapminder</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="n">gapminder1957</span> <span class="o">=</span> <span class="n">gapminder</span><span class="p">[</span><span class="n">gapminder</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">beginning_year</span><span class="p">]</span>
+<span class="n">gapminder2007</span> <span class="o">=</span> <span class="n">gapminder</span><span class="p">[</span><span class="n">gapminder</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">latest_year</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following Python code creates the most basic bubble chart using ggplot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With plotnine (ggplot2)</span>
+
+<span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">gapminder1957</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">gapminder1957</span><span class="p">)</span> <span class="o">+</span> \
+    <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;gdp_cap&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;life_exp&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;population&#39;</span><span class="p">)</span> <span class="o">+</span> \
+    <span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+
+<span class="p">(</span>
+<span class="n">p</span> <span class="o">+</span> <span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_point : Removed 1 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/Chapter4_Data_Visualization_66_1.png" src="_images/Chapter4_Data_Visualization_66_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (312446985)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The bubble size is the first thing we need to modify in the preceding chart. Using the range input, <code class="docutils literal notranslate"><span class="pre">scale_size()</span></code> allows you to change the size of the smallest and largest circles. It’s worth noting that you can change the legend’s name with your own.</p>
+<p>It is worth noting that circles frequently overlap. You must first sort your dataset, as shown in the code below, to avoid having large circles on top of the chart.</p>
+<p><strong>Note:</strong> Here we use <code class="docutils literal notranslate"><span class="pre">xlim()</span></code> to specify the left/lower limit and the right/upper limit of the scale.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_sorted</span> <span class="o">=</span> <span class="n">gapminder1957</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data_sorted</span><span class="p">)</span> <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;gdp_cap&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;life_exp&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;population&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">)</span>
+
+<span class="p">(</span>
+<span class="n">p</span> <span class="o">+</span> <span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">25000</span><span class="p">)</span> <span class="o">+</span> <span class="n">scale_size</span><span class="p">(</span><span class="nb">range</span> <span class="o">=</span> <span class="p">(</span><span class="mf">.1</span><span class="p">,</span><span class="mi">28</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Population (M)&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_point : Removed 1 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/Chapter4_Data_Visualization_68_1.png" src="_images/Chapter4_Data_Visualization_68_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (314251261)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Most points fall into <strong>two distinct categories</strong>:</p>
+<ol class="simple">
+<li><p>Life expectancy around 70 years and GDP per capita  more than 5000.</p></li>
+<li><p>Life expectancy lower than 55 years and GDP per capita lower than 2500.</p></li>
+</ol>
+<p>We can utilize color to signify continent to check that these countries are really from the regions we expect.</p>
+<p>Each country’s continent is applied to control circle color in this example by adding <code class="docutils literal notranslate"><span class="pre">color='continent'</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_sorted</span> <span class="o">=</span> <span class="n">gapminder1957</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data_sorted</span><span class="p">)</span> <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;gdp_cap&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;life_exp&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;population&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;continent&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">)</span>
+
+<span class="p">(</span>
+<span class="n">p</span> <span class="o">+</span> <span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">25000</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">scale_size</span><span class="p">(</span><span class="nb">range</span> <span class="o">=</span> <span class="p">(</span><span class="mf">.1</span><span class="p">,</span><span class="mi">28</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Population (M)&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">xlab</span><span class="p">(</span><span class="s1">&#39;Gdp per Capta&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">ylab</span><span class="p">(</span><span class="s1">&#39;Life Expectancy&#39;</span><span class="p">)</span> 
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_point : Removed 1 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/Chapter4_Data_Visualization_71_1.png" src="_images/Chapter4_Data_Visualization_71_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (314401913)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We may compare the results between 1957 and 2007 to see whether there is an improvement in life expectancy with GDP per capita.</p>
+<p>To do this, we can simply repeat the whole process as above by replacing the data in 1957 with 2007.</p>
+<p>Alternatively, we can use Pandas <code class="docutils literal notranslate"><span class="pre">pipe</span></code> function.</p>
+</section>
+<section id="pandas-pipe">
+<h3><span class="section-number">6.7.2. </span>Pandas Pipe<a class="headerlink" href="#pandas-pipe" title="Permalink to this headline">¶</a></h3>
+<p>We will briefly introduce the concept of <strong>pipes (or method chaining)</strong> in Python that allows us to make code more efficient and improve code readability.</p>
+<p><strong>Background</strong> In Data Processing, it is common to construct a function to perform operations (such as statistical calculations, splitting, or substituting values) on a certain row or column in order to get new data.</p>
+<p>(source: <a class="reference external" href="https://towardsdatascience.com/using-pandas-pipe-function-to-improve-code-readability-96d66abfaf8">https://towardsdatascience.com/using-pandas-pipe-function-to-improve-code-readability-96d66abfaf8</a>)</p>
+<p>For a typical code example below, we might save a result of a function in a variale, for example <code class="docutils literal notranslate"><span class="pre">res1</span></code>, and then pass it into the next function, <code class="docutils literal notranslate"><span class="pre">g</span></code>. As a result, you will have a lot of variables with potentially meaningless names, which will add to the complexity of your code.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># f(), g() and h() are user-defined function </span>
+<span class="c1"># df is a Pandas DataFrame</span>
+<span class="n">res1</span> <span class="o">=</span> <span class="n">h</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">res2</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">res1</span><span class="p">,</span> <span class="n">arg1</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">res3</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">res2</span><span class="p">,</span> <span class="n">arg2</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">arg3</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Alternative to the this approach, we can nest function calls as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># f(), g() and h() are user-defined function </span>
+<span class="c1"># df is a Pandas DataFrame</span>
+<span class="n">f</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="n">arg1</span><span class="o">=</span><span class="n">a</span><span class="p">),</span> <span class="n">arg2</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">arg3</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Pipes will enable us to build code that offers the following advantages:</p>
+<ul class="simple">
+<li><p>arranging data operations in a left-to-right order (as opposed to from the inside and out),</p></li>
+<li><p>avoiding calls to nested functions</p></li>
+<li><p>reducing the number of local variables and function definitions required, and</p></li>
+<li><p>making it simple to add steps to the sequence of operations at any point.</p></li>
+</ul>
+<p>For a better understanding how the piped code works the interpreted version is shown below:
+We can write with pipe as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">arg1</span><span class="o">=</span><span class="n">a</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">arg2</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">arg3</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> 
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>To make the code the way we want it, we’ll use () brackets around it.</p>
+<p>We also see that a pipe passes the results of one method (function) to another method (function):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df.pipe(h)</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">h(df)</span></code>, which is then used as the input for another method, the method <code class="docutils literal notranslate"><span class="pre">g</span></code> in this case.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.pipe(h).pipe(g,</span> <span class="pre">arg1=a)</span></code> results in <code class="docutils literal notranslate"><span class="pre">g(h(df),</span> <span class="pre">arg1=a)</span></code>. It is then passed to the function <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df.pipe(h).pipe(g,</span> <span class="pre">arg1=a).pipe(f,</span> <span class="pre">arg2=b,</span> <span class="pre">arg3=c)</span></code> then produces the same final result as <code class="docutils literal notranslate"><span class="pre">f(g(h(df),</span> <span class="pre">arg1=a),</span> <span class="pre">arg2=b,</span> <span class="pre">arg3=c)</span></code>.</p></li>
+</ul>
+<p>When applying numerous methods to a Python iterable, pipe makes code look clearer.</p>
+</section>
+<section id="applying-pandas-pipes-to-gapminder">
+<h3><span class="section-number">6.7.3. </span>Applying Pandas pipes to gapminder<a class="headerlink" href="#applying-pandas-pipes-to-gapminder" title="Permalink to this headline">¶</a></h3>
+<p>We will apply the concept of Pandas pipes to gapminder dataset. In the data visualization process above, we proceed in the following manner:</p>
+<ol class="simple">
+<li><p>We select rows (observations) from year 1957 in the Gapminder dataset.</p></li>
+<li><p>The result filtered data frame is used as the data for the <code class="docutils literal notranslate"><span class="pre">ggplot</span></code> function to produce the bubble plt.</p></li>
+</ol>
+<p>Therefore, to apply pipes for this example, we first define a Python function (see the preceding code) that returns the subset of the data frame filtered by selecting rows with a specified year.</p>
+<p>To select rows with the year 2007, we previously used the following code <code class="docutils literal notranslate"><span class="pre">gapminder[gapminder['year']==latest_year]</span></code>.</p>
+<p>Using pipe together with our user-defined function <code class="docutils literal notranslate"><span class="pre">year_filter</span></code> produces the same results
+<code class="docutils literal notranslate"><span class="pre">year_filter(gapminder,</span> <span class="pre">latest_year)</span></code>, which will selects rows with observations in 2007.</p>
+<p><strong>Note</strong> The function <code class="docutils literal notranslate"><span class="pre">year_filter</span></code> is defined for illustrative purposes. Aalternatively, we can directly apply the pandas <code class="docutils literal notranslate"><span class="pre">query</span></code> method to select the specific observations (or rows). Details are given below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">year_filter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">year_selected</span><span class="p">):</span>
+    <span class="n">cond</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">year_selected</span>
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cond</span><span class="p">,]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">year_filter</span><span class="p">,</span><span class="n">latest_year</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>population</th>
+      <th>continent</th>
+      <th>life_exp</th>
+      <th>gdp_cap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>11</th>
+      <td>Afghanistan</td>
+      <td>2007</td>
+      <td>31889923</td>
+      <td>Asia</td>
+      <td>43.828</td>
+      <td>974.580338</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Albania</td>
+      <td>2007</td>
+      <td>3600523</td>
+      <td>Europe</td>
+      <td>76.423</td>
+      <td>5937.029526</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Algeria</td>
+      <td>2007</td>
+      <td>33333216</td>
+      <td>Africa</td>
+      <td>72.301</td>
+      <td>6223.367465</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Angola</td>
+      <td>2007</td>
+      <td>12420476</td>
+      <td>Africa</td>
+      <td>42.731</td>
+      <td>4797.231267</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>Argentina</td>
+      <td>2007</td>
+      <td>40301927</td>
+      <td>Americas</td>
+      <td>75.320</td>
+      <td>12779.379640</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1655</th>
+      <td>Vietnam</td>
+      <td>2007</td>
+      <td>85262356</td>
+      <td>Asia</td>
+      <td>74.249</td>
+      <td>2441.576404</td>
+    </tr>
+    <tr>
+      <th>1667</th>
+      <td>West Bank and Gaza</td>
+      <td>2007</td>
+      <td>4018332</td>
+      <td>Asia</td>
+      <td>73.422</td>
+      <td>3025.349798</td>
+    </tr>
+    <tr>
+      <th>1679</th>
+      <td>Yemen, Rep.</td>
+      <td>2007</td>
+      <td>22211743</td>
+      <td>Asia</td>
+      <td>62.698</td>
+      <td>2280.769906</td>
+    </tr>
+    <tr>
+      <th>1691</th>
+      <td>Zambia</td>
+      <td>2007</td>
+      <td>11746035</td>
+      <td>Africa</td>
+      <td>42.384</td>
+      <td>1271.211593</td>
+    </tr>
+    <tr>
+      <th>1703</th>
+      <td>Zimbabwe</td>
+      <td>2007</td>
+      <td>12311143</td>
+      <td>Africa</td>
+      <td>43.487</td>
+      <td>469.709298</td>
+    </tr>
+  </tbody>
+</table>
+<p>142 rows × 6 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year_filter</span><span class="p">(</span><span class="n">gapminder</span><span class="p">,</span> <span class="n">latest_year</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>population</th>
+      <th>continent</th>
+      <th>life_exp</th>
+      <th>gdp_cap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>11</th>
+      <td>Afghanistan</td>
+      <td>2007</td>
+      <td>31889923</td>
+      <td>Asia</td>
+      <td>43.828</td>
+      <td>974.580338</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Albania</td>
+      <td>2007</td>
+      <td>3600523</td>
+      <td>Europe</td>
+      <td>76.423</td>
+      <td>5937.029526</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Algeria</td>
+      <td>2007</td>
+      <td>33333216</td>
+      <td>Africa</td>
+      <td>72.301</td>
+      <td>6223.367465</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Angola</td>
+      <td>2007</td>
+      <td>12420476</td>
+      <td>Africa</td>
+      <td>42.731</td>
+      <td>4797.231267</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>Argentina</td>
+      <td>2007</td>
+      <td>40301927</td>
+      <td>Americas</td>
+      <td>75.320</td>
+      <td>12779.379640</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1655</th>
+      <td>Vietnam</td>
+      <td>2007</td>
+      <td>85262356</td>
+      <td>Asia</td>
+      <td>74.249</td>
+      <td>2441.576404</td>
+    </tr>
+    <tr>
+      <th>1667</th>
+      <td>West Bank and Gaza</td>
+      <td>2007</td>
+      <td>4018332</td>
+      <td>Asia</td>
+      <td>73.422</td>
+      <td>3025.349798</td>
+    </tr>
+    <tr>
+      <th>1679</th>
+      <td>Yemen, Rep.</td>
+      <td>2007</td>
+      <td>22211743</td>
+      <td>Asia</td>
+      <td>62.698</td>
+      <td>2280.769906</td>
+    </tr>
+    <tr>
+      <th>1691</th>
+      <td>Zambia</td>
+      <td>2007</td>
+      <td>11746035</td>
+      <td>Africa</td>
+      <td>42.384</td>
+      <td>1271.211593</td>
+    </tr>
+    <tr>
+      <th>1703</th>
+      <td>Zimbabwe</td>
+      <td>2007</td>
+      <td>12311143</td>
+      <td>Africa</td>
+      <td>43.487</td>
+      <td>469.709298</td>
+    </tr>
+  </tbody>
+</table>
+<p>142 rows × 6 columns</p>
+</div></div></div>
+</div>
+<p>Now we will proceed to our next step to use the current filtered data frame to create a bubble plot with ggplot. The following command with pipe completes our task:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">gapminder</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">year_filter</span><span class="p">,</span><span class="mi">2007</span><span class="p">)</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">ggplot</span><span class="p">)</span> 
+
+<span class="p">(</span> <span class="n">p</span> <span class="o">+</span>
+  <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;gdp_cap&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;life_exp&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;population&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_79_0.png" src="_images/Chapter4_Data_Visualization_79_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (314400861)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Please also note that we can also use pandas <code class="docutils literal notranslate"><span class="pre">query</span></code> method to filter or subset this data frame. Filtering conditions can be applied as a string using the query function. You can reference variables using &#64; (see example below). The <code class="docutils literal notranslate"><span class="pre">query</span></code> gives you more options than many other approaches.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  In pandas query, you can reference variables using @:</span>
+<span class="c1"># ref: https://stackoverflow.com/questions/57297077/use-variable-in-pandas-query</span>
+
+<span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">gapminder</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;year == @latest_year&#39;</span><span class="p">))</span> <span class="o">+</span>
+    <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;gdp_cap&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;life_exp&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;population&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_81_0.png" src="_images/Chapter4_Data_Visualization_81_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (314870913)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="faceting">
+<h3><span class="section-number">6.7.4. </span>Faceting<a class="headerlink" href="#faceting" title="Permalink to this headline">¶</a></h3>
+<p>We could easily plot the data from 2007 in the same way we plotted the data from 1962. However, side by side plots are recommended for comparisons.</p>
+<p><strong>Faceting</strong> variables in ggplot2 allows us to do this: we stratify the data by some variable and create the same plot for each strata.
+We add a layer with the function facet grid to create faceting, which automatically separates the plots. This function allows you to facet by up to two variables, with one variable represented by columns and the other by rows. The function expects a space between the row and column variables.</p>
+<p>We can create a very simple grid with two facets (each subplot is a facet) as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">gapminder</span><span class="o">.</span>
+    <span class="n">query</span><span class="p">(</span><span class="s1">&#39;year == @beginning_year or year == @latest_year&#39;</span><span class="p">)</span><span class="o">.</span>
+    <span class="n">pipe</span><span class="p">(</span><span class="n">ggplot</span><span class="p">)</span> <span class="o">+</span>     
+    <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;gdp_cap&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;life_exp&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="s1">&#39;population&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">facet_grid</span><span class="p">(</span><span class="s1">&#39;continent~year&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_83_0.png" src="_images/Chapter4_Data_Visualization_83_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (312593245)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each continent/year pair has its own plot. However, this is merely an example and goes beyond what we are looking for, which is a simple comparison between 1957 and 2007. There is only one variable in this example, therefore we use <code class="docutils literal notranslate"><span class="pre">.</span></code> to tell <code class="docutils literal notranslate"><span class="pre">Facet</span></code> that we are not utilizing one of the variables:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">gapminder</span><span class="o">.</span>
+    <span class="n">query</span><span class="p">(</span><span class="s1">&#39;year == @beginning_year or year == @latest_year&#39;</span><span class="p">)</span><span class="o">.</span>
+    <span class="n">pipe</span><span class="p">(</span><span class="n">ggplot</span><span class="p">)</span> <span class="o">+</span>     
+    <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;gdp_cap&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;life_exp&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;continent&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">facet_grid</span><span class="p">(</span><span class="s1">&#39;.~year&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_85_0.png" src="_images/Chapter4_Data_Visualization_85_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (314650981)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Many countries have moved from the developing world cluster to the western world cluster, as shown in this graph.  This is especially evident when comparing Europe to Asia, which has some countries that have made significant progress.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, 2002,
+       2007])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can build a plot for multiple years to see how this transition occurred for over time. For instance, we can include the years 1957, 1967, 1977, 1987, 1997, 2007. If we do this, we will not want all the plots on the same row, which is <code class="docutils literal notranslate"><span class="pre">facet_grid</span></code>’s default behavior. We will want to create many rows and columns instead. This is made possible by the function <code class="docutils literal notranslate"><span class="pre">facet_wrap</span></code>, which wraps a series of plots so that each display has readable dimensions.</p>
+<p>The next two plots compare between using <code class="docutils literal notranslate"><span class="pre">facet_grid</span></code> and <code class="docutils literal notranslate"><span class="pre">facet_wap</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#continent_selected = [&#39;Asia&#39;,&#39;Europe&#39;]</span>
+
+<span class="c1">#(</span>
+<span class="c1">#    gapminder.</span>
+<span class="c1">#    query(&#39;year in [1957, 1967, 1977, 1987, 1997, 2007] and continent in @continent_selected&#39;).</span>
+<span class="c1">#    pipe(ggplot) +     </span>
+<span class="c1">#    aes(x = &#39;gdp_cap&#39;, y=&#39;life_exp&#39;, size=&#39;population&#39;, color=&#39;continent&#39;) + </span>
+<span class="c1">#    geom_point(alpha = 0.8) +</span>
+<span class="c1">#    facet_grid(&#39;.~year&#39;)</span>
+<span class="c1">#)</span>
+
+<span class="c1"># Notice that we use both single and double quotes.</span>
+
+<span class="p">(</span>
+    <span class="n">gapminder</span><span class="o">.</span>
+    <span class="n">query</span><span class="p">(</span><span class="s2">&quot;year in [1957, 1967, 1977, 1987, 1997, 2007] and continent in [&#39;Asia&#39;,&#39;Europe&#39;]&quot;</span><span class="p">)</span><span class="o">.</span>
+    <span class="n">pipe</span><span class="p">(</span><span class="n">ggplot</span><span class="p">)</span> <span class="o">+</span>     
+    <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;gdp_cap&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;life_exp&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;continent&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">facet_grid</span><span class="p">(</span><span class="s1">&#39;.~year&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_89_0.png" src="_images/Chapter4_Data_Visualization_89_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (312923501)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Notice that we use both single and double quotes.</span>
+
+<span class="c1"># using Facet_wrap</span>
+
+<span class="p">(</span>
+    <span class="n">gapminder</span><span class="o">.</span>
+    <span class="n">query</span><span class="p">(</span><span class="s2">&quot;year in [1957, 1967, 1977, 1987, 1997, 2007] and continent in [&#39;Asia&#39;,&#39;Europe&#39;]&quot;</span><span class="p">)</span><span class="o">.</span>
+    <span class="n">pipe</span><span class="p">(</span><span class="n">ggplot</span><span class="p">)</span> <span class="o">+</span>     
+    <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;gdp_cap&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;life_exp&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;continent&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">facet_wrap</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_90_0.png" src="_images/Chapter4_Data_Visualization_90_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (314202637)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-transformations">
+<h3><span class="section-number">6.7.5. </span>Data transformations<a class="headerlink" href="#data-transformations" title="Permalink to this headline">¶</a></h3>
+<p>In this section, we refer to the following note: Chapter 11 of the following lecture note: <a class="reference external" href="https://rafalab.github.io/dsbook/">https://rafalab.github.io/dsbook/</a></p>
+<p>We will now turn our attention to the question, <strong>which concerns the common belief that global wealth distribution has gotten worse in recent decades</strong>. When asked if poor countries have gotten poorer and rich ones have gotten richer, the majority of people say <strong>yes</strong>.</p>
+<p>We will be able to tell if this is the case by using stratification, histograms, smooth densities, and boxplots.</p>
+<p>To begin, we will look at <strong>how transformations can occasionally aid in the building of more useful summaries and plots</strong>.</p>
+<p>In the gapminder dataset, the market value of goods and services generated by a country in a year is measured by GDP. The GDP per capita is frequently used to give an approximate idea of a country’s wealth. The GDP figures have been adjusted for inflation, so they should be comparable across the years.</p>
+<p>We <strong>divide this number by 365</strong> to get the more easily understandable metric of <code class="docutils literal notranslate"><span class="pre">dollars_per_day</span></code>. A person living in absolute poverty is defined as someone who survives on less than $2 a day in current dollars. This variable can be added to the Gapminder data frame using <code class="docutils literal notranslate"><span class="pre">pipe</span></code> and <code class="docutils literal notranslate"><span class="pre">assign</span></code> below.</p>
+<p>Recall that the <code class="docutils literal notranslate"><span class="pre">assign</span></code> method adds new columns to a DataFrame and returns a new object (a duplicate) with the new columns combined with the original. Existing columns will be overwritten if they are re-assigned.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ref: https://stackoverflow.com/questions/44631279/assign-in-pandas-pipeline</span>
+
+<span class="n">gapminder</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">dollars_per_day</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">gdp_cap</span><span class="o">/</span><span class="mi">365</span><span class="p">))</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>population</th>
+      <th>continent</th>
+      <th>life_exp</th>
+      <th>gdp_cap</th>
+      <th>dollars_per_day</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Afghanistan</td>
+      <td>1952</td>
+      <td>8425333</td>
+      <td>Asia</td>
+      <td>28.801</td>
+      <td>779.445314</td>
+      <td>2.135467</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Afghanistan</td>
+      <td>1957</td>
+      <td>9240934</td>
+      <td>Asia</td>
+      <td>30.332</td>
+      <td>820.853030</td>
+      <td>2.248912</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Afghanistan</td>
+      <td>1962</td>
+      <td>10267083</td>
+      <td>Asia</td>
+      <td>31.997</td>
+      <td>853.100710</td>
+      <td>2.337262</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Afghanistan</td>
+      <td>1967</td>
+      <td>11537966</td>
+      <td>Asia</td>
+      <td>34.020</td>
+      <td>836.197138</td>
+      <td>2.290951</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Afghanistan</td>
+      <td>1972</td>
+      <td>13079460</td>
+      <td>Asia</td>
+      <td>36.088</td>
+      <td>739.981106</td>
+      <td>2.027345</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Here is a histogram of per day incomes from the 1957 data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">beginning_year</span> <span class="o">=</span> <span class="mi">1957</span>
+
+<span class="p">(</span>
+    <span class="n">gapminder</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">dollars_per_day</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">gdp_cap</span><span class="o">/</span><span class="mi">365</span><span class="p">))</span><span class="o">.</span> 
+    <span class="n">query</span><span class="p">(</span><span class="s1">&#39;year == @beginning_year&#39;</span><span class="p">)</span><span class="o">.</span>
+    <span class="n">pipe</span><span class="p">(</span><span class="n">ggplot</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_94_0.png" src="_images/Chapter4_Data_Visualization_94_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (312926869)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We set <code class="docutils literal notranslate"><span class="pre">xlim(0,50)</span></code> to remove an outlier.</p>
+<p>You might want to investigate what’s causing this outlier.</p>
+<p>It is important to understand what causes them. Outliers can be caused by data entry/experiment measurement errors, sampling issues, or natural variation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Adjusting the x-limit</span>
+
+<span class="p">(</span>
+    <span class="n">gapminder</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">dollars_per_day</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">gdp_cap</span><span class="o">/</span><span class="mi">365</span><span class="p">))</span><span class="o">.</span> 
+    <span class="n">query</span><span class="p">(</span><span class="s1">&#39;year == @beginning_year&#39;</span><span class="p">)</span><span class="o">.</span>
+    <span class="n">pipe</span><span class="p">(</span><span class="n">ggplot</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages/plotnine/layer.py:324: PlotnineWarning: stat_bin : Removed 1 rows containing non-finite values.
+/Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages/plotnine/layer.py:401: PlotnineWarning: geom_histogram : Removed 2 rows containing missing values.
+</pre></div>
+</div>
+<img alt="_images/Chapter4_Data_Visualization_96_1.png" src="_images/Chapter4_Data_Visualization_96_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (314277509)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#(</span>
+<span class="c1">#    (gapminder.pipe(lambda x: x.assign(dollars_per_day = x.gdp_cap/365)). </span>
+<span class="c1">#    query(&#39;year == @beginning_year&#39;).sort_values(by = &#39;dollars_per_day&#39;, ascending=False)[&#39;dollars_per_day&#39;]&gt;= 20).value_counts()</span>
+<span class="c1">#)    </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#(</span>
+<span class="c1">#    gapminder.pipe(lambda x: x.assign(dollars_per_day = x.gdp_cap/365)). </span>
+<span class="c1">#    query(&#39;year == @beginning_year&#39;).isnull().value_counts()</span>
+<span class="c1">#)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The majority of countries’ average daily income are less than \$20, as shown in the above figure.</p>
+<p>20 countries with averages above \<span class="math notranslate nohighlight">\(20, on the other hand, take up the majority of the x-axis. As a result, the plot is not very useful for countries with daily values below \\\)</span>20.</p>
+<p>It could be more useful to know how many countries have average daily incomes of</p>
+<ul class="simple">
+<li><p>\$1 (extremely poor),</p></li>
+<li><p>\$2 (very poor),</p></li>
+<li><p>\$4 (poor),</p></li>
+<li><p>\$8 (middle),</p></li>
+<li><p>\$16 (well off),</p></li>
+<li><p>\$32 (rich),</p></li>
+<li><p>\$64 (very rich) each day.</p></li>
+</ul>
+<p>2<strong>2 -&gt; 2</strong>3
+log2(2<strong>2) = 2 -&gt; log2(2</strong>3) = 3</p>
+<p>These changes are <strong>multiplicative</strong>, and log transformations turn multiplicative changes into <strong>additive</strong> ones: using base 2, a doubling of a value turns into an increase by 1 in the log base 2 scale.</p>
+<section id="logging-the-values">
+<h4><span class="section-number">6.7.5.1. </span>Logging the values<a class="headerlink" href="#logging-the-values" title="Permalink to this headline">¶</a></h4>
+<p>If we use a log, we get the following distribution.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Taking log base 2 of dollars income per day</span>
+<span class="c1"># The variable name should be log(dollars_per_day)</span>
+
+<span class="p">(</span>
+    <span class="n">gapminder</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">dollars_per_day</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">gdp_cap</span><span class="o">/</span><span class="mi">365</span><span class="p">)))</span><span class="o">.</span> 
+    <span class="n">query</span><span class="p">(</span><span class="s1">&#39;year == @beginning_year&#39;</span><span class="p">)</span><span class="o">.</span>
+    <span class="n">pipe</span><span class="p">(</span><span class="n">ggplot</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">xlab</span><span class="p">(</span><span class="s1">&#39;log2(dollars_per_day)&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_100_0.png" src="_images/Chapter4_Data_Visualization_100_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (312028493)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="scaling-the-axis">
+<h4><span class="section-number">6.7.5.2. </span>Scaling the axis<a class="headerlink" href="#scaling-the-axis" title="Permalink to this headline">¶</a></h4>
+<p>The scale_x_continuous function can be used to scale the axis with logs. We use this layer instead of logging the values first.</p>
+<p>In plots, we can utilize log transformations in two ways. Before graphing, we can log the values or use log scales in the axes. Both approaches have advantages and disadvantages.</p>
+<ul class="simple">
+<li><p>We can more easily interpret <strong>intermediate values in the scale</strong> if we log the data.</p></li>
+<li><p>The benefit of using logged scales is that the <strong>original values</strong> are shown on the axes.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">gapminder</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">dollars_per_day</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">gdp_cap</span><span class="o">/</span><span class="mi">365</span><span class="p">))</span><span class="o">.</span> 
+    <span class="n">query</span><span class="p">(</span><span class="s1">&#39;year == @beginning_year&#39;</span><span class="p">)</span><span class="o">.</span>
+    <span class="n">pipe</span><span class="p">(</span><span class="n">ggplot</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">scale_x_continuous</span><span class="p">(</span><span class="n">trans</span> <span class="o">=</span> <span class="s2">&quot;log2&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_102_0.png" src="_images/Chapter4_Data_Visualization_102_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (312601081)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let us apply <code class="docutils literal notranslate"><span class="pre">facet_wrap</span></code> to dig deeper into the variations of the histogram of incomes per day from 1952 to 2007.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">gapminder</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">dollars_per_day</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">gdp_cap</span><span class="o">/</span><span class="mi">365</span><span class="p">))</span><span class="o">.</span> 
+    <span class="n">query</span><span class="p">(</span><span class="s1">&#39;year  in [1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, 2007] &#39;</span><span class="p">)</span><span class="o">.</span>
+    <span class="n">pipe</span><span class="p">(</span><span class="n">ggplot</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">scale_x_continuous</span><span class="p">(</span><span class="n">trans</span> <span class="o">=</span> <span class="s2">&quot;log2&quot;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">facet_wrap</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_104_0.png" src="_images/Chapter4_Data_Visualization_104_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (311545613)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>From the figures above, the histogram in the 1967 income distribution values revealed a dichotomy (two groups). However, the histogram does not indicate whether the two groups of countries are developed and developing.</p>
+<p>In what follows, we will read another CSV file, namely gapminder_dslab, which contains information about the regional classification. Then we will merge this regional classification into our original Gapminder dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">past_year</span> <span class="o">=</span> <span class="mi">1967</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="adding-regional-classfication-into-gapminder-dataset">
+<h2><span class="section-number">6.8. </span>Adding regional classfication into Gapminder dataset<a class="headerlink" href="#adding-regional-classfication-into-gapminder-dataset" title="Permalink to this headline">¶</a></h2>
+<p>In addition to the variable <code class="docutils literal notranslate"><span class="pre">continent</span></code> variable in the Gapminder dataset, we will preprocess our data by adding another variable, region, which gives a classification of countries by region.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder_dslab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/Data/gapminder_dslab.csv&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># url = &#39;https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/gapminder_dslab.csv&#39;</span>
+<span class="c1"># gapminder_dslab = pd.read_csv(url)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can check that countries are classified into 22 different regions as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">region</span> <span class="o">=</span> <span class="n">gapminder_dslab</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;year== 2007&#39;</span><span class="p">)[[</span><span class="s1">&#39;country&#39;</span><span class="p">,</span><span class="s1">&#39;region&#39;</span><span class="p">]]</span>
+<span class="n">region</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Southern Europe&#39;, &#39;Northern Africa&#39;, &#39;Middle Africa&#39;, &#39;Caribbean&#39;,
+       &#39;South America&#39;, &#39;Western Asia&#39;, &#39;Australia and New Zealand&#39;,
+       &#39;Western Europe&#39;, &#39;Southern Asia&#39;, &#39;Eastern Europe&#39;,
+       &#39;Central America&#39;, &#39;Western Africa&#39;, &#39;Southern Africa&#39;,
+       &#39;South-Eastern Asia&#39;, &#39;Eastern Africa&#39;, &#39;Northern America&#39;,
+       &#39;Eastern Asia&#39;, &#39;Northern Europe&#39;, &#39;Melanesia&#39;, &#39;Polynesia&#39;,
+       &#39;Central Asia&#39;, &#39;Micronesia&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">region</span><span class="o">.</span><span class="n">head</span><span class="p">())</span> <span class="c1">#dslab</span>
+<span class="n">gapminder</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  country           region
+8695              Albania  Southern Europe
+8696              Algeria  Northern Africa
+8697               Angola    Middle Africa
+8698  Antigua and Barbuda        Caribbean
+8699            Argentina    South America
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>population</th>
+      <th>continent</th>
+      <th>life_exp</th>
+      <th>gdp_cap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Afghanistan</td>
+      <td>1952</td>
+      <td>8425333</td>
+      <td>Asia</td>
+      <td>28.801</td>
+      <td>779.445314</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Afghanistan</td>
+      <td>1957</td>
+      <td>9240934</td>
+      <td>Asia</td>
+      <td>30.332</td>
+      <td>820.853030</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Afghanistan</td>
+      <td>1962</td>
+      <td>10267083</td>
+      <td>Asia</td>
+      <td>31.997</td>
+      <td>853.100710</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Afghanistan</td>
+      <td>1967</td>
+      <td>11537966</td>
+      <td>Asia</td>
+      <td>34.020</td>
+      <td>836.197138</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Afghanistan</td>
+      <td>1972</td>
+      <td>13079460</td>
+      <td>Asia</td>
+      <td>36.088</td>
+      <td>739.981106</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>merge() is most useful when you want to combine rows that share data (in our case <code class="docutils literal notranslate"><span class="pre">country</span></code> also known as <strong>key column</strong>).</p>
+<p>See <a class="reference external" href="https://realpython.com/pandas-merge-join-and-concat/">https://realpython.com/pandas-merge-join-and-concat/</a> for more detail.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">gapminder</span><span class="p">,</span><span class="n">region</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, let us begin by looking at the data by region.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># note that past_year = 1967</span>
+
+<span class="p">(</span>
+    <span class="n">gapminder</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">dollars_per_day</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">gdp_cap</span><span class="o">/</span><span class="mi">365</span><span class="p">))</span><span class="o">.</span> 
+    <span class="n">query</span><span class="p">(</span><span class="s1">&#39;year == @past_year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span>
+    <span class="n">pipe</span><span class="p">(</span><span class="n">ggplot</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">,</span><span class="s1">&#39;region&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
+    <span class="n">scale_x_continuous</span><span class="p">(</span><span class="n">trans</span><span class="o">=</span><span class="s1">&#39;log2&#39;</span><span class="p">)</span> 
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_116_0.png" src="_images/Chapter4_Data_Visualization_116_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (311986217)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default, the discrete values along axis are ordered alphabetically.</p>
+<p>To get more information from the plot above, we will <strong>reorder the regions by the median value</strong> (from low to high or vice versa). If we want a specific ordering we use a <code class="docutils literal notranslate"><span class="pre">pandas.Categorical</span></code> variable with categories ordered to our preference defined by keyword <code class="docutils literal notranslate"><span class="pre">categories</span></code>.</p>
+<p>(see the links below for more detail <a class="reference external" href="https://plotnine.readthedocs.io/en/stable/tutorials/miscellaneous-order-plot-series.html">https://plotnine.readthedocs.io/en/stable/tutorials/miscellaneous-order-plot-series.html</a></p>
+<p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html">https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html</a>)</p>
+<p><strong>Notes</strong></p>
+<ol class="simple">
+<li><p>Categoricals are a data type in Pandas that represents statistical categorical variables. Gender, social status, blood type, country affiliation, observation time, and Likert scale ratings are some examples.</p></li>
+<li><p>Categorical data values are either in categories or np.nan. Order is defined by the order of <code class="docutils literal notranslate"><span class="pre">categories</span></code>, not lexical order of the values.</p></li>
+</ol>
+<p>To enhance data visualization, we begin by creating a new data frame which is the filtered dataset of Gapminder, namely <strong>gapminder1967</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder1967</span> <span class="o">=</span> <span class="n">gapminder</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">dollars_per_day</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">gdp_cap</span><span class="o">/</span><span class="mi">365</span><span class="p">))</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;year == @past_year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder1967</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>population</th>
+      <th>continent</th>
+      <th>life_exp</th>
+      <th>gdp_cap</th>
+      <th>region</th>
+      <th>dollars_per_day</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>15</th>
+      <td>Albania</td>
+      <td>1967</td>
+      <td>1984060</td>
+      <td>Europe</td>
+      <td>66.220</td>
+      <td>2760.196931</td>
+      <td>Southern Europe</td>
+      <td>7.562183</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Algeria</td>
+      <td>1967</td>
+      <td>12760499</td>
+      <td>Africa</td>
+      <td>51.407</td>
+      <td>3246.991771</td>
+      <td>Northern Africa</td>
+      <td>8.895868</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Angola</td>
+      <td>1967</td>
+      <td>5247469</td>
+      <td>Africa</td>
+      <td>35.985</td>
+      <td>5522.776375</td>
+      <td>Middle Africa</td>
+      <td>15.130894</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Argentina</td>
+      <td>1967</td>
+      <td>22934225</td>
+      <td>Americas</td>
+      <td>65.634</td>
+      <td>8052.953021</td>
+      <td>South America</td>
+      <td>22.062885</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>Australia</td>
+      <td>1967</td>
+      <td>11872264</td>
+      <td>Oceania</td>
+      <td>71.100</td>
+      <td>14526.124650</td>
+      <td>Australia and New Zealand</td>
+      <td>39.797602</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># reorder the regions by the median value</span>
+<span class="n">region_list</span> <span class="o">=</span> <span class="n">gapminder1967</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;region&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="c1"># categories=region_list defines the order of Categoricals</span>
+<span class="n">region_cat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">gapminder1967</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="n">region_list</span><span class="p">)</span>
+
+<span class="c1"># assign to a new column in the DataFrame</span>
+<span class="n">gapminder1967</span> <span class="o">=</span> <span class="n">gapminder1967</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">region_cat</span> <span class="o">=</span> <span class="n">region_cat</span><span class="p">)</span>
+
+<span class="p">(</span>
+    <span class="n">gapminder1967</span><span class="o">.</span>
+    <span class="n">pipe</span><span class="p">(</span><span class="n">ggplot</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">,</span><span class="s1">&#39;region_cat&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
+    <span class="n">scale_x_continuous</span><span class="p">(</span><span class="n">trans</span><span class="o">=</span><span class="s1">&#39;log2&#39;</span><span class="p">)</span> 
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_120_0.png" src="_images/Chapter4_Data_Visualization_120_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (311707625)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Based on the sorted median values of incomes per day, we clearly see that there is a “west vs the rest” dichotomy: there are two distinct groups,</p>
+<ul class="simple">
+<li><p>the rich group consisting of North America, Northern and Western Europe, New Zealand, and Australia, and</p></li>
+<li><p>the poor group consisting of the rest of the world.</p></li>
+</ul>
+<p>In what follows, we form five different groups as based on our observations:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">region_cat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Southern Europe&#39;, &#39;Northern Africa&#39;, &#39;Middle Africa&#39;, &#39;South America&#39;, &#39;Australia and New Zealand&#39;, ..., &#39;South America&#39;, &#39;South-Eastern Asia&#39;, &#39;Western Asia&#39;, &#39;Eastern Africa&#39;, &#39;Eastern Africa&#39;]
+Length: 133
+Categories (18, object): [&#39;Northern America&#39;, &#39;Australia and New Zealand&#39;, &#39;Northern Europe&#39;, &#39;Western Europe&#39;, ..., &#39;South-Eastern Asia&#39;, &#39;Western Africa&#39;, &#39;Eastern Africa&#39;, &#39;Southern Asia&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder1967</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>population</th>
+      <th>continent</th>
+      <th>life_exp</th>
+      <th>gdp_cap</th>
+      <th>region</th>
+      <th>dollars_per_day</th>
+      <th>region_cat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>15</th>
+      <td>Albania</td>
+      <td>1967</td>
+      <td>1984060</td>
+      <td>Europe</td>
+      <td>66.220</td>
+      <td>2760.196931</td>
+      <td>Southern Europe</td>
+      <td>7.562183</td>
+      <td>Southern Europe</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Algeria</td>
+      <td>1967</td>
+      <td>12760499</td>
+      <td>Africa</td>
+      <td>51.407</td>
+      <td>3246.991771</td>
+      <td>Northern Africa</td>
+      <td>8.895868</td>
+      <td>Northern Africa</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Angola</td>
+      <td>1967</td>
+      <td>5247469</td>
+      <td>Africa</td>
+      <td>35.985</td>
+      <td>5522.776375</td>
+      <td>Middle Africa</td>
+      <td>15.130894</td>
+      <td>Middle Africa</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Argentina</td>
+      <td>1967</td>
+      <td>22934225</td>
+      <td>Americas</td>
+      <td>65.634</td>
+      <td>8052.953021</td>
+      <td>South America</td>
+      <td>22.062885</td>
+      <td>South America</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>Australia</td>
+      <td>1967</td>
+      <td>11872264</td>
+      <td>Oceania</td>
+      <td>71.100</td>
+      <td>14526.124650</td>
+      <td>Australia and New Zealand</td>
+      <td>39.797602</td>
+      <td>Australia and New Zealand</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1635</th>
+      <td>Venezuela</td>
+      <td>1967</td>
+      <td>9709552</td>
+      <td>Americas</td>
+      <td>63.479</td>
+      <td>9541.474188</td>
+      <td>South America</td>
+      <td>26.141025</td>
+      <td>South America</td>
+    </tr>
+    <tr>
+      <th>1647</th>
+      <td>Vietnam</td>
+      <td>1967</td>
+      <td>39463910</td>
+      <td>Asia</td>
+      <td>47.838</td>
+      <td>637.123289</td>
+      <td>South-Eastern Asia</td>
+      <td>1.745543</td>
+      <td>South-Eastern Asia</td>
+    </tr>
+    <tr>
+      <th>1659</th>
+      <td>West Bank and Gaza</td>
+      <td>1967</td>
+      <td>1142636</td>
+      <td>Asia</td>
+      <td>51.631</td>
+      <td>2649.715007</td>
+      <td>Western Asia</td>
+      <td>7.259493</td>
+      <td>Western Asia</td>
+    </tr>
+    <tr>
+      <th>1683</th>
+      <td>Zambia</td>
+      <td>1967</td>
+      <td>3900000</td>
+      <td>Africa</td>
+      <td>47.768</td>
+      <td>1777.077318</td>
+      <td>Eastern Africa</td>
+      <td>4.868705</td>
+      <td>Eastern Africa</td>
+    </tr>
+    <tr>
+      <th>1695</th>
+      <td>Zimbabwe</td>
+      <td>1967</td>
+      <td>4995432</td>
+      <td>Africa</td>
+      <td>53.995</td>
+      <td>569.795071</td>
+      <td>Eastern Africa</td>
+      <td>1.561082</td>
+      <td>Eastern Africa</td>
+    </tr>
+  </tbody>
+</table>
+<p>133 rows × 9 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder1967</span><span class="o">.</span><span class="n">region</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Western Europe&quot;</span><span class="p">,</span> <span class="s2">&quot;Northern Europe&quot;</span><span class="p">,</span><span class="s2">&quot;Southern Europe&quot;</span><span class="p">,</span> <span class="s2">&quot;Northern America&quot;</span><span class="p">,</span>
+<span class="s2">&quot;Australia and New Zealand&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15       True
+27      False
+39      False
+51      False
+63       True
+        ...  
+1635    False
+1647    False
+1659    False
+1683    False
+1695    False
+Name: region, Length: 133, dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<p>Exercise:</p>
+<ol class="simple">
+<li><p>Append the column called <code class="docutils literal notranslate"><span class="pre">group</span></code> that groups countries into 5 different groups as follows:</p></li>
+</ol>
+<ul class="simple">
+<li><p>West: [“Western Europe”, “Northern Europe”,”Southern Europe”, “Northern America”,
+“Australia and New Zealand”]</p></li>
+<li><p>East Asia: [“Eastern Asia”, “South-Eastern Asia”]</p></li>
+<li><p>Latin America: [“Caribbean”, “Central America”,
+“South America”]</p></li>
+<li><p>Sub-Saharan: [continent == “Africa”] &amp;
+[region != “Northern Africa”]</p></li>
+<li><p>Other: All remaining countries (also including NAN).</p></li>
+</ul>
+<ol class="simple">
+<li><p>We now want to compare the distribution across these five groups to confirm the “west versus the rest” dichotomy. We could generate five histograms or five density plots, but it may be more practical to have all the visual summaries in one plot. Write Python code to stack boxplots next to each other.</p></li>
+<li><p>We now want to compare the distribution across these five groups to confirm the “west versus the rest” dichotomy. To do this, we will work with the 1967 data. We could generate five histograms or five smooth density plots, but it may be more practical to have all the visual summaries <strong>in one plot</strong>. Write Python code to stack smooth density plots (or histograms) vertically (with slightly overlapping lines) that share the same x-axis.</p></li>
+</ol>
+<p>The Numpy <code class="docutils literal notranslate"><span class="pre">select</span></code> function is more powerful for creating a new column based on some conditions on the other columns. It can be used to specify a set of conditions and values. As a result, each condition can be assigned a specific value.</p>
+<p>See
+<a class="reference external" href="https://towardsdatascience.com/3-methods-to-create-conditional-columns-with-python-pandas-and-numpy-a6cd4be9da53">https://towardsdatascience.com/3-methods-to-create-conditional-columns-with-python-pandas-and-numpy-a6cd4be9da53</a> and
+<a class="reference external" href="https://towardsdatascience.com/create-new-column-based-on-other-columns-pandas-5586d87de73d">https://towardsdatascience.com/create-new-column-based-on-other-columns-pandas-5586d87de73d</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;year==2007 &amp; continent == &#39;Africa&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">,</span><span class="s1">&#39;continent&#39;</span><span class="p">,</span><span class="s1">&#39;region&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>continent</th>
+      <th>region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>35</th>
+      <td>Algeria</td>
+      <td>Africa</td>
+      <td>Northern Africa</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Angola</td>
+      <td>Africa</td>
+      <td>Middle Africa</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>Benin</td>
+      <td>Africa</td>
+      <td>Western Africa</td>
+    </tr>
+    <tr>
+      <th>167</th>
+      <td>Botswana</td>
+      <td>Africa</td>
+      <td>Southern Africa</td>
+    </tr>
+    <tr>
+      <th>203</th>
+      <td>Burkina Faso</td>
+      <td>Africa</td>
+      <td>Western Africa</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Let’s start by defining the conditions and their values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://stackoverflow.com/questions/19960077/how-to-filter-pandas-dataframe-using-in-and-not-in-like-in-sql</span>
+
+<span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">gapminder1967</span><span class="o">.</span><span class="n">region</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Western Europe&quot;</span><span class="p">,</span> <span class="s2">&quot;Northern Europe&quot;</span><span class="p">,</span><span class="s2">&quot;Southern Europe&quot;</span><span class="p">,</span> <span class="s2">&quot;Northern America&quot;</span><span class="p">,</span>
+<span class="s2">&quot;Australia and New Zealand&quot;</span><span class="p">]),</span>
+    <span class="n">gapminder1967</span><span class="o">.</span><span class="n">region</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Eastern Asia&quot;</span><span class="p">,</span> <span class="s2">&quot;South-Eastern Asia&quot;</span><span class="p">]),</span>
+    <span class="n">gapminder1967</span><span class="o">.</span><span class="n">region</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Caribbean&quot;</span><span class="p">,</span> <span class="s2">&quot;Central America&quot;</span><span class="p">,</span>
+<span class="s2">&quot;South America&quot;</span><span class="p">]</span> <span class="p">),</span>
+    <span class="p">(</span><span class="n">gapminder1967</span><span class="o">.</span><span class="n">continent</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Africa&quot;</span><span class="p">]))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="o">~</span><span class="n">gapminder1967</span><span class="o">.</span><span class="n">region</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Northern Africa&quot;</span><span class="p">]</span> <span class="p">))</span>
+<span class="p">]</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;West&#39;</span><span class="p">,</span><span class="s1">&#39;East Asia&#39;</span><span class="p">,</span><span class="s1">&#39;Latin America&#39;</span><span class="p">,</span><span class="s1">&#39;Sub-Saharan&#39;</span><span class="p">]</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">conditions</span><span class="p">,</span><span class="n">values</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;Others&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;West&#39;, &#39;Others&#39;, &#39;Sub-Saharan&#39;, &#39;Latin America&#39;, &#39;West&#39;, &#39;West&#39;,
+       &#39;Others&#39;, &#39;Others&#39;, &#39;West&#39;, &#39;Sub-Saharan&#39;, &#39;Latin America&#39;, &#39;West&#39;,
+       &#39;Sub-Saharan&#39;, &#39;Latin America&#39;, &#39;Others&#39;, &#39;Sub-Saharan&#39;,
+       &#39;Sub-Saharan&#39;, &#39;East Asia&#39;, &#39;Sub-Saharan&#39;, &#39;West&#39;, &#39;Sub-Saharan&#39;,
+       &#39;Sub-Saharan&#39;, &#39;Latin America&#39;, &#39;East Asia&#39;, &#39;Latin America&#39;,
+       &#39;Sub-Saharan&#39;, &#39;Sub-Saharan&#39;, &#39;Sub-Saharan&#39;, &#39;Latin America&#39;,
+       &#39;Sub-Saharan&#39;, &#39;West&#39;, &#39;Latin America&#39;, &#39;Others&#39;, &#39;West&#39;,
+       &#39;Sub-Saharan&#39;, &#39;Latin America&#39;, &#39;Latin America&#39;, &#39;Others&#39;,
+       &#39;Latin America&#39;, &#39;Sub-Saharan&#39;, &#39;Sub-Saharan&#39;, &#39;Sub-Saharan&#39;,
+       &#39;West&#39;, &#39;West&#39;, &#39;Sub-Saharan&#39;, &#39;Sub-Saharan&#39;, &#39;West&#39;,
+       &#39;Sub-Saharan&#39;, &#39;West&#39;, &#39;Latin America&#39;, &#39;Sub-Saharan&#39;,
+       &#39;Sub-Saharan&#39;, &#39;Latin America&#39;, &#39;Latin America&#39;, &#39;East Asia&#39;,
+       &#39;Others&#39;, &#39;West&#39;, &#39;Others&#39;, &#39;East Asia&#39;, &#39;Others&#39;, &#39;Others&#39;,
+       &#39;West&#39;, &#39;Others&#39;, &#39;West&#39;, &#39;Latin America&#39;, &#39;East Asia&#39;, &#39;Others&#39;,
+       &#39;Sub-Saharan&#39;, &#39;Others&#39;, &#39;Others&#39;, &#39;Sub-Saharan&#39;, &#39;Sub-Saharan&#39;,
+       &#39;Others&#39;, &#39;Sub-Saharan&#39;, &#39;Sub-Saharan&#39;, &#39;East Asia&#39;, &#39;Sub-Saharan&#39;,
+       &#39;Sub-Saharan&#39;, &#39;Sub-Saharan&#39;, &#39;Latin America&#39;, &#39;East Asia&#39;, &#39;West&#39;,
+       &#39;Others&#39;, &#39;Sub-Saharan&#39;, &#39;Sub-Saharan&#39;, &#39;Others&#39;, &#39;West&#39;, &#39;West&#39;,
+       &#39;Latin America&#39;, &#39;Sub-Saharan&#39;, &#39;Sub-Saharan&#39;, &#39;West&#39;, &#39;Others&#39;,
+       &#39;Others&#39;, &#39;Latin America&#39;, &#39;Latin America&#39;, &#39;Latin America&#39;,
+       &#39;East Asia&#39;, &#39;Others&#39;, &#39;West&#39;, &#39;Latin America&#39;, &#39;Others&#39;,
+       &#39;Sub-Saharan&#39;, &#39;Others&#39;, &#39;Sub-Saharan&#39;, &#39;West&#39;, &#39;Sub-Saharan&#39;,
+       &#39;East Asia&#39;, &#39;Others&#39;, &#39;West&#39;, &#39;Sub-Saharan&#39;, &#39;West&#39;, &#39;Others&#39;,
+       &#39;Others&#39;, &#39;Sub-Saharan&#39;, &#39;West&#39;, &#39;West&#39;, &#39;Others&#39;, &#39;Sub-Saharan&#39;,
+       &#39;East Asia&#39;, &#39;Sub-Saharan&#39;, &#39;Latin America&#39;, &#39;Others&#39;, &#39;Others&#39;,
+       &#39;Sub-Saharan&#39;, &#39;West&#39;, &#39;West&#39;, &#39;Latin America&#39;, &#39;Latin America&#39;,
+       &#39;East Asia&#39;, &#39;Others&#39;, &#39;Sub-Saharan&#39;, &#39;Sub-Saharan&#39;], dtype=&#39;&lt;U13&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder1967</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">conditions</span><span class="p">,</span><span class="n">values</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;Others&quot;</span><span class="p">)</span>
+
+<span class="n">gapminder1967</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>population</th>
+      <th>continent</th>
+      <th>life_exp</th>
+      <th>gdp_cap</th>
+      <th>region</th>
+      <th>dollars_per_day</th>
+      <th>region_cat</th>
+      <th>group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>15</th>
+      <td>Albania</td>
+      <td>1967</td>
+      <td>1984060</td>
+      <td>Europe</td>
+      <td>66.220</td>
+      <td>2760.196931</td>
+      <td>Southern Europe</td>
+      <td>7.562183</td>
+      <td>Southern Europe</td>
+      <td>West</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Algeria</td>
+      <td>1967</td>
+      <td>12760499</td>
+      <td>Africa</td>
+      <td>51.407</td>
+      <td>3246.991771</td>
+      <td>Northern Africa</td>
+      <td>8.895868</td>
+      <td>Northern Africa</td>
+      <td>Others</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Angola</td>
+      <td>1967</td>
+      <td>5247469</td>
+      <td>Africa</td>
+      <td>35.985</td>
+      <td>5522.776375</td>
+      <td>Middle Africa</td>
+      <td>15.130894</td>
+      <td>Middle Africa</td>
+      <td>Sub-Saharan</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Argentina</td>
+      <td>1967</td>
+      <td>22934225</td>
+      <td>Americas</td>
+      <td>65.634</td>
+      <td>8052.953021</td>
+      <td>South America</td>
+      <td>22.062885</td>
+      <td>South America</td>
+      <td>Latin America</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>Australia</td>
+      <td>1967</td>
+      <td>11872264</td>
+      <td>Oceania</td>
+      <td>71.100</td>
+      <td>14526.124650</td>
+      <td>Australia and New Zealand</td>
+      <td>39.797602</td>
+      <td>Australia and New Zealand</td>
+      <td>West</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We turn this group variable into a factor to control the order of the levels.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">group_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Others&quot;</span><span class="p">,</span> <span class="s2">&quot;Latin America&quot;</span><span class="p">,</span><span class="s2">&quot;East Asia&quot;</span><span class="p">,</span> <span class="s2">&quot;Sub-Saharan&quot;</span><span class="p">,</span> <span class="s2">&quot;West&quot;</span><span class="p">]</span>
+
+<span class="n">gapminder1967</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">gapminder1967</span><span class="p">[</span><span class="s1">&#39;group&#39;</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="n">group_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Two characteristics of the average income distribution in 1967 were identified by the exploratory data analysis above. We discovered a <strong>bimodal distribution</strong> using a histogram, with the modes corresponding to poor and rich countries.</p>
+<p>To confirm the “west vs the rest” dichotomy, we will compare the distribution across these five groups. A summary plot may be beneficial because the number of points in each category is large enough.</p>
+<p>We could make five histograms or density plots, but having all of the visual summaries in one figure may be more practical. As a result, we begin by stacking boxplots adjacent to one another.</p>
+<p><strong>Note</strong> A <strong>boxplot</strong> is a standard method of displaying a dataset based on a five-number summary: minimum, maximum, sample median, first and third quartiles.</p>
+<p>In addition to the lowest and maximum values required to create a box-plot, the interquartile range (IQR), as shown in the plot, is another essential feature that can be used to create a box-plot.</p>
+<p>As seen from the plot, a box plot normally consists of two parts: a box and a pair of whiskers. The lowest point on the box-plot (i.e. the lower whisker’s boundary) represents the data set’s minimum value, while the highest point (i.e. the upper whisker’s boundary) represents the data set’s maximum value (excluding any <strong>outliers</strong>). A horizontal line is drawn in the middle of the box to signify the median, which drawn from Q1 to Q3.</p>
+<p>The whisker limits are found inside the 1.5 IQR value. Outliers are all other observed data points that are outside the whisker’s boundary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">gapminder1967</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;group&#39;</span><span class="p">,</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_boxplot</span><span class="p">()</span> <span class="o">+</span>
+    <span class="n">scale_y_continuous</span><span class="p">(</span><span class="n">trans</span><span class="o">=</span><span class="s1">&#39;log2&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">xlab</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_134_0.png" src="_images/Chapter4_Data_Visualization_134_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (311822765)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#gapminder1967.query(&#39;region == polynesia&#39;)</span>
+<span class="n">gapminder1967</span><span class="o">.</span><span class="n">region</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15              Southern Europe
+27              Northern Africa
+39                Middle Africa
+51                South America
+63    Australia and New Zealand
+Name: region, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>The shortcoming of boxplots is that by summarizing the data into five numbers, we may miss important data properties. Showing the data is one approach to avoid this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">gapminder1967</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;group&#39;</span><span class="p">,</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_boxplot</span><span class="p">()</span> <span class="o">+</span>
+    <span class="n">scale_y_continuous</span><span class="p">(</span><span class="n">trans</span><span class="o">=</span><span class="s1">&#39;log2&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">xlab</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_137_0.png" src="_images/Chapter4_Data_Visualization_137_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (311707437)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">gapminder1967</span><span class="o">.</span><span class="n">region</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we are concerned that the boxplot summary is too basic, we can present smooth densities or histograms with <code class="docutils literal notranslate"><span class="pre">facet_wrap</span></code>.</p>
+<p><strong>Note</strong> if you are working with R programming, the library <strong>ggridges</strong> (together with ggplot) can be used to visualize distributions of several groups of a category. This allows us to stack smooth densities or histograms vetically. We refer to the stacked plot as <strong>ridge plots</strong>. See for an example
+<a class="reference external" href="https://cran.r-project.org/web/packages/ggridges/vignettes/gallery.html">https://cran.r-project.org/web/packages/ggridges/vignettes/gallery.html</a> and
+<a class="reference external" href="https://www.analyticsvidhya.com/blog/2021/06/ridgeline-plots-visualize-data-with-a-joy/#:~:text=Ridgeline%20Plot%20or%20Joy%20Plot,beautiful%20piece%20of%20the%20plot">https://www.analyticsvidhya.com/blog/2021/06/ridgeline-plots-visualize-data-with-a-joy/#:~:text=Ridgeline Plot or Joy Plot,beautiful piece of the plot</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">gapminder1967</span><span class="p">)</span> <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">geom_density</span><span class="p">()</span> <span class="o">+</span>
+    <span class="n">facet_wrap</span><span class="p">(</span><span class="s1">&#39;group&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">scale_x_continuous</span><span class="p">(</span><span class="n">trans</span><span class="o">=</span><span class="s1">&#39;log2&#39;</span><span class="p">)</span> 
+<span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter4_Data_Visualization_140_0.png" src="_images/Chapter4_Data_Visualization_140_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (313847509)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="in-python-plot-a-ridgeline-plot">
+<h3><span class="section-number">6.8.1. </span>In Python, plot a ridgeline plot.<a class="headerlink" href="#in-python-plot-a-ridgeline-plot" title="Permalink to this headline">¶</a></h3>
+<p>In Python, a Ridgeline Plot can be created using a variety of tools, including the popular Matplotlib and Plotly libraries. However, plotting a Ridgeline Plot with joypy is rather simple. Here is an example to the Gapminder dataset.</p>
+<p>See the following for more detail: <a class="reference external" href="https://towardsdatascience.com/ridgeline-plots-the-perfect-way-to-visualize-data-distributions-with-python-de99a5493052">https://towardsdatascience.com/ridgeline-plots-the-perfect-way-to-visualize-data-distributions-with-python-de99a5493052</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install joypy
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: joypy in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (0.2.6)
+Requirement already satisfied: pandas&gt;=0.20.0 in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from joypy) (1.3.4)
+Requirement already satisfied: scipy&gt;=0.11.0 in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from joypy) (1.7.1)
+Requirement already satisfied: numpy&gt;=1.16.5 in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from joypy) (1.21.2)
+Requirement already satisfied: matplotlib in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from joypy) (3.5.0)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from pandas&gt;=0.20.0-&gt;joypy) (2.8.2)
+Requirement already satisfied: pytz&gt;=2017.3 in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from pandas&gt;=0.20.0-&gt;joypy) (2021.3)
+Requirement already satisfied: six&gt;=1.5 in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from python-dateutil&gt;=2.7.3-&gt;pandas&gt;=0.20.0-&gt;joypy) (1.16.0)
+Requirement already satisfied: cycler&gt;=0.10 in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from matplotlib-&gt;joypy) (0.11.0)
+Requirement already satisfied: packaging&gt;=20.0 in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from matplotlib-&gt;joypy) (21.3)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from matplotlib-&gt;joypy) (3.0.4)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from matplotlib-&gt;joypy) (4.25.0)
+Requirement already satisfied: pillow&gt;=6.2.0 in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from matplotlib-&gt;joypy) (8.4.0)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages (from matplotlib-&gt;joypy) (1.3.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">joypy</span> <span class="kn">import</span> <span class="n">joyplot</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">joyplot</span><span class="p">(</span><span class="n">gapminder1967</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">,</span> <span class="n">x_range</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span><span class="mi">150</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;dollars_per_day&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 15.0, &#39;dollars_per_day&#39;)
+</pre></div>
+</div>
+<img alt="_images/Chapter4_Data_Visualization_144_1.png" src="_images/Chapter4_Data_Visualization_144_1.png" />
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -938,12 +2902,19 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Chapter3-Data-Preparation.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Chapter3_Data_Preparation.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Data Preparation</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Data Selection</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="Chapter5_Practical_Statistics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Practical Statistics</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
         

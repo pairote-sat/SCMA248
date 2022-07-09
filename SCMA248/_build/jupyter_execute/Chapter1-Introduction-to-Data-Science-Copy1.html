@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Introduction to Data Science &#8212; SCMA248 Introduction to Data Science</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SCMA248 Introduction to Data Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Welcome to SCMA248 Introduction to Data Science
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Chapter1_Introduction_to_Data_Science.html">
+   1. Introduction to Data Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Chapter2_Python_Basics.html">
+   2. Python Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Chapter3_Data_Preparation.html">
+   3. Data Selection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Chapter4_Data_Visualization.html">
+   6. Data Visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Chapter5_Practical_Statistics.html">
+   7. Practical Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Chapter6_Regression.html">
+   8. Regression Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Chapter7_Introduction_Machine_Learning.html">
+   9. Machine learning: Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Chapter8_Unsupervised_Learning.html">
+   10. Unsupervised Machine Learning: K-means Clustering
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/SCMA248/_build/jupyter_execute/Chapter1-Introduction-to-Data-Science-Copy1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FSCMA248/_build/jupyter_execute/Chapter1-Introduction-to-Data-Science-Copy1.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/SCMA248/_build/jupyter_execute/Chapter1-Introduction-to-Data-Science-Copy1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-data-science">
+   What is data science?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-day-in-the-life-of-a-data-scientist">
+   A day in the life of a data scientist
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#business-problem">
+     Business problem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-acquisition">
+     Data acquisition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-preparation">
+     Data preparation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploratory-data-analysis">
+     Exploratory data analysis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-modeling">
+     Data modeling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualization-and-communication">
+     Visualization and communication
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deployment-and-maintainance">
+     Deployment and maintainance
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-science-life-cycle">
+   Data science life cycle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-difference-between-a-data-analyst-a-data-engineer-and-a-data-scientist">
+   What is the difference between a data analyst, a data engineer, and a data scientist?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-data-in-data-science">
+   The data in data science
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-does-data-come-from">
+     Where does data come from?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-is-data-science-applied-in-the-world-of-data">
+     Where is data science applied in the world of data?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#where-is-business-intelligence-used">
+       Where is Business Intelligence used?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-does-data-science-apply">
+     Where does data science apply?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cases-studies-examples-of-data-science-applications">
+   Cases studies: Examples of data science applications
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-cases-examples-of-data-science-applications-that-prominent-companies-use">
+   Use Cases: Examples of Data Science applications that prominent companies use
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#this-video-on-what-is-data-science-from-simplilearn">
+   This video on “What is Data Science” from Simplilearn
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-data-science">
+<h1>Introduction to Data Science<a class="headerlink" href="#introduction-to-data-science" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>“Learning from data is virtually universally useful. Master it and you will be welcomed anywhere.” — John Elder, Elder Research</p>
+</div></blockquote>
+<p><a class="reference external" href="https://www.elderresearch.com/wp-content/uploads/2020/11/Elder-John-scaled.jpg">Image of John Elder</a></p>
+<section id="what-is-data-science">
+<h2>What is data science?<a class="headerlink" href="#what-is-data-science" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.analytixlabs.co.in/blog/data-science-process/">https://www.analytixlabs.co.in/blog/data-science-process/</a></p>
+<p><strong>Data Science</strong> is an associated field of Big Data that focuses on analyzing enormous amounts of complicated and raw data to provide valuable information to businesses. In order to analyze and present data for effective decision making by executives, various subjects such as statistics, mathematics, and computation are combined. Data Science enables businesses to improve performance, productivity, and customer satisfaction while making it easier to meet their financial goals. However, a thorough understanding of the Data Science process is essential for Data Scientists to successfully apply Data Science and deliver helpful, productive results. The many stages of the Data Science process help transform data into useful results. It helps in more efficient analysis, extraction, visualization, storage, and management of data.</p>
+<p><a class="reference external" href="https://ischoolonline.berkeley.edu/data-science/what-is-data-science/">https://ischoolonline.berkeley.edu/data-science/what-is-data-science/</a></p>
+<p>Data Science continues to be one of the most promising and sought-after career paths for qualified individuals. Today’s effective data scientists recognize that they must go beyond the traditional skills of large-scale data analysis, data mining, and programming. Data Scientists must be proficient across the spectrum of the data science lifecycle and possess a level of flexibility and awareness to maximize returns at each stage of the process to produce meaningful insights for their organizations.</p>
+<p>The term “data scientist” was introduced in 2008 when companies recognized the need for data experts capable of organizing and analyzing massive amounts of data.</p>
+<p><a class="reference external" href="https://www.simplilearn.com/a-day-in-the-life-of-a-data-scientist-article">https://www.simplilearn.com/a-day-in-the-life-of-a-data-scientist-article</a></p>
+<p>A Data Scientist is a specialist in statistics, data science, Big Data, R programming, Python, and SAS, and a job as a Data Scientist offers many opportunities and a high income. According to Harvard Business Review, Data Science is the most attractive job of the twenty-first century. Data Scientist has been named the best job in the United States by Glassdoor, with a job rating of 4.8 out of 5 and a satisfaction rate of 4.2 out of 5. The average base salary is $110,000, and there are currently hundreds of openings, with many more to come: By 2020, IBM predicts a 28 percent increase in demand for Data Scientists.</p>
+<p><a class="reference external" href="https://medium.datadriveninvestor.com/data-science-in-3-minutes-data-science-for-beginners-what-is-data-science-f4632bee9881">https://medium.datadriveninvestor.com/data-science-in-3-minutes-data-science-for-beginners-what-is-data-science-f4632bee9881</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=X3paOmcrTjQ">https://www.youtube.com/watch?v=X3paOmcrTjQ</a></p>
+</section>
+<section id="a-day-in-the-life-of-a-data-scientist">
+<h2>A day in the life of a data scientist<a class="headerlink" href="#a-day-in-the-life-of-a-data-scientist" title="Permalink to this headline">¶</a></h2>
+<p>Let us take a look at how a day in the life of a data scientist goes while working on a data science project.</p>
+<section id="business-problem">
+<h3>Business problem<a class="headerlink" href="#business-problem" title="Permalink to this headline">¶</a></h3>
+<p>First and foremost, it’s critical to understand the business problem. In meetings with clients, the data scientist asks relevant questions, understands, and defines objectives for the problem that needs to be solved.</p>
+<p><a class="reference external" href="https://www.analytixlabs.co.in/blog/data-science-process/">https://www.analytixlabs.co.in/blog/data-science-process/</a></p>
+<p>Asking questions like these can help you get through this process.</p>
+<ul class="simple">
+<li><p>Who are the customers?</p></li>
+<li><p>How can they be identified?</p></li>
+<li><p>How is the sales process going right now?</p></li>
+<li><p>Why are they interested in your products?</p></li>
+<li><p>What products are they interested in?</p></li>
+</ul>
+<p>To turn numbers into insights, You need much more context to the numbers to understand them. By the end of this phase, you should have as much information as possible.</p>
+</section>
+<section id="data-acquisition">
+<h3>Data acquisition<a class="headerlink" href="#data-acquisition" title="Permalink to this headline">¶</a></h3>
+<p>In the next step, the data scientist prepares for data acquisition, gathering and scraping data from multiple sources, including web servers, databases, APIs, and online archives. It appears that collecting the proper data takes both time and work.</p>
+</section>
+<section id="data-preparation">
+<h3>Data preparation<a class="headerlink" href="#data-preparation" title="Permalink to this headline">¶</a></h3>
+<p>Once the data has been collected, the next phase is data preparation, which involves data cleaning and transformation. The most time-consuming step is data cleaning, which deals with a variety of challenging conditions. The data scientist is responsible for data types that are not consistent. In data transformation, the data scientist modifies the data based on defined mapping rules. The project uses extract, transform, and load (ETL) tools such as Talend and Informatica to perform complex transformations that help the team better understand the data structure.</p>
+<p>Below are the most common mistakes to watch out for:</p>
+<ul class="simple">
+<li><p>Values that are missing</p></li>
+<li><p>Values that have been manipulated, such as invalid entries</p></li>
+<li><p>Differences in time zones</p></li>
+<li><p>Errors related to the date range, such as a transaction that was recorded before the sale even started, are common.</p></li>
+</ul>
+<p>You also need to look at the aggregate of all rows and columns in the file to determine if the results are correct. If they are not, you will need to delete or change the incorrect data.</p>
+</section>
+<section id="exploratory-data-analysis">
+<h3>Exploratory data analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h3>
+<p>It is very important to understand what you can do with your data. The data scientist performs exploratory data analysis (EDA). Using EDA, the data scientist defines and refines the selection of feature variables to be used in model development.</p>
+</section>
+<section id="data-modeling">
+<h3>Data modeling<a class="headerlink" href="#data-modeling" title="Permalink to this headline">¶</a></h3>
+<p>This step is where your knowledge of math, statistics, and technology comes in handy. To properly analyze the data and gain all possible insights, you will need to use all available data science tools. You may need to create a predictive model that compares your average customer to customers who are less successful. Several factors, such as age or social media engagement, could prove to be crucial elements in your research to predict who will buy a service or product.</p>
+<p>Python is preferred for modeling the data but it can also be done using R and SAS.</p>
+</section>
+<section id="visualization-and-communication">
+<h3>Visualization and communication<a class="headerlink" href="#visualization-and-communication" title="Permalink to this headline">¶</a></h3>
+<p>After all these processes, it is crucial that you share your findings and insights with the sales manager and convince him of their importance. It is to your advantage to communicate well in order to accomplish the task assigned to you. Clear and concise communication will lead to action. Improper contact, on the other hand, can lead to inaction. Tools such as Tableau, Power Bi, and QlikView can be used to create powerful reports and dashboards.</p>
+<p>You need to link the data you have collected and your insights to the sales manager’s knowledge so that they can understand it better. Start by discussing why a product is not performing well and why certain demographics are not responding to the sales pitch. After you have laid out the problem, you can move on to the solution. You need to write a compelling story with clear goals and objectives.</p>
+<blockquote>
+<div><p>“If you can’t explain it simply, you don’t understand it well enough.” — Albert Einstein</p>
+</div></blockquote>
+</section>
+<section id="deployment-and-maintainance">
+<h3>Deployment and maintainance<a class="headerlink" href="#deployment-and-maintainance" title="Permalink to this headline">¶</a></h3>
+<p>In the final phase, the data scientist deploys and maintains the model. The selected model is tested in a pre-production environment before being deployed in the production environment, which is the best practice.</p>
+</section>
+</section>
+<section id="data-science-life-cycle">
+<h2>Data science life cycle<a class="headerlink" href="#data-science-life-cycle" title="Permalink to this headline">¶</a></h2>
+<p>A Data Science lifecycle is a series of Data Science steps that you go through to complete a project or analysis. Because each Data Science project and team is unique, each Data Science lifecycle is also unique. However, most data science projects follow a similar generic data science life cycle.</p>
+<p>The following diagram represents the five phases of the data science life cycle (from the School of Information, Berkeley: <a class="reference external" href="https://ischoolonline.berkeley.edu/data-science/what-is-data-science/">https://ischoolonline.berkeley.edu/data-science/what-is-data-science/</a>):</p>
+<p><img alt="Data science life cycle: from Berkley" src="https://ischoolonline.berkeley.edu/wp-content/uploads/sites/37/2021/01/DataScienceLifeCycle.jpg" /></p>
+<p>Another useful infographic about the lifecycle of a data science project from SuperDataScience is given below (<a class="reference external" href="https://i1.wp.com/www.paolacelio.it/wp-content/uploads/2020/05/Lifecycle_Data_Science_Project.png?w=1212">Data science life cycle: from SuperDataScience</a>):</p>
+<p><img alt="Data science life cycle: from SuperDataScience" src="https://i1.wp.com/www.paolacelio.it/wp-content/uploads/2020/05/Lifecycle_Data_Science_Project.png?w=1212" /></p>
+</section>
+<section id="what-is-the-difference-between-a-data-analyst-a-data-engineer-and-a-data-scientist">
+<h2>What is the difference between a data analyst, a data engineer, and a data scientist?<a class="headerlink" href="#what-is-the-difference-between-a-data-analyst-a-data-engineer-and-a-data-scientist" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.dataquest.io/blog/data-analyst-data-scientist-data-engineer/">https://www.dataquest.io/blog/data-analyst-data-scientist-data-engineer/</a>
+<a class="reference external" href="https://www.edureka.co/blog/data-analyst-vs-data-engineer-vs-data-scientist/">https://www.edureka.co/blog/data-analyst-vs-data-engineer-vs-data-scientist/</a>
+<a class="reference external" href="https://www.simplilearn.com/tutorials/data-science-tutorial/data-scientist-vs-data-analyst-vs-data-engineer">https://www.simplilearn.com/tutorials/data-science-tutorial/data-scientist-vs-data-analyst-vs-data-engineer</a>
+<a class="reference external" href="https://ischoolonline.berkeley.edu/data-science/what-is-data-science/">https://ischoolonline.berkeley.edu/data-science/what-is-data-science/</a></p>
+<p>Data has always been crucial to any decision-making process. Today’s world is entirely based on data, and no business could operate without data-driven strategic planning and decision making. Because of its invaluable insights and trust, data is used in a variety of professions in the industry today. In this section, we explore the important differences and similarities between a data analyst, a data engineer, and a data scientist.</p>
+<p><strong>Data Scientist</strong></p>
+<p>Data Scientists are concerned with what questions need to be answered and where to find the relevant data. They have analytical and business acumen, as well as the ability to extract, cleanse, and present data. They help companies find, organize, and analyze large amounts of unstructured data. Also, they use advanced data techniques to derive business insights, such as clustering, neural networks, decision trees, etc. The results are then summarized and distributed to key stakeholders to help the business make strategic decisions.</p>
+<p>The following are examples of the work of data scientists:</p>
+<ul class="simple">
+<li><p>Evaluating statistical models to determine the validity of analyzes.</p></li>
+<li><p>Using machine learning to develop better predictive algorithms.</p></li>
+<li><p>Testing and continuously improving the accuracy of machine learning models.</p></li>
+<li><p>Creating data visualizations to summarize the results of advanced analysis.</p></li>
+</ul>
+<p><strong>Skills needed:</strong> Programming (SAS, R, Python), statistical and mathematical skills, storytelling and data visualization, Hadoop, SQL and machine learning are also required skills.</p>
+<p><strong>Data Analyst</strong></p>
+<p>In a data analytics team, data analysts are the entry-level position. They add value to their business by collecting data, analyzing it, and sharing the results to support business decisions. Cleaning data, performing analysis, and developing data visualizations are common tasks for data analysts.</p>
+<p>The title of data analyst can vary by industry (e.g., business analyst, business intelligence analyst, operations analyst, database analyst). Regardless of the designation, the data analyst is a generalist who can work in a variety of roles and teams to help others make better data-driven decisions.</p>
+<p>The specific skills required will vary depending on the needs of the business, but below are some general tasks:</p>
+<ul class="simple">
+<li><p>Cleaning and organizing unprocessed data.</p></li>
+<li><p>Using descriptive statistics to get an overview of the data</p></li>
+<li><p>Identifying and analyze significant data trends.</p></li>
+<li><p>Creating visual representations and dashboards to support data interpretation and decision making.</p></li>
+<li><p>Providing technical analysis results to business customers or internal teams.</p></li>
+</ul>
+<p><strong>Skills needed:</strong> Programming skills (SAS, R, Python), statistical and mathematical skills, data manipulation and data visualization are required.</p>
+<p><strong>Data Engineer</strong></p>
+<p>Data engineers are responsible for managing vast amounts of data that is constantly changing. They work to create data pipelines and infrastructures, deploy, manage, and optimise to transform and deliver data to data scientists and data analysts to perform their work.</p>
+<p>The mindset of a data engineer is often more focused on building and optimizing. The responsibilities of a data engineer include, but are not limited to, the following:</p>
+<ul class="simple">
+<li><p>Creating APIs for data usage.</p></li>
+<li><p>Integrating external or new data sets into existing data pipelines.</p></li>
+<li><p>Applying feature transformations for machine learning models to new data.</p></li>
+<li><p>Continuous monitoring and testing of the system to ensure optimal performance.</p></li>
+</ul>
+<p><strong>Skills needed:</strong> Programming languages (Java, Scala), NoSQL databases (MongoDB, Cassandra DB) and frameworks are required (Apache Hadoop).</p>
+<p><em><strong>Summary of the various tools and skills required by a Data Analyst/Data Engineer/Data Scientist</strong></em> (from MathaMagicians, <a class="reference external" href="https://mathamagicians.co/differences-between-a-data-analyst-data-scientist-and-data-engineer/">https://mathamagicians.co/differences-between-a-data-analyst-data-scientist-and-data-engineer/</a>)</p>
+<p><img alt="Image from MathaMagicians" src="https://mathamagicians.co/wp-content/uploads/sites/3/2020/04/Chart-Jobs-1-1024x576.jpg" /></p>
+<p>The 365 Data Science team created the What-Where-Who infographic in response to the need for a simple explanation of data science. They define the key data science processes and promote the field. Their viewpoint on data science is as follows. For more detail, please visit <a class="reference external" href="https://365datascience.com/career-advice/career-guides/defining-data-science/">https://365datascience.com/career-advice/career-guides/defining-data-science/</a> and <a class="reference external" href="https://www.youtube.com/watch?v=edZ_JYpOM8U">https://www.youtube.com/watch?v=edZ_JYpOM8U</a>.</p>
+<p><img alt="Image from 365 Data Science" src="https://uc535dc4095d076e8dc34314c6fc.previews.dropboxusercontent.com/p/thumb/ABbUogOprPnCXYa_0viRMVswbdOBPdmPdGVNi1t_HOnwVd4Mtz0iiPAchp55mdksHuG0s1HfbaCgN9TUcgEkTVNecrM2QwIPvAe_nET5IWHpf-CPPLbzoWnuo6YiYvXUp38AgdbkMi87apEEtfWwMc8tkgH2Eu5R254IZEmR_EadpMwDSgvihBRiXTHOFXK_Ndi_ERNnCbKCZtX08w9E9IbQUULPvEvGJDTyAMk00WsK0fl7gpyZSHhe70Xu-7Y0brPp9UA_gU82cWHBMzTMBESjXSfX85Eo_xwWyU49BjRE76P5gTVVd8XJowGq4JvEtk0tfPoGCfaQ8N_eEqr6CKulmxt4kKuZLYJ8zsxd8RDcdU_0y3uTvNNgAhnoY8sdoxN66xWu6-KQn1YW1vnMrHyaFADuyGWNB1C0m-Oye-7QmP9qo0nVMKZQKqhLlmRuodQ/p.png" /></p>
+</section>
+<section id="the-data-in-data-science">
+<h2>The data in data science<a class="headerlink" href="#the-data-in-data-science" title="Permalink to this headline">¶</a></h2>
+<p>There is always data before anything else. Data is the raw material on which all analysis is built, and it is the cornerstone of data science. In data science, there are two types of data: <strong>traditional data</strong> and <strong>big Data</strong>.</p>
+<p>Traditional data is organized and stored in databases that analysts can access from a single computer, and it is in tabular form with numeric or text values. We use the term “traditional” only for clarity. It clarifies the distinction between Big Data and other forms of data.</p>
+<p>Big Data, on the other hand, is much more extensive than traditional data. It comes from many different sources (numbers, text, but also photos, audio and mobile data).</p>
+<p><strong>Relational database</strong> management systems are used to store traditional data. Big data, on the other hand, is kept on multiple servers and is significantly more complex.</p>
+<section id="where-does-data-come-from">
+<h3>Where does data come from?<a class="headerlink" href="#where-does-data-come-from" title="Permalink to this headline">¶</a></h3>
+<p>Traditional data sources include simple customer records and historical stock price data.</p>
+<p>Big data, on the other hand, is all around us. Big data is being used and generated by more and more companies and industries. These include:</p>
+<ul class="simple">
+<li><p>Think of internet networks like Facebook, Google and LinkedIn, and data from financial transactions.</p></li>
+<li><p>Temperature measurement networks in different geographic regions and machine data from sensors in industrial equipment, are examples of Big Data.</p></li>
+<li><p>There is also wearable technology.</p></li>
+</ul>
+</section>
+<section id="where-is-data-science-applied-in-the-world-of-data">
+<h3>Where is data science applied in the world of data?<a class="headerlink" href="#where-is-data-science-applied-in-the-world-of-data" title="Permalink to this headline">¶</a></h3>
+<section id="where-is-business-intelligence-used">
+<h4>Where is Business Intelligence used?<a class="headerlink" href="#where-is-business-intelligence-used" title="Permalink to this headline">¶</a></h4>
+<p>Business intelligence is used in sales, marketing, finance and operations. Quantitative analysis, monitoring performance against business goals, gaining customer insights and sharing data to uncover new opportunities are just some of the tasks.</p>
+<p><strong>Analyst and data scientist:</strong></p>
+<p><a class="reference external" href="https://www.netsuite.com/portal/resource/articles/business-strategy/business-intelligence-examples.shtml">https://www.netsuite.com/portal/resource/articles/business-strategy/business-intelligence-examples.shtml</a></p>
+<p>Analysts are BI experts who use consolidated enterprise data along with powerful analytical tools to determine where improvements can be made and what strategic recommendations they can make to management.</p>
+<p><strong>Marketing:</strong></p>
+<p>Marketers can use business intelligence products to track campaign analytics from a central digital location. BI systems can track campaigns in real time, analyze their effectiveness, and plan future initiatives. This information provides marketing teams with a better understanding of overall performance, as well as contextual images to share with the rest of the organization.</p>
+<p><strong>Finance:</strong></p>
+<p>BI professionals can extract insights from financial data and combine it with operational, marketing, and sales data to make decisions and understand factors that affect profit and loss.</p>
+<p><strong>Sales:</strong></p>
+<p>For quick access to complicated information such as discount analysis, customer profitability, and customer lifetime value, sales data analysts and operations managers often use BI dashboards and key performance indicators (KPIs). Sales managers use dashboards with reports and data visualizations to track revenue goals, sales force performance, and the state of the sales pipeline.</p>
+<p><strong>Operations:</strong></p>
+<p>Managers can access and evaluate data such as supply chain analytics to find methods to optimize processes to save time and resources. Business intelligence can also help improve distribution channels and ensure compliance with service level agreements.</p>
+</section>
+</section>
+<section id="where-does-data-science-apply">
+<h3>Where does data science apply?<a class="headerlink" href="#where-does-data-science-apply" title="Permalink to this headline">¶</a></h3>
+<p>The applications for the relevant methods are extremely diverse; data science is rapidly making its way into a wide range of businesses. However, four important areas should be included in the discussion.</p>
+<p><strong>Data Science and User Experience (UX)</strong>
+When a company launches a new product, it typically conducts surveys to determine how customers feel about it. After the BI team creates its dashboards, it must analyze the data by segmenting the observations (e.g., by region) and then analyzing each segment independently to derive useful prediction. The results of these operations often support the notion that in order to maximize consumer happiness,the product must have small but significant differences in each segment to maximize consumer satisfaction.</p>
+<p><strong>Sales Volume Prediction</strong>
+This form of analysis uses time series analysis. The data scientist wants to know what will happen in the next sales period or a year from now based on the sales data collected up to that point. They use mathematical and statistical models to run multiple simulations that present future scenarios to the analyst. This is the core of data science because based on these scenarios, the company can make better forecasts and apply appropriate strategies.</p>
+<p><strong>Fraud detection</strong>
+Banks can use machine learning, especially supervised learning, to collect historical data, categorize transactions as valid or fraudulent, and train fraud detection models. When these models detect even the slightest hint of theft, they flag the transactions and intervene in real time to prevent the fraud.</p>
+<p><strong>Customer Engagement</strong>
+Businesses can use machine learning algorithms to figure out which customers are likely to buy their products. This means that the store can efficiently offer discounts and a “personal touch,” which lowers marketing spend and increases revenue. Google and Amazon are two big names that come to mind.</p>
+</section>
+</section>
+<section id="cases-studies-examples-of-data-science-applications">
+<h2>Cases studies: Examples of data science applications<a class="headerlink" href="#cases-studies-examples-of-data-science-applications" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><strong>Expedia:</strong> Business intelligence improves customer experience</p></li>
+</ol>
+<p>Expedia is the parent company of Expedia, Hotwire and TripAdvisor, all of which are leading travel companies.</p>
+<ul class="simple">
+<li><p><strong>The challenge:</strong> Customer satisfaction is critical to the company’s purpose, strategy and long-term success. The online experience should reflect an enjoyable trip, but the company does not have access to the voice of the customer.</p></li>
+<li><p><strong>The solution:</strong> the company was manually collecting tons of data, leaving little time for analysis. The customer satisfaction group was able to examine customer data from across the company using business intelligence and link the results to ten goals that were directly related to the company’s priorities. KPI managers create, monitor, and analyze data to identify trends or patterns.</p></li>
+<li><p><strong>The results:</strong> The customer care team can monitor their performance against the KPIs in real time and make adjustments as needed. In addition, the data can be used by other departments. For example, a travel manager can use BI to identify large volumes of unsold tickets or offline bookings and develop tactics to change behavior and increase overall savings.</p></li>
+</ul>
+<ol class="simple">
+<li><p><strong><a class="reference external" href="http://Lotte.com">Lotte.com</a>:</strong> Business intelligence boosts revenue
+With 13 million customers, <a class="reference external" href="http://Lotte.com">Lotte.com</a> is the Korea’s largest online shopping mall.</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>The challenge:</strong> With more than 1 million page views daily, company executives wanted to know why customers abandon their shopping carts.</p></li>
+<li><p><strong>The solution:</strong> Customer Experience Analytics, Korea’s first online behavioral analytics system, was implemented by the assistant general manager of the marketing planning team. The manager used the information to better analyze customer behavior, conduct targeted marketing and redesign the website.</p></li>
+<li><p><strong>The results:</strong> After one year, customer loyalty was up and sales were up $10 million, driven by insights from the new analytics program, BI. Adjustments resulted from identifying and correcting the causes of abandoned purchases, such as a lengthy checkout process and unexpected delivery times.</p></li>
+</ul>
+</section>
+<section id="use-cases-examples-of-data-science-applications-that-prominent-companies-use">
+<h2>Use Cases: Examples of Data Science applications that prominent companies use<a class="headerlink" href="#use-cases-examples-of-data-science-applications-that-prominent-companies-use" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><strong>Netflix:</strong> With 148 million members, the Internet entertainment company has a significant BI advantage. What is Netflix’s approach to business intelligence? Netflix uses data in a variety of ways. For example, the company develops and tests new programming concepts based on shows already watched. Business intelligence is also used by Netflix to encourage users to interact with its content. The service is so good at promoting targeted material that its recommendation system is responsible for over 80% of all streamed content.</p></li>
+<li><p><strong>Tesla:</strong> The forward-thinking automaker uses BI to wirelessly connect its vehicles to its corporate offices and collect data for research. This method connects the automaker to the customer and allows it to anticipate and fix problems such as component damage, traffic and hazard data. The result is high customer satisfaction and the selection of future improvements and goods is based on better information.</p></li>
+<li><p><strong>Uber:</strong> The company uses business intelligence to identify a variety of key components of its operations. One example is surge pricing. Algorithms continuously monitor traffic conditions, ride times, driver availability and customer demand, and adjust prices as demand increases and traffic conditions change. Airlines and hotel companies use real-time dynamic pricing to adjust costs to meet demand.</p></li>
+</ol>
+</section>
+<section id="this-video-on-what-is-data-science-from-simplilearn">
+<h2>This video on “What is Data Science” from Simplilearn<a class="headerlink" href="#this-video-on-what-is-data-science-from-simplilearn" title="Permalink to this headline">¶</a></h2>
+<p>This video on “What is Data Science” will give you an idea of what the life of a Data Scientist is like. This video on Data Science for Beginners also explains the process of a Data Science project, its many applications, and the positions and salaries of a Data Scientist.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span><span class="p">,</span> <span class="n">YouTubeVideo</span><span class="p">,</span> <span class="n">SVG</span><span class="p">,</span> <span class="n">HTML</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://www.youtube.com/watch?v=X3paOmcrTjQ</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;X3paOmcrTjQ&#39;</span><span class="p">,</span><span class="mi">640</span><span class="p">,</span><span class="mi">360</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="640"
+    height="360"
+    src="https://www.youtube.com/embed/X3paOmcrTjQ"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./SCMA248/_build/jupyter_execute"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Pairote Satiracoo<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

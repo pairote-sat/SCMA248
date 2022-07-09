@@ -20,8 +20,8 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 (out2010.loc[(2010,slice(None)),:])['Proportion']
 ------------------
 
-[0;31m--------------------------------------------------------------------[0m
-[0;31mKeyError[0m                           Traceback (most recent call last)
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
 [0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/indexes/base.py[0m in [0;36mget_loc[0;34m(self, key, method, tolerance)[0m
 [1;32m   3360[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m-> 3361[0;31m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_engine[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mcasted_key[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
@@ -39,8 +39,8 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 
 The above exception was the direct cause of the following exception:
 
-[0;31mKeyError[0m                           Traceback (most recent call last)
-[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_6111/3493248267.py[0m in [0;36m<module>[0;34m[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_6363/3493248267.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0;34m([0m[0mout2010[0m[0;34m.[0m[0mloc[0m[0;34m[[0m[0;34m([0m[0;36m2010[0m[0;34m,[0m[0mslice[0m[0;34m([0m[0;32mNone[0m[0;34m)[0m[0;34m)[0m[0;34m,[0m[0;34m:[0m[0;34m][0m[0;34m)[0m[0;34m[[0m[0;34m'Proportion'[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py[0m in [0;36m__getitem__[0;34m(self, key)[0m

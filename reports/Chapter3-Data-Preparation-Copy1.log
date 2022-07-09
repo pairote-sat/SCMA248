@@ -23,8 +23,8 @@ iris = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/ir
 type(iris)
 ------------------
 
-[0;31m--------------------------------------------------------------------[0m
-[0;31mSSLCertVerificationError[0m           Traceback (most recent call last)
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mSSLCertVerificationError[0m                  Traceback (most recent call last)
 [0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py[0m in [0;36mdo_open[0;34m(self, http_class, req, **http_conn_args)[0m
 [1;32m   1349[0m                 h.request(req.get_method(), req.selector, req.data, headers,
 [0;32m-> 1350[0;31m                           encode_chunked=req.has_header('Transfer-encoding'))
@@ -79,8 +79,8 @@ type(iris)
 
 During handling of the above exception, another exception occurred:
 
-[0;31mURLError[0m                           Traceback (most recent call last)
-[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_6072/16525021.py[0m in [0;36m<module>[0;34m[0m
+[0;31mURLError[0m                                  Traceback (most recent call last)
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_6318/16525021.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m iris = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None, 
 [0;32m----> 2[0;31m                 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
 [0m[1;32m      3[0m [0;34m[0m[0m
