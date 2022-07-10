@@ -20,8 +20,13 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 #iris = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None, 
 #                names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
 
-iris = pd.read_csv('https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data', header=None, 
-                names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
+
+url = 'https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data'
+
+iris = pd.read_csv(url, header=None, names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
+
+#iris = pd.read_csv('https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data', header=None, 
+#                names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
 
 type(iris)
 ------------------
@@ -83,12 +88,12 @@ type(iris)
 During handling of the above exception, another exception occurred:
 
 [0;31mURLError[0m                                  Traceback (most recent call last)
-[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_1948/897477228.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      3[0m [0;34m[0m[0m
-[1;32m      4[0m iris = pd.read_csv('https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data', header=None, 
-[0;32m----> 5[0;31m                 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
-[0m[1;32m      6[0m [0;34m[0m[0m
-[1;32m      7[0m [0mtype[0m[0;34m([0m[0miris[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_2140/1918620916.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      5[0m [0murl[0m [0;34m=[0m [0;34m'https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data'[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      6[0m [0;34m[0m[0m
+[0;32m----> 7[0;31m [0miris[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0murl[0m[0;34m,[0m [0mheader[0m[0;34m=[0m[0;32mNone[0m[0;34m,[0m [0mnames[0m [0;34m=[0m [0;34m[[0m[0;34m'sepal_length'[0m[0;34m,[0m [0;34m'sepal_width'[0m[0;34m,[0m [0;34m'petal_length'[0m[0;34m,[0m [0;34m'petal_width'[0m[0;34m,[0m [0;34m'class'[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      8[0m [0;34m[0m[0m
+[1;32m      9[0m [0;31m#iris = pd.read_csv('https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data', header=None,[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/util/_decorators.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
 [1;32m    309[0m                     [0mstacklevel[0m[0;34m=[0m[0mstacklevel[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
