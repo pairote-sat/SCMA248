@@ -17,18 +17,17 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-#iris = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None, 
-#                names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
+import pandas as pd
 
+# How to read CSV file from GitHub using pandas
+# https://stackoverflow.com/questions/55240330/how-to-read-csv-file-from-github-using-pandas
 
-url = 'https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data'
+# url = 'https://raw.githubusercontent.com/pairote-sat/SCMA248/main/demo_df'
+url = 'https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/demo_df.csv'
 
-iris = pd.read_csv(url, header=None, names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
-
-#iris = pd.read_csv('https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data', header=None, 
-#                names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
-
-type(iris)
+df1 = pd.read_csv(url)
+print(df1.head())
+df1.columns
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
@@ -88,12 +87,12 @@ type(iris)
 During handling of the above exception, another exception occurred:
 
 [0;31mURLError[0m                                  Traceback (most recent call last)
-[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_2140/1918620916.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      5[0m [0murl[0m [0;34m=[0m [0;34m'https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data'[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      6[0m [0;34m[0m[0m
-[0;32m----> 7[0;31m [0miris[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0murl[0m[0;34m,[0m [0mheader[0m[0;34m=[0m[0;32mNone[0m[0;34m,[0m [0mnames[0m [0;34m=[0m [0;34m[[0m[0;34m'sepal_length'[0m[0;34m,[0m [0;34m'sepal_width'[0m[0;34m,[0m [0;34m'petal_length'[0m[0;34m,[0m [0;34m'petal_width'[0m[0;34m,[0m [0;34m'class'[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      8[0m [0;34m[0m[0m
-[1;32m      9[0m [0;31m#iris = pd.read_csv('https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data', header=None,[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_2309/3690297895.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      7[0m [0murl[0m [0;34m=[0m [0;34m'https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/demo_df.csv'[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      8[0m [0;34m[0m[0m
+[0;32m----> 9[0;31m [0mdf1[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0murl[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     10[0m [0mprint[0m[0;34m([0m[0mdf1[0m[0;34m.[0m[0mhead[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     11[0m [0mdf1[0m[0;34m.[0m[0mcolumns[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/util/_decorators.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
 [1;32m    309[0m                     [0mstacklevel[0m[0;34m=[0m[0mstacklevel[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
