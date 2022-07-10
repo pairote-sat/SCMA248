@@ -83,7 +83,7 @@ type(iris)
 During handling of the above exception, another exception occurred:
 
 [0;31mURLError[0m                                  Traceback (most recent call last)
-[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_1778/897477228.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_1948/897477228.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      3[0m [0;34m[0m[0m
 [1;32m      4[0m iris = pd.read_csv('https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data', header=None, 
 [0;32m----> 5[0;31m                 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
