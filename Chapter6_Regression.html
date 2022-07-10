@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>8. Regression Analysis &#8212; SCMA248 Introduction to Data Science</title>
+    <title>6. Regression Analysis &#8212; SCMA248 Introduction to Data Science</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="9. Machine learning: Introduction" href="Chapter7_Introduction_Machine_Learning.html" />
-    <link rel="prev" title="7. Practical Statistics" href="Chapter5_Practical_Statistics.html" />
+    <link rel="next" title="7. Machine learning: Introduction" href="Chapter7_Introduction_Machine_Learning.html" />
+    <link rel="prev" title="5. Practical Statistics" href="Chapter5_Practical_Statistics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,32 +112,32 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter3_Data_Preparation.html">
-   3. Data Selection
+   3. Data Preparation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter4_Data_Visualization.html">
-   6. Data Visualization
+   4. Data Visualization
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter5_Practical_Statistics.html">
-   7. Practical Statistics
+   5. Practical Statistics
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   8. Regression Analysis
+   6. Regression Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter7_Introduction_Machine_Learning.html">
-   9. Machine learning: Introduction
+   7. Machine learning: Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter8_Unsupervised_Learning.html">
-   10. Unsupervised Machine Learning: K-means Clustering
+   8. Unsupervised Machine Learning: K-means Clustering
   </a>
  </li>
 </ul>
@@ -246,121 +246,121 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#simple-linear-regression">
-   8.1. Simple linear regression
+   6.1. Simple linear regression
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#insurance-premium-prediction-example">
-   8.2. Insurance Premium Prediction: Example
+   6.2. Insurance Premium Prediction: Example
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exploratory-data-analysis">
-     8.2.1. Exploratory data analysis
+     6.2.1. Exploratory data analysis
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#make-a-research-question">
-     8.2.2. Make a research question
+     6.2.2. Make a research question
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#running-and-reading-a-simple-linear-regression">
-     8.2.3. Running and reading a simple linear regression
+     6.2.3. Running and reading a simple linear regression
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#method-of-least-squares">
-     8.2.4. Method of least squares
+     6.2.4. Method of least squares
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#linear-least-squares">
-     8.2.5. Linear least squares
+     6.2.5. Linear least squares
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#interpreting-the-results">
-     8.2.6. Interpreting the results
+     6.2.6. Interpreting the results
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#presenting-the-results">
-     8.2.7. Presenting the results
+     6.2.7. Presenting the results
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#predicted-values-and-residuals">
-     8.2.8. Predicted values and residuals
+     6.2.8. Predicted values and residuals
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#violin-plots">
-     8.2.9. Violin plots
+     6.2.9. Violin plots
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multivariate-analysis">
-   8.3. Multivariate Analysis
+   6.3. Multivariate Analysis
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exploratory-data-analysis-eda">
-     8.3.1. Exploratory Data Analysis (EDA)
+     6.3.1. Exploratory Data Analysis (EDA)
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id1">
-       8.3.1.1. Multivariate analysis
+       6.3.1.1. Multivariate analysis
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#pairs-plot-with-color-by-category">
-       8.3.1.2. Pairs Plot with Color by Category
+       6.3.1.2. Pairs Plot with Color by Category
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#preprocessing-categorical-variables">
-       8.3.1.3. Preprocessing categorical variables
+       6.3.1.3. Preprocessing categorical variables
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#one-hot-encoding">
-       8.3.1.4. One Hot Encoding
+       6.3.1.4. One Hot Encoding
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#label-encoding">
-       8.3.1.5. Label Encoding
+       6.3.1.5. Label Encoding
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#correlation-analysis">
-       8.3.1.6. Correlation Analysis
+       6.3.1.6. Correlation Analysis
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#multiple-linear-regression">
-     8.3.2. Multiple Linear Regression
+     6.3.2. Multiple Linear Regression
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#building-the-model-and-interpreting-the-coefficients">
-       8.3.2.1. Building the model and interpreting the coefficients
+       6.3.2.1. Building the model and interpreting the coefficients
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#fitted-multiple-regression-function">
-       8.3.2.2. Fitted multiple regression function
+       6.3.2.2. Fitted multiple regression function
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#example-of-calculating-fitted-values">
-       8.3.2.3. Example of calculating fitted values
+       6.3.2.3. Example of calculating fitted values
       </a>
      </li>
     </ul>
@@ -369,44 +369,44 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scikit-learn-regression-models">
-   8.4. Scikit-learn regression models
+   6.4. Scikit-learn regression models
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-a-model-and-fit-it">
-     8.4.1. Create a model and fit it
+     6.4.1. Create a model and fit it
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-algorithm-s-evaluation">
-     8.4.2. The algorithm’s evaluation
+     6.4.2. The algorithm’s evaluation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multivariate-linear-regression-in-scikit-learn">
-   8.5. Multivariate Linear Regression in Scikit-Learn
+   6.5. Multivariate Linear Regression in Scikit-Learn
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#categorical-variable-encoding">
-     8.5.1. Categorical variable encoding
+     6.5.1. Categorical variable encoding
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#visualize-predictions-of-multiple-linear-regression-with-plotnine">
-     8.5.2. Visualize Predictions Of Multiple Linear Regression with Plotnine
+     6.5.2. Visualize Predictions Of Multiple Linear Regression with Plotnine
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#compare-results-and-conclusions">
-     8.5.3. Compare Results and Conclusions
+     6.5.3. Compare Results and Conclusions
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#conclusions">
-       8.5.3.1. Conclusions
+       6.5.3.1. Conclusions
       </a>
      </li>
     </ul>
@@ -425,7 +425,7 @@
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="regression-analysis">
-<h1><span class="section-number">8. </span>Regression Analysis<a class="headerlink" href="#regression-analysis" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>Regression Analysis<a class="headerlink" href="#regression-analysis" title="Permalink to this headline">¶</a></h1>
 <p>Regression analysis is a statistical technique that allows us to determine the relationship between two or more quantitative variables in order to predict a response or outcome variable from one or more of them. This methodology is frequently employed in a variety of fields, including business, social and behavioral sciences, biology, and many more.</p>
 <p>Here are a few examples of applications:</p>
 <ol class="simple">
@@ -446,13 +446,13 @@
 \[{\displaystyle Y_{i}=f(X_{i},\beta )+e_{i}}.\]</div>
 <p>In other words, regression analysis aims to find the function <span class="math notranslate nohighlight">\(f(X_{i},\beta)\)</span> that best matches the data. The function’s form must be supplied in order to do regression analysis. The form of this function is sometimes based on knowledge of the relationship between <span class="math notranslate nohighlight">\(X_{i}\)</span> and <span class="math notranslate nohighlight">\(Y_{i}\)</span>. If such information is not available, a flexible or convenient form is adopted.</p>
 <section id="simple-linear-regression">
-<h2><span class="section-number">8.1. </span>Simple linear regression<a class="headerlink" href="#simple-linear-regression" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>Simple linear regression<a class="headerlink" href="#simple-linear-regression" title="Permalink to this headline">¶</a></h2>
 <p>The simplest model to consider is a linear model, in which the response <span class="math notranslate nohighlight">\({\displaystyle Y_{i}}\)</span> is linearly proportional to the variables <span class="math notranslate nohighlight">\({\displaystyle X_{i}}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[{\displaystyle Y_{i}=\beta _{0}+\beta _{1}X_{i}+e_{i}}\]</div>
 </section>
 <section id="insurance-premium-prediction-example">
-<h2><span class="section-number">8.2. </span>Insurance Premium Prediction: Example<a class="headerlink" href="#insurance-premium-prediction-example" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2. </span>Insurance Premium Prediction: Example<a class="headerlink" href="#insurance-premium-prediction-example" title="Permalink to this headline">¶</a></h2>
 <p>For analysis, we used the Kaggle public dataset “Insurance Premium Prediction.”. There are 1338 samples and 7 features.</p>
 <p>We will learn how to predict insurance costs based on the features age, sex, bmi, children, smoking status, and region.</p>
 <p>Let us start by loading the data and performing a preliminary analysis with <a class="reference external" href="http://df.info">df.info</a> ()</p>
@@ -531,7 +531,7 @@ memory usage: 73.3+ KB
 </ul>
 <p>There is no missing data among 1338 records.</p>
 <section id="exploratory-data-analysis">
-<h3><span class="section-number">8.2.1. </span>Exploratory data analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.1. </span>Exploratory data analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h3>
 <p>It is now time to experiment with the data and make some visualizations.</p>
 <p>In our dataset, a <strong>pairplot</strong> plots pairwise relationships. The pairplot function creates a grid of Axes in which each variable in the data is shared across a single row and a single column on the y-axis.</p>
 <p>A pairs plot shows the distribution of single variables as well as the relationships between them. Pair plots are a great way to detect trends for further study, and they’re simple to create in Python!</p>
@@ -551,7 +551,7 @@ memory usage: 73.3+ KB
 <p><strong>Note:</strong> We can see that age is correlated with the response variable charges.</p>
 </section>
 <section id="make-a-research-question">
-<h3><span class="section-number">8.2.2. </span>Make a research question<a class="headerlink" href="#make-a-research-question" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.2. </span>Make a research question<a class="headerlink" href="#make-a-research-question" title="Permalink to this headline">¶</a></h3>
 <p>For our first regression analysis, we are interested in the following question.</p>
 <blockquote>
 <div><p>Is there an association between charges and age?</p>
@@ -564,13 +564,13 @@ $<span class="math notranslate nohighlight">\({\displaystyle Y_{i}=\beta _{0}+\b
 <p>If this hypothesis is accepted, one should discard the <span class="math notranslate nohighlight">\(X\)</span> information and base inferences on the <span class="math notranslate nohighlight">\(Y\)</span> values alone (so <span class="math notranslate nohighlight">\(Y_i = \bar{Y}\)</span>).</p>
 </section>
 <section id="running-and-reading-a-simple-linear-regression">
-<h3><span class="section-number">8.2.3. </span>Running and reading a simple linear regression<a class="headerlink" href="#running-and-reading-a-simple-linear-regression" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.3. </span>Running and reading a simple linear regression<a class="headerlink" href="#running-and-reading-a-simple-linear-regression" title="Permalink to this headline">¶</a></h3>
 <p><strong>statsmodels</strong> is a Python package that may be used to fit a variety of statistical models, run statistical tests, and explore and visualize data. Other libraries contain Bayesian methods and machine learning models, whereas Statsmodels contains more “traditional” frequentist statistical approaches.</p>
 <p>In statsmodels, there are various types of linear regression models, ranging from the most basic (e.g., ordinary least squares) to the most complicated (e.g., logistic regression) (e.g., iteratively reweighted least squares).</p>
 <p>In what follows, we will use Python’s statsmodels module to implement <strong>Ordinary Least Squares(OLS) method</strong> of linear regression.</p>
 </section>
 <section id="method-of-least-squares">
-<h3><span class="section-number">8.2.4. </span>Method of least squares<a class="headerlink" href="#method-of-least-squares" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.4. </span>Method of least squares<a class="headerlink" href="#method-of-least-squares" title="Permalink to this headline">¶</a></h3>
 <p>The general model takes the following form:</p>
 <div class="math notranslate nohighlight">
 \[{\displaystyle Y_{i}=f(X_{i},\beta )+e_{i}}.\]</div>
@@ -584,7 +584,7 @@ the <strong>residual</strong> as the difference between the observed value of th
 \[{\displaystyle S=\sum _{i=1}^{n}r_{i}^{2}.}\]</div>
 </section>
 <section id="linear-least-squares">
-<h3><span class="section-number">8.2.5. </span>Linear least squares<a class="headerlink" href="#linear-least-squares" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.5. </span>Linear least squares<a class="headerlink" href="#linear-least-squares" title="Permalink to this headline">¶</a></h3>
 <p>For the simplest linear model $<span class="math notranslate nohighlight">\({\displaystyle Y_{i}=\beta _{0}+\beta _{1}X_{i}+e_{i}},\)</span><span class="math notranslate nohighlight">\( the method of least squares reduces to find the vaues of \)</span>\beta _{0}<span class="math notranslate nohighlight">\( and \)</span>\beta _{1}<span class="math notranslate nohighlight">\( that minimise
 \)</span><span class="math notranslate nohighlight">\({\displaystyle S=\sum _{i=1}^{n}(y_{i}- \beta _{0}-\beta _{1}x_{i}  )^{2}.}\)</span>$</p>
 <p>Follow the link for more details: <a class="reference external" href="https://en.wikipedia.org/wiki/Linear_least_squares#Example">https://en.wikipedia.org/wiki/Linear_least_squares#Example</a></p>
@@ -619,7 +619,7 @@ the <strong>residual</strong> as the difference between the observed value of th
 </ul>
 </section>
 <section id="interpreting-the-results">
-<h3><span class="section-number">8.2.6. </span>Interpreting the results<a class="headerlink" href="#interpreting-the-results" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.6. </span>Interpreting the results<a class="headerlink" href="#interpreting-the-results" title="Permalink to this headline">¶</a></h3>
 <p>To view the results of the model, you can use <code class="docutils literal notranslate"><span class="pre">summary()</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -724,7 +724,7 @@ the <strong>residual</strong> as the difference between the observed value of th
 <p><strong>Note:</strong> we will not partition our data into training and testing because we are conducting an observational study to observe/test an association rather than constructing a predictive model. As a result, do not be surprised if this method differs from what you’ll find in most data science classes.</p>
 </section>
 <section id="presenting-the-results">
-<h3><span class="section-number">8.2.7. </span>Presenting the results<a class="headerlink" href="#presenting-the-results" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.7. </span>Presenting the results<a class="headerlink" href="#presenting-the-results" title="Permalink to this headline">¶</a></h3>
 <p>From our analysis, we found that the regression coefficients are
 $<span class="math notranslate nohighlight">\(\beta_0 = 3165.885006 \text{ and } \beta_1 = 257.722619.\)</span>$</p>
 <p>The estimated regression function is
@@ -758,7 +758,7 @@ dtype: float64
 </div>
 </section>
 <section id="predicted-values-and-residuals">
-<h3><span class="section-number">8.2.8. </span>Predicted values and residuals<a class="headerlink" href="#predicted-values-and-residuals" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.8. </span>Predicted values and residuals<a class="headerlink" href="#predicted-values-and-residuals" title="Permalink to this headline">¶</a></h3>
 <p>We can compute predicted values given the estimated model parameters using <code class="docutils literal notranslate"><span class="pre">predict</span></code> function.</p>
 <p>In what follows, we calculate the predicted values and use them to calculate the residuals.</p>
 <p>Recall that the <span class="math notranslate nohighlight">\(i\)</span>th residual is the difference between the observed value <span class="math notranslate nohighlight">\(Y_i\)</span> and the corresponding fitted value <span class="math notranslate nohighlight">\(\hat{Y_i}\)</span>.</p>
@@ -1219,7 +1219,7 @@ dtype: float64
 </div>
 </section>
 <section id="violin-plots">
-<h3><span class="section-number">8.2.9. </span>Violin plots<a class="headerlink" href="#violin-plots" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.9. </span>Violin plots<a class="headerlink" href="#violin-plots" title="Permalink to this headline">¶</a></h3>
 <p>A <strong>violin plot</strong> displays the densities of different groups, allowing you to compare their distributions.</p>
 <p>Violin plots are similar to box plots in that they display the probability density of the data at various values, which is normally smoothed using a kernel density estimator. Typically, a violin plot will include all of the data found in a box plot: a marker for the data’s median; a box or marker representing the interquartile range; and, assuming the number of samples is not too large, all sample points.</p>
 <div class="cell docutils container">
@@ -1546,7 +1546,7 @@ dtype: float64
 </section>
 </section>
 <section id="multivariate-analysis">
-<h2><span class="section-number">8.3. </span>Multivariate Analysis<a class="headerlink" href="#multivariate-analysis" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.3. </span>Multivariate Analysis<a class="headerlink" href="#multivariate-analysis" title="Permalink to this headline">¶</a></h2>
 <p>Our next analysis is to estimate the association between two or more independent variables and one dependent variable. Multiple linear regression will be used to answer the following:</p>
 <ol class="simple">
 <li><p>The degree to which two or more independent variables and one dependent variable are related (e.g. how strong the relationship is between independent variables (age, bmi, and smoker) and dependent variable (charges)).</p></li>
@@ -1649,7 +1649,7 @@ dtype: float64
 </div></div></div>
 </div>
 <section id="exploratory-data-analysis-eda">
-<h3><span class="section-number">8.3.1. </span>Exploratory Data Analysis (EDA)<a class="headerlink" href="#exploratory-data-analysis-eda" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.1. </span>Exploratory Data Analysis (EDA)<a class="headerlink" href="#exploratory-data-analysis-eda" title="Permalink to this headline">¶</a></h3>
 <p>We will perform exploratory data analysis to analyze data quality as well as uncover hidden relationships between variables. In this exercise, I’ll go through three strategies relevant to regression analysis:</p>
 <ol class="simple">
 <li><p>Multivariate analysis</p></li>
@@ -1657,7 +1657,7 @@ dtype: float64
 <li><p>Correlation Analysis</p></li>
 </ol>
 <section id="id1">
-<h4><span class="section-number">8.3.1.1. </span>Multivariate analysis<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.3.1.1. </span>Multivariate analysis<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>We have already created a pairs plot to shows the distribution of single variables as well as the relationships between them.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1676,7 +1676,7 @@ dtype: float64
 <p>In Seaborn, pairs plots (scatter plots or box plots) can take an additional hue argument to add another variable for comparison (e.g., for comparison between different categories).</p>
 </section>
 <section id="pairs-plot-with-color-by-category">
-<h4><span class="section-number">8.3.1.2. </span>Pairs Plot with Color by Category<a class="headerlink" href="#pairs-plot-with-color-by-category" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.3.1.2. </span>Pairs Plot with Color by Category<a class="headerlink" href="#pairs-plot-with-color-by-category" title="Permalink to this headline">¶</a></h4>
 <p>Consider making the categorical variable the legend. To do this, we first create the lists of numeric variables <strong>num_list</strong> and categorical variables <strong>cat_list</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1766,7 +1766,7 @@ dtype: float64
 <p><strong>Exercise</strong> Use plotnine to create the two scatter plots above.</p>
 </section>
 <section id="preprocessing-categorical-variables">
-<h4><span class="section-number">8.3.1.3. </span>Preprocessing categorical variables<a class="headerlink" href="#preprocessing-categorical-variables" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.3.1.3. </span>Preprocessing categorical variables<a class="headerlink" href="#preprocessing-categorical-variables" title="Permalink to this headline">¶</a></h4>
 <p>Categorical variables cannot be handled by most machine learning algorithms unless they are converted to numerical values. The categorical variables must be preprocessed before they may be used. We must transform these categorical variables to integers in order for the model to comprehend and extract useful information.</p>
 <p>We can encode these categorical variables as integers in a variety of ways and use them in our regression analysis. We’ll take a look at two of them, including</p>
 <ul class="simple">
@@ -1775,7 +1775,7 @@ dtype: float64
 </ul>
 </section>
 <section id="one-hot-encoding">
-<h4><span class="section-number">8.3.1.4. </span>One Hot Encoding<a class="headerlink" href="#one-hot-encoding" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.3.1.4. </span>One Hot Encoding<a class="headerlink" href="#one-hot-encoding" title="Permalink to this headline">¶</a></h4>
 <p>In this method, we map each category to a vector that comprises 1 and 0, indicating whether the feature is present or not. The number of vectors is determined by the number of feature categories. If the number of categories for the feature is really large, this approach produces many columns, which considerably slows down the model processing.</p>
 <p>The <strong>get_dummies</strong> function in Pandas is quite simple to use. The following is a sample DataFrame code:</p>
 <div class="cell docutils container">
@@ -2167,7 +2167,7 @@ dtype: float64
 </div>
 </section>
 <section id="label-encoding">
-<h4><span class="section-number">8.3.1.5. </span>Label Encoding<a class="headerlink" href="#label-encoding" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.3.1.5. </span>Label Encoding<a class="headerlink" href="#label-encoding" title="Permalink to this headline">¶</a></h4>
 <p>In this encoding, each category in this encoding is given a number between 1 and N (where N is the number of categories for the feature). One fundamental problem with this technique is that there is no relationship or order between these classes, despite the fact that the algorithm may treat them as such. (region0 &lt; region1 &lt; region2 and 0 &lt; 1 &lt;  2) is an example of what it might look like. The data-frame has the following Scikit-learn code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2341,7 +2341,7 @@ dtype: float64
 </div>
 </section>
 <section id="correlation-analysis">
-<h4><span class="section-number">8.3.1.6. </span>Correlation Analysis<a class="headerlink" href="#correlation-analysis" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.3.1.6. </span>Correlation Analysis<a class="headerlink" href="#correlation-analysis" title="Permalink to this headline">¶</a></h4>
 <p>The linear correlation between variable pairs is investigated using correlation analysis. This may be accomplished by combining the <code class="docutils literal notranslate"><span class="pre">corr()</span></code> and <code class="docutils literal notranslate"><span class="pre">sns.heatmap()</span></code> functions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2396,7 +2396,7 @@ dtype: float64
 </section>
 </section>
 <section id="multiple-linear-regression">
-<h3><span class="section-number">8.3.2. </span>Multiple Linear Regression<a class="headerlink" href="#multiple-linear-regression" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.2. </span>Multiple Linear Regression<a class="headerlink" href="#multiple-linear-regression" title="Permalink to this headline">¶</a></h3>
 <p>Multiple inputs and a single output are possible in multiple linear regression. We’ll look at how numerous input variables interact to affect the output variable, as well as how the calculations differ from those of a simple linear regression model. We’ll also use Python’s <strong>Statsmodel</strong> to create a multiple regression model.</p>
 <p>Recall that the fitted regression model equation is</p>
 <div class="math notranslate nohighlight">
@@ -2411,7 +2411,7 @@ dtype: float64
 <p>Finding the values of these constants (β) is the task of the regression model, minimizing the error function and fitting the best line or hyperplane (depending on the number of input variables).</p>
 <p>This is done by minimizing the Residual Sum of Squares (RSS), which is obtained by squaring the differences between the actual and predicted results.</p>
 <section id="building-the-model-and-interpreting-the-coefficients">
-<h4><span class="section-number">8.3.2.1. </span>Building the model and interpreting the coefficients<a class="headerlink" href="#building-the-model-and-interpreting-the-coefficients" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.3.2.1. </span>Building the model and interpreting the coefficients<a class="headerlink" href="#building-the-model-and-interpreting-the-coefficients" title="Permalink to this headline">¶</a></h4>
 <p>Similar to linear regression analysis, the results can be obtained by running the following code:</p>
 <p><strong>Fit and summary:</strong></p>
 <div class="cell docutils container">
@@ -2661,13 +2661,13 @@ R2:  0.7474771588119513
 </div>
 </section>
 <section id="fitted-multiple-regression-function">
-<h4><span class="section-number">8.3.2.2. </span>Fitted multiple regression function<a class="headerlink" href="#fitted-multiple-regression-function" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.3.2.2. </span>Fitted multiple regression function<a class="headerlink" href="#fitted-multiple-regression-function" title="Permalink to this headline">¶</a></h4>
 <p>Based on the previous results, the equation to predict the output variable using age, bmi, and smoker yes as input would be as follows:</p>
 <div class="math notranslate nohighlight">
 \[ charges = - 11676.83042519 + (259.54749155 * age) + (322.61513282 * bmi) + (23823.68449531 * smoker\_yes) \]</div>
 </section>
 <section id="example-of-calculating-fitted-values">
-<h4><span class="section-number">8.3.2.3. </span>Example of calculating fitted values<a class="headerlink" href="#example-of-calculating-fitted-values" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.3.2.3. </span>Example of calculating fitted values<a class="headerlink" href="#example-of-calculating-fitted-values" title="Permalink to this headline">¶</a></h4>
 <p>If sample data with actual output value 8240.5896 has</p>
 <ul class="simple">
 <li><p>age = 46,</p></li>
@@ -2952,7 +2952,7 @@ R2:  0.7474771588119513
 </section>
 </section>
 <section id="scikit-learn-regression-models">
-<h2><span class="section-number">8.4. </span>Scikit-learn regression models<a class="headerlink" href="#scikit-learn-regression-models" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4. </span>Scikit-learn regression models<a class="headerlink" href="#scikit-learn-regression-models" title="Permalink to this headline">¶</a></h2>
 <p>Scikit-learn lets you perform linear regression in Python in a different way.</p>
 <p>When it comes to machine learning in Python, Scikit-learn (or SKLearn) is the gold standard. There are many learning techniques available for regression, classification, clustering, and dimensionality reduction.</p>
 <p>To use linear regression, we first need to import it:</p>
@@ -2972,7 +2972,7 @@ R2:  0.7474771588119513
 </div>
 </div>
 <section id="create-a-model-and-fit-it">
-<h3><span class="section-number">8.4.1. </span>Create a model and fit it<a class="headerlink" href="#create-a-model-and-fit-it" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.1. </span>Create a model and fit it<a class="headerlink" href="#create-a-model-and-fit-it" title="Permalink to this headline">¶</a></h3>
 <p>In a simple linear regression, there is only one input variable and one output variable.</p>
 <p>First Let us take age as the input variable and charges as the output.  We will define our x and y.</p>
 <p>We then import the LinearRegression class from Scikit-Learn’s <code class="docutils literal notranslate"><span class="pre">linear_model</span></code>. Then you can instantiate a new <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> object. In this case it was called <code class="docutils literal notranslate"><span class="pre">lm</span></code>.</p>
@@ -3069,7 +3069,7 @@ Intercept:  3165.885006063021
 <p>The results of the regression analysis, including the R-squared, slope, and intercept, are the same as for <strong>statsmodel</strong>.</p>
 </section>
 <section id="the-algorithm-s-evaluation">
-<h3><span class="section-number">8.4.2. </span>The algorithm’s evaluation<a class="headerlink" href="#the-algorithm-s-evaluation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.2. </span>The algorithm’s evaluation<a class="headerlink" href="#the-algorithm-s-evaluation" title="Permalink to this headline">¶</a></h3>
 <p>The final stage is to evaluate the algorithm’s performance.</p>
 <p>This phase is especially significant when comparing the performance of multiple algorithms on a given data set. Regression methods are often evaluated using three metrics:</p>
 <ol class="simple">
@@ -3180,13 +3180,13 @@ Root Mean Squared Error: 11551.66562075632
 </section>
 </section>
 <section id="multivariate-linear-regression-in-scikit-learn">
-<h2><span class="section-number">8.5. </span>Multivariate Linear Regression in Scikit-Learn<a class="headerlink" href="#multivariate-linear-regression-in-scikit-learn" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.5. </span>Multivariate Linear Regression in Scikit-Learn<a class="headerlink" href="#multivariate-linear-regression-in-scikit-learn" title="Permalink to this headline">¶</a></h2>
 <p>We will perform linear regression using multiple variables.</p>
 <p>Scikit-Learn makes creating these models a breeze. Remember passing a two-dimensional array <code class="docutils literal notranslate"><span class="pre">x</span></code> when you originally trained your model?
 In that array, there was only one column.</p>
 <p>To match your data with multiple variables, you can simply pass in an array with multiple columns. Let us take a look at how this works:</p>
 <section id="categorical-variable-encoding">
-<h3><span class="section-number">8.5.1. </span>Categorical variable encoding<a class="headerlink" href="#categorical-variable-encoding" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.5.1. </span>Categorical variable encoding<a class="headerlink" href="#categorical-variable-encoding" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/Data/insuranceKaggle.csv&#39;</span><span class="p">)</span>
@@ -3397,7 +3397,7 @@ R2-score: 0.75
 <p>Again, the results of the multiple regression analysis, including the R-squared, the coefficients, and the intercept, are the same as for <strong>statsmodel</strong>.</p>
 </section>
 <section id="visualize-predictions-of-multiple-linear-regression-with-plotnine">
-<h3><span class="section-number">8.5.2. </span>Visualize Predictions Of Multiple Linear Regression with Plotnine<a class="headerlink" href="#visualize-predictions-of-multiple-linear-regression-with-plotnine" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.5.2. </span>Visualize Predictions Of Multiple Linear Regression with Plotnine<a class="headerlink" href="#visualize-predictions-of-multiple-linear-regression-with-plotnine" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -3620,7 +3620,7 @@ R2-score: 0.75
 </div>
 </section>
 <section id="compare-results-and-conclusions">
-<h3><span class="section-number">8.5.3. </span>Compare Results and Conclusions<a class="headerlink" href="#compare-results-and-conclusions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.5.3. </span>Compare Results and Conclusions<a class="headerlink" href="#compare-results-and-conclusions" title="Permalink to this headline">¶</a></h3>
 <p>The error distribution can be used to assess the quality of a linear regression model (details given elsewhere). Quantitative measurements like MAE, MSE, RMSE, and R squared are also available for model comparison.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3637,7 +3637,7 @@ Multiple Linear Regression  4216.775692   37005395.750508  0.747477
 </div>
 </div>
 <section id="conclusions">
-<h4><span class="section-number">8.5.3.1. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.5.3.1. </span>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h4>
 <p>By comparing the simple linear regression and multiple linear regression models, we conclude that the multiple linear regression is the best model, achieving 74.75% accuracy (R-squared).</p>
 <p>In this situation, an R-squared value of 0.7475 indicates that the multiple linear regression model explains 74.75 percent of the variation in the target variable, which is generally considered as a good rate.</p>
 <p>When we look at error graphs, we can see that</p>
@@ -3709,13 +3709,13 @@ Multiple Linear Regression  4216.775692   37005395.750508  0.747477
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7. </span>Practical Statistics</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Practical Statistics</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Chapter7_Introduction_Machine_Learning.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">9. </span>Machine learning: Introduction</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Machine learning: Introduction</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

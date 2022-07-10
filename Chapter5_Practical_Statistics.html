@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>7. Practical Statistics &#8212; SCMA248 Introduction to Data Science</title>
+    <title>5. Practical Statistics &#8212; SCMA248 Introduction to Data Science</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="8. Regression Analysis" href="Chapter6_Regression.html" />
-    <link rel="prev" title="6. Data Visualization" href="Chapter4_Data_Visualization.html" />
+    <link rel="next" title="6. Regression Analysis" href="Chapter6_Regression.html" />
+    <link rel="prev" title="4. Data Visualization" href="Chapter4_Data_Visualization.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,32 +112,32 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter3_Data_Preparation.html">
-   3. Data Selection
+   3. Data Preparation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter4_Data_Visualization.html">
-   6. Data Visualization
+   4. Data Visualization
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   7. Practical Statistics
+   5. Practical Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter6_Regression.html">
-   8. Regression Analysis
+   6. Regression Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter7_Introduction_Machine_Learning.html">
-   9. Machine learning: Introduction
+   7. Machine learning: Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter8_Unsupervised_Learning.html">
-   10. Unsupervised Machine Learning: K-means Clustering
+   8. Unsupervised Machine Learning: K-means Clustering
   </a>
  </li>
 </ul>
@@ -246,69 +246,69 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#density-plots-and-estimates">
-   7.1. Density Plots and Estimates
+   5.1. Density Plots and Estimates
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#correlation">
-   7.2. Correlation
+   5.2. Correlation
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-correlation-matrix">
-     7.2.1. The correlation matrix
+     5.2.1. The correlation matrix
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#finding-correlation-between-two-variables">
-     7.2.2. Finding Correlation Between Two Variables
+     5.2.2. Finding Correlation Between Two Variables
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plotting-correlation-matrix">
-     7.2.3. Plotting Correlation Matrix
+     5.2.3. Plotting Correlation Matrix
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plotting-correlation-heatmap">
-     7.2.4. Plotting Correlation HeatMap
+     5.2.4. Plotting Correlation HeatMap
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-and-sampling-distributions">
-   7.3. Data and Sampling Distributions
+   5.3. Data and Sampling Distributions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sampling-bias">
-     7.3.1. Sampling bias
+     5.3.1. Sampling bias
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#types-of-sampling-techniques">
-     7.3.2. Types of sampling techniques
+     5.3.2. Types of sampling techniques
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#simple-random-sampling">
-       7.3.2.1. Simple random sampling
+       5.3.2.1. Simple random sampling
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#systematic-sampling">
-       7.3.2.2. Systematic sampling
+       5.3.2.2. Systematic sampling
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#stratified-sampling">
-       7.3.2.3. Stratified Sampling
+       5.3.2.3. Stratified Sampling
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#cluster-sampling">
-       7.3.2.4. Cluster Sampling
+       5.3.2.4. Cluster Sampling
       </a>
      </li>
     </ul>
@@ -317,56 +317,56 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#distribution-of-random-variables">
-   7.4. Distribution of Random Variables
+   5.4. Distribution of Random Variables
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#random-variable">
-     7.4.1. Random Variable
+     5.4.1. Random Variable
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#discrete-random-variables">
-       7.4.1.1. Discrete random variables
+       5.4.1.1. Discrete random variables
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#continuous-random-variables">
-     7.4.2. Continuous random variables
+     5.4.2. Continuous random variables
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#the-uniform-distribution">
-       7.4.2.1. The uniform distribution
+       5.4.2.1. The uniform distribution
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#uniform-distribution-in-python">
-       7.4.2.2. Uniform Distribution in Python
+       5.4.2.2. Uniform Distribution in Python
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#uniform-random-variate">
-       7.4.2.3. Uniform random variate
+       5.4.2.3. Uniform random variate
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#normal-distribution-function">
-     7.4.3. Normal Distribution Function
+     5.4.3. Normal Distribution Function
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#poisson-distribution">
-     7.4.4. Poisson Distribution
+     5.4.4. Poisson Distribution
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#poisson-distribution-function">
-       7.4.4.1. Poisson Distribution Function
+       5.4.4.1. Poisson Distribution Function
       </a>
      </li>
     </ul>
@@ -375,42 +375,42 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fitting-models-to-data">
-   7.5. Fitting Models to Data
+   5.5. Fitting Models to Data
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generate-test-data-and-fit-it">
-     7.5.1. Generate test data and fit it
+     5.5.1. Generate test data and fit it
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fitting-distributions">
-     7.5.2. Fitting distributions
+     5.5.2. Fitting distributions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#choosing-the-most-appropriate-distribution-and-indentifying-the-parameters">
-     7.5.3. Choosing the most appropriate distribution and indentifying the parameters
+     5.5.3. Choosing the most appropriate distribution and indentifying the parameters
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#distribution-fitting-with-distfit">
-     7.5.4. Distribution fitting with distfit
+     5.5.4. Distribution fitting with distfit
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#distribution-fitting-with-python-scipy">
-     7.5.5. Distribution Fitting with Python SciPy
+     5.5.5. Distribution Fitting with Python SciPy
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#calculating-the-sum-of-squared-errors">
-       7.5.5.1. Calculating the sum of squared errors
+       5.5.5.1. Calculating the sum of squared errors
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#get-data-points-from-a-histogram-in-python-from-matplotlib">
-       7.5.5.2. Get data points from a histogram in Python from matplotlib
+       5.5.5.2. Get data points from a histogram in Python from matplotlib
       </a>
      </li>
     </ul>
@@ -429,9 +429,9 @@
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="practical-statistics">
-<h1><span class="section-number">7. </span>Practical Statistics<a class="headerlink" href="#practical-statistics" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>Practical Statistics<a class="headerlink" href="#practical-statistics" title="Permalink to this headline">¶</a></h1>
 <section id="density-plots-and-estimates">
-<h2><span class="section-number">7.1. </span>Density Plots and Estimates<a class="headerlink" href="#density-plots-and-estimates" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Density Plots and Estimates<a class="headerlink" href="#density-plots-and-estimates" title="Permalink to this headline">¶</a></h2>
 <p>A histogram is a visual representation of a frequency table, with the data count on the y-axis and the bins on the x-axis. It displays the amount of occurrences of certain values. In Chapter 4, we have learned how to make a histogram with pandas and plotnine.</p>
 <p>A density plot is similar to a histogram in that it representts the distribution of data values as a continuous line.</p>
 <p>A density plot can be thought of as a smoothed histogram, which is normally produced directly from the data using a <strong>kernel density estimate (KDE)</strong>.</p>
@@ -550,7 +550,7 @@
 </div>
 </section>
 <section id="correlation">
-<h2><span class="section-number">7.2. </span>Correlation<a class="headerlink" href="#correlation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>Correlation<a class="headerlink" href="#correlation" title="Permalink to this headline">¶</a></h2>
 <p>In many modeling initiatives (whether in data science or research), exploratory data analysis requires looking for correlations among predictors and between predictors and a target variable.</p>
 <p><strong>Positively correlated</strong> variables X and Y (each with measured data) are those in which high values of X correspond to high values of Y and low values of X correspond to low values of Y.</p>
 <p>The variables are <strong>negatively correlated</strong> if high values of X correspond to low values of Y and vice versa.</p>
@@ -569,7 +569,7 @@ Given paired data $<span class="math notranslate nohighlight">\({\displaystyle \
 <div class="math notranslate nohighlight">
 \[{\displaystyle r_{xy}={\frac {1}{n-1}}\sum _{i=1}^{n}\left({\frac {x_{i}-{\bar {x}}}{s_{x}}}\right)\left({\frac {y_{i}-{\bar {y}}}{s_{y}}}\right)}\]</div>
 <section id="the-correlation-matrix">
-<h3><span class="section-number">7.2.1. </span>The correlation matrix<a class="headerlink" href="#the-correlation-matrix" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.1. </span>The correlation matrix<a class="headerlink" href="#the-correlation-matrix" title="Permalink to this headline">¶</a></h3>
 <p>The correlation matrix presents the relationship between all of the variable (feature) pairs. It is frequently the initial step in dimensionality reduction because it shows you how many features are tightly connected (and so may be discarded) versus how many are independent.</p>
 <p>For illustration, let us use the Iris Data Set, containing four features of three Iris classes.
 The correlation matrix may be simply computed using the following code:</p>
@@ -675,7 +675,7 @@ The correlation matrix may be simply computed using the following code:</p>
 </div>
 </section>
 <section id="finding-correlation-between-two-variables">
-<h3><span class="section-number">7.2.2. </span>Finding Correlation Between Two Variables<a class="headerlink" href="#finding-correlation-between-two-variables" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.2. </span>Finding Correlation Between Two Variables<a class="headerlink" href="#finding-correlation-between-two-variables" title="Permalink to this headline">¶</a></h3>
 <p>The pandas dataframe provides the method called <code class="docutils literal notranslate"><span class="pre">corr()</span></code> to find the correlation between the variables. It calculates the correlation between the two variables.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -694,7 +694,7 @@ The correlation matrix may be simply computed using the following code:</p>
 <p>The correlation between the features sepal length and petal length is around 0.8717. The number is closer to 1, which means these two features are highly correlated.</p>
 </section>
 <section id="plotting-correlation-matrix">
-<h3><span class="section-number">7.2.3. </span>Plotting Correlation Matrix<a class="headerlink" href="#plotting-correlation-matrix" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.3. </span>Plotting Correlation Matrix<a class="headerlink" href="#plotting-correlation-matrix" title="Permalink to this headline">¶</a></h3>
 <p>In this section, you’ll plot the correlation matrix by using the background gradient colors. This internally uses the matplotlib library.</p>
 <p>First, find the correlation between each variable available in the dataframe using the <code class="docutils literal notranslate"><span class="pre">corr()</span></code> method. The <code class="docutils literal notranslate"><span class="pre">corr()</span></code> method will give a matrix with the correlation values between each variable.</p>
 <p>Now, set the background gradient for the correlation data. Then, you’ll see the correlation matrix colored.</p>
@@ -779,7 +779,7 @@ The correlation matrix may be simply computed using the following code:</p>
 </div>
 </section>
 <section id="plotting-correlation-heatmap">
-<h3><span class="section-number">7.2.4. </span>Plotting Correlation HeatMap<a class="headerlink" href="#plotting-correlation-heatmap" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.4. </span>Plotting Correlation HeatMap<a class="headerlink" href="#plotting-correlation-heatmap" title="Permalink to this headline">¶</a></h3>
 <p>We can visualize the correlation matrix in a graphical form using a heatmap from  the Seaborn library.</p>
 <p>In what follows, you can add title and axes labels using the <code class="docutils literal notranslate"><span class="pre">heatmap.set(xlabel=’X</span> <span class="pre">Axis</span> <span class="pre">label’,</span> <span class="pre">ylabel=’Y</span> <span class="pre">axis</span> <span class="pre">label’,</span> <span class="pre">title=’title’)</span></code>.</p>
 <p>After setting the values, you can use the <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> method to plot the heat map with the x-axis label, y-axis label, and the title for the heat map.</p>
@@ -806,7 +806,7 @@ The correlation matrix may be simply computed using the following code:</p>
 </section>
 </section>
 <section id="data-and-sampling-distributions">
-<h2><span class="section-number">7.3. </span>Data and Sampling Distributions<a class="headerlink" href="#data-and-sampling-distributions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3. </span>Data and Sampling Distributions<a class="headerlink" href="#data-and-sampling-distributions" title="Permalink to this headline">¶</a></h2>
 <p>When we are working on a problem with a large data set, it is usually not possible or necessary to work with the entire data set unless you want to wait hours for processing transformations and feature engineering to complete.</p>
 <p>Drawing a sample from your data that is informative enough to discover important insights is a more effective method that will still allow you to draw accurate conclusions from your results.</p>
 <p>Let us have a look at some fundamental terminology.</p>
@@ -832,17 +832,17 @@ The correlation matrix may be simply computed using the following code:</p>
 <li><p>Sample Size. The number of observations that will constitute the sample.</p></li>
 </ul>
 <section id="sampling-bias">
-<h3><span class="section-number">7.3.1. </span>Sampling bias<a class="headerlink" href="#sampling-bias" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.1. </span>Sampling bias<a class="headerlink" href="#sampling-bias" title="Permalink to this headline">¶</a></h3>
 <p>One of the most common types of biases seen in real-world scenarios is sampling bias.</p>
 <p>Sampling bias arises when some members of a population are systematically more likely to be selected in a sample than others.</p>
 <p>In machine learning, it arises when the data used to train a model does not accurately reflect the distribution of samples that the model would encounter in the production.</p>
 </section>
 <section id="types-of-sampling-techniques">
-<h3><span class="section-number">7.3.2. </span>Types of sampling techniques<a class="headerlink" href="#types-of-sampling-techniques" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.2. </span>Types of sampling techniques<a class="headerlink" href="#types-of-sampling-techniques" title="Permalink to this headline">¶</a></h3>
 <p><img alt="Image from questionpro" src="https://cdn.scribbr.com/wp-content/uploads/2019/09/probability-sampling.png" /></p>
 <p>Image source: <a class="reference external" href="https://cdn.scribbr.com/wp-content/uploads/2019/09/probability-sampling.png">https://cdn.scribbr.com/wp-content/uploads/2019/09/probability-sampling.png</a></p>
 <section id="simple-random-sampling">
-<h4><span class="section-number">7.3.2.1. </span>Simple random sampling<a class="headerlink" href="#simple-random-sampling" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.3.2.1. </span>Simple random sampling<a class="headerlink" href="#simple-random-sampling" title="Permalink to this headline">¶</a></h4>
 <p>The simple random sampling is the simplest straightforward approach to sample data. In essence, the subset is made up of observations that were randomly selected from a bigger set; each observation has the same chance of being chosen from the larger set.</p>
 <p>Simple random sampling is simple and straightforward to implement. However, it’s still feasible that we’ll introduce bias into our sample data. Consider a scenario in which we have a large dataset with unbalanced labels (or categories). We may mistakenly fail to collect enough cases to represent the minority class by using simple random sampling.</p>
 <p><strong>Example</strong> You wish to choose a simple random sample of 100 employees of the company . You assign a number from 1 to 1000 to each employee in the company database, and then choose 100 numbers using a random number generator.</p>
@@ -1004,7 +1004,7 @@ The correlation matrix may be simply computed using the following code:</p>
 </div>
 </section>
 <section id="systematic-sampling">
-<h4><span class="section-number">7.3.2.2. </span>Systematic sampling<a class="headerlink" href="#systematic-sampling" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.3.2.2. </span>Systematic sampling<a class="headerlink" href="#systematic-sampling" title="Permalink to this headline">¶</a></h4>
 <p>Systematic sampling is similar to simple random sampling, but it is usually slightly easier to carry out. Every person in the population is assigned a number, but rather than assigning numbers at random, individuals are chosen at regular intervals.</p>
 <p>When the observations are randomized, systematic sampling usually yields a better sample than simple random sampling. If our data contains periodicity or repeating patterns, however, systematic sampling is not suitable.</p>
 <p><strong>Example</strong> All of the company’s employees are listed alphabetically. You choose a starting point at random from the first ten numbers: number 6. Every tenth individual on the list is chosen from number 6 onwards (6, 16, 26, 36, and so on), resulting in a sample of 100 persons.</p>
@@ -1074,7 +1074,7 @@ The correlation matrix may be simply computed using the following code:</p>
 </div>
 </section>
 <section id="stratified-sampling">
-<h4><span class="section-number">7.3.2.3. </span>Stratified Sampling<a class="headerlink" href="#stratified-sampling" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.3.2.3. </span>Stratified Sampling<a class="headerlink" href="#stratified-sampling" title="Permalink to this headline">¶</a></h4>
 <p>Stratified random sampling is a kind of probability sampling in which a research organization divides the total population into many non-overlapping, homogenous groups (strata) and selects final members for research at random from the various strata. Each of these groupings’ members should be unique enough that every member of each group has an equal chance of being chosen using basic probability. The number of instances from each stratum to choose from is proportionate to the stratum’s size.</p>
 <p>Arranging or classifying by  age, socioeconomic divisions, nationality, religion, educational achievements is a common practice.</p>
 <p><strong>Example:</strong> There are 800 female employees and 200 male employees at the company. You select the population into two strata based on gender to ensure that the sample reflects the company’s gender balance. Then you select 80 women and 20 men at random from each group, giving you a representative sample of 100 people.</p>
@@ -1469,7 +1469,7 @@ The train_test_split is the most basic one which just divides the data into two 
 </div>
 </section>
 <section id="cluster-sampling">
-<h4><span class="section-number">7.3.2.4. </span>Cluster Sampling<a class="headerlink" href="#cluster-sampling" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.3.2.4. </span>Cluster Sampling<a class="headerlink" href="#cluster-sampling" title="Permalink to this headline">¶</a></h4>
 <p>Cluster Sampling is a method where the entire population is divided into clusters or portions Some of these clusters are then chosen at random. For this sampling, <strong>all of the selcted clusters’ elements</strong> are used.</p>
 <p>The term <strong>cluster</strong> refers to a natural intact (but heterogeneous) grouping of the members of the population.</p>
 <p>Researchers use this sampling technique to examine a sample that contain multiple sample parameters such as demographics, habits, background – or any other population attribute that is relevant to the research being undertaken.</p>
@@ -1653,7 +1653,7 @@ The train_test_split is the most basic one which just divides the data into two 
 </section>
 </section>
 <section id="distribution-of-random-variables">
-<h2><span class="section-number">7.4. </span>Distribution of Random Variables<a class="headerlink" href="#distribution-of-random-variables" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.4. </span>Distribution of Random Variables<a class="headerlink" href="#distribution-of-random-variables" title="Permalink to this headline">¶</a></h2>
 <p>In this tutorial, we will learn about probability distributions that are often used in machine learning literature and how to implement them in Python.</p>
 <p>The underlying components of Data Science are probability and statistics. In truth, statistical mathematics and linear algebra are the core principles of machine learning and artificial intelligence.</p>
 <p>You will frequently find yourself in circumstances, particularly in Data Science, where you will need to read a research article that contains a lot of math to understand a certain issue, therefore if you want to improve at Data Science, you will need to have a solid mathematical and statistical understanding.</p>
@@ -1666,10 +1666,10 @@ The train_test_split is the most basic one which just divides the data into two 
 </ul>
 <p>Before you begin, you need be familiar with some mathematical terms, which will be covered in the next section.</p>
 <section id="random-variable">
-<h3><span class="section-number">7.4.1. </span>Random Variable<a class="headerlink" href="#random-variable" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.1. </span>Random Variable<a class="headerlink" href="#random-variable" title="Permalink to this headline">¶</a></h3>
 <p>A <strong>random variable</strong> is a variable whose possible values are numerical results of a random event. Discrete and continuous random variables are the two forms of random variables.</p>
 <section id="discrete-random-variables">
-<h4><span class="section-number">7.4.1.1. </span>Discrete random variables<a class="headerlink" href="#discrete-random-variables" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.4.1.1. </span>Discrete random variables<a class="headerlink" href="#discrete-random-variables" title="Permalink to this headline">¶</a></h4>
 <p>A <strong>discrete random variable</strong> is one that can only have a finite number of different values and can thus be quantified.</p>
 <p>For example, a random variable <span class="math notranslate nohighlight">\(X\)</span> can be defined as the number that appears when a fair dice is rolled. <span class="math notranslate nohighlight">\(X\)</span> is a discrete random variable with the following values: [1,2,3,4,5,6].</p>
 <p>The probability distribution of a discrete random variable is a list of probabilities associated with each of its potential values. It’s also known as the <strong>probability mass function (pmf) or the probability function</strong>. Consider a random variable <span class="math notranslate nohighlight">\(X\)</span> that can take <span class="math notranslate nohighlight">\(k\)</span> distinct values, with the probability that <span class="math notranslate nohighlight">\(X=x_i\)</span> being defined as <span class="math notranslate nohighlight">\(P(X=x_i)=p_i\)</span>. The probabilities <span class="math notranslate nohighlight">\(p_i\)</span> must then satisfy the following conditions:</p>
@@ -1722,7 +1722,7 @@ The train_test_split is the most basic one which just divides the data into two 
 </section>
 </section>
 <section id="continuous-random-variables">
-<h3><span class="section-number">7.4.2. </span>Continuous random variables<a class="headerlink" href="#continuous-random-variables" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.2. </span>Continuous random variables<a class="headerlink" href="#continuous-random-variables" title="Permalink to this headline">¶</a></h3>
 <p>A <strong>continuous random variable</strong> can take an infinite number of different values. For example, a random variable X can be defined as the height of pupils in a class.</p>
 <p>The area under a curve is used to represent a continuous random variable because it is defined throughout a range of values (or the integral).</p>
 <p><strong>Probability distribution functions (pdf)</strong> are functions that take on continuous values and represent the probability distribution of a continuous random variable. Because the number of possible values for the random variable is unlimited, the probability of seeing any single value is zero.</p>
@@ -1734,7 +1734,7 @@ The train_test_split is the most basic one which just divides the data into two 
 <p>The term <strong>density curve</strong> refers to a curve that meets certain criteria.</p>
 <p>Normal distribution, exponential distribution, beta distribution, and other continuous probability distributions are examples.</p>
 <section id="the-uniform-distribution">
-<h4><span class="section-number">7.4.2.1. </span>The uniform distribution<a class="headerlink" href="#the-uniform-distribution" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.4.2.1. </span>The uniform distribution<a class="headerlink" href="#the-uniform-distribution" title="Permalink to this headline">¶</a></h4>
 <p>The <strong>uniform distribution</strong> is one of the most basic and useful distributions. The probability distribution function of the continuous uniform distribution’s is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f(x)={\begin{cases}{\frac {1}{b-a}}&amp;\mathrm {for} \ a\leq x\leq b,\\[8pt]0&amp;\mathrm {for} \ x&lt;a\ \mathrm {or} \ x&gt;b\end{cases}}\end{split}\]</div>
@@ -1743,7 +1743,7 @@ The train_test_split is the most basic one which just divides the data into two 
 <p>A uniform distribution in intervals <span class="math notranslate nohighlight">\((a,b)\)</span> is depicted in the diagram below. Because the area must be 1, <span class="math notranslate nohighlight">\(1/(b-a)\)</span> is the height setting.</p>
 </section>
 <section id="uniform-distribution-in-python">
-<h4><span class="section-number">7.4.2.2. </span>Uniform Distribution in Python<a class="headerlink" href="#uniform-distribution-in-python" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.4.2.2. </span>Uniform Distribution in Python<a class="headerlink" href="#uniform-distribution-in-python" title="Permalink to this headline">¶</a></h4>
 <p>We can also use plotnine to construct more complicated statistical visualisations than simple plots like bar and scatterplots.</p>
 <p>We can combine the capabilities of the <strong>scipy</strong> package with <strong>plotnine</strong> to chart some probability density functions in the plot below.</p>
 <p>Here we use <code class="docutils literal notranslate"><span class="pre">stat_function</span></code> to superimpose a function (or add the graph of a function) onto a plot.</p>
@@ -1769,7 +1769,7 @@ The train_test_split is the most basic one which just divides the data into two 
 </div>
 </section>
 <section id="uniform-random-variate">
-<h4><span class="section-number">7.4.2.3. </span>Uniform random variate<a class="headerlink" href="#uniform-random-variate" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.4.2.3. </span>Uniform random variate<a class="headerlink" href="#uniform-random-variate" title="Permalink to this headline">¶</a></h4>
 <p>In probability and statistics, a <strong>random variate</strong> is a particular outcome of a random variable: the random variates which are other outcomes of the same random variable might have different values (random numbers).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">uniform.rvs</span></code> function, with its <code class="docutils literal notranslate"><span class="pre">loc</span></code> and <code class="docutils literal notranslate"><span class="pre">scale</span></code> arguments, creates a uniform continuous variable between the provided intervals.</p>
 <p>In the standard form, the distribution is uniform on [0, 1]. Using the parameters loc and scale, one obtains the uniform distribution on [loc, loc + scale].</p>
@@ -1808,7 +1808,7 @@ The train_test_split is the most basic one which just divides the data into two 
 </section>
 </section>
 <section id="normal-distribution-function">
-<h3><span class="section-number">7.4.3. </span>Normal Distribution Function<a class="headerlink" href="#normal-distribution-function" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.3. </span>Normal Distribution Function<a class="headerlink" href="#normal-distribution-function" title="Permalink to this headline">¶</a></h3>
 <p>In Data Science, the <strong>Normal Distribution</strong>, commonly known as the <strong>Gaussian Distribution</strong>, is often used, especially when it comes to statistical inference. Many data science techniques make this assumption as well.</p>
 <p>The mean <span class="math notranslate nohighlight">\(\mu\)</span> and standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span> of a normal distribution define a bell-shaped density curve. The density curve is symmetrical, centered around its mean, and its spread is determined by its standard deviation, indicating that data close to the mean occur more frequently than those further from it.</p>
 <p>At a given point <span class="math notranslate nohighlight">\(x\)</span>, the probability distribution function of a normal density curve with mean <span class="math notranslate nohighlight">\(\mu\)</span> and standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span> is:
@@ -1902,14 +1902,14 @@ $<span class="math notranslate nohighlight">\({\displaystyle f(x)={\frac {1}{\si
 </div>
 </section>
 <section id="poisson-distribution">
-<h3><span class="section-number">7.4.4. </span>Poisson Distribution<a class="headerlink" href="#poisson-distribution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.4.4. </span>Poisson Distribution<a class="headerlink" href="#poisson-distribution" title="Permalink to this headline">¶</a></h3>
 <p>Typically, a Poisson random variable is used to model the number of times an event occurs in a certain time frame. A Poisson process, for example, might be considered as the number of users who visit a website at a certain interval.</p>
 <p>The rate (<span class="math notranslate nohighlight">\(\mu\)</span>) at which events occur is given by the Poisson distribution. In a certain interval, an event can occur 0, 1, 2,… times.</p>
 <p>The average number of events in an interval is designated <span class="math notranslate nohighlight">\(λ\)</span> (lambda). The event rate, commonly known as the rate parameter, is <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
 <p>The following equation gives the likelihood of seeing <span class="math notranslate nohighlight">\(k\)</span> events in a given interval:
 $<span class="math notranslate nohighlight">\(\!f(k; \lambda)= \Pr(X{=}k)= \frac{\lambda^k e^{-\lambda}}{k!},\)</span>$</p>
 <section id="poisson-distribution-function">
-<h4><span class="section-number">7.4.4.1. </span>Poisson Distribution Function<a class="headerlink" href="#poisson-distribution-function" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.4.4.1. </span>Poisson Distribution Function<a class="headerlink" href="#poisson-distribution-function" title="Permalink to this headline">¶</a></h4>
 <p>It is worth noting that</p>
 <ol class="simple">
 <li><p>the normal distribution is a special case of the Poisson distribution with parameter <span class="math notranslate nohighlight">\(\lambda \rightarrow \infty\)</span>.</p></li>
@@ -2489,7 +2489,7 @@ dtype: int64
 </section>
 </section>
 <section id="fitting-models-to-data">
-<h2><span class="section-number">7.5. </span>Fitting Models to Data<a class="headerlink" href="#fitting-models-to-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.5. </span>Fitting Models to Data<a class="headerlink" href="#fitting-models-to-data" title="Permalink to this headline">¶</a></h2>
 <p>We will learn how to find the best-matching statistical distributions for your data points. Modeling quantities of interest for example claim numbers and sizes is the subject of this section, which involves fitting probability distributions from selected families to sets of data containing observed claim numbers or sizes.</p>
 <p>After an exploratory investigation of the data set, the family may be chosen by looking at numerical summaries such as mean, median, mode, standard deviation (or variance), skewness, kurtosis, and graphs like the empirical distribution function.</p>
 <p>Of course, one might want to fit a distribution from each of several families to compare the fitted models, as well as compare them to earlier work and make a decision.</p>
@@ -2503,7 +2503,7 @@ dtype: int64
 </ul>
 <p>To fit a <strong>parametric model</strong> (i.e. a probability distribution), we must obtain estimates of the probability distribution’s unknown parameters. The method of moments, the method of maximum likelihood, the method of percentiles, and the method of minimum distance are among the criteria offered.</p>
 <section id="generate-test-data-and-fit-it">
-<h3><span class="section-number">7.5.1. </span>Generate test data and fit it<a class="headerlink" href="#generate-test-data-and-fit-it" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.5.1. </span>Generate test data and fit it<a class="headerlink" href="#generate-test-data-and-fit-it" title="Permalink to this headline">¶</a></h3>
 <p>For the first illustration, we will begin by generating some normally distributed test data using the <strong>NumPy</strong> module and fit them by using the <strong>Fitter</strong> library to see whether the fitter is able to identify the distribution.</p>
 <p>The <strong>Fitter</strong> package offers a basic class that can be used to identify the distribution from which a data sample is drawn. It employs 80 Scipy distributions and allows you to plot the results to see which distribution is the most likely and which parameters are the best.</p>
 <div class="cell docutils container">
@@ -2588,7 +2588,7 @@ dtype: int64
 </div>
 </section>
 <section id="fitting-distributions">
-<h3><span class="section-number">7.5.2. </span>Fitting distributions<a class="headerlink" href="#fitting-distributions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.5.2. </span>Fitting distributions<a class="headerlink" href="#fitting-distributions" title="Permalink to this headline">¶</a></h3>
 <p>The next step is to start fitting different distributions to the data and determining which one is best for the data.</p>
 <p>The steps are as follows:</p>
 <ol class="simple">
@@ -2684,7 +2684,7 @@ dtype: int64
 </div>
 </section>
 <section id="choosing-the-most-appropriate-distribution-and-indentifying-the-parameters">
-<h3><span class="section-number">7.5.3. </span>Choosing the most appropriate distribution and indentifying the parameters<a class="headerlink" href="#choosing-the-most-appropriate-distribution-and-indentifying-the-parameters" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.5.3. </span>Choosing the most appropriate distribution and indentifying the parameters<a class="headerlink" href="#choosing-the-most-appropriate-distribution-and-indentifying-the-parameters" title="Permalink to this headline">¶</a></h3>
 <p>We may also use the <code class="docutils literal notranslate"><span class="pre">.get_best()</span></code> method to retrieve the best distribution, where we can additionally specify the technique for picking the best distribution.</p>
 <p>As selection criteria, we can use the <code class="docutils literal notranslate"><span class="pre">sumsquare_error</span></code> in the method argument. It will print the name of the distribution with the lowest sum square error, as well as the relevant parameters. ‘sumsquare_error’ is a formula used to measure the difference between the given data and the expected data obtained by the fitted model, i.e. <strong>lower is better</strong>.</p>
 <p>Based on the sum square error criteria, we can observe that the normal distribution is the best fit. It also prints the normal distribution’s optimum parameters including location (loc), and scale parameters (scale).</p>
@@ -2800,7 +2800,7 @@ dtype: int64
 <p><a class="reference external" href="https://towardsdatascience.com/find-the-best-matching-distribution-for-your-data-effortlessly-bcc091aa08ab">https://towardsdatascience.com/find-the-best-matching-distribution-for-your-data-effortlessly-bcc091aa08ab</a></p>
 </section>
 <section id="distribution-fitting-with-distfit">
-<h3><span class="section-number">7.5.4. </span>Distribution fitting with distfit<a class="headerlink" href="#distribution-fitting-with-distfit" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.5.4. </span>Distribution fitting with distfit<a class="headerlink" href="#distribution-fitting-with-distfit" title="Permalink to this headline">¶</a></h3>
 <p>The distfit library uses the goodness of fit test with the Sum of Squared Errors (or estimates) (SSE) to determine the best probability distribution.</p>
 <p>The Sum of Squared Errors (or estimates) (SSE), also named Residual Sum of Squares (RSS) works by comparing the observed frequency (f) to the expected frequency from the model (f-hat), and computing the residual sum of squares (RSS).</p>
 <div class="cell docutils container">
@@ -2853,7 +2853,7 @@ dtype: int64
 </div>
 </section>
 <section id="distribution-fitting-with-python-scipy">
-<h3><span class="section-number">7.5.5. </span>Distribution Fitting with Python SciPy<a class="headerlink" href="#distribution-fitting-with-python-scipy" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.5.5. </span>Distribution Fitting with Python SciPy<a class="headerlink" href="#distribution-fitting-with-python-scipy" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
@@ -2887,7 +2887,7 @@ dtype: int64
 </div>
 </div>
 <section id="calculating-the-sum-of-squared-errors">
-<h4><span class="section-number">7.5.5.1. </span>Calculating the sum of squared errors<a class="headerlink" href="#calculating-the-sum-of-squared-errors" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.5.5.1. </span>Calculating the sum of squared errors<a class="headerlink" href="#calculating-the-sum-of-squared-errors" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
@@ -3043,7 +3043,7 @@ dtype: int64
 </div>
 </section>
 <section id="get-data-points-from-a-histogram-in-python-from-matplotlib">
-<h4><span class="section-number">7.5.5.2. </span>Get data points from a histogram in Python from matplotlib<a class="headerlink" href="#get-data-points-from-a-histogram-in-python-from-matplotlib" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.5.5.2. </span>Get data points from a histogram in Python from matplotlib<a class="headerlink" href="#get-data-points-from-a-histogram-in-python-from-matplotlib" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#counts, bins, bars = plt.hist(data, density=True,bins=10)</span>
@@ -3278,13 +3278,13 @@ dtype: int64
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6. </span>Data Visualization</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Data Visualization</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Chapter6_Regression.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Regression Analysis</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Regression Analysis</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

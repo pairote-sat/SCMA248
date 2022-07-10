@@ -17,7 +17,10 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-iris = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None, 
+#iris = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None, 
+#                names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
+
+iris = pd.read_csv('https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data', header=None, 
                 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
 
 type(iris)
@@ -75,16 +78,17 @@ type(iris)
 [0;32m-> 1139[0;31m             [0mself[0m[0;34m.[0m[0m_sslobj[0m[0;34m.[0m[0mdo_handshake[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m   1140[0m         [0;32mfinally[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mSSLCertVerificationError[0m: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1091)
+[0;31mSSLCertVerificationError[0m: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1091)
 
 During handling of the above exception, another exception occurred:
 
 [0;31mURLError[0m                                  Traceback (most recent call last)
-[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_6270/16525021.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m iris = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None, 
-[0;32m----> 2[0;31m                 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
-[0m[1;32m      3[0m [0;34m[0m[0m
-[1;32m      4[0m [0mtype[0m[0;34m([0m[0miris[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_1574/897477228.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      3[0m [0;34m[0m[0m
+[1;32m      4[0m iris = pd.read_csv('https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data', header=None, 
+[0;32m----> 5[0;31m                 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class'])
+[0m[1;32m      6[0m [0;34m[0m[0m
+[1;32m      7[0m [0mtype[0m[0;34m([0m[0miris[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/util/_decorators.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
 [1;32m    309[0m                     [0mstacklevel[0m[0;34m=[0m[0mstacklevel[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
@@ -198,6 +202,6 @@ During handling of the above exception, another exception occurred:
 [0m[1;32m   1353[0m             [0mr[0m [0;34m=[0m [0mh[0m[0;34m.[0m[0mgetresponse[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   1354[0m         [0;32mexcept[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mURLError[0m: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1091)>
-URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1091)>
+[0;31mURLError[0m: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1091)>
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1091)>
 

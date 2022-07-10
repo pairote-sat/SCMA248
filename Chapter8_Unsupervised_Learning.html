@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>10. Unsupervised Machine Learning: K-means Clustering &#8212; SCMA248 Introduction to Data Science</title>
+    <title>8. Unsupervised Machine Learning: K-means Clustering &#8212; SCMA248 Introduction to Data Science</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,7 +54,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="9. Machine learning: Introduction" href="Chapter7_Introduction_Machine_Learning.html" />
+    <link rel="prev" title="7. Machine learning: Introduction" href="Chapter7_Introduction_Machine_Learning.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,32 +111,32 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter3_Data_Preparation.html">
-   3. Data Selection
+   3. Data Preparation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter4_Data_Visualization.html">
-   6. Data Visualization
+   4. Data Visualization
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter5_Practical_Statistics.html">
-   7. Practical Statistics
+   5. Practical Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter6_Regression.html">
-   8. Regression Analysis
+   6. Regression Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter7_Introduction_Machine_Learning.html">
-   9. Machine learning: Introduction
+   7. Machine learning: Introduction
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   10. Unsupervised Machine Learning: K-means Clustering
+   8. Unsupervised Machine Learning: K-means Clustering
   </a>
  </li>
 </ul>
@@ -245,93 +245,93 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-clustering-and-how-does-it-work">
-   10.1. What is clustering and how does it work?
+   8.1. What is clustering and how does it work?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-is-clustering-a-problem-of-unsupervised-learning">
-   10.2. How is clustering a problem of unsupervised learning?
+   8.2. How is clustering a problem of unsupervised learning?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#applications-of-clustering">
-   10.3. Applications of Clustering
+   8.3. Applications of Clustering
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-k-means-algorithm-an-overview">
-   10.4. The K-means Algorithm: An Overview
+   8.4. The K-means Algorithm: An Overview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#k-means-clustering-in-1-dimension-explained">
-   10.5. K-means clustering in 1 dimension: Explained
+   8.5. K-means clustering in 1 dimension: Explained
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-quality-of-the-cluster-assignments">
-     10.5.1. The quality of the cluster assignments
+     8.5.1. The quality of the cluster assignments
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#k-means-clustering-in-python-a-toy-example">
-   10.6. K-means clustering in Python: a toy example
+   8.6. K-means clustering in Python: a toy example
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-simple-example">
-     10.6.1. A simple example
+     8.6.1. A simple example
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#violin-and-swarm-plots">
-     10.6.2. Violin and swarm plots
+     8.6.2. Violin and swarm plots
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#clustering-using-k-means">
-   10.7. Clustering using K- means
+   8.7. Clustering using K- means
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#choosing-the-appropriate-number-of-clusters-elbow-method">
-   10.8. Choosing the appropriate number of clusters: Elbow Method
+   8.8. Choosing the appropriate number of clusters: Elbow Method
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ploting-the-cluster-boundary-and-clusters">
-   10.9. Ploting the cluster boundary and clusters
+   8.9. Ploting the cluster boundary and clusters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#choosing-the-appropriate-number-of-clusters-silhouette-method">
-   10.10. Choosing the appropriate number of clusters: Silhouette Method
+   8.10. Choosing the appropriate number of clusters: Silhouette Method
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#steps-to-find-the-silhouette-score">
-     10.10.1. Steps to find the silhouette score
+     8.10.1. Steps to find the silhouette score
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#silhouette-visualizer">
-       10.10.1.1. Silhouette Visualizer
+       8.10.1.1. Silhouette Visualizer
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#evaluating-clustering-performance-using-advanced-techniques-adjusted-rand-index">
-     10.10.2. Evaluating Clustering Performance Using Advanced Techniques: Adjusted Rand Index
+     8.10.2. Evaluating Clustering Performance Using Advanced Techniques: Adjusted Rand Index
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#adjusted-rand-index">
-       10.10.2.1. Adjusted Rand Index
+       8.10.2.1. Adjusted Rand Index
       </a>
      </li>
     </ul>
@@ -340,59 +340,59 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#customer-segmentation">
-   10.11. Customer segmentation
+   8.11. Customer segmentation
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#mall-customer-data">
-     10.11.1. Mall Customer Data
+     8.11.1. Mall Customer Data
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exploratory-data-analysis">
-     10.11.2. Exploratory Data Analysis
+     8.11.2. Exploratory Data Analysis
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#clustering-based-on-two-features-annual-income-and-spending-score">
-     10.11.3. Clustering based on two features: annual income and spending score
+     8.11.3. Clustering based on two features: annual income and spending score
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id1">
-       10.11.3.1. Choosing the appropriate number of clusters: Elbow Method
+       8.11.3.1. Choosing the appropriate number of clusters: Elbow Method
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id2">
-       10.11.3.2. Choosing the appropriate number of clusters: Silhouette Method
+       8.11.3.2. Choosing the appropriate number of clusters: Silhouette Method
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#cluster-analysis">
-       10.11.3.3. Cluster Analysis
+       8.11.3.3. Cluster Analysis
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#clustering-based-on-three-features-annual-income-spending-score-and-age">
-     10.11.4. Clustering based on three features: annual income, spending score and age
+     8.11.4. Clustering based on three features: annual income, spending score and age
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ploting-the-relation-between-age-and-other-features">
-       10.11.4.1. Ploting the relation between age and other features
+       8.11.4.1. Ploting the relation between age and other features
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#the-elbow-method">
-       10.11.4.2. The elbow method
+       8.11.4.2. The elbow method
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#the-silhouette-method">
-       10.11.4.3. The Silhouette Method
+       8.11.4.3. The Silhouette Method
       </a>
      </li>
     </ul>
@@ -411,15 +411,15 @@
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="unsupervised-machine-learning-k-means-clustering">
-<h1><span class="section-number">10. </span>Unsupervised Machine Learning: K-means Clustering<a class="headerlink" href="#unsupervised-machine-learning-k-means-clustering" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">8. </span>Unsupervised Machine Learning: K-means Clustering<a class="headerlink" href="#unsupervised-machine-learning-k-means-clustering" title="Permalink to this headline">¶</a></h1>
 <p>In this chapter, we will take an in-depth look at <strong>k-means clustering</strong> and its components. We explain why clustering is important, how to use it, and how to perform it in Python with a real dataset.</p>
 <section id="what-is-clustering-and-how-does-it-work">
-<h2><span class="section-number">10.1. </span>What is clustering and how does it work?<a class="headerlink" href="#what-is-clustering-and-how-does-it-work" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>What is clustering and how does it work?<a class="headerlink" href="#what-is-clustering-and-how-does-it-work" title="Permalink to this headline">¶</a></h2>
 <p><strong>Clustering</strong> is a collection of methods for dividing data into groups or clusters. Clusters are roughly described as collections of data objects that are more similar to each other than data objects from other clusters.</p>
 <p>There are numerous cases where automatic grouping of data can be very beneficial. Take the case of developing an Internet advertising campaign for a brand new product line that is about to be launched. While we could show a single generic ad to the entire population, a far better approach would be to divide the population into groups of people with common characteristics and interests, and then show individualized ads to each group. <strong>K-means</strong> is an algorithm that finds these groupings in large data sets where manual searching is impossible.</p>
 </section>
 <section id="how-is-clustering-a-problem-of-unsupervised-learning">
-<h2><span class="section-number">10.2. </span>How is clustering a problem of unsupervised learning?<a class="headerlink" href="#how-is-clustering-a-problem-of-unsupervised-learning" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.2. </span>How is clustering a problem of unsupervised learning?<a class="headerlink" href="#how-is-clustering-a-problem-of-unsupervised-learning" title="Permalink to this headline">¶</a></h2>
 <p>Imagine a project where you need to predict whether a loan will be approved or not. We aim to predict the loan status based on the customer’s gender, marital status, income, and other factors.
 Such challenges are called <strong>supervised learning</strong> problems when we have a target variable that we need to predict based on a set of predictors or independent variables.</p>
 <p>There may be cases where we do not have an outcome variable that we can predict.</p>
@@ -429,7 +429,7 @@ Such challenges are called <strong>supervised learning</strong> problems when we
 <p><img alt="k-means clustering: image from medium" src="https://miro.medium.com/max/1400/1*IXGsBrC9FnSHGJVw9lDhQA.png" /></p>
 </section>
 <section id="applications-of-clustering">
-<h2><span class="section-number">10.3. </span>Applications of Clustering<a class="headerlink" href="#applications-of-clustering" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.3. </span>Applications of Clustering<a class="headerlink" href="#applications-of-clustering" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p><strong>Customer segmentation</strong> is the process of obtaining information about a company’s customer base based on their interactions with the company. In most cases, this interaction is about their purchasing habits and behaviors. Businesses can use to create targeted advertising campaigns.</p></li>
 </ol>
@@ -445,7 +445,7 @@ Such challenges are called <strong>supervised learning</strong> problems when we
 </ol>
 </section>
 <section id="the-k-means-algorithm-an-overview">
-<h2><span class="section-number">10.4. </span>The K-means Algorithm: An Overview<a class="headerlink" href="#the-k-means-algorithm-an-overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4. </span>The K-means Algorithm: An Overview<a class="headerlink" href="#the-k-means-algorithm-an-overview" title="Permalink to this headline">¶</a></h2>
 <p>This section takes you step by step through the traditional form of the k-means algorithm. This section will help you decide if k-means is the best method to solve your clustering problem.</p>
 <p><strong>The traditional k-means algorithm consists of only a few steps.</strong></p>
 <p>To begin, we randomly select k centroids, where k is the number of clusters you want to use.</p>
@@ -460,7 +460,7 @@ Such challenges are called <strong>supervised learning</strong> problems when we
 <p>The “M-step” or “maximization step” is so named because it involves maximizing a fitness function that defines the location of the cluster centers - in this case, this maximization is achieved by simply averaging the data in each cluster.</p>
 </section>
 <section id="k-means-clustering-in-1-dimension-explained">
-<h2><span class="section-number">10.5. </span>K-means clustering in 1 dimension: Explained<a class="headerlink" href="#k-means-clustering-in-1-dimension-explained" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.5. </span>K-means clustering in 1 dimension: Explained<a class="headerlink" href="#k-means-clustering-in-1-dimension-explained" title="Permalink to this headline">¶</a></h2>
 <p>We will learn how to cluster samples that can be put on a line, and the concept can be extended more generally. Imagine that you had some data that you could plot on a line, and you knew that you had to divide it into three clusters. Perhaps they are measurements from three different tumor types or other cell types. In this case, the data yields three relatively obvious clusters, but instead of relying on our eye, we want to see if we can get a computer to identify the same three clusters, using k-means clustering. We start with raw data that we have not yet clustered.</p>
 <p><strong>Step one:</strong> choose the number of clusters you want to identify in your data - that’s the K in k-means clustering. In this case, we choose K to equal three, meaning we want to identify three clusters. There is a more sophisticated way to select a value for K, but we will get into that later.</p>
 <p>Images below from statquest.</p>
@@ -478,7 +478,7 @@ Such challenges are called <strong>supervised learning</strong> problems when we
 <p>Then we repeat the measurement and clustering based on the mean values. Since the clustering did not change during the last iteration, we are done.</p>
 <p><img alt="K-means clustering in 1 dimension: image from statquest" src="https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/k5_2.png" /></p>
 <section id="the-quality-of-the-cluster-assignments">
-<h3><span class="section-number">10.5.1. </span>The quality of the cluster assignments<a class="headerlink" href="#the-quality-of-the-cluster-assignments" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.5.1. </span>The quality of the cluster assignments<a class="headerlink" href="#the-quality-of-the-cluster-assignments" title="Permalink to this headline">¶</a></h3>
 <p>Before going any further, it’s important to define what we mean by a good clustering solution. What do we mean when we say “best potential clustering solution”? Consider the following diagram, which depicts two potential observations assignments to the same centroid.</p>
 <p><img alt="A good clustering solution: image from medium.com" src="https://miro.medium.com/max/1400/1*AdIvgTEaMKu9n-vNzUOPtw.png" /></p>
 <p>The first assignment is clearly better than the second, but how can we quantify this using the k-means algorithm?</p>
@@ -500,7 +500,7 @@ Such challenges are called <strong>supervised learning</strong> problems when we
 </section>
 </section>
 <section id="k-means-clustering-in-python-a-toy-example">
-<h2><span class="section-number">10.6. </span>K-means clustering in Python: a toy example<a class="headerlink" href="#k-means-clustering-in-python-a-toy-example" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.6. </span>K-means clustering in Python: a toy example<a class="headerlink" href="#k-means-clustering-in-python-a-toy-example" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ch">#!pip install kneed</span>
@@ -542,7 +542,7 @@ Such challenges are called <strong>supervised learning</strong> problems when we
 </div>
 </div>
 <section id="a-simple-example">
-<h3><span class="section-number">10.6.1. </span>A simple example<a class="headerlink" href="#a-simple-example" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.6.1. </span>A simple example<a class="headerlink" href="#a-simple-example" title="Permalink to this headline">¶</a></h3>
 <p>Let us get started by using scikit-learn to generate some random data points. It has a <code class="docutils literal notranslate"><span class="pre">make_blobs()</span></code> function that generates a number of gaussian clusters. We will create a two-dimensional dataset containing three distinct blobs. We set <code class="docutils literal notranslate"><span class="pre">random_state=1</span></code> to ensure that this example will always generate the same points for reproducibility.</p>
 <p>To emphasize that this is an <strong>unsupervised algorithm</strong>, we will leave the labels out of the visualization.</p>
 <div class="cell docutils container">
@@ -867,7 +867,7 @@ The melt() function is useful to convert a DataFrame to a format where one or mo
 </div>
 </section>
 <section id="violin-and-swarm-plots">
-<h3><span class="section-number">10.6.2. </span>Violin and swarm plots<a class="headerlink" href="#violin-and-swarm-plots" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.6.2. </span>Violin and swarm plots<a class="headerlink" href="#violin-and-swarm-plots" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
@@ -890,7 +890,7 @@ The melt() function is useful to convert a DataFrame to a format where one or mo
 </section>
 </section>
 <section id="clustering-using-k-means">
-<h2><span class="section-number">10.7. </span>Clustering using K- means<a class="headerlink" href="#clustering-using-k-means" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.7. </span>Clustering using K- means<a class="headerlink" href="#clustering-using-k-means" title="Permalink to this headline">¶</a></h2>
 <p>The data is now ready for clustering. Before fitting the estimator to the data, you set the algorithm parameters in the KMeans estimator class in scikit-learn. The scikit-learn implementation is adaptable, with various adjustable parameters.</p>
 <p>The following are the parameters that were utilized in this example.</p>
 <ul class="simple">
@@ -1011,7 +1011,7 @@ Name: cluster, dtype: int64
 </div>
 </section>
 <section id="choosing-the-appropriate-number-of-clusters-elbow-method">
-<h2><span class="section-number">10.8. </span>Choosing the appropriate number of clusters: Elbow Method<a class="headerlink" href="#choosing-the-appropriate-number-of-clusters-elbow-method" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.8. </span>Choosing the appropriate number of clusters: Elbow Method<a class="headerlink" href="#choosing-the-appropriate-number-of-clusters-elbow-method" title="Permalink to this headline">¶</a></h2>
 <p>The <strong>elbow method</strong> is a widely used approach to determine the proper number of clusters.</p>
 <p>To perform the elbow method, we run many k-means by increasing k at each iteration and plot the SST (also known as <strong>intetia</strong>) as a function of the number of clusters. We will observe that it continues to decrease as we increase k. The distance between each point and its nearest centroid will decrease as more centroids are added.</p>
 <p>The <strong>elbow point</strong> is a position on the SSE curve when <strong>it begins to bend</strong>. This point is believed to be a good compromise between error and cluster count. From the figure below, the elbow is positioned at k=3 in our example.</p>
@@ -1043,7 +1043,7 @@ Name: cluster, dtype: int64
 <p>From the figure, the elbow is positioned at k=3 in our example where the curve starts to bend.</p>
 </section>
 <section id="ploting-the-cluster-boundary-and-clusters">
-<h2><span class="section-number">10.9. </span>Ploting the cluster boundary and clusters<a class="headerlink" href="#ploting-the-cluster-boundary-and-clusters" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.9. </span>Ploting the cluster boundary and clusters<a class="headerlink" href="#ploting-the-cluster-boundary-and-clusters" title="Permalink to this headline">¶</a></h2>
 <p>To plot the cluster boundary and the clusters, we run the Code below, which is modified from <a class="reference external" href="https://www.kaggle.com/code/irfanasrullah/customer-segmentation-analysis/notebook">https://www.kaggle.com/code/irfanasrullah/customer-segmentation-analysis/notebook</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1162,7 +1162,7 @@ Name: cluster, dtype: int64
 </div>
 </section>
 <section id="choosing-the-appropriate-number-of-clusters-silhouette-method">
-<h2><span class="section-number">10.10. </span>Choosing the appropriate number of clusters: Silhouette Method<a class="headerlink" href="#choosing-the-appropriate-number-of-clusters-silhouette-method" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.10. </span>Choosing the appropriate number of clusters: Silhouette Method<a class="headerlink" href="#choosing-the-appropriate-number-of-clusters-silhouette-method" title="Permalink to this headline">¶</a></h2>
 <p>In K-Means clustering, the number of clusters (k) is the most crucial hyperparameter. If we already know how many clusters we want to group the data into, tuning the value of k is unnecessary.</p>
 <p>The <strong>silhouette method</strong> is also used to determine the optimal number of clusters, as well as to interpret and validate consistency within data clusters.</p>
 <p>The silhouette method calculates each point’s silhouette coefficients, which measure how well a data point fits into its assigned cluster based on two factors:</p>
@@ -1173,7 +1173,7 @@ Name: cluster, dtype: int64
 <p>This method also displays a clear graphical depiction of how effectively each object has been classified</p>
 <p>The silhouette value is a  measure of how similar an object is to its own cluster (cohesion) compared to other clusters (separation).</p>
 <section id="steps-to-find-the-silhouette-score">
-<h3><span class="section-number">10.10.1. </span>Steps to find the silhouette score<a class="headerlink" href="#steps-to-find-the-silhouette-score" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.10.1. </span>Steps to find the silhouette score<a class="headerlink" href="#steps-to-find-the-silhouette-score" title="Permalink to this headline">¶</a></h3>
 <p>To find the silhouette coefficient of each point, follow these steps:</p>
 <ol class="simple">
 <li><p>For data point  <span class="math notranslate nohighlight">\({\displaystyle i}\)</span> in the cluster <span class="math notranslate nohighlight">\({\displaystyle C_{I}}\)</span>, we calculate the mean distance between <span class="math notranslate nohighlight">\({\displaystyle i}\)</span> and all other data points in the same cluster</p></li>
@@ -1201,7 +1201,7 @@ Name: cluster, dtype: int64
 </ul>
 <p><img alt="silhouette coefficients: image from medium.com" src="https://miro.medium.com/max/902/1*cNzzMupO355ohnVqXnvxEA.png" /></p>
 <section id="silhouette-visualizer">
-<h4><span class="section-number">10.10.1.1. </span>Silhouette Visualizer<a class="headerlink" href="#silhouette-visualizer" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.10.1.1. </span>Silhouette Visualizer<a class="headerlink" href="#silhouette-visualizer" title="Permalink to this headline">¶</a></h4>
 <p>The <strong>Silhouette Visualizer</strong> visualizes which clusters are dense and which are not by displaying the silhouette coefficient for each sample on a per-cluster basis. This is especially useful for determining cluster imbalance or comparing different visualizers to determine a K value.</p>
 <p>We will import the <strong>Yellowbrik</strong> library for silhoutte analsis, an extension to the Scikit-Learn API that simplifies model selection and hyperparameter tuning.</p>
 <p>For more details about the library, please refer to
@@ -1365,12 +1365,12 @@ Name: cluster, dtype: int64
 </section>
 </section>
 <section id="evaluating-clustering-performance-using-advanced-techniques-adjusted-rand-index">
-<h3><span class="section-number">10.10.2. </span>Evaluating Clustering Performance Using Advanced Techniques: Adjusted Rand Index<a class="headerlink" href="#evaluating-clustering-performance-using-advanced-techniques-adjusted-rand-index" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.10.2. </span>Evaluating Clustering Performance Using Advanced Techniques: Adjusted Rand Index<a class="headerlink" href="#evaluating-clustering-performance-using-advanced-techniques-adjusted-rand-index" title="Permalink to this headline">¶</a></h3>
 <p>Without the use of ground truth labels, the elbow technique and silhouette coefficient evaluate clustering performance.</p>
 <p><strong>Ground truth labels</strong> divide data points into categories based on a human’s or an algorithm’s classification. When used without context, these measures do their best to imply the correct number of clusters, but they can be misleading.</p>
 <p>Note that datasets with ground truth labels are uncommon in practice.</p>
 <section id="adjusted-rand-index">
-<h4><span class="section-number">10.10.2.1. </span>Adjusted Rand Index<a class="headerlink" href="#adjusted-rand-index" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.10.2.1. </span>Adjusted Rand Index<a class="headerlink" href="#adjusted-rand-index" title="Permalink to this headline">¶</a></h4>
 <p>Because the ground truth labels are known, a clustering metric that considers labels in its evaluation can be used. The scikit-learn version of a standard metric known as the <strong>adjusted rand index (ARI)</strong> can be used.</p>
 <p>The Rand Index computes a similarity measure between two clusterings by evaluating all pairs of samples and counting pairs that are assigned in the same or different clusters in the predicted and true clusterings,</p>
 <p>The Rand index has been adjusted to account for chance. For more information, please refer to <a class="reference external" href="https://towardsdatascience.com/performance-metrics-in-machine-learning-part-3-clustering-d69550662dc6">https://towardsdatascience.com/performance-metrics-in-machine-learning-part-3-clustering-d69550662dc6</a>.</p>
@@ -1500,7 +1500,7 @@ Name: cluster, dtype: int64
 </section>
 </section>
 <section id="customer-segmentation">
-<h2><span class="section-number">10.11. </span>Customer segmentation<a class="headerlink" href="#customer-segmentation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.11. </span>Customer segmentation<a class="headerlink" href="#customer-segmentation" title="Permalink to this headline">¶</a></h2>
 <p>Customer segmentation is the process of categorizing your customers based on a variety of factors. These can be personal information,</p>
 <ul class="simple">
 <li><p>buying habits,</p></li>
@@ -1517,7 +1517,7 @@ Name: cluster, dtype: int64
 <p><img alt="Customer Segmentation: image from segmentify" src="https://www.segmentify.com/wp-content/uploads/2021/08/Top-Customer-Segmentation-Examples-every-Marketer-Needs-to-Know.png" /></p>
 <p><img alt="Customer Segmentation: image from segmentify" src="https://www.segmentify.com/wp-content/uploads/2021/08/personalisation-has-significant-positive-effects.png" /></p>
 <section id="mall-customer-data">
-<h3><span class="section-number">10.11.1. </span>Mall Customer Data<a class="headerlink" href="#mall-customer-data" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.11.1. </span>Mall Customer Data<a class="headerlink" href="#mall-customer-data" title="Permalink to this headline">¶</a></h3>
 <p>Mall Customer Segmentation Data is a dataset from Kaggle that contains the following information:</p>
 <ul class="simple">
 <li><p>individual unique customer IDs,</p></li>
@@ -1647,7 +1647,7 @@ behavior and spending type</p></li>
 </ul>
 </section>
 <section id="exploratory-data-analysis">
-<h3><span class="section-number">10.11.2. </span>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.11.2. </span>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h3>
 <p><strong>Exercise</strong></p>
 <ol class="simple">
 <li><p>Perform exploratory data analysis to understand the data set before modeling it, which includes:</p></li>
@@ -2075,7 +2075,7 @@ dtype: int64
 </div>
 </section>
 <section id="clustering-based-on-two-features-annual-income-and-spending-score">
-<h3><span class="section-number">10.11.3. </span>Clustering based on two features: annual income and spending score<a class="headerlink" href="#clustering-based-on-two-features-annual-income-and-spending-score" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.11.3. </span>Clustering based on two features: annual income and spending score<a class="headerlink" href="#clustering-based-on-two-features-annual-income-and-spending-score" title="Permalink to this headline">¶</a></h3>
 <p>The figure below do appear to be some patterns in the data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2139,7 +2139,7 @@ dtype: int64
 </div>
 </div>
 <section id="id1">
-<h4><span class="section-number">10.11.3.1. </span>Choosing the appropriate number of clusters: Elbow Method<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.11.3.1. </span>Choosing the appropriate number of clusters: Elbow Method<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Taking the annual income and spending score</span>
@@ -2174,7 +2174,7 @@ dtype: int64
 <p>The best number of clusters for our data is clearly 5, as the curve slope is not severe enough after that.</p>
 </section>
 <section id="id2">
-<h4><span class="section-number">10.11.3.2. </span>Choosing the appropriate number of clusters: Silhouette Method<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.11.3.2. </span>Choosing the appropriate number of clusters: Silhouette Method<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>The silhouette method calculates each point’s silhouette coefficients, which measure how well a data point fits into its assigned cluster based on two factors:</p>
 <ul class="simple">
 <li><p>How close the data point is to other points in the cluster.</p></li>
@@ -2308,7 +2308,7 @@ dtype: int64
 </div>
 </section>
 <section id="cluster-analysis">
-<h4><span class="section-number">10.11.3.3. </span>Cluster Analysis<a class="headerlink" href="#cluster-analysis" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.11.3.3. </span>Cluster Analysis<a class="headerlink" href="#cluster-analysis" title="Permalink to this headline">¶</a></h4>
 <p>Based on the above results, which clusters should be the target group?</p>
 <p>There are five clusters created by the model including</p>
 <ol class="simple">
@@ -2334,9 +2334,9 @@ dtype: int64
 </section>
 </section>
 <section id="clustering-based-on-three-features-annual-income-spending-score-and-age">
-<h3><span class="section-number">10.11.4. </span>Clustering based on three features: annual income, spending score and age<a class="headerlink" href="#clustering-based-on-three-features-annual-income-spending-score-and-age" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.11.4. </span>Clustering based on three features: annual income, spending score and age<a class="headerlink" href="#clustering-based-on-three-features-annual-income-spending-score-and-age" title="Permalink to this headline">¶</a></h3>
 <section id="ploting-the-relation-between-age-and-other-features">
-<h4><span class="section-number">10.11.4.1. </span>Ploting the relation between age and other features<a class="headerlink" href="#ploting-the-relation-between-age-and-other-features" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.11.4.1. </span>Ploting the relation between age and other features<a class="headerlink" href="#ploting-the-relation-between-age-and-other-features" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span> 
@@ -2376,7 +2376,7 @@ dtype: int64
 <p><strong>Note</strong> Using a 2D visualization, we can’t see any distinct patterns in the data set.</p>
 </section>
 <section id="the-elbow-method">
-<h4><span class="section-number">10.11.4.2. </span>The elbow method<a class="headerlink" href="#the-elbow-method" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.11.4.2. </span>The elbow method<a class="headerlink" href="#the-elbow-method" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Taking the annual income and spending score</span>
@@ -2410,7 +2410,7 @@ dtype: int64
 </div>
 </section>
 <section id="the-silhouette-method">
-<h4><span class="section-number">10.11.4.3. </span>The Silhouette Method<a class="headerlink" href="#the-silhouette-method" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.11.4.3. </span>The Silhouette Method<a class="headerlink" href="#the-silhouette-method" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
@@ -3071,7 +3071,7 @@ if (outputEl) {{
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">9. </span>Machine learning: Introduction</p>
+            <p class="prev-next-title"><span class="section-number">7. </span>Machine learning: Introduction</p>
         </div>
     </a>
 </div>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Data Selection &#8212; SCMA248 Introduction to Data Science</title>
+    <title>3. Data Preparation &#8212; SCMA248 Introduction to Data Science</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,7 +54,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="6. Data Visualization" href="Chapter4_Data_Visualization.html" />
+    <link rel="next" title="4. Data Visualization" href="Chapter4_Data_Visualization.html" />
     <link rel="prev" title="2. Python Basics" href="Chapter2_Python_Basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -112,32 +112,32 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Data Selection
+   3. Data Preparation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter4_Data_Visualization.html">
-   6. Data Visualization
+   4. Data Visualization
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter5_Practical_Statistics.html">
-   7. Practical Statistics
+   5. Practical Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter6_Regression.html">
-   8. Regression Analysis
+   6. Regression Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter7_Introduction_Machine_Learning.html">
-   9. Machine learning: Introduction
+   7. Machine learning: Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter8_Unsupervised_Learning.html">
-   10. Unsupervised Machine Learning: K-means Clustering
+   8. Unsupervised Machine Learning: K-means Clustering
   </a>
  </li>
 </ul>
@@ -244,120 +244,132 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   3. Data Selection
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-preparation-with-pandas">
+   3.1. Data Preparation with Pandas
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importing-data">
+     3.1.1. Importing data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-selection">
+   3.2. Data Selection
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-indexing-operators">
-     3.1. The indexing operators []
+     3.2.1. The indexing operators []
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#loc">
-     3.2. .loc()
+     3.2.2. .loc()
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#iloc">
-     3.3. .iloc()
+     3.2.3. .iloc()
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dealing-with-problematic-data">
-   4. Dealing with Problematic Data
+   3.3. Dealing with Problematic Data
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#problem-in-setting-index-in-pandas-dataframe">
-     4.1. Problem in setting index in pandas DataFrame
+     3.3.1. Problem in setting index in pandas DataFrame
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#convert-strings-to-datetime">
-     4.2. Convert Strings to Datetime
+     3.3.2. Convert Strings to Datetime
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#missing-values">
-     4.3. Missing values
+     3.3.3. Missing values
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#standard-missing-values">
-     4.4. Standard Missing Values
+     3.3.4. Standard Missing Values
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#missing-values-that-aren-t-standard">
-     4.5. Missing Values That Aren’t Standard
+     3.3.5. Missing Values That Aren’t Standard
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#unexpected-missing-values">
-     4.6. Unexpected Missing Values
+     3.3.6. Unexpected Missing Values
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-manipulation">
-   5. Data Manipulation
+   3.4. Data Manipulation
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-a-new-column-to-an-existing-pandas-dataframe">
-     5.1. Add A New Column To An Existing Pandas DataFrame
+     3.4.1. Add A New Column To An Existing Pandas DataFrame
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#appending-a-row-to-a-dataframe-and-specify-its-index-label">
-     5.2. Appending a row to a dataframe and specify its index label
+     3.4.2. Appending a row to a dataframe and specify its index label
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sorting">
-     5.3. Sorting
+     3.4.3. Sorting
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#grouping-data">
-     5.4. Grouping Data
+     3.4.4. Grouping Data
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rearranging-data">
-     5.5. Rearranging Data
+     3.4.5. Rearranging Data
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#simplest-pivot-table">
-       5.5.1. Simplest Pivot table
+       3.4.5.1. Simplest Pivot table
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#specifying-values-and-performing-aggregation">
-       5.5.2. Specifying values and performing aggregation
+       3.4.5.2. Specifying values and performing aggregation
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#seeing-break-down-using-columns">
-       5.5.3. Seeing break down using columns
+       3.4.5.3. Seeing break down using columns
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exercise">
-     5.6. Exercise
+     3.4.6. Exercise
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solutions-to-exercise">
-     5.7. Solutions to Exercise
+     3.4.7. Solutions to Exercise
     </a>
    </li>
   </ul>
@@ -373,7 +385,30 @@
         
               <div>
                 
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="data-preparation">
+<h1><span class="section-number">3. </span>Data Preparation<a class="headerlink" href="#data-preparation" title="Permalink to this headline">¶</a></h1>
+<section id="data-preparation-with-pandas">
+<h2><span class="section-number">3.1. </span>Data Preparation with Pandas<a class="headerlink" href="#data-preparation-with-pandas" title="Permalink to this headline">¶</a></h2>
+<p>This chapter will show you how to use the pandas package to import and preprocess data. Preprocessing is the process of pre-analyzing data before converting it to a standard and normalized format.
+The following are some of the aspects of preprocessing:</p>
+<ul class="simple">
+<li><p>missing values</p></li>
+<li><p>data normalization</p></li>
+<li><p>data standardization</p></li>
+<li><p>data binning</p></li>
+</ul>
+<p>We’ll simply be dealing with missing values in this session.</p>
+<section id="importing-data">
+<h3><span class="section-number">3.1.1. </span>Importing data<a class="headerlink" href="#importing-data" title="Permalink to this headline">¶</a></h3>
+<p>We will utilize the Iris dataset in this tutorial, which can be downloaded from the UCI Machine Learning Repository, <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/iris">https://archive.ics.uci.edu/ml/datasets/iris</a>.</p>
+<p>In the pattern recognition literature, this is probably the most well-known database. Fisher’s paper is considered a classic in the subject and is still cited frequently. (See, for example, Duda &amp; Hart.) The data collection has three classes, each with 50 instances, each referring to a different species of iris plant. The three classes include</p>
+<ul class="simple">
+<li><p>Iris Setosa</p></li>
+<li><p>Iris Versicolour</p></li>
+<li><p>Iris Virginica.</p></li>
+</ul>
+<p>To begin, use the pandas library to import data and transform it to a dataframe.</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
@@ -382,7 +417,10 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#iris = pd.read_csv(&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#39;, header=None, </span>
+<span class="c1">#                names = [&#39;sepal_length&#39;, &#39;sepal_width&#39;, &#39;petal_length&#39;, &#39;petal_width&#39;, &#39;class&#39;])</span>
+
+<span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
                 <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">])</span>
 
 <span class="nb">type</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
@@ -442,16 +480,17 @@
 <span class="ne">-&gt; </span><span class="mi">1139</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">do_handshake</span><span class="p">()</span>
 <span class="g g-Whitespace">   </span><span class="mi">1140</span>         <span class="k">finally</span><span class="p">:</span>
 
-<span class="nn">SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate</span> in <span class="ni">certificate chain </span><span class="nt">(_ssl.c:1091)</span>
+<span class="ne">SSLCertVerificationError</span>: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1091)
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">URLError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_5484</span><span class="o">/</span><span class="mf">16525021.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
-<span class="ne">----&gt; </span><span class="mi">2</span>                 <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">])</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1574</span><span class="o">/</span><span class="mf">897477228.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">type</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/iris.data&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+<span class="ne">----&gt; </span><span class="mi">5</span>                 <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="nb">type</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
 
 <span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
@@ -565,7 +604,7 @@
 <span class="g g-Whitespace">   </span><span class="mi">1353</span>             <span class="n">r</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="g g-Whitespace">   </span><span class="mi">1354</span>         <span class="k">except</span><span class="p">:</span>
 
-<span class="ne">URLError</span>: &lt;urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1091)&gt;
+<span class="ne">URLError</span>: &lt;urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1091)&gt;
 </pre></div>
 </div>
 </div>
@@ -1039,8 +1078,10 @@ dtype: object
 </div>
 </div>
 </div>
+</section>
+</section>
 <section id="data-selection">
-<h1><span class="section-number">3. </span>Data Selection<a class="headerlink" href="#data-selection" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">3.2. </span>Data Selection<a class="headerlink" href="#data-selection" title="Permalink to this headline">¶</a></h2>
 <p>We’ll concentrate on how to slice, dice, and retrieve and set subsets of pandas objects in general. Because Series and DataFrame have received greater development attention in this area, they will be the key focus.</p>
 <p>The axis labeling information in pandas objects is useful for a variety of reasons:</p>
 <ul class="simple">
@@ -1148,7 +1189,7 @@ Index([&#39;sepal_length&#39;, &#39;sepal_width&#39;, &#39;petal_length&#39;, &#
 </div></div></div>
 </div>
 <section id="the-indexing-operators">
-<h2><span class="section-number">3.1. </span>The indexing operators []<a class="headerlink" href="#the-indexing-operators" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.2.1. </span>The indexing operators []<a class="headerlink" href="#the-indexing-operators" title="Permalink to this headline">¶</a></h3>
 <p>To begin, simply indicate the column and line (by using its index) you’re interested in.</p>
 <p>You can use the following command to get the sepal width of the fifth line (index is 4):</p>
 <div class="cell docutils container">
@@ -1261,7 +1302,7 @@ Name: sepal_width, dtype: float64
 </div>
 </section>
 <section id="loc">
-<h2><span class="section-number">3.2. </span>.loc()<a class="headerlink" href="#loc" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.2.2. </span>.loc()<a class="headerlink" href="#loc" title="Permalink to this headline">¶</a></h3>
 <p>You can use the <code class="docutils literal notranslate"><span class="pre">.loc()</span></code> method to get something similar to the other approach (as in a matrix) of obtaining data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1351,7 +1392,7 @@ Name: sepal_width, dtype: float64
 </div>
 </section>
 <section id="iloc">
-<h2><span class="section-number">3.3. </span>.iloc()<a class="headerlink" href="#iloc" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.2.3. </span>.iloc()<a class="headerlink" href="#iloc" title="Permalink to this headline">¶</a></h3>
 <p>Finally, there is <code class="docutils literal notranslate"><span class="pre">.iloc()</span></code>, which is a fully optimized function that defines the positions (as in a matrix). It requires you to define the cell using the row and column numbers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1714,9 +1755,9 @@ Name: sepal_width, dtype: float64
 </section>
 </section>
 <section id="dealing-with-problematic-data">
-<h1><span class="section-number">4. </span>Dealing with Problematic Data<a class="headerlink" href="#dealing-with-problematic-data" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">3.3. </span>Dealing with Problematic Data<a class="headerlink" href="#dealing-with-problematic-data" title="Permalink to this headline">¶</a></h2>
 <section id="problem-in-setting-index-in-pandas-dataframe">
-<h2><span class="section-number">4.1. </span>Problem in setting index in pandas DataFrame<a class="headerlink" href="#problem-in-setting-index-in-pandas-dataframe" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.3.1. </span>Problem in setting index in pandas DataFrame<a class="headerlink" href="#problem-in-setting-index-in-pandas-dataframe" title="Permalink to this headline">¶</a></h3>
 <p>It may happen that the dataset contains an index column. How to import it correctly with Pandas?</p>
 <p>We will use a very simple dataset, namely demo_df.csv (the file can be download from my github repository), that contains an index column (this is just a counter and not a feature).</p>
 <div class="cell docutils container">
@@ -1812,7 +1853,7 @@ Name: sepal_width, dtype: float64
 <p>The dataset is loaded and the index is correct after performing the command.</p>
 </section>
 <section id="convert-strings-to-datetime">
-<h2><span class="section-number">4.2. </span>Convert Strings to Datetime<a class="headerlink" href="#convert-strings-to-datetime" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.3.2. </span>Convert Strings to Datetime<a class="headerlink" href="#convert-strings-to-datetime" title="Permalink to this headline">¶</a></h3>
 <p>However, we see an issue right away: all of the data, including dates, has been parsed as integers (or, in other cases, as string). If the dates do not have a particularly unusual format, you can use the autodetection routines to identify the column that contains the date data. It works nicely with the following arguments when the data file is stored locally.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1874,7 +1915,7 @@ dtype: object
 </div>
 </section>
 <section id="missing-values">
-<h2><span class="section-number">4.3. </span>Missing values<a class="headerlink" href="#missing-values" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.3.3. </span>Missing values<a class="headerlink" href="#missing-values" title="Permalink to this headline">¶</a></h3>
 <p>We will concentrate on missing values, which is perhaps the most challenging data cleaning operation.</p>
 <p>It’s a good idea to have an overall sense of a data set before you start cleaning it. After that, you can develop a plan for cleaning the data.</p>
 <p>To begin, I like to ask the following questions:</p>
@@ -2093,7 +2134,7 @@ Name: ST_NUM, dtype: float64
 </ul>
 </section>
 <section id="standard-missing-values">
-<h2><span class="section-number">4.4. </span>Standard Missing Values<a class="headerlink" href="#standard-missing-values" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.3.4. </span>Standard Missing Values<a class="headerlink" href="#standard-missing-values" title="Permalink to this headline">¶</a></h3>
 <p>So, what exactly do I mean when I say “standard missing values?” These are missing values that Pandas can detect.</p>
 <p>Let’s return to our initial dataset and examine the “Street Number” column.</p>
 <p>There are an empty cell in the third row (from the original file). A value of “NaN” appears in the seventh row.</p>
@@ -2144,7 +2185,7 @@ Name: NUM_BEDROOMS, dtype: object
 </div>
 </section>
 <section id="missing-values-that-aren-t-standard">
-<h2><span class="section-number">4.5. </span>Missing Values That Aren’t Standard<a class="headerlink" href="#missing-values-that-aren-t-standard" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.3.5. </span>Missing Values That Aren’t Standard<a class="headerlink" href="#missing-values-that-aren-t-standard" title="Permalink to this headline">¶</a></h3>
 <p>It is possible that there are missing values with different formats in some cases.</p>
 <p>There are two other missing values in this column of different formats</p>
 <ul class="simple">
@@ -2287,7 +2328,7 @@ Name: NUM_BEDROOMS, dtype: object
 </div>
 </section>
 <section id="unexpected-missing-values">
-<h2><span class="section-number">4.6. </span>Unexpected Missing Values<a class="headerlink" href="#unexpected-missing-values" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.3.6. </span>Unexpected Missing Values<a class="headerlink" href="#unexpected-missing-values" title="Permalink to this headline">¶</a></h3>
 <p>We have observed both standard and non-standard missing data so far. What if we have a type that is not expected?</p>
 <p>For instance, if our feature is supposed to be a string but it’s a numeric type, it’s technically a missing value.</p>
 <p>Take a look at the column labeled “OWN_OCCUPIED” to understand what I’m talking about.</p>
@@ -2379,7 +2420,7 @@ Name: OWN_OCCUPIED, dtype: object
 </section>
 </section>
 <section id="data-manipulation">
-<h1><span class="section-number">5. </span>Data Manipulation<a class="headerlink" href="#data-manipulation" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">3.4. </span>Data Manipulation<a class="headerlink" href="#data-manipulation" title="Permalink to this headline">¶</a></h2>
 <p>We have learned how to select the data we want, we will need to learn how to manipulate it. Using aggregation methods to work with columns or rows is one of the most straightforward things we can perform.</p>
 <p>All of these functions always <strong>return a number</strong> when applied to a row or column.</p>
 <p>We can specify whether the function should be applied to</p>
@@ -3127,7 +3168,7 @@ dtype: float64
 </div></div></div>
 </div>
 <section id="add-a-new-column-to-an-existing-pandas-dataframe">
-<h2><span class="section-number">5.1. </span>Add A New Column To An Existing Pandas DataFrame<a class="headerlink" href="#add-a-new-column-to-an-existing-pandas-dataframe" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.4.1. </span>Add A New Column To An Existing Pandas DataFrame<a class="headerlink" href="#add-a-new-column-to-an-existing-pandas-dataframe" title="Permalink to this headline">¶</a></h3>
 <p>Adding new values in our DataFrame is another simple manipulation technique. This can be done directly over a DataFrame with the assign operator (<code class="docutils literal notranslate"><span class="pre">=</span></code>).</p>
 <p>For example, we can assign a Series to a selection of a column that does not exist to add a new column to a DataFrame.</p>
 <p>You should be aware that previous values will be overridden if a column with the same name already exists.</p>
@@ -3523,7 +3564,7 @@ dtype: float64
 </div>
 </section>
 <section id="appending-a-row-to-a-dataframe-and-specify-its-index-label">
-<h2><span class="section-number">5.2. </span>Appending a row to a dataframe and specify its index label<a class="headerlink" href="#appending-a-row-to-a-dataframe-and-specify-its-index-label" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.4.2. </span>Appending a row to a dataframe and specify its index label<a class="headerlink" href="#appending-a-row-to-a-dataframe-and-specify-its-index-label" title="Permalink to this headline">¶</a></h3>
 <p>In this section, we will learn how to add/remove new rows and remove missing values.  We will use the dataset, namely property_data.csv.</p>
 <p>A general solution when appending a row to a dataframe and specify its index label is to create the row, transform the new row data into a pandas series, name it to the index you want to have and then append it to the data frame. Don’t forget to overwrite the original data frame with the one with appended row. The following commands produce the required result.</p>
 <p>See <a class="reference external" href="https://stackoverflow.com/questions/16824607/pandas-appending-a-row-to-a-dataframe-and-specify-its-index-label">https://stackoverflow.com/questions/16824607/pandas-appending-a-row-to-a-dataframe-and-specify-its-index-label</a> for more details.</p>
@@ -4767,7 +4808,7 @@ dtype: object
 </div>
 </section>
 <section id="sorting">
-<h2><span class="section-number">5.3. </span>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.4.3. </span>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h3>
 <p>Sorting by columns is another important feature we will need while examining at our data. Using the sort method, we can sort a DataFrame by any column. We only need to execute the following commands to see the first five rows of data sorted in descending order (i.e., from the largest to the lowest values) and using the Value column:</p>
 <p>Here we will work with the Iris dataset.</p>
 <div class="cell docutils container">
@@ -5227,7 +5268,7 @@ dtype: object
 </div>
 </section>
 <section id="grouping-data">
-<h2><span class="section-number">5.4. </span>Grouping Data<a class="headerlink" href="#grouping-data" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.4.4. </span>Grouping Data<a class="headerlink" href="#grouping-data" title="Permalink to this headline">¶</a></h3>
 <p>Another useful method for inspecting data is to group it according to certain criteria. For the sales dataset, it would be useful to categorize all of the data by location, independent of the year. The <code class="docutils literal notranslate"><span class="pre">groupby</span></code> function in Pandas allows us to accomplish just that. This function returns a special grouped DataFrame as a result. As a result, an aggregate function must be used to create a suitable DataFrame. As a result, <strong>all values in the same group will be subjected to this function</strong>.</p>
 <p>For instance, in our scenario, we can get a DataFrame that shows the number (count) of the transactions for each location across all years by grouping by location and using the count function as the aggregation technique for each group. As a consequence, a DataFrame with locations as indexes and counting values of transactions as the column would be created:</p>
 <div class="cell docutils container">
@@ -5405,10 +5446,10 @@ dtype: object
 </div>
 </section>
 <section id="rearranging-data">
-<h2><span class="section-number">5.5. </span>Rearranging Data<a class="headerlink" href="#rearranging-data" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.4.5. </span>Rearranging Data<a class="headerlink" href="#rearranging-data" title="Permalink to this headline">¶</a></h3>
 <p>Until now, our indices were merely a numerical representation of rows with little meaning. We can change the way our data is organized by redistributing indexes and columns for better data processing, which usually results in greater performance. Using the <code class="docutils literal notranslate"><span class="pre">pivot_table</span></code> function, we may rearrange our data. We can define which columns will be the new indexes, values, and columns.</p>
 <section id="simplest-pivot-table">
-<h3><span class="section-number">5.5.1. </span>Simplest Pivot table<a class="headerlink" href="#simplest-pivot-table" title="Permalink to this headline">¶</a></h3>
+<h4><span class="section-number">3.4.5.1. </span>Simplest Pivot table<a class="headerlink" href="#simplest-pivot-table" title="Permalink to this headline">¶</a></h4>
 <p>An <code class="docutils literal notranslate"><span class="pre">index</span></code> is required even for the smallest pivot table. Let us utilize the location as our index in this case. It uses the <code class="docutils literal notranslate"><span class="pre">'mean'</span></code> aggregation function on all available numerical columns by default.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5764,7 +5805,7 @@ dtype: object
 </div>
 </section>
 <section id="specifying-values-and-performing-aggregation">
-<h3><span class="section-number">5.5.2. </span>Specifying values and performing aggregation<a class="headerlink" href="#specifying-values-and-performing-aggregation" title="Permalink to this headline">¶</a></h3>
+<h4><span class="section-number">3.4.5.2. </span>Specifying values and performing aggregation<a class="headerlink" href="#specifying-values-and-performing-aggregation" title="Permalink to this headline">¶</a></h4>
 <p>The mean aggregation function is applied to all numerical columns by default, and the result is returned. Use the <code class="docutils literal notranslate"><span class="pre">values</span></code> argument to specify the columns we are interested in.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -6002,7 +6043,7 @@ dtype: object
 </div>
 </section>
 <section id="seeing-break-down-using-columns">
-<h3><span class="section-number">5.5.3. </span>Seeing break down using columns<a class="headerlink" href="#seeing-break-down-using-columns" title="Permalink to this headline">¶</a></h3>
+<h4><span class="section-number">3.4.5.3. </span>Seeing break down using columns<a class="headerlink" href="#seeing-break-down-using-columns" title="Permalink to this headline">¶</a></h4>
 <p>If we would like to see sales broken down by product_category, the columns argument allows us to do that</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -6185,7 +6226,7 @@ dtype: object
 </section>
 </section>
 <section id="exercise">
-<h2><span class="section-number">5.6. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.4.6. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
 <p>Apply <code class="docutils literal notranslate"><span class="pre">pivot_table</span></code> (in new worksheets) to answer the following questions.</p>
 <ol class="simple">
 <li><p>The number of sales transactions for the given salesperson</p></li>
@@ -6195,7 +6236,7 @@ dtype: object
 </ol>
 </section>
 <section id="solutions-to-exercise">
-<h2><span class="section-number">5.7. </span>Solutions to Exercise<a class="headerlink" href="#solutions-to-exercise" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.4.7. </span>Solutions to Exercise<a class="headerlink" href="#solutions-to-exercise" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>The number of sales transactions for the given salesperson</p></li>
 </ol>
@@ -6751,6 +6792,7 @@ dtype: int64
 </div>
 </section>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -6787,7 +6829,7 @@ dtype: int64
     <a class='right-next' id="next-link" href="Chapter4_Data_Visualization.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Data Visualization</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Data Visualization</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

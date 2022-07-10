@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6. Data Visualization &#8212; SCMA248 Introduction to Data Science</title>
+    <title>4. Data Visualization &#8212; SCMA248 Introduction to Data Science</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="7. Practical Statistics" href="Chapter5_Practical_Statistics.html" />
-    <link rel="prev" title="3. Data Selection" href="Chapter3_Data_Preparation.html" />
+    <link rel="next" title="5. Practical Statistics" href="Chapter5_Practical_Statistics.html" />
+    <link rel="prev" title="3. Data Preparation" href="Chapter3_Data_Preparation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,32 +112,32 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter3_Data_Preparation.html">
-   3. Data Selection
+   3. Data Preparation
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   6. Data Visualization
+   4. Data Visualization
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter5_Practical_Statistics.html">
-   7. Practical Statistics
+   5. Practical Statistics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter6_Regression.html">
-   8. Regression Analysis
+   6. Regression Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter7_Introduction_Machine_Learning.html">
-   9. Machine learning: Introduction
+   7. Machine learning: Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chapter8_Unsupervised_Learning.html">
-   10. Unsupervised Machine Learning: K-means Clustering
+   8. Unsupervised Machine Learning: K-means Clustering
   </a>
  </li>
 </ul>
@@ -246,37 +246,37 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-pandas-to-plot-line-bar-charts-and-histogram-in-python">
-   6.1. Using pandas to plot line, bar charts and Histogram in Python
+   4.1. Using pandas to plot line, bar charts and Histogram in Python
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plot-a-histogram-in-python-using-matplotlib">
-   6.2. Plot a Histogram in Python using Matplotlib
+   4.2. Plot a Histogram in Python using Matplotlib
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-ggplot-and-python-to-create-your-first-plot">
-   6.3. Using ggplot and Python to Create Your First Plot
+   4.3. Using ggplot and Python to Create Your First Plot
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#building-your-first-plot-with-ggplot-and-python">
-     6.3.1. Building Your First Plot With ggplot and Python
+     4.3.1. Building Your First Plot With ggplot and Python
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#geometries">
-       6.3.1.1. Geometries
+       4.3.1.1. Geometries
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#aesthetic-mappings">
-       6.3.1.2. Aesthetic mappings
+       4.3.1.2. Aesthetic mappings
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#adding-more-arguments">
-       6.3.1.3. Adding more arguments
+       4.3.1.3. Adding more arguments
       </a>
      </li>
     </ul>
@@ -285,64 +285,64 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#global-and-local-aesthetic-mappings">
-   6.4. Global and local aesthetic mappings
+   4.4. Global and local aesthetic mappings
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#scales">
-     6.4.1. Scales
+     4.4.1. Scales
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#labels-and-titles">
-   6.5. Labels and titles
+   4.5. Labels and titles
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#categories-as-colors">
-   6.6. Categories as colors
+   4.6. Categories as colors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-visualization-in-practice">
-   6.7. Data visualization in practice
+   4.7. Data visualization in practice
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#visualization-with-bubble-plot">
-     6.7.1. Visualization with bubble plot
+     4.7.1. Visualization with bubble plot
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pandas-pipe">
-     6.7.2. Pandas Pipe
+     4.7.2. Pandas Pipe
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#applying-pandas-pipes-to-gapminder">
-     6.7.3. Applying Pandas pipes to gapminder
+     4.7.3. Applying Pandas pipes to gapminder
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#faceting">
-     6.7.4. Faceting
+     4.7.4. Faceting
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-transformations">
-     6.7.5. Data transformations
+     4.7.5. Data transformations
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#logging-the-values">
-       6.7.5.1. Logging the values
+       4.7.5.1. Logging the values
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#scaling-the-axis">
-       6.7.5.2. Scaling the axis
+       4.7.5.2. Scaling the axis
       </a>
      </li>
     </ul>
@@ -351,12 +351,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#adding-regional-classfication-into-gapminder-dataset">
-   6.8. Adding regional classfication into Gapminder dataset
+   4.8. Adding regional classfication into Gapminder dataset
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#in-python-plot-a-ridgeline-plot">
-     6.8.1. In Python, plot a ridgeline plot.
+     4.8.1. In Python, plot a ridgeline plot.
     </a>
    </li>
   </ul>
@@ -373,7 +373,7 @@
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="data-visualization">
-<h1><span class="section-number">6. </span>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4. </span>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this headline">¶</a></h1>
 <p>In this section, you will learn how to use Python to create your first data visualization. The phrase “a picture is worth a thousand words” comes to mind. Data visualization is a valuable tool for communicating a data-driven conclusion. In certain circumstances, the visualization is so persuasive that there is no need for further investigation.</p>
 <p>Python’s most powerful feature is probably exploratory data visualization. With a unique blend of flexibility and ease, one may go from idea to data to plot quickly.</p>
 <p>Excel may be easier than Python, but it lacks the flexibility of Python. Although D3.js is more powerful and flexible than Python, it takes substantially longer to create a plot.</p>
@@ -411,7 +411,7 @@
 </div>
 </div>
 <section id="using-pandas-to-plot-line-bar-charts-and-histogram-in-python">
-<h2><span class="section-number">6.1. </span>Using pandas to plot line, bar charts and Histogram in Python<a class="headerlink" href="#using-pandas-to-plot-line-bar-charts-and-histogram-in-python" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.1. </span>Using pandas to plot line, bar charts and Histogram in Python<a class="headerlink" href="#using-pandas-to-plot-line-bar-charts-and-histogram-in-python" title="Permalink to this headline">¶</a></h2>
 <p>To give you an example, the property fund had 1,110 policyholders in 2010 who had a total of 1,377 claims.</p>
 <p>First we will create a table reporting the <strong>2010 claims frequency distribution</strong>.</p>
 <p><strong>Note:</strong> In a dataset, a histogram displays the amount of occurrences of certain values. It looks a lot like a bar chart at first glance.</p>
@@ -618,7 +618,7 @@ Name: Freq, dtype: int64
 </ul>
 </section>
 <section id="plot-a-histogram-in-python-using-matplotlib">
-<h2><span class="section-number">6.2. </span>Plot a Histogram in Python using Matplotlib<a class="headerlink" href="#plot-a-histogram-in-python-using-matplotlib" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2. </span>Plot a Histogram in Python using Matplotlib<a class="headerlink" href="#plot-a-histogram-in-python-using-matplotlib" title="Permalink to this headline">¶</a></h2>
 <p>To plot a histogram in Python using Matplotlib, use the following command:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -661,7 +661,7 @@ Name: Freq, dtype: int64
 </div>
 </section>
 <section id="using-ggplot-and-python-to-create-your-first-plot">
-<h2><span class="section-number">6.3. </span>Using ggplot and Python to Create Your First Plot<a class="headerlink" href="#using-ggplot-and-python-to-create-your-first-plot" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.3. </span>Using ggplot and Python to Create Your First Plot<a class="headerlink" href="#using-ggplot-and-python-to-create-your-first-plot" title="Permalink to this headline">¶</a></h2>
 <p>You will learn how to construct data visualizations using <strong>ggplot</strong> in Python using a <strong>grammar of graphics</strong>. A grammar of graphics is a high-level tool for creating data displays in a consistent and efficient manner. It abstracts the majority of low-level details, <strong>allowing you to concentrate on producing useful and beautiful data visualizations</strong>.</p>
 <p>A graphics grammar is provided by a number of Python libraries. We focus on <strong>plotnine</strong> since it is the most developed.</p>
 <p>Plotnine is based on the R programming language’s <strong>ggplot2</strong>, thus if you are familiar with R, you may think of plotnine as the Python counterpart of ggplot2.</p>
@@ -710,7 +710,7 @@ Name: Freq, dtype: int64
 </div>
 </div>
 <section id="building-your-first-plot-with-ggplot-and-python">
-<h3><span class="section-number">6.3.1. </span>Building Your First Plot With ggplot and Python<a class="headerlink" href="#building-your-first-plot-with-ggplot-and-python" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.3.1. </span>Building Your First Plot With ggplot and Python<a class="headerlink" href="#building-your-first-plot-with-ggplot-and-python" title="Permalink to this headline">¶</a></h3>
 <p>You will learn how to use ggplot in Python to create your first data visualization.</p>
 <p>The approach of making visuals with ggplot2 is intuitively based on <strong>The Grammar of Graphics</strong> (where the gg comes from).</p>
 <p>This is comparable to how understanding grammar can help a beginner build hundreds of distinct sentences without having to memorize each one.</p>
@@ -764,7 +764,7 @@ Name: Freq, dtype: int64
 </ol>
 <p>Do not worry if you are not sure what each component means right now. Throughout this chapter, you will learn more about them.</p>
 <section id="geometries">
-<h4><span class="section-number">6.3.1.1. </span>Geometries<a class="headerlink" href="#geometries" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.3.1.1. </span>Geometries<a class="headerlink" href="#geometries" title="Permalink to this headline">¶</a></h4>
 <p>In plotnine we create graphs by adding layers. Layers can define geometries, compute summary statistics, define what scales to use, or even change styles.</p>
 <p>To add layers, we use the symbol <code class="docutils literal notranslate"><span class="pre">+</span></code>. In general, a line of code will look like this:</p>
 <p><code class="docutils literal notranslate"><span class="pre">ggplot(data)</span> <span class="pre">+</span> <span class="pre">LAYER</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">LAYER</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">LAYER</span> <span class="pre">N</span></code></p>
@@ -796,7 +796,7 @@ this geometry is <code class="docutils literal notranslate"><span class="pre">ge
 </div>
 </section>
 <section id="aesthetic-mappings">
-<h4><span class="section-number">6.3.1.2. </span>Aesthetic mappings<a class="headerlink" href="#aesthetic-mappings" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.3.1.2. </span>Aesthetic mappings<a class="headerlink" href="#aesthetic-mappings" title="Permalink to this headline">¶</a></h4>
 <p>The next step is to decide which variable you’ll use for each axis in your graph. You must tell plotnine which variables you want to include in the visual because each row in a data frame can have several fields.</p>
 <p>Data variables are mapped to graphical features such as 2D position and color by aesthetics.</p>
 <p>In other words, aesthetic mappings describe how properties of the data (variables) connect with features of the graph, such as distance along an axis, size, or colour.</p>
@@ -804,7 +804,7 @@ this geometry is <code class="docutils literal notranslate"><span class="pre">ge
 <p>The code, for example, creates a graph with <strong>BCcov</strong> (coverages (in millions)) on the x-axis and <strong>claims</strong> on the y-axis:</p>
 </section>
 <section id="adding-more-arguments">
-<h4><span class="section-number">6.3.1.3. </span>Adding more arguments<a class="headerlink" href="#adding-more-arguments" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.3.1.3. </span>Adding more arguments<a class="headerlink" href="#adding-more-arguments" title="Permalink to this headline">¶</a></h4>
 <p>A second layer in the plot we wish to make involves adding a label to each point to identify the entity type.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">geom_label</span></code> and <code class="docutils literal notranslate"><span class="pre">geom_text</span></code> functions permit us to add text to the plot <strong>with</strong> and <strong>without</strong> a rectangle behind the text, respectively.</p>
 <p>Because each point (each claim in this case) has a label (type of local government entities), we need an aesthetic mapping to make the connection between points and labels.</p>
@@ -849,7 +849,7 @@ this geometry is <code class="docutils literal notranslate"><span class="pre">ge
 </section>
 </section>
 <section id="global-and-local-aesthetic-mappings">
-<h2><span class="section-number">6.4. </span>Global and local aesthetic mappings<a class="headerlink" href="#global-and-local-aesthetic-mappings" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4. </span>Global and local aesthetic mappings<a class="headerlink" href="#global-and-local-aesthetic-mappings" title="Permalink to this headline">¶</a></h2>
 <p>In the previous line of code, we define the mapping <code class="docutils literal notranslate"><span class="pre">aes(x</span> <span class="pre">=</span> <span class="pre">'BCcov',</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">'y')</span></code> twice, once in each geometry.</p>
 <p>We can avoid this by using a global aesthetic mapping.</p>
 <p>We can do this when we define the blank slate ggplot object.</p>
@@ -898,7 +898,7 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <section id="scales">
-<h3><span class="section-number">6.4.1. </span>Scales<a class="headerlink" href="#scales" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.4.1. </span>Scales<a class="headerlink" href="#scales" title="Permalink to this headline">¶</a></h3>
 <p>First, our desired scale in claims is in log-scale. This is not the default, so this change needs to be added through a scales layer.</p>
 <p>A quick look at the cheat sheet reveals the <code class="docutils literal notranslate"><span class="pre">scale_y_continuous</span></code> function lets us control the behavior of scale. We use it like this:</p>
 <div class="cell docutils container">
@@ -943,7 +943,7 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 </section>
 </section>
 <section id="labels-and-titles">
-<h2><span class="section-number">6.5. </span>Labels and titles<a class="headerlink" href="#labels-and-titles" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.5. </span>Labels and titles<a class="headerlink" href="#labels-and-titles" title="Permalink to this headline">¶</a></h2>
 <p>Similarly, the cheat sheet quickly reveals that to change labels and add a title, we use the following functions:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -968,7 +968,7 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 </div>
 </section>
 <section id="categories-as-colors">
-<h2><span class="section-number">6.6. </span>Categories as colors<a class="headerlink" href="#categories-as-colors" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.6. </span>Categories as colors<a class="headerlink" href="#categories-as-colors" title="Permalink to this headline">¶</a></h2>
 <p>We can change the color of the points using the <code class="docutils literal notranslate"><span class="pre">colour</span></code> argument in the <code class="docutils literal notranslate"><span class="pre">geom_point</span></code> function.</p>
 <p>To facilitate demonstration of new features, we will redefine <code class="docutils literal notranslate"><span class="pre">p</span></code> to be everything except the points layer:</p>
 <div class="cell docutils container">
@@ -1012,7 +1012,7 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 <p><strong>Comment:</strong> The above data visualization should provide insight into the relationship between claims and Coverage, and also claims and entity type.</p>
 </section>
 <section id="data-visualization-in-practice">
-<h2><span class="section-number">6.7. </span>Data visualization in practice<a class="headerlink" href="#data-visualization-in-practice" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.7. </span>Data visualization in practice<a class="headerlink" href="#data-visualization-in-practice" title="Permalink to this headline">¶</a></h2>
 <p>In this section, we will show how to use plotnine (ggplot2) to make plots that are both informative and visually appealing. We will use plots to help us better comprehend global health and economic patterns as motivation.</p>
 <p>We will put what we learned in this chapter into practice and learn how to improve the plots by augmenting the code. We will go through general data visualization principles and ideas like faceting, time series plots, transformations, and ridge plots as we go through our case study.</p>
 <p>Here is an example that uses an abstract from the Gapminder dataset, which became popular after <strong>Hans Rosling’s Ted Talk</strong>. For more than 100 countries, it provides average life expectancy, GDP per capita, and population size.</p>
@@ -1024,7 +1024,7 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 </ul>
 <p><a class="reference external" href="https://genus.springeropen.com/articles/10.1186/s41118-019-0071-0#:~:text=GDP%20per%20capita%20increases%20the,to%20the%20prolongation%20of%20longevity.)">https://genus.springeropen.com/articles/10.1186/s41118-019-0071-0#:~:text=GDP per capita increases the,to the prolongation of longevity.)</a></p>
 <section id="visualization-with-bubble-plot">
-<h3><span class="section-number">6.7.1. </span>Visualization with bubble plot<a class="headerlink" href="#visualization-with-bubble-plot" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.7.1. </span>Visualization with bubble plot<a class="headerlink" href="#visualization-with-bubble-plot" title="Permalink to this headline">¶</a></h3>
 <p>The link between world countries’ life expectancy (y) and GDP per capita (x) is depicted by a bubble plot below. Each country’s population is indicated by the size of its circles.</p>
 <p>A <strong>bubble plot</strong> is a scatterplot with a third dimension: the size of the dots represents the value of an additional numeric variable. (source: data-to-viz).</p>
 <p>As input, you will need three numerical variables: one for the X axis, one for the Y axis, and one for the dot size.</p>
@@ -1171,7 +1171,7 @@ Also note that the <code class="docutils literal notranslate"><span class="pre">
 <p>Alternatively, we can use Pandas <code class="docutils literal notranslate"><span class="pre">pipe</span></code> function.</p>
 </section>
 <section id="pandas-pipe">
-<h3><span class="section-number">6.7.2. </span>Pandas Pipe<a class="headerlink" href="#pandas-pipe" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.7.2. </span>Pandas Pipe<a class="headerlink" href="#pandas-pipe" title="Permalink to this headline">¶</a></h3>
 <p>We will briefly introduce the concept of <strong>pipes (or method chaining)</strong> in Python that allows us to make code more efficient and improve code readability.</p>
 <p><strong>Background</strong> In Data Processing, it is common to construct a function to perform operations (such as statistical calculations, splitting, or substituting values) on a certain row or column in order to get new data.</p>
 <p>(source: <a class="reference external" href="https://towardsdatascience.com/using-pandas-pipe-function-to-improve-code-readability-96d66abfaf8">https://towardsdatascience.com/using-pandas-pipe-function-to-improve-code-readability-96d66abfaf8</a>)</p>
@@ -1215,7 +1215,7 @@ We can write with pipe as follows:</p>
 <p>When applying numerous methods to a Python iterable, pipe makes code look clearer.</p>
 </section>
 <section id="applying-pandas-pipes-to-gapminder">
-<h3><span class="section-number">6.7.3. </span>Applying Pandas pipes to gapminder<a class="headerlink" href="#applying-pandas-pipes-to-gapminder" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.7.3. </span>Applying Pandas pipes to gapminder<a class="headerlink" href="#applying-pandas-pipes-to-gapminder" title="Permalink to this headline">¶</a></h3>
 <p>We will apply the concept of Pandas pipes to gapminder dataset. In the data visualization process above, we proceed in the following manner:</p>
 <ol class="simple">
 <li><p>We select rows (observations) from year 1957 in the Gapminder dataset.</p></li>
@@ -1552,7 +1552,7 @@ We can write with pipe as follows:</p>
 </div>
 </section>
 <section id="faceting">
-<h3><span class="section-number">6.7.4. </span>Faceting<a class="headerlink" href="#faceting" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.7.4. </span>Faceting<a class="headerlink" href="#faceting" title="Permalink to this headline">¶</a></h3>
 <p>We could easily plot the data from 2007 in the same way we plotted the data from 1962. However, side by side plots are recommended for comparisons.</p>
 <p><strong>Faceting</strong> variables in ggplot2 allows us to do this: we stratify the data by some variable and create the same plot for each strata.
 We add a layer with the function facet grid to create faceting, which automatically separates the plots. This function allows you to facet by up to two variables, with one variable represented by columns and the other by rows. The function expects a space between the row and column variables.</p>
@@ -1673,7 +1673,7 @@ We add a layer with the function facet grid to create faceting, which automatica
 </div>
 </section>
 <section id="data-transformations">
-<h3><span class="section-number">6.7.5. </span>Data transformations<a class="headerlink" href="#data-transformations" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.7.5. </span>Data transformations<a class="headerlink" href="#data-transformations" title="Permalink to this headline">¶</a></h3>
 <p>In this section, we refer to the following note: Chapter 11 of the following lecture note: <a class="reference external" href="https://rafalab.github.io/dsbook/">https://rafalab.github.io/dsbook/</a></p>
 <p>We will now turn our attention to the question, <strong>which concerns the common belief that global wealth distribution has gotten worse in recent decades</strong>. When asked if poor countries have gotten poorer and rich ones have gotten richer, the majority of people say <strong>yes</strong>.</p>
 <p>We will be able to tell if this is the case by using stratification, histograms, smooth densities, and boxplots.</p>
@@ -1861,7 +1861,7 @@ We add a layer with the function facet grid to create faceting, which automatica
 log2(2<strong>2) = 2 -&gt; log2(2</strong>3) = 3</p>
 <p>These changes are <strong>multiplicative</strong>, and log transformations turn multiplicative changes into <strong>additive</strong> ones: using base 2, a doubling of a value turns into an increase by 1 in the log base 2 scale.</p>
 <section id="logging-the-values">
-<h4><span class="section-number">6.7.5.1. </span>Logging the values<a class="headerlink" href="#logging-the-values" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.7.5.1. </span>Logging the values<a class="headerlink" href="#logging-the-values" title="Permalink to this headline">¶</a></h4>
 <p>If we use a log, we get the following distribution.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1888,7 +1888,7 @@ log2(2<strong>2) = 2 -&gt; log2(2</strong>3) = 3</p>
 </div>
 </section>
 <section id="scaling-the-axis">
-<h4><span class="section-number">6.7.5.2. </span>Scaling the axis<a class="headerlink" href="#scaling-the-axis" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.7.5.2. </span>Scaling the axis<a class="headerlink" href="#scaling-the-axis" title="Permalink to this headline">¶</a></h4>
 <p>The scale_x_continuous function can be used to scale the axis with logs. We use this layer instead of logging the values first.</p>
 <p>In plots, we can utilize log transformations in two ways. Before graphing, we can log the values or use log scales in the axes. Both approaches have advantages and disadvantages.</p>
 <ul class="simple">
@@ -1950,7 +1950,7 @@ log2(2<strong>2) = 2 -&gt; log2(2</strong>3) = 3</p>
 </section>
 </section>
 <section id="adding-regional-classfication-into-gapminder-dataset">
-<h2><span class="section-number">6.8. </span>Adding regional classfication into Gapminder dataset<a class="headerlink" href="#adding-regional-classfication-into-gapminder-dataset" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.8. </span>Adding regional classfication into Gapminder dataset<a class="headerlink" href="#adding-regional-classfication-into-gapminder-dataset" title="Permalink to this headline">¶</a></h2>
 <p>In addition to the variable <code class="docutils literal notranslate"><span class="pre">continent</span></code> variable in the Gapminder dataset, we will preprocess our data by adding another variable, region, which gives a classification of countries by region.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2823,7 +2823,7 @@ Name: region, dtype: object
 </div>
 </div>
 <section id="in-python-plot-a-ridgeline-plot">
-<h3><span class="section-number">6.8.1. </span>In Python, plot a ridgeline plot.<a class="headerlink" href="#in-python-plot-a-ridgeline-plot" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.8.1. </span>In Python, plot a ridgeline plot.<a class="headerlink" href="#in-python-plot-a-ridgeline-plot" title="Permalink to this headline">¶</a></h3>
 <p>In Python, a Ridgeline Plot can be created using a variety of tools, including the popular Matplotlib and Plotly libraries. However, plotting a Ridgeline Plot with joypy is rather simple. Here is an example to the Gapminder dataset.</p>
 <p>See the following for more detail: <a class="reference external" href="https://towardsdatascience.com/ridgeline-plots-the-perfect-way-to-visualize-data-distributions-with-python-de99a5493052">https://towardsdatascience.com/ridgeline-plots-the-perfect-way-to-visualize-data-distributions-with-python-de99a5493052</a></p>
 <div class="cell docutils container">
@@ -2906,13 +2906,13 @@ Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/Kaemyuijang/opt/an
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Data Selection</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Data Preparation</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Chapter5_Practical_Statistics.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Practical Statistics</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Practical Statistics</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
