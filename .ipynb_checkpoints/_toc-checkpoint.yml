@@ -12,3 +12,7 @@ chapters:
 - file: Chapter2_Python_Basics.ipynb  
 - file: Chapter3_Data_Preparation.ipynb
 - file: Chapter4_Data_Visualization.ipynb
+- file: Chapter5_Practical_Statistics.ipynb
+- file: Chapter6_Regression.ipynb
+- file: Chapter7_Introduction_Machine_Learning.ipynb
+- file: Chapter8_Unsupervised_Learning.ipynb

@@ -37,8 +37,8 @@ df = df.rename(
 )
 ------------------
 
-[0;31m--------------------------------------------------------------------[0m
-[0;31mSSLCertVerificationError[0m           Traceback (most recent call last)
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mSSLCertVerificationError[0m                  Traceback (most recent call last)
 [0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py[0m in [0;36mdo_open[0;34m(self, http_class, req, **http_conn_args)[0m
 [1;32m   1349[0m                 h.request(req.get_method(), req.selector, req.data, headers,
 [0;32m-> 1350[0;31m                           encode_chunked=req.has_header('Transfer-encoding'))
@@ -93,8 +93,8 @@ df = df.rename(
 
 During handling of the above exception, another exception occurred:
 
-[0;31mURLError[0m                           Traceback (most recent call last)
-[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_6129/2902671142.py[0m in [0;36m<module>[0;34m[0m
+[0;31mURLError[0m                                  Traceback (most recent call last)
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_6490/2902671142.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      3[0m order_leads = pd.read_csv(
 [1;32m      4[0m     [0;34m'https://raw.githubusercontent.com/FBosler/Medium-Data-Exploration/master/order_leads.csv'[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 5[0;31m     [0mparse_dates[0m [0;34m=[0m [0;34m[[0m[0;36m3[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m

@@ -1,0 +1,1477 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; SCMA248 Introduction to Data Science</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SCMA248 Introduction to Data Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to SCMA248 Introduction to Data Science
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter1_Introduction_to_Data_Science.html">
+   1. Introduction to Data Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter2_Python_Basics.html">
+   2. Python Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter3_Data_Preparation.html">
+   3. Data Selection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter4_Data_Visualization.html">
+   6. Data Visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter5_Practical_Statistics.html">
+   7. Practical Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter6_Regression.html">
+   8. Regression Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter7_Introduction_Machine_Learning.html">
+   9. Machine learning: Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter8_Unsupervised_Learning.html">
+   10. Unsupervised Machine Learning: K-means Clustering
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Demo_mlxtend.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDemo_mlxtend.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Demo_mlxtend.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sebastian Raschka 2014-2020</span>
+<span class="c1"># mlxtend Machine Learning Library Extensions</span>
+<span class="c1">#</span>
+<span class="c1"># A function for plotting decision regions of classifiers.</span>
+<span class="c1"># Author: Sebastian Raschka &lt;sebastianraschka.com&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># License: BSD 3 clause</span>
+
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">cycle</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">mlxtend.utils</span> <span class="kn">import</span> <span class="n">check_Xy</span><span class="p">,</span> <span class="n">format_kwarg_dictionaries</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">floor</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">ceil</span>
+
+
+<span class="k">def</span> <span class="nf">get_feature_range_mask</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">filler_feature_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                           <span class="n">filler_feature_ranges</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function that constucts a boolean array to get rid of samples</span>
+<span class="sd">    in X that are outside the feature range specified by filler_feature_values</span>
+<span class="sd">    and filler_feature_ranges</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;X must be a 2D array&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">filler_feature_values</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;filler_feature_values must not be None&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">filler_feature_ranges</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;filler_feature_ranges must not be None&#39;</span><span class="p">)</span>
+
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">feature_idx</span> <span class="ow">in</span> <span class="n">filler_feature_ranges</span><span class="p">:</span>
+        <span class="n">feature_value</span> <span class="o">=</span> <span class="n">filler_feature_values</span><span class="p">[</span><span class="n">feature_idx</span><span class="p">]</span>
+        <span class="n">feature_width</span> <span class="o">=</span> <span class="n">filler_feature_ranges</span><span class="p">[</span><span class="n">feature_idx</span><span class="p">]</span>
+        <span class="n">upp_limit</span> <span class="o">=</span> <span class="n">feature_value</span> <span class="o">+</span> <span class="n">feature_width</span>
+        <span class="n">low_limit</span> <span class="o">=</span> <span class="n">feature_value</span> <span class="o">-</span> <span class="n">feature_width</span>
+        <span class="n">feature_mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="n">feature_idx</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">low_limit</span><span class="p">)</span> <span class="o">&amp;</span> \
+                       <span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="n">feature_idx</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">upp_limit</span><span class="p">)</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span> <span class="o">&amp;</span> <span class="n">feature_mask</span>
+
+    <span class="k">return</span> <span class="n">mask</span>
+
+
+<span class="k">def</span> <span class="nf">plot_decision_regions</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">clf</span><span class="p">,</span>
+                          <span class="n">feature_index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">filler_feature_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">filler_feature_ranges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">X_highlight</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">zoom_factor</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span>
+                          <span class="n">legend</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                          <span class="n">hide_spines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                          <span class="n">markers</span><span class="o">=</span><span class="s1">&#39;s^oxv&lt;&gt;&#39;</span><span class="p">,</span>
+                          <span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;#1f77b4,#ff7f0e,#3ca02c,#d62728,&#39;</span>
+                                  <span class="s1">&#39;#9467bd,#8c564b,#e377c2,&#39;</span>
+                                  <span class="s1">&#39;#7f7f7f,#bcbd22,#17becf&#39;</span><span class="p">),</span>
+                          <span class="n">scatter_kwargs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">contourf_kwargs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">contour_kwargs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">scatter_highlight_kwargs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Plot decision regions of a classifier.</span>
+
+<span class="sd">    Please note that this functions assumes that class labels are</span>
+<span class="sd">    labeled consecutively, e.g,. 0, 1, 2, 3, 4, and 5. If you have class</span>
+<span class="sd">    labels with integer labels &gt; 4, you may want to provide additional colors</span>
+<span class="sd">    and/or markers as `colors` and `markers` arguments.</span>
+<span class="sd">    See http://matplotlib.org/examples/color/named_colors.html for more</span>
+<span class="sd">    information.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    X : array-like, shape = [n_samples, n_features]</span>
+<span class="sd">        Feature Matrix.</span>
+
+<span class="sd">    y : array-like, shape = [n_samples]</span>
+<span class="sd">        True class labels.</span>
+
+<span class="sd">    clf : Classifier object.</span>
+<span class="sd">        Must have a .predict method.</span>
+
+<span class="sd">    feature_index : array-like (default: (0,) for 1D, (0, 1) otherwise)</span>
+<span class="sd">        Feature indices to use for plotting. The first index in</span>
+<span class="sd">        `feature_index` will be on the x-axis, the second index will be</span>
+<span class="sd">        on the y-axis.</span>
+
+<span class="sd">    filler_feature_values : dict (default: None)</span>
+<span class="sd">        Only needed for number features &gt; 2. Dictionary of feature</span>
+<span class="sd">        index-value pairs for the features not being plotted.</span>
+
+<span class="sd">    filler_feature_ranges : dict (default: None)</span>
+<span class="sd">        Only needed for number features &gt; 2. Dictionary of feature</span>
+<span class="sd">        index-value pairs for the features not being plotted. Will use the</span>
+<span class="sd">        ranges provided to select training samples for plotting.</span>
+
+<span class="sd">    ax : matplotlib.axes.Axes (default: None)</span>
+<span class="sd">        An existing matplotlib Axes. Creates</span>
+<span class="sd">        one if ax=None.</span>
+
+<span class="sd">    X_highlight : array-like, shape = [n_samples, n_features] (default: None)</span>
+<span class="sd">        An array with data points that are used to highlight samples in `X`.</span>
+
+<span class="sd">    zoom_factor : float (default: 1.0)</span>
+<span class="sd">        Controls the scale of the x- and y-axis of the decision plot.</span>
+
+<span class="sd">    hide_spines : bool (default: True)</span>
+<span class="sd">        Hide axis spines if True.</span>
+
+<span class="sd">    legend : int (default: 1)</span>
+<span class="sd">        Integer to specify the legend location.</span>
+<span class="sd">        No legend if legend is 0.</span>
+
+<span class="sd">    markers : str (default: &#39;s^oxv&lt;&gt;&#39;)</span>
+<span class="sd">        Scatterplot markers.</span>
+
+<span class="sd">    colors : str (default: &#39;red,blue,limegreen,gray,cyan&#39;)</span>
+<span class="sd">        Comma separated list of colors.</span>
+
+<span class="sd">    scatter_kwargs : dict (default: None)</span>
+<span class="sd">        Keyword arguments for underlying matplotlib scatter function.</span>
+
+<span class="sd">    contourf_kwargs : dict (default: None)</span>
+<span class="sd">        Keyword arguments for underlying matplotlib contourf function.</span>
+
+<span class="sd">    contour_kwargs : dict (default: None)</span>
+<span class="sd">        Keyword arguments for underlying matplotlib contour function</span>
+<span class="sd">        (which draws the lines between decision regions).</span>
+
+<span class="sd">    scatter_highlight_kwargs : dict (default: None)</span>
+<span class="sd">        Keyword arguments for underlying matplotlib scatter function.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    ---------</span>
+<span class="sd">    ax : matplotlib.axes.Axes object</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    -----------</span>
+<span class="sd">    For usage examples, please see</span>
+<span class="sd">    http://rasbt.github.io/mlxtend/user_guide/plotting/plot_decision_regions/</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">check_Xy</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_int</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Validate X and y arrays</span>
+    <span class="n">dim</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+    <span class="n">plot_testdata</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X_highlight</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">X_highlight</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;X_highlight must be a NumPy array or None&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plot_testdata</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_highlight</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;X_highlight must be a 2D array&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">feature_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Unpack and validate the feature_index values</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;feature_index requires more than one training feature&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">x_index</span><span class="p">,</span> <span class="n">y_index</span> <span class="o">=</span> <span class="n">feature_index</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;Unable to unpack feature_index. Make sure feature_index &#39;</span>
+                <span class="s1">&#39;only has two dimensions.&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">X</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span>
+                <span class="s1">&#39;feature_index values out of range. X.shape is </span><span class="si">{}</span><span class="s1">, but &#39;</span>
+                <span class="s1">&#39;feature_index is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">feature_index</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">feature_index</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">x_index</span><span class="p">,</span> <span class="n">y_index</span> <span class="o">=</span> <span class="n">feature_index</span>
+
+    <span class="c1"># Extra input validation for higher number of training features</span>
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">filler_feature_values</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Filler values must be provided when &#39;</span>
+                             <span class="s1">&#39;X has more than 2 training features.&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">filler_feature_ranges</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">(</span><span class="n">filler_feature_values</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">filler_feature_ranges</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s1">&#39;filler_feature_values and filler_feature_ranges must &#39;</span>
+                    <span class="s1">&#39;have the same keys&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Check that all columns in X are accounted for</span>
+        <span class="n">column_check</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">dim</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">filler_feature_values</span><span class="p">:</span>
+            <span class="n">column_check</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">feature_index</span><span class="p">:</span>
+            <span class="n">column_check</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">column_check</span><span class="p">):</span>
+            <span class="n">missing_cols</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="o">~</span><span class="n">column_check</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;Column(s) </span><span class="si">{}</span><span class="s1"> need to be accounted for in either &#39;</span>
+                <span class="s1">&#39;feature_index or filler_feature_values&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">missing_cols</span><span class="p">))</span>
+
+    <span class="n">marker_gen</span> <span class="o">=</span> <span class="n">cycle</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">markers</span><span class="p">))</span>
+
+    <span class="n">n_classes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="n">colors_gen</span> <span class="o">=</span> <span class="n">cycle</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="nb">next</span><span class="p">(</span><span class="n">colors_gen</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">)]</span>
+
+    <span class="c1"># Get minimum and maximum</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mf">1.</span><span class="o">/</span><span class="n">zoom_factor</span><span class="p">,</span>
+                    <span class="n">X</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mf">1.</span><span class="o">/</span><span class="n">zoom_factor</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mf">1.</span><span class="o">/</span><span class="n">zoom_factor</span><span class="p">,</span>
+                        <span class="n">X</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mf">1.</span><span class="o">/</span><span class="n">zoom_factor</span><span class="p">)</span>
+
+    <span class="n">xnum</span><span class="p">,</span> <span class="n">ynum</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">dpi</span> <span class="o">*</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">get_size_inches</span><span class="p">()</span>
+    <span class="n">xnum</span><span class="p">,</span> <span class="n">ynum</span> <span class="o">=</span> <span class="n">floor</span><span class="p">(</span><span class="n">xnum</span><span class="p">),</span> <span class="n">ceil</span><span class="p">(</span><span class="n">ynum</span><span class="p">)</span>
+    <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">xnum</span><span class="p">),</span>
+                         <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">ynum</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">X_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span><span class="o">.</span><span class="n">T</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">X_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">X_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">X_grid</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dim</span><span class="p">))</span>
+        <span class="n">X_predict</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_grid</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">X_predict</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_grid</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">feature_idx</span> <span class="ow">in</span> <span class="n">filler_feature_values</span><span class="p">:</span>
+                <span class="n">X_predict</span><span class="p">[:,</span> <span class="n">feature_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">filler_feature_values</span><span class="p">[</span><span class="n">feature_idx</span><span class="p">]</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_predict</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">Z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="c1"># Plot decisoin region</span>
+    <span class="c1"># Make sure contourf_kwargs has backwards compatible defaults</span>
+    <span class="n">contourf_kwargs_default</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">,</span> <span class="s1">&#39;antialiased&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="n">contourf_kwargs</span> <span class="o">=</span> <span class="n">format_kwarg_dictionaries</span><span class="p">(</span>
+                        <span class="n">default_kwargs</span><span class="o">=</span><span class="n">contourf_kwargs_default</span><span class="p">,</span>
+                        <span class="n">user_kwargs</span><span class="o">=</span><span class="n">contourf_kwargs</span><span class="p">,</span>
+                        <span class="n">protected_keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;colors&#39;</span><span class="p">,</span> <span class="s1">&#39;levels&#39;</span><span class="p">])</span>
+    <span class="n">cset</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span>
+                       <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+                       <span class="n">levels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">,</span>
+                       <span class="o">**</span><span class="n">contourf_kwargs</span><span class="p">)</span>
+
+    <span class="n">contour_kwargs_default</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;linewidths&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;colors&#39;</span><span class="p">:</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="s1">&#39;antialiased&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="n">contour_kwargs</span> <span class="o">=</span> <span class="n">format_kwarg_dictionaries</span><span class="p">(</span>
+                        <span class="n">default_kwargs</span><span class="o">=</span><span class="n">contour_kwargs_default</span><span class="p">,</span>
+                        <span class="n">user_kwargs</span><span class="o">=</span><span class="n">contour_kwargs</span><span class="p">,</span>
+                        <span class="n">protected_keys</span><span class="o">=</span><span class="p">[])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">cset</span><span class="o">.</span><span class="n">levels</span><span class="p">,</span>
+               <span class="o">**</span><span class="n">contour_kwargs</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="n">xx</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">xx</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span>
+
+    <span class="c1"># Scatter training data samples</span>
+    <span class="c1"># Make sure scatter_kwargs has backwards compatible defaults</span>
+    <span class="n">scatter_kwargs_default</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">}</span>
+    <span class="n">scatter_kwargs</span> <span class="o">=</span> <span class="n">format_kwarg_dictionaries</span><span class="p">(</span>
+                        <span class="n">default_kwargs</span><span class="o">=</span><span class="n">scatter_kwargs_default</span><span class="p">,</span>
+                        <span class="n">user_kwargs</span><span class="o">=</span><span class="n">scatter_kwargs</span><span class="p">,</span>
+                        <span class="n">protected_keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;marker&#39;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">]]</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">,</span> <span class="n">y_index</span><span class="p">]</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">,</span> <span class="n">x_index</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">dim</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">filler_feature_ranges</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">class_mask</span> <span class="o">=</span> <span class="n">y</span> <span class="o">==</span> <span class="n">c</span>
+            <span class="n">feature_range_mask</span> <span class="o">=</span> <span class="n">get_feature_range_mask</span><span class="p">(</span>
+                            <span class="n">X</span><span class="p">,</span> <span class="n">filler_feature_values</span><span class="o">=</span><span class="n">filler_feature_values</span><span class="p">,</span>
+                            <span class="n">filler_feature_ranges</span><span class="o">=</span><span class="n">filler_feature_ranges</span><span class="p">)</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">class_mask</span> <span class="o">&amp;</span> <span class="n">feature_range_mask</span><span class="p">,</span> <span class="n">y_index</span><span class="p">]</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">class_mask</span> <span class="o">&amp;</span> <span class="n">feature_range_mask</span><span class="p">,</span> <span class="n">x_index</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x_data</span><span class="p">,</span>
+                   <span class="n">y</span><span class="o">=</span><span class="n">y_data</span><span class="p">,</span>
+                   <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+                   <span class="n">marker</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">marker_gen</span><span class="p">),</span>
+                   <span class="n">label</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
+                   <span class="o">**</span><span class="n">scatter_kwargs</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">hide_spines</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+
+    <span class="k">if</span> <span class="n">plot_testdata</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X_highlight</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">X_highlight</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X_highlight</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">]</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">X_highlight</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">feature_range_mask</span> <span class="o">=</span> <span class="n">get_feature_range_mask</span><span class="p">(</span>
+                    <span class="n">X_highlight</span><span class="p">,</span> <span class="n">filler_feature_values</span><span class="o">=</span><span class="n">filler_feature_values</span><span class="p">,</span>
+                    <span class="n">filler_feature_ranges</span><span class="o">=</span><span class="n">filler_feature_ranges</span><span class="p">)</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">X_highlight</span><span class="p">[</span><span class="n">feature_range_mask</span><span class="p">,</span> <span class="n">y_index</span><span class="p">]</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X_highlight</span><span class="p">[</span><span class="n">feature_range_mask</span><span class="p">,</span> <span class="n">x_index</span><span class="p">]</span>
+
+        <span class="c1"># Make sure scatter_highlight_kwargs backwards compatible defaults</span>
+        <span class="n">scatter_highlight_defaults</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                                      <span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+                                      <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+                                      <span class="s1">&#39;linewidths&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                                      <span class="s1">&#39;marker&#39;</span><span class="p">:</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span>
+                                      <span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">}</span>
+        <span class="n">scatter_highlight_kwargs</span> <span class="o">=</span> <span class="n">format_kwarg_dictionaries</span><span class="p">(</span>
+                                    <span class="n">default_kwargs</span><span class="o">=</span><span class="n">scatter_highlight_defaults</span><span class="p">,</span>
+                                    <span class="n">user_kwargs</span><span class="o">=</span><span class="n">scatter_highlight_kwargs</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span>
+                   <span class="n">y_data</span><span class="p">,</span>
+                   <span class="o">**</span><span class="n">scatter_highlight_kwargs</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">legend</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">filler_feature_ranges</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">handles</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span>
+                      <span class="n">framealpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">scatterpoints</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">legend</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ax</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_5841</span><span class="o">/</span><span class="mf">2568925339.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">---&gt; </span><span class="mi">12</span> <span class="kn">from</span> <span class="nn">mlxtend.utils</span> <span class="kn">import</span> <span class="n">check_Xy</span><span class="p">,</span> <span class="n">format_kwarg_dictionaries</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">floor</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">ceil</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;mlxtend&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/susanli2016/Machine-Learning-with-Python/master/fruit_data_with_colors.txt&#39;</span>
+    
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;mass&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;fruit_label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">check_Xy</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_int</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Validate X and y arrays</span>
+<span class="n">dim</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dim</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">knn</span>
+
+<span class="n">feature_index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Decision region for feature 3 = mass = value</span>
+<span class="n">value</span><span class="o">=</span><span class="mi">150</span>
+<span class="c1"># Plot training sample with feature 3 = mass = value +/- width</span>
+<span class="n">width</span><span class="o">=</span><span class="mi">100</span>
+
+<span class="n">filler_feature_values</span><span class="o">=</span><span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="n">value</span><span class="p">}</span>  <span class="c1">#these will be ignored</span>
+<span class="n">filler_feature_ranges</span><span class="o">=</span><span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="n">width</span><span class="p">}</span>
+
+<span class="n">ax</span><span class="o">=</span><span class="kc">None</span>
+<span class="n">X_highlight</span><span class="o">=</span><span class="kc">None</span>
+
+<span class="n">markers</span><span class="o">=</span><span class="s1">&#39;s^oxv&lt;&gt;&#39;</span>
+<span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;#1f77b4,#ff7f0e,#3ca02c,#d62728,&#39;</span>
+                                  <span class="s1">&#39;#9467bd,#8c564b,#e377c2,&#39;</span>
+                                  <span class="s1">&#39;#7f7f7f,#bcbd22,#17becf&#39;</span><span class="p">)</span>
+<span class="n">scatter_kwargs</span><span class="o">=</span><span class="kc">None</span>
+<span class="n">contourf_kwargs</span><span class="o">=</span><span class="kc">None</span>
+<span class="n">contour_kwargs</span><span class="o">=</span><span class="kc">None</span>
+
+<span class="n">zoom_factor</span><span class="o">=</span><span class="mf">1.</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">knn</span>
+
+<span class="n">legend</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">hide_spines</span><span class="o">=</span><span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="n">check_Xy</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_int</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Validate X and y arrays</span>
+    <span class="n">dim</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+    <span class="n">plot_testdata</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X_highlight</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">X_highlight</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;X_highlight must be a NumPy array or None&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plot_testdata</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_highlight</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;X_highlight must be a 2D array&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">feature_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Unpack and validate the feature_index values</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;feature_index requires more than one training feature&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">x_index</span><span class="p">,</span> <span class="n">y_index</span> <span class="o">=</span> <span class="n">feature_index</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;Unable to unpack feature_index. Make sure feature_index &#39;</span>
+                <span class="s1">&#39;only has two dimensions.&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">X</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span>
+                <span class="s1">&#39;feature_index values out of range. X.shape is </span><span class="si">{}</span><span class="s1">, but &#39;</span>
+                <span class="s1">&#39;feature_index is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">feature_index</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">feature_index</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">x_index</span><span class="p">,</span> <span class="n">y_index</span> <span class="o">=</span> <span class="n">feature_index</span>
+
+    <span class="c1"># Extra input validation for higher number of training features</span>
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">filler_feature_values</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Filler values must be provided when &#39;</span>
+                             <span class="s1">&#39;X has more than 2 training features.&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">filler_feature_ranges</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">(</span><span class="n">filler_feature_values</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">filler_feature_ranges</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s1">&#39;filler_feature_values and filler_feature_ranges must &#39;</span>
+                    <span class="s1">&#39;have the same keys&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Check that all columns in X are accounted for</span>
+        <span class="n">column_check</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">dim</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">filler_feature_values</span><span class="p">:</span>
+            <span class="n">column_check</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">feature_index</span><span class="p">:</span>
+            <span class="n">column_check</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">column_check</span><span class="p">):</span>
+            <span class="n">missing_cols</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="o">~</span><span class="n">column_check</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;Column(s) </span><span class="si">{}</span><span class="s1"> need to be accounted for in either &#39;</span>
+                <span class="s1">&#39;feature_index or filler_feature_values&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">missing_cols</span><span class="p">))</span>
+
+    <span class="n">marker_gen</span> <span class="o">=</span> <span class="n">cycle</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">markers</span><span class="p">))</span>
+
+    <span class="n">n_classes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="n">colors_gen</span> <span class="o">=</span> <span class="n">cycle</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="nb">next</span><span class="p">(</span><span class="n">colors_gen</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">)]</span>
+
+    <span class="c1"># Get minimum and maximum</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mf">1.</span><span class="o">/</span><span class="n">zoom_factor</span><span class="p">,</span>
+                    <span class="n">X</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mf">1.</span><span class="o">/</span><span class="n">zoom_factor</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mf">1.</span><span class="o">/</span><span class="n">zoom_factor</span><span class="p">,</span>
+                        <span class="n">X</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mf">1.</span><span class="o">/</span><span class="n">zoom_factor</span><span class="p">)</span>
+
+    <span class="n">xnum</span><span class="p">,</span> <span class="n">ynum</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">dpi</span> <span class="o">*</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">get_size_inches</span><span class="p">()</span>
+    <span class="n">xnum</span><span class="p">,</span> <span class="n">ynum</span> <span class="o">=</span> <span class="n">floor</span><span class="p">(</span><span class="n">xnum</span><span class="p">),</span> <span class="n">ceil</span><span class="p">(</span><span class="n">ynum</span><span class="p">)</span>
+    <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">xnum</span><span class="p">),</span>
+                         <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">ynum</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">X_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span><span class="o">.</span><span class="n">T</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">X_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">X_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">X_grid</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dim</span><span class="p">))</span>
+        <span class="n">X_predict</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_grid</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">X_predict</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_grid</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">feature_idx</span> <span class="ow">in</span> <span class="n">filler_feature_values</span><span class="p">:</span>
+                <span class="n">X_predict</span><span class="p">[:,</span> <span class="n">feature_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">filler_feature_values</span><span class="p">[</span><span class="n">feature_idx</span><span class="p">]</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_predict</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">Z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="c1"># Plot decisoin region</span>
+    <span class="c1"># Make sure contourf_kwargs has backwards compatible defaults</span>
+    <span class="n">contourf_kwargs_default</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">,</span> <span class="s1">&#39;antialiased&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="n">contourf_kwargs</span> <span class="o">=</span> <span class="n">format_kwarg_dictionaries</span><span class="p">(</span>
+                        <span class="n">default_kwargs</span><span class="o">=</span><span class="n">contourf_kwargs_default</span><span class="p">,</span>
+                        <span class="n">user_kwargs</span><span class="o">=</span><span class="n">contourf_kwargs</span><span class="p">,</span>
+                        <span class="n">protected_keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;colors&#39;</span><span class="p">,</span> <span class="s1">&#39;levels&#39;</span><span class="p">])</span>
+    <span class="n">cset</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span>
+                       <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+                       <span class="n">levels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">,</span>
+                       <span class="o">**</span><span class="n">contourf_kwargs</span><span class="p">)</span>
+
+    <span class="n">contour_kwargs_default</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;linewidths&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;colors&#39;</span><span class="p">:</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="s1">&#39;antialiased&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="n">contour_kwargs</span> <span class="o">=</span> <span class="n">format_kwarg_dictionaries</span><span class="p">(</span>
+                        <span class="n">default_kwargs</span><span class="o">=</span><span class="n">contour_kwargs_default</span><span class="p">,</span>
+                        <span class="n">user_kwargs</span><span class="o">=</span><span class="n">contour_kwargs</span><span class="p">,</span>
+                        <span class="n">protected_keys</span><span class="o">=</span><span class="p">[])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">cset</span><span class="o">.</span><span class="n">levels</span><span class="p">,</span>
+               <span class="o">**</span><span class="n">contour_kwargs</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="n">xx</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">xx</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span>
+
+    <span class="c1"># Scatter training data samples</span>
+    <span class="c1"># Make sure scatter_kwargs has backwards compatible defaults</span>
+    <span class="n">scatter_kwargs_default</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">}</span>
+    <span class="n">scatter_kwargs</span> <span class="o">=</span> <span class="n">format_kwarg_dictionaries</span><span class="p">(</span>
+                        <span class="n">default_kwargs</span><span class="o">=</span><span class="n">scatter_kwargs_default</span><span class="p">,</span>
+                        <span class="n">user_kwargs</span><span class="o">=</span><span class="n">scatter_kwargs</span><span class="p">,</span>
+                        <span class="n">protected_keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;marker&#39;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">]]</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">,</span> <span class="n">y_index</span><span class="p">]</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">,</span> <span class="n">x_index</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">dim</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">filler_feature_ranges</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">class_mask</span> <span class="o">=</span> <span class="n">y</span> <span class="o">==</span> <span class="n">c</span>
+            <span class="n">feature_range_mask</span> <span class="o">=</span> <span class="n">get_feature_range_mask</span><span class="p">(</span>
+                            <span class="n">X</span><span class="p">,</span> <span class="n">filler_feature_values</span><span class="o">=</span><span class="n">filler_feature_values</span><span class="p">,</span>
+                            <span class="n">filler_feature_ranges</span><span class="o">=</span><span class="n">filler_feature_ranges</span><span class="p">)</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">class_mask</span> <span class="o">&amp;</span> <span class="n">feature_range_mask</span><span class="p">,</span> <span class="n">y_index</span><span class="p">]</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">class_mask</span> <span class="o">&amp;</span> <span class="n">feature_range_mask</span><span class="p">,</span> <span class="n">x_index</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x_data</span><span class="p">,</span>
+                   <span class="n">y</span><span class="o">=</span><span class="n">y_data</span><span class="p">,</span>
+                   <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+                   <span class="n">marker</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">marker_gen</span><span class="p">),</span>
+                   <span class="n">label</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
+                   <span class="o">**</span><span class="n">scatter_kwargs</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">hide_spines</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+
+    <span class="k">if</span> <span class="n">plot_testdata</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X_highlight</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">X_highlight</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X_highlight</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">]</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">X_highlight</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">feature_range_mask</span> <span class="o">=</span> <span class="n">get_feature_range_mask</span><span class="p">(</span>
+                    <span class="n">X_highlight</span><span class="p">,</span> <span class="n">filler_feature_values</span><span class="o">=</span><span class="n">filler_feature_values</span><span class="p">,</span>
+                    <span class="n">filler_feature_ranges</span><span class="o">=</span><span class="n">filler_feature_ranges</span><span class="p">)</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">X_highlight</span><span class="p">[</span><span class="n">feature_range_mask</span><span class="p">,</span> <span class="n">y_index</span><span class="p">]</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X_highlight</span><span class="p">[</span><span class="n">feature_range_mask</span><span class="p">,</span> <span class="n">x_index</span><span class="p">]</span>
+
+        <span class="c1"># Make sure scatter_highlight_kwargs backwards compatible defaults</span>
+        <span class="n">scatter_highlight_defaults</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                                      <span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+                                      <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+                                      <span class="s1">&#39;linewidths&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                                      <span class="s1">&#39;marker&#39;</span><span class="p">:</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span>
+                                      <span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">}</span>
+        <span class="n">scatter_highlight_kwargs</span> <span class="o">=</span> <span class="n">format_kwarg_dictionaries</span><span class="p">(</span>
+                                    <span class="n">default_kwargs</span><span class="o">=</span><span class="n">scatter_highlight_defaults</span><span class="p">,</span>
+                                    <span class="n">user_kwargs</span><span class="o">=</span><span class="n">scatter_highlight_kwargs</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span>
+                   <span class="n">y_data</span><span class="p">,</span>
+                   <span class="o">**</span><span class="n">scatter_highlight_kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages/ipykernel_launcher.py:146: UserWarning: You passed a edgecolor/edgecolors (&#39;black&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+</pre></div>
+</div>
+<img alt="_images/Demo_mlxtend_7_1.png" src="_images/Demo_mlxtend_7_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_predict_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_predict</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;mass&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_predict_df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>height</th>
+      <th>width</th>
+      <th>mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>124416.000000</td>
+      <td>124416.000000</td>
+      <td>124416.0</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>7.250000</td>
+      <td>7.700000</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>2.459435</td>
+      <td>1.680146</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>3.000000</td>
+      <td>4.800000</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>5.125000</td>
+      <td>6.250000</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>7.250000</td>
+      <td>7.700000</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>9.375000</td>
+      <td>9.150000</td>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>11.500000</td>
+      <td>10.600000</td>
+      <td>150.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 1, 1, ..., 3, 3, 3],
+       [1, 1, 1, ..., 3, 3, 3],
+       [1, 1, 1, ..., 3, 3, 3],
+       ...,
+       [3, 3, 3, ..., 3, 3, 3],
+       [3, 3, 3, ..., 3, 3, 3],
+       [3, 3, 3, ..., 3, 3, 3]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+
+    <span class="n">plot_testdata</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X_highlight</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">X_highlight</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;X_highlight must be a NumPy array or None&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">plot_testdata</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_highlight</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;X_highlight must be a 2D array&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">feature_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Unpack and validate the feature_index values</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;feature_index requires more than one training feature&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">x_index</span><span class="p">,</span> <span class="n">y_index</span> <span class="o">=</span> <span class="n">feature_index</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;Unable to unpack feature_index. Make sure feature_index &#39;</span>
+                <span class="s1">&#39;only has two dimensions.&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">X</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span>
+                <span class="s1">&#39;feature_index values out of range. X.shape is </span><span class="si">{}</span><span class="s1">, but &#39;</span>
+                <span class="s1">&#39;feature_index is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">feature_index</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">feature_index</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">x_index</span><span class="p">,</span> <span class="n">y_index</span> <span class="o">=</span> <span class="n">feature_index</span>
+
+    <span class="c1"># Extra input validation for higher number of training features</span>
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">filler_feature_values</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Filler values must be provided when &#39;</span>
+                             <span class="s1">&#39;X has more than 2 training features.&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">filler_feature_ranges</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">(</span><span class="n">filler_feature_values</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">filler_feature_ranges</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s1">&#39;filler_feature_values and filler_feature_ranges must &#39;</span>
+                    <span class="s1">&#39;have the same keys&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Check that all columns in X are accounted for</span>
+        <span class="n">column_check</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">dim</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">filler_feature_values</span><span class="p">:</span>
+            <span class="n">column_check</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">feature_index</span><span class="p">:</span>
+            <span class="n">column_check</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">column_check</span><span class="p">):</span>
+            <span class="n">missing_cols</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="o">~</span><span class="n">column_check</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;Column(s) </span><span class="si">{}</span><span class="s1"> need to be accounted for in either &#39;</span>
+                <span class="s1">&#39;feature_index or filler_feature_values&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">missing_cols</span><span class="p">))</span>
+
+    <span class="n">marker_gen</span> <span class="o">=</span> <span class="n">cycle</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">markers</span><span class="p">))</span>
+
+    <span class="n">n_classes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="n">colors_gen</span> <span class="o">=</span> <span class="n">cycle</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="nb">next</span><span class="p">(</span><span class="n">colors_gen</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">)]</span>
+
+    <span class="c1"># Get minimum and maximum</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mf">1.</span><span class="o">/</span><span class="n">zoom_factor</span><span class="p">,</span>
+                    <span class="n">X</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mf">1.</span><span class="o">/</span><span class="n">zoom_factor</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mf">1.</span><span class="o">/</span><span class="n">zoom_factor</span><span class="p">,</span>
+                        <span class="n">X</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mf">1.</span><span class="o">/</span><span class="n">zoom_factor</span><span class="p">)</span>
+
+    <span class="n">xnum</span><span class="p">,</span> <span class="n">ynum</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">dpi</span> <span class="o">*</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">get_size_inches</span><span class="p">()</span>
+    <span class="n">xnum</span><span class="p">,</span> <span class="n">ynum</span> <span class="o">=</span> <span class="n">floor</span><span class="p">(</span><span class="n">xnum</span><span class="p">),</span> <span class="n">ceil</span><span class="p">(</span><span class="n">ynum</span><span class="p">)</span>
+    <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">xnum</span><span class="p">),</span>
+                         <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">ynum</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">X_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span><span class="o">.</span><span class="n">T</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">X_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">X_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">X_grid</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dim</span><span class="p">))</span>
+        <span class="n">X_predict</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_grid</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">X_predict</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_grid</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">feature_idx</span> <span class="ow">in</span> <span class="n">filler_feature_values</span><span class="p">:</span>
+                <span class="n">X_predict</span><span class="p">[:,</span> <span class="n">feature_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mf">30.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">200.0</span><span class="p">)</span> <span class="c1">#100.  #filler_feature_values[feature_idx]</span>
+    <span class="c1">#X_predict =np.random.uniform(low=80.0, high=150.0,size=len(X_predict))</span>
+    <span class="n">X_predict</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mf">30.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">200.0</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">X_predict</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">X_predict</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mf">30.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">200.0</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">X_predict</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_predict</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">dtype</span><span class="p">)))</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_predict</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">dtype</span><span class="p">))</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">Z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="c1"># Plot decisoin region</span>
+    <span class="c1"># Make sure contourf_kwargs has backwards compatible defaults</span>
+    <span class="n">contourf_kwargs_default</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">,</span> <span class="s1">&#39;antialiased&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="n">contourf_kwargs</span> <span class="o">=</span> <span class="n">format_kwarg_dictionaries</span><span class="p">(</span>
+                        <span class="n">default_kwargs</span><span class="o">=</span><span class="n">contourf_kwargs_default</span><span class="p">,</span>
+                        <span class="n">user_kwargs</span><span class="o">=</span><span class="n">contourf_kwargs</span><span class="p">,</span>
+                        <span class="n">protected_keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;colors&#39;</span><span class="p">,</span> <span class="s1">&#39;levels&#39;</span><span class="p">])</span>
+    <span class="n">cset</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span>
+                       <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+                       <span class="n">levels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">,</span>
+                       <span class="o">**</span><span class="n">contourf_kwargs</span><span class="p">)</span>
+
+    <span class="n">contour_kwargs_default</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;linewidths&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;colors&#39;</span><span class="p">:</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="s1">&#39;antialiased&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="n">contour_kwargs</span> <span class="o">=</span> <span class="n">format_kwarg_dictionaries</span><span class="p">(</span>
+                        <span class="n">default_kwargs</span><span class="o">=</span><span class="n">contour_kwargs_default</span><span class="p">,</span>
+                        <span class="n">user_kwargs</span><span class="o">=</span><span class="n">contour_kwargs</span><span class="p">,</span>
+                        <span class="n">protected_keys</span><span class="o">=</span><span class="p">[])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">cset</span><span class="o">.</span><span class="n">levels</span><span class="p">,</span>
+               <span class="o">**</span><span class="n">contour_kwargs</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="n">xx</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">xx</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span>
+
+    <span class="c1"># Scatter training data samples</span>
+    <span class="c1"># Make sure scatter_kwargs has backwards compatible defaults</span>
+    <span class="n">scatter_kwargs_default</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">}</span>
+    <span class="n">scatter_kwargs</span> <span class="o">=</span> <span class="n">format_kwarg_dictionaries</span><span class="p">(</span>
+                        <span class="n">default_kwargs</span><span class="o">=</span><span class="n">scatter_kwargs_default</span><span class="p">,</span>
+                        <span class="n">user_kwargs</span><span class="o">=</span><span class="n">scatter_kwargs</span><span class="p">,</span>
+                        <span class="n">protected_keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;marker&#39;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">]]</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">,</span> <span class="n">y_index</span><span class="p">]</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">y</span> <span class="o">==</span> <span class="n">c</span><span class="p">,</span> <span class="n">x_index</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">dim</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">filler_feature_ranges</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">class_mask</span> <span class="o">=</span> <span class="n">y</span> <span class="o">==</span> <span class="n">c</span>
+            <span class="n">feature_range_mask</span> <span class="o">=</span> <span class="n">get_feature_range_mask</span><span class="p">(</span>
+                            <span class="n">X</span><span class="p">,</span> <span class="n">filler_feature_values</span><span class="o">=</span><span class="n">filler_feature_values</span><span class="p">,</span>
+                            <span class="n">filler_feature_ranges</span><span class="o">=</span><span class="n">filler_feature_ranges</span><span class="p">)</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">class_mask</span> <span class="o">&amp;</span> <span class="n">feature_range_mask</span><span class="p">,</span> <span class="n">y_index</span><span class="p">]</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">class_mask</span> <span class="o">&amp;</span> <span class="n">feature_range_mask</span><span class="p">,</span> <span class="n">x_index</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x_data</span><span class="p">,</span>
+                   <span class="n">y</span><span class="o">=</span><span class="n">y_data</span><span class="p">,</span>
+                   <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+                   <span class="n">marker</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="n">marker_gen</span><span class="p">),</span>
+                   <span class="n">label</span><span class="o">=</span><span class="n">c</span><span class="p">,</span>
+                   <span class="o">**</span><span class="n">scatter_kwargs</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">hide_spines</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+
+    <span class="k">if</span> <span class="n">plot_testdata</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X_highlight</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">X_highlight</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X_highlight</span><span class="p">[:,</span> <span class="n">x_index</span><span class="p">]</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">X_highlight</span><span class="p">[:,</span> <span class="n">y_index</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">feature_range_mask</span> <span class="o">=</span> <span class="n">get_feature_range_mask</span><span class="p">(</span>
+                    <span class="n">X_highlight</span><span class="p">,</span> <span class="n">filler_feature_values</span><span class="o">=</span><span class="n">filler_feature_values</span><span class="p">,</span>
+                    <span class="n">filler_feature_ranges</span><span class="o">=</span><span class="n">filler_feature_ranges</span><span class="p">)</span>
+            <span class="n">y_data</span> <span class="o">=</span> <span class="n">X_highlight</span><span class="p">[</span><span class="n">feature_range_mask</span><span class="p">,</span> <span class="n">y_index</span><span class="p">]</span>
+            <span class="n">x_data</span> <span class="o">=</span> <span class="n">X_highlight</span><span class="p">[</span><span class="n">feature_range_mask</span><span class="p">,</span> <span class="n">x_index</span><span class="p">]</span>
+
+        <span class="c1"># Make sure scatter_highlight_kwargs backwards compatible defaults</span>
+        <span class="n">scatter_highlight_defaults</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                                      <span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+                                      <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+                                      <span class="s1">&#39;linewidths&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                                      <span class="s1">&#39;marker&#39;</span><span class="p">:</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span>
+                                      <span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">}</span>
+        <span class="n">scatter_highlight_kwargs</span> <span class="o">=</span> <span class="n">format_kwarg_dictionaries</span><span class="p">(</span>
+                                    <span class="n">default_kwargs</span><span class="o">=</span><span class="n">scatter_highlight_defaults</span><span class="p">,</span>
+                                    <span class="n">user_kwargs</span><span class="o">=</span><span class="n">scatter_highlight_kwargs</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span>
+                   <span class="n">y_data</span><span class="p">,</span>
+                   <span class="o">**</span><span class="n">scatter_highlight_kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_1140</span><span class="o">/</span><span class="mf">556487312.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span> 
+<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="n">n_classes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="ne">---&gt; </span><span class="mi">61</span> <span class="n">colors</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="n">colors_gen</span> <span class="o">=</span> <span class="n">cycle</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span> <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="nb">next</span><span class="p">(</span><span class="n">colors_gen</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">)]</span>
+
+<span class="ne">AttributeError</span>: &#39;list&#39; object has no attribute &#39;split&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 1, 1, ..., 3, 3, 3],
+       [1, 1, 1, ..., 3, 3, 3],
+       [1, 1, 1, ..., 3, 3, 3],
+       ...,
+       [3, 3, 3, ..., 3, 3, 3],
+       [3, 3, 3, ..., 3, 3, 3],
+       [3, 3, 3, ..., 3, 3, 3]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mf">30.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">200.0</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 52.84948644,  54.09262965, 156.69533944])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 3])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">X_predict</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>124416
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mf">30.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">200.0</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">temp</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 74.41930614,  67.27784808, 159.41237535, ..., 176.23613314,
+       153.25564871, 135.57282253])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mf">30.0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">200.0</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">temp</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[  3.        ,   4.8       ,  33.87663814],
+       [  3.01972158,   4.8       , 127.02086637],
+       [  3.03944316,   4.8       , 193.08511088],
+       ...,
+       [ 11.46055684,  10.6       ,  89.54586798],
+       [ 11.48027842,  10.6       , 135.38731397],
+       [ 11.5       ,  10.6       , 197.49842499]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_predict_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_predict</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;mass&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_predict_df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>height</th>
+      <th>width</th>
+      <th>mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>124416.000000</td>
+      <td>124416.000000</td>
+      <td>124416.0</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>7.250000</td>
+      <td>7.700000</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>2.459435</td>
+      <td>1.680146</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>3.000000</td>
+      <td>4.800000</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>5.125000</td>
+      <td>6.250000</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>7.250000</td>
+      <td>7.700000</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>9.375000</td>
+      <td>9.150000</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>11.500000</td>
+      <td>10.600000</td>
+      <td>100.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[  3.        ,   4.8       , 100.        ],
+       [  3.01972158,   4.8       , 100.        ],
+       [  3.03944316,   4.8       , 100.        ],
+       ...,
+       [ 11.46055684,  10.6       , 100.        ],
+       [ 11.48027842,  10.6       , 100.        ],
+       [ 11.5       ,  10.6       , 100.        ]])
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Pairote Satiracoo<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

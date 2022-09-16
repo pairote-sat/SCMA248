@@ -1,0 +1,1102 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Assignment 4 (Exercise for Chapters 5) &#8212; SCMA248 Introduction to Data Science</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SCMA248 Introduction to Data Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to SCMA248 Introduction to Data Science
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter1_Introduction_to_Data_Science.html">
+   1. Introduction to Data Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter2_Python_Basics.html">
+   2. Python Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter3_Data_Preparation.html">
+   3. Data Selection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter4_Data_Visualization.html">
+   6. Data Visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter5_Practical_Statistics.html">
+   7. Practical Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter6_Regression.html">
+   8. Regression Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter7_Introduction_Machine_Learning.html">
+   9. Machine learning: Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter8_Unsupervised_Learning.html">
+   10. Unsupervised Machine Learning: K-means Clustering
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Assignments/Assignment4_Solution.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAssignments/Assignment4_Solution.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Assignments/Assignment4_Solution.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="assignment-4-exercise-for-chapters-5">
+<h1>Assignment 4 (Exercise for Chapters 5)<a class="headerlink" href="#assignment-4-exercise-for-chapters-5" title="Permalink to this headline">¶</a></h1>
+<p>Due date: 15 March 2022 before 4 pm.</p>
+<p>Points: 5 + (<strong>4 extra points</strong>)</p>
+<p>Do not alter this file.</p>
+<ol class="simple">
+<li><p>Form a group of two members. The group member must be different from the previous Assignments 1, 2 and 3.</p></li>
+<li><p>Duplicate this file and move it into the Personal folder (you may share access to your team member). Rename the file as Assignment4_id1_id2 (id1 and id2 are student ID numbers in ascending order, e.g. Assignment4_6305001_6305001).</p></li>
+<li><p>Write Python commands to answer each of the questions. For each question that requires numerical values (not list, table or dataframe), you also need to assign the variable e.g. ans1 to store the numerical answer for question 1. If there is more than 1 answer required, you must create more variables e.g. ans1_1, ans1_2 to store the values of the answers.</p></li>
+<li><p>When you want to submit your file, you simply share access with me using my email <a class="reference external" href="mailto:pairote&#46;sat&#37;&#52;&#48;mahidol&#46;edu">pairote<span>&#46;</span>sat<span>&#64;</span>mahidol<span>&#46;</span>edu</a> and my TA <a class="reference external" href="mailto:p&#46;pooy&#46;pui&#46;i&#37;&#52;&#48;gmail&#46;com">p<span>&#46;</span>pooy<span>&#46;</span>pui<span>&#46;</span>i<span>&#64;</span>gmail<span>&#46;</span>com</a>. Do not move your file into the DS&#64;MathMahidol team.</p></li>
+</ol>
+<p><strong>Goals:</strong> The purpose of this exercise is to perform simple descriptive statistics and to describe the <strong>importance of data visualisation</strong> before analyzing and model building.</p>
+<ol class="simple">
+<li><p>Enter student IDs of your group.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Download the following dataset from this Github link (store this data frame as a pandas DataFrame with the variable name <code class="docutils literal notranslate"><span class="pre">anscombes</span></code>):</p></li>
+</ol>
+<p><a class="reference external" href="https://gist.github.com/ericbusboom/b2ac1d366c005cd2ed8c">https://gist.github.com/ericbusboom/b2ac1d366c005cd2ed8c</a></p>
+<p>The dataset consists of values <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> from four different groups (I,II,III and IV which are given by the column namely <code class="docutils literal notranslate"><span class="pre">dataset</span></code>).</p>
+<p>Perform statistical data analysis of the <code class="docutils literal notranslate"><span class="pre">anscombes</span></code> dataset by answering the following questions:</p>
+<ol class="simple">
+<li><p>Write python code to create a table that provides a summary of the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> for each of groups (including the mean of <span class="math notranslate nohighlight">\(x\)</span>, the sample variance of <span class="math notranslate nohighlight">\(x\)</span>, the mean of <span class="math notranslate nohighlight">\(y\)</span>, the sample variance of <span class="math notranslate nohighlight">\(y\)</span>).</p></li>
+</ol>
+<p>2.1 Find the mean of <span class="math notranslate nohighlight">\(x\)</span> in the group I.</p>
+<p>2.2 Find the mean of <span class="math notranslate nohighlight">\(x\)</span> in the group II.</p>
+<p>2.3 Find the sample variance of <span class="math notranslate nohighlight">\(y\)</span> in the group III.</p>
+<p>2.4 Find the sample variance of <span class="math notranslate nohighlight">\(y\)</span> in the group IV.</p>
+<ol class="simple">
+<li><p>Write python code to create a grouped boxplot of the values <span class="math notranslate nohighlight">\(x\)</span> categorized by groups (I, II, III and IV).</p></li>
+</ol>
+<p>Note that a grouped boxplot is a boxplot where categories are organized in groups and subgroups.</p>
+<p>See for detail: <a class="reference external" href="https://www.r-graph-gallery.com/265-grouped-boxplot-with-ggplot2.html#:~:text=A%20grouped%20boxplot%20is%20a,called%20in%20the%20fill%20argument">https://www.r-graph-gallery.com/265-grouped-boxplot-with-ggplot2.html#:~:text=A grouped boxplot is a,called in the fill argument</a>.</p>
+<ol class="simple">
+<li><p>Write python code to create a grouped boxplot of the values <span class="math notranslate nohighlight">\(y\)</span> categorized by groups (I, II, III and IV).</p></li>
+</ol>
+<ol class="simple">
+<li><p>Write python code to plot (in the same figure) histograms and the kernel density estimate (KDE) of the values <span class="math notranslate nohighlight">\(x\)</span> for each of the four datasets. (you may use <code class="docutils literal notranslate"><span class="pre">facet_wrap</span></code> in <strong>plotnine</strong>  to build a plot for multiple subsets of the data set)</p></li>
+</ol>
+<ol class="simple">
+<li><p>Write python code to plot (in the same figure) histograms and the kernel density estimate (KDE) of the values <span class="math notranslate nohighlight">\(y\)</span> for each of the groups. (you may use <code class="docutils literal notranslate"><span class="pre">facet_wrap</span></code> in <strong>plotnine</strong>  to build a plot for multiple subsets)</p></li>
+</ol>
+<ol class="simple">
+<li><p>Write python code that create a table that summarizes the (linear) correlation coefficient of the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> for each of the groups.</p></li>
+</ol>
+<p>7.1 Find the correlation coefficient of the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> of the dataset I.</p>
+<p>7.2 Find the correlation coefficient of the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> of the dataset II.</p>
+<ol class="simple">
+<li><p>Write python code to graphically display the relationship of the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> for each of groups.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Discuss and conclude the results from the data analysis of this work.</p></li>
+</ol>
+<p>Extra questions for extra points (4 points):</p>
+<p>Complete questions 10 to earn extra points.</p>
+<ol class="simple">
+<li><p>Perform regression analysis to determine the possible relationship between the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> for each group.</p></li>
+</ol>
+<p>10.1 Find the regression line for the data in group I (for e.g. the regression line is given as ‘y = a + b x’ where a and b represent the y intercept and slope of the regression line).</p>
+<p>10.2 Find the regression line for the data in group II.</p>
+<p>10.3 Find the coefficient of determination (R-squared) of the dataset I.</p>
+<p>10.4 Find the coefficient of determination (R-squared) of the dataset II.</p>
+<ol class="simple">
+<li><p>Enter student IDs of your group.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Download the following dataset from this Github link (store this data frame as a pandas DataFrame with the variable name <code class="docutils literal notranslate"><span class="pre">anscombes</span></code>):</p></li>
+</ol>
+<p><a class="reference external" href="https://gist.github.com/ericbusboom/b2ac1d366c005cd2ed8c">https://gist.github.com/ericbusboom/b2ac1d366c005cd2ed8c</a></p>
+<p>The dataset consists of values <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> from four different groups (I,II,III and IV which are given by the column namely <code class="docutils literal notranslate"><span class="pre">dataset</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Add this line so you can plot your charts into your Jupyter Notebook.</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_5454</span><span class="o">/</span><span class="mf">1612358284.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Add this line so you can plot your charts into your Jupyter Notebook.</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;plotnine&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We want to specify that &#39;id&#39; is the index column while loading this data set with the following command (with the parameter index_col):</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/anscombes.csv&#39;</span>
+<span class="c1">#anscombes = pd.read_csv(&#39;/Users/Kaemyuijang/SCMA248/Data/anscombes.csv&#39;,index_col = 0)</span>
+
+<span class="n">anscombes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#anscombes.dtypes</span>
+<span class="n">anscombes</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dataset</th>
+      <th>x</th>
+      <th>y</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>I</td>
+      <td>10.0</td>
+      <td>8.04</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>I</td>
+      <td>8.0</td>
+      <td>6.95</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>I</td>
+      <td>13.0</td>
+      <td>7.58</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>I</td>
+      <td>9.0</td>
+      <td>8.81</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>I</td>
+      <td>11.0</td>
+      <td>8.33</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Perform statistical data analysis of the <code class="docutils literal notranslate"><span class="pre">anscombes</span></code> dataset by answering the following questions:</p>
+<ol class="simple">
+<li><p>Write python code to create a table that provides a summary of the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> for each of groups (including the mean of <span class="math notranslate nohighlight">\(x\)</span>, the sample variance of <span class="math notranslate nohighlight">\(x\)</span>, the mean of <span class="math notranslate nohighlight">\(y\)</span>, the sample variance of <span class="math notranslate nohighlight">\(y\)</span>).</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anscombes</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="8" halign="left">x</th>
+      <th colspan="8" halign="left">y</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>dataset</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>I</th>
+      <td>11.0</td>
+      <td>9.0</td>
+      <td>3.316625</td>
+      <td>4.0</td>
+      <td>6.5</td>
+      <td>9.0</td>
+      <td>11.5</td>
+      <td>14.0</td>
+      <td>11.0</td>
+      <td>7.500909</td>
+      <td>2.031568</td>
+      <td>4.26</td>
+      <td>6.315</td>
+      <td>7.58</td>
+      <td>8.57</td>
+      <td>10.84</td>
+    </tr>
+    <tr>
+      <th>II</th>
+      <td>11.0</td>
+      <td>9.0</td>
+      <td>3.316625</td>
+      <td>4.0</td>
+      <td>6.5</td>
+      <td>9.0</td>
+      <td>11.5</td>
+      <td>14.0</td>
+      <td>11.0</td>
+      <td>7.500909</td>
+      <td>2.031657</td>
+      <td>3.10</td>
+      <td>6.695</td>
+      <td>8.14</td>
+      <td>8.95</td>
+      <td>9.26</td>
+    </tr>
+    <tr>
+      <th>III</th>
+      <td>11.0</td>
+      <td>9.0</td>
+      <td>3.316625</td>
+      <td>4.0</td>
+      <td>6.5</td>
+      <td>9.0</td>
+      <td>11.5</td>
+      <td>14.0</td>
+      <td>11.0</td>
+      <td>7.500000</td>
+      <td>2.030424</td>
+      <td>5.39</td>
+      <td>6.250</td>
+      <td>7.11</td>
+      <td>7.98</td>
+      <td>12.74</td>
+    </tr>
+    <tr>
+      <th>IV</th>
+      <td>11.0</td>
+      <td>9.0</td>
+      <td>3.316625</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>19.0</td>
+      <td>11.0</td>
+      <td>7.500909</td>
+      <td>2.030579</td>
+      <td>5.25</td>
+      <td>6.170</td>
+      <td>7.04</td>
+      <td>8.19</td>
+      <td>12.50</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>2.1 Find the mean of <span class="math notranslate nohighlight">\(x\)</span> in the group I.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">output</span> <span class="o">=</span> <span class="n">anscombes</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+
+<span class="n">output</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">)]</span>
+
+<span class="n">ans2_1</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Q2.1 the mean of x in the group I:&#39;</span><span class="p">,</span> <span class="n">ans2_1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Q2.1 the mean of x in the group I: 9.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.2 Find the mean of <span class="math notranslate nohighlight">\(x\)</span> in the group II.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ans2_2</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;II&#39;</span><span class="p">,(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Q2.2 the mean of x in the group II:&#39;</span><span class="p">,</span> <span class="n">ans2_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Q2.2 the mean of x in the group II: 9.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.3 Find the sample variance of <span class="math notranslate nohighlight">\(y\)</span> in the group III.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ans2_3</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;III&#39;</span><span class="p">,(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">)]</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Q2.3 the sample variance of $y$ in the group III:&#39;</span><span class="p">,</span> <span class="n">ans2_3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Q2.3 the sample variance of $y$ in the group III: 4.12262
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.4 Find the sample variance of <span class="math notranslate nohighlight">\(y\)</span> in the group IV.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ans2_4</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;IV&#39;</span><span class="p">,(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">)]</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Q2.4 the sample variance of $y$ in the group IV:&#39;</span><span class="p">,</span> <span class="n">ans2_4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Q2.4 the sample variance of $y$ in the group IV: 4.12324909090909
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Write python code to create a grouped boxplot of the values <span class="math notranslate nohighlight">\(x\)</span> categorized by groups (I, II, III and IV).</p></li>
+</ol>
+<p>Note that a grouped boxplot is a boxplot where categories are organized in groups and subgroups.</p>
+<p>See for detail: <a class="reference external" href="https://www.r-graph-gallery.com/265-grouped-boxplot-with-ggplot2.html#:~:text=A%20grouped%20boxplot%20is%20a,called%20in%20the%20fill%20argument">https://www.r-graph-gallery.com/265-grouped-boxplot-with-ggplot2.html#:~:text=A grouped boxplot is a,called in the fill argument</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span> <span class="n">ggplot</span><span class="p">(</span><span class="n">anscombes</span><span class="p">)</span>  <span class="o">+</span> 
+     <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="o">+</span>
+     <span class="n">geom_boxplot</span><span class="p">()</span>  
+<span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Assignment4_Solution_36_0.png" src="../_images/Assignment4_Solution_36_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (304675205)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Write python code to create a grouped boxplot of the values <span class="math notranslate nohighlight">\(y\)</span> categorized by groups (I, II, III and IV).</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span> <span class="n">ggplot</span><span class="p">(</span><span class="n">anscombes</span><span class="p">)</span>  <span class="o">+</span> 
+     <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span> <span class="o">+</span>
+     <span class="n">geom_boxplot</span><span class="p">()</span>  
+<span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Assignment4_Solution_38_0.png" src="../_images/Assignment4_Solution_38_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (304767449)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Write python code to plot (in the same figure) histograms and the kernel density estimate (KDE) of the values <span class="math notranslate nohighlight">\(x\)</span> for each of the four datasets. (you may use <code class="docutils literal notranslate"><span class="pre">facet_wrap</span></code> in <strong>plotnine</strong>  to build a plot for multiple subsets of the data set)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span> <span class="n">ggplot</span><span class="p">(</span><span class="n">anscombes</span><span class="p">)</span>  <span class="o">+</span> 
+     <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="o">+</span> 
+     <span class="n">geom_histogram</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">after_stat</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)))</span> <span class="o">+</span> 
+     <span class="n">geom_density</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">after_stat</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)))</span> <span class="o">+</span>
+     <span class="n">facet_wrap</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">)</span> 
+<span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages/plotnine/stats/stat_bin.py:95: PlotnineWarning: &#39;stat_bin()&#39; using &#39;bins = 7&#39;. Pick better value with &#39;binwidth&#39;.
+</pre></div>
+</div>
+<img alt="../_images/Assignment4_Solution_40_1.png" src="../_images/Assignment4_Solution_40_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (304887865)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Write python code to plot (in the same figure) histograms and the kernel density estimate (KDE) of the values <span class="math notranslate nohighlight">\(y\)</span> for each of the groups. (you may use <code class="docutils literal notranslate"><span class="pre">facet_wrap</span></code> in <strong>plotnine</strong>  to build a plot for multiple subsets)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span> <span class="n">ggplot</span><span class="p">(</span><span class="n">anscombes</span><span class="p">)</span>  <span class="o">+</span> 
+     <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span> <span class="o">+</span> 
+     <span class="n">geom_histogram</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">after_stat</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)))</span> <span class="o">+</span> 
+     <span class="n">geom_density</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">after_stat</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)))</span> <span class="o">+</span>
+     <span class="n">facet_wrap</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">)</span> 
+<span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages/plotnine/stats/stat_bin.py:95: PlotnineWarning: &#39;stat_bin()&#39; using &#39;bins = 7&#39;. Pick better value with &#39;binwidth&#39;.
+</pre></div>
+</div>
+<img alt="../_images/Assignment4_Solution_42_1.png" src="../_images/Assignment4_Solution_42_1.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (305181757)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Write python code that create a table that summarizes the (linear) correlation coefficient of the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> for each of the groups.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anscombes</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+    </tr>
+    <tr>
+      <th>dataset</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">I</th>
+      <th>x</th>
+      <td>1.000000</td>
+      <td>0.816421</td>
+    </tr>
+    <tr>
+      <th>y</th>
+      <td>0.816421</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">II</th>
+      <th>x</th>
+      <td>1.000000</td>
+      <td>0.816237</td>
+    </tr>
+    <tr>
+      <th>y</th>
+      <td>0.816237</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">III</th>
+      <th>x</th>
+      <td>1.000000</td>
+      <td>0.816287</td>
+    </tr>
+    <tr>
+      <th>y</th>
+      <td>0.816287</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">IV</th>
+      <th>x</th>
+      <td>1.000000</td>
+      <td>0.816521</td>
+    </tr>
+    <tr>
+      <th>y</th>
+      <td>0.816521</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>7.1 Find the correlation coefficient of the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> of the dataset I.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ans7_1</span>  <span class="o">=</span> <span class="n">anscombes</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+      
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Q7.1 the correlation coefficient of the variables $x$ and $y$ of the dataset I:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ans7_1</span><span class="p">)</span>      
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Q7.1 the correlation coefficient of the variables $x$ and $y$ of the dataset I:
+ 0.8164205163448399
+</pre></div>
+</div>
+</div>
+</div>
+<p>7.2 Find the correlation coefficient of the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> of the dataset II.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ans7_2</span>  <span class="o">=</span> <span class="n">anscombes</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;II&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+      
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Q7.2 the correlation coefficient of the variables $x$ and $y$ of the dataset I:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ans7_2</span><span class="p">)</span>      
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Q7.2 the correlation coefficient of the variables $x$ and $y$ of the dataset I:
+ 0.8162365060002427
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Write python code to graphically display the relationship of the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> for each of groups.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anscombes</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dataset</th>
+      <th>x</th>
+      <th>y</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>I</td>
+      <td>10.0</td>
+      <td>8.04</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>I</td>
+      <td>8.0</td>
+      <td>6.95</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>I</td>
+      <td>13.0</td>
+      <td>7.58</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>I</td>
+      <td>9.0</td>
+      <td>8.81</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>I</td>
+      <td>11.0</td>
+      <td>8.33</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">anscombes</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
+    <span class="n">facet_wrap</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Assignment4_Solution_51_0.png" src="../_images/Assignment4_Solution_51_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (293804697)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Discuss and conclude the results from the data analysis of this work.</p></li>
+</ol>
+<p>Q9: <strong>Anscombe’s Quartet</strong> is a collection of four data sets that are essentially equal in terms of simple descriptive statistics (as shown in Q2), but have some oddities in the dataset:</p>
+<p>These oddities trick the regression model if formed. When plotted on scatter plots (Q8), they have extremely different distributions and appear differently.</p>
+<p>Extra questions for extra points (4 points):</p>
+<p>Complete questions 10 to earn extra points.</p>
+<ol class="simple">
+<li><p>Perform regression analysis to determine the possible relationship between the variables <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> for each group.</p></li>
+</ol>
+<p>Q10: The results from the regression analysis are identical, but when graphed, they differ significantly. This dataset demonstrates the importance of plotting graphs before analysing and creating models, as well as the impact of other observations on statistical features.</p>
+<p>10.1 Find the regression line for the data in group I (for e.g. the regression line is given as ‘y = a + b x’ where a and b represent the y intercept and slope of the regression line).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#anscombes.query(&quot;dataset == &#39;I&#39;&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">group1</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;y ~ x&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">anscombes</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;dataset == &#39;I&#39;&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Q10.1: the slope and intercept of the regression line</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">group1</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Q10.1: the slope and intercept of the regression line
+ Intercept    3.000091
+x            0.500091
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>10.2 Find the regression line for the data in group II.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">group2</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;y ~ x&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">anscombes</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;dataset == &#39;II&#39;&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Q10.2: the slope and intercept of the regression line</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">group2</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Q10.2: the slope and intercept of the regression line
+ Intercept    3.000909
+x            0.500000
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>10.3 Find the coefficient of determination (R-squared) of the dataset I.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">group1</span><span class="o">.</span><span class="n">rsquared</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.666542459508775
+</pre></div>
+</div>
+</div>
+</div>
+<p>10.4 Find the coefficient of determination (R-squared) of the dataset II.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">group2</span><span class="o">.</span><span class="n">rsquared</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6662420337274844
+</pre></div>
+</div>
+</div>
+</div>
+<p>The regression lines for each group:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">anscombes</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
+    <span class="n">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;lm&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">facet_wrap</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Assignment4_Solution_68_0.png" src="../_images/Assignment4_Solution_68_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (305054469)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Assignments"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Pairote Satiracoo<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

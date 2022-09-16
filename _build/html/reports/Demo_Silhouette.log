@@ -1,0 +1,79 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 1093, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 560, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 854, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from sklearn.cluster import KMeans
+
+from yellowbrick.cluster import SilhouetteVisualizer
+from yellowbrick.datasets import load_nfl
+
+# Load a clustering dataset
+X, y = load_nfl()
+
+# Specify the features to use for clustering
+features = ['Rec', 'Yds', 'TD', 'Fmb', 'Ctch_Rate']
+X = X.query('Tgt >= 20')[features]
+
+# Instantiate the clustering model and visualizer
+model = KMeans(5, random_state=42)
+visualizer = SilhouetteVisualizer(model, colors='yellowbrick')
+
+visualizer.fit(X)        # Fit the data to the visualizer
+visualizer.show()        # Finalize and render the figure
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mImportError[0m                               Traceback (most recent call last)
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_5666/4291523093.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mcluster[0m [0;32mimport[0m [0mKMeans[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0;34m[0m[0m
+[0;32m----> 3[0;31m [0;32mfrom[0m [0myellowbrick[0m[0;34m.[0m[0mcluster[0m [0;32mimport[0m [0mSilhouetteVisualizer[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      4[0m [0;32mfrom[0m [0myellowbrick[0m[0;34m.[0m[0mdatasets[0m [0;32mimport[0m [0mload_nfl[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;34m[0m[0m
+
+[0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/yellowbrick/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     35[0m [0;31m# Import yellowbrick functionality to the top level[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     36[0m [0;31m# TODO: review top-level functionality[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 37[0;31m [0;32mfrom[0m [0;34m.[0m[0manscombe[0m [0;32mimport[0m [0manscombe[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     38[0m [0;32mfrom[0m [0;34m.[0m[0mdatasaurus[0m [0;32mimport[0m [0mdatasaurus[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     39[0m [0;32mfrom[0m [0;34m.[0m[0mclassifier[0m [0;32mimport[0m [0mROCAUC[0m[0;34m,[0m [0mClassBalance[0m[0;34m,[0m [0mClassificationScoreVisualizer[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/yellowbrick/anscombe.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     21[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     22[0m [0;34m[0m[0m
+[0;32m---> 23[0;31m [0;32mfrom[0m [0myellowbrick[0m[0;34m.[0m[0mbestfit[0m [0;32mimport[0m [0mdraw_best_fit[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     24[0m [0;32mfrom[0m [0myellowbrick[0m[0;34m.[0m[0mstyle[0m [0;32mimport[0m [0mget_color_cycle[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     25[0m [0;34m[0m[0m
+
+[0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/yellowbrick/bestfit.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     23[0m [0;32mfrom[0m [0msklearn[0m [0;32mimport[0m [0mlinear_model[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     24[0m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mpreprocessing[0m [0;32mimport[0m [0mPolynomialFeatures[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 25[0;31m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mpipeline[0m [0;32mimport[0m [0mmake_pipeline[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     26[0m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mmetrics[0m [0;32mimport[0m [0mmean_squared_error[0m [0;32mas[0m [0mmse[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     27[0m [0;34m[0m[0m
+
+[0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/pipeline.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     19[0m [0;32mfrom[0m [0;34m.[0m[0mbase[0m [0;32mimport[0m [0mclone[0m[0;34m,[0m [0mTransformerMixin[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     20[0m [0;32mfrom[0m [0;34m.[0m[0mutils[0m[0;34m.[0m[0m_estimator_html_repr[0m [0;32mimport[0m [0m_VisualBlock[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 21[0;31m [0;32mfrom[0m [0;34m.[0m[0mutils[0m[0;34m.[0m[0mmetaestimators[0m [0;32mimport[0m [0mavailable_if[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     22[0m from .utils import (
+[1;32m     23[0m     [0mBunch[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mImportError[0m: cannot import name 'available_if' from 'sklearn.utils.metaestimators' (/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/utils/metaestimators.py)
+ImportError: cannot import name 'available_if' from 'sklearn.utils.metaestimators' (/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/utils/metaestimators.py)
+

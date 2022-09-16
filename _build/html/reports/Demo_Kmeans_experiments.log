@@ -1,0 +1,59 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 1093, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 560, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 854, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+features, true_labels = make_blobs(
+    n_samples=400,
+    centers=4,
+    cluster_std=0.5,
+    random_state=1
+)
+
+df = pd.DataFrame(features, columns=["x1", "x2"])
+
+scaler = StandardScaler()
+
+df_scaled = df
+features = [['x1','x2']]
+for feature in features:
+    df_scaled[feature] = scaler.fit_transform(df_scaled[feature])
+df_scaled.plot.scatter("x1", "x2")
+
+
+    
+df_melted = pd.melt(df_scaled[['x1','x2']], var_name = 'features',value_name = 'value')    
+
+(
+    ggplot(df_melted) + aes('value') + geom_histogram(aes(y=after_stat('density')), color = 'lightskyblue', fill = 'lightskyblue', bins = 15)
+    + geom_density(aes(y=after_stat('density')), color = 'steelblue')
+    + facet_wrap('features')
+)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_5626/4242010350.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m features, true_labels = make_blobs(
+[0m[1;32m      2[0m     [0mn_samples[0m[0;34m=[0m[0;36m400[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m     [0mcenters[0m[0;34m=[0m[0;36m4[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m     [0mcluster_std[0m[0;34m=[0m[0;36m0.5[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m     [0mrandom_state[0m[0;34m=[0m[0;36m1[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mNameError[0m: name 'make_blobs' is not defined
+NameError: name 'make_blobs' is not defined
+

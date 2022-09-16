@@ -1,0 +1,69 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 1093, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 560, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 854, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# od.download("https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset")
+
+od.download('https://www.kaggle.com/tklimonova/gapminder-datacamp-2007')
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_6571/2902251619.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;31m# od.download("https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset")[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0;34m[0m[0m
+[0;32m----> 3[0;31m [0mod[0m[0;34m.[0m[0mdownload[0m[0;34m([0m[0;34m'https://www.kaggle.com/tklimonova/gapminder-datacamp-2007'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/opendatasets/__init__.py[0m in [0;36mdownload[0;34m(dataset_id_or_url, data_dir, force, dry_run, **kwargs)[0m
+[1;32m     11[0m     [0;31m# Check for a Kaggle dataset URL[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     12[0m     [0;32mif[0m [0mis_kaggle_url[0m[0;34m([0m[0mdataset_id_or_url[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 13[0;31m         [0;32mreturn[0m [0mdownload_kaggle_dataset[0m[0;34m([0m[0mdataset_id_or_url[0m[0;34m,[0m [0mdata_dir[0m[0;34m=[0m[0mdata_dir[0m[0;34m,[0m [0mforce[0m[0;34m=[0m[0mforce[0m[0;34m,[0m [0mdry_run[0m[0;34m=[0m[0mdry_run[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     14[0m [0;34m[0m[0m
+[1;32m     15[0m     [0;31m# Check for Google Drive URL[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/opendatasets/utils/kaggle_api.py[0m in [0;36mdownload_kaggle_dataset[0;34m(dataset_url, data_dir, force, dry_run)[0m
+[1;32m     44[0m     [0;32mif[0m [0;32mnot[0m [0mread_kaggle_creds[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     45[0m         [0mprint[0m[0;34m([0m[0;34m"Please provide your Kaggle credentials to download this dataset. Learn more: http://bit.ly/kaggle-creds"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 46[0;31m         [0mos[0m[0;34m.[0m[0menviron[0m[0;34m[[0m[0;34m'KAGGLE_USERNAME'[0m[0;34m][0m [0;34m=[0m [0mclick[0m[0;34m.[0m[0mprompt[0m[0;34m([0m[0;34m"Your Kaggle username"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     47[0m         [0mos[0m[0;34m.[0m[0menviron[0m[0;34m[[0m[0;34m'KAGGLE_KEY'[0m[0;34m][0m [0;34m=[0m [0m_get_kaggle_key[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     48[0m [0;34m[0m[0m
+
+[0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/click/termui.py[0m in [0;36mprompt[0;34m(text, default, hide_input, confirmation_prompt, type, value_proc, prompt_suffix, show_default, err, show_choices)[0m
+[1;32m    145[0m     [0;32mwhile[0m [0;36m1[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    146[0m         [0;32mwhile[0m [0;36m1[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 147[0;31m             [0mvalue[0m [0;34m=[0m [0mprompt_func[0m[0;34m([0m[0mprompt[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    148[0m             [0;32mif[0m [0mvalue[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    149[0m                 [0;32mbreak[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/click/termui.py[0m in [0;36mprompt_func[0;34m(text)[0m
+[1;32m    127[0m             [0;31m# coloring through colorama on Windows[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    128[0m             [0mecho[0m[0;34m([0m[0mtext[0m[0;34m,[0m [0mnl[0m[0;34m=[0m[0;32mFalse[0m[0;34m,[0m [0merr[0m[0;34m=[0m[0merr[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 129[0;31m             [0;32mreturn[0m [0mf[0m[0;34m([0m[0;34m""[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    130[0m         [0;32mexcept[0m [0;34m([0m[0mKeyboardInterrupt[0m[0;34m,[0m [0mEOFError[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    131[0m             [0;31m# getpass doesn't print a newline if the user aborts input with ^C.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
+[1;32m   1003[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1004[0m             raise StdinNotImplementedError(
+[0;32m-> 1005[0;31m                 [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1006[0m             )
+[1;32m   1007[0m         return self._input_request(
+
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.
+

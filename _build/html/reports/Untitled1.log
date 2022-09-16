@@ -1,0 +1,153 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 1093, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 560, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 854, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+%matplotlib inline
+
+import warnings
+import numpy as np
+import pandas as pd
+import scipy.stats as st
+import statsmodels.api as sm
+from scipy.stats._continuous_distns import _distn_names
+import matplotlib
+import matplotlib.pyplot as plt
+
+matplotlib.rcParams['figure.figsize'] = (16.0, 12.0)
+matplotlib.style.use('ggplot')
+
+# Create models from data
+def best_fit_distribution(data, bins=200, ax=None):
+    """Model data by finding best fit distribution to data"""
+    # Get histogram of original data
+    y, x = np.histogram(data, bins=bins, density=True)
+    x = (x + np.roll(x, -1))[:-1] / 2.0
+
+    # Best holders
+    best_distributions = []
+
+    # Estimate distribution parameters from data
+    for ii, distribution in enumerate([d for d in _distn_names if not d in ['levy_stable', 'studentized_range']]):
+
+        print("{:>3} / {:<3}: {}".format( ii+1, len(_distn_names), distribution ))
+
+        distribution = getattr(st, distribution)
+
+        # Try to fit the distribution
+        try:
+            # Ignore warnings from data that can't be fit
+            with warnings.catch_warnings():
+                warnings.filterwarnings('ignore')
+                
+                # fit dist to data
+                params = distribution.fit(data)
+
+                # Separate parts of parameters
+                arg = params[:-2]
+                loc = params[-2]
+                scale = params[-1]
+                
+                # Calculate fitted PDF and error with fit in distribution
+                pdf = distribution.pdf(x, loc=loc, scale=scale, *arg)
+                sse = np.sum(np.power(y - pdf, 2.0))
+                
+                # if axis pass in add to plot
+                try:
+                    if ax:
+                        pd.Series(pdf, x).plot(ax=ax)
+                    end
+                except Exception:
+                    pass
+
+                # identify if this distribution is better
+                best_distributions.append((distribution, params, sse))
+        
+        except Exception:
+            pass
+
+    
+    return sorted(best_distributions, key=lambda x:x[2])
+
+def make_pdf(dist, params, size=10000):
+    """Generate distributions's Probability Distribution Function """
+
+    # Separate parts of parameters
+    arg = params[:-2]
+    loc = params[-2]
+    scale = params[-1]
+
+    # Get sane start and end points of distribution
+    start = dist.ppf(0.01, *arg, loc=loc, scale=scale) if arg else dist.ppf(0.01, loc=loc, scale=scale)
+    end = dist.ppf(0.99, *arg, loc=loc, scale=scale) if arg else dist.ppf(0.99, loc=loc, scale=scale)
+
+    # Build PDF and turn into pandas Series
+    x = np.linspace(start, end, size)
+    y = dist.pdf(x, loc=loc, scale=scale, *arg)
+    pdf = pd.Series(y, x)
+
+    return pdf
+
+# Load data from statsmodels datasets
+data = pd.Series(sm.datasets.elnino.load_pandas().data.set_index('YEAR').values.ravel())
+
+# Plot for comparison
+plt.figure(figsize=(12,8))
+ax = data.plot(kind='hist', bins=50, density=True, alpha=0.5, color=list(matplotlib.rcParams['axes.prop_cycle'])[1]['color'])
+
+# Save plot limits
+dataYLim = ax.get_ylim()
+
+# Find best fit distribution
+best_distibutions = best_fit_distribution(data, 200, ax)
+best_dist = best_distibutions[0]
+
+# Update plots
+ax.set_ylim(dataYLim)
+ax.set_title(u'El Niño sea temp.\n All Fitted Distributions')
+ax.set_xlabel(u'Temp (°C)')
+ax.set_ylabel('Frequency')
+
+# Make PDF with best params 
+pdf = make_pdf(best_dist[0], best_dist[1])
+
+# Display
+plt.figure(figsize=(12,8))
+ax = pdf.plot(lw=2, label='PDF', legend=True)
+data.plot(kind='hist', bins=50, density=True, alpha=0.5, label='Data', legend=True, ax=ax)
+
+param_names = (best_dist[0].shapes + ', loc, scale').split(', ') if best_dist[0].shapes else ['loc', 'scale']
+param_str = ', '.join(['{}={:0.2f}'.format(k,v) for k,v in zip(param_names, best_dist[1])])
+dist_str = '{}({})'.format(best_dist[0].name, param_str)
+
+ax.set_title(u'El Niño sea temp. with best fit distribution \n' + dist_str)
+ax.set_xlabel(u'Temp. (°C)')
+ax.set_ylabel('Frequency')
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+[0;32m/var/folders/kl/h_r05n_j76n32kt0dwy7kynw0000gn/T/ipykernel_5807/4029579469.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      5[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      6[0m [0;32mimport[0m [0mscipy[0m[0;34m.[0m[0mstats[0m [0;32mas[0m [0mst[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 7[0;31m [0;32mimport[0m [0mstatsmodels[0m[0;34m.[0m[0mapi[0m [0;32mas[0m [0msm[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      8[0m [0;32mfrom[0m [0mscipy[0m[0;34m.[0m[0mstats[0m[0;34m.[0m[0m_continuous_distns[0m [0;32mimport[0m [0m_distn_names[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      9[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mModuleNotFoundError[0m: No module named 'statsmodels'
+ModuleNotFoundError: No module named 'statsmodels'
+

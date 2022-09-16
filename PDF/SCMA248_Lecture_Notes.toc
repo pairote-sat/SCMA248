@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {-1}Course Syllabus}{2}
+\contentsline {section}{\numberline {0}Welcome to SCMA248 Introduction to Data Science}{15}
+\contentsline {section}{\numberline {1}Introduction to Data Science}{17}
+\contentsline {section}{\numberline {2}Python Basics}{27}
+\contentsline {section}{\numberline {3}Data Preparation}{40}
+\contentsline {section}{\numberline {4}Data Visualization}{77}
+\contentsline {section}{\numberline {5}Practical Statistics}{114}
+\contentsline {section}{\numberline {6}Regression Analysis}{152}
+\contentsline {section}{\numberline {7}Machine learning: Introduction}{191}
+\contentsline {section}{\numberline {8}Unsupervised Machine Learning: K-means Clustering}{249}

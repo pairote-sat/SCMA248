@@ -1,0 +1,1338 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Regression Analysis &#8212; SCMA248 Introduction to Data Science</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SCMA248 Introduction to Data Science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to SCMA248 Introduction to Data Science
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter1_Introduction_to_Data_Science.html">
+   1. Introduction to Data Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter2_Python_Basics.html">
+   2. Python Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter3_Data_Preparation.html">
+   3. Data Selection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter4_Data_Visualization.html">
+   6. Data Visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter5_Practical_Statistics.html">
+   7. Practical Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter6_Regression.html">
+   8. Regression Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter7_Introduction_Machine_Learning.html">
+   9. Machine learning: Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter8_Unsupervised_Learning.html">
+   10. Unsupervised Machine Learning: K-means Clustering
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Chapter6_Regression-Copy1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FChapter6_Regression-Copy1.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Chapter6_Regression-Copy1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-linear-regression">
+   Simple linear regression
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#insurance-premium-prediction-example">
+   Insurance Premium Prediction: Example
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploratory-data-analysis">
+     Exploratory data analysis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#make-a-research-question">
+     Make a research question
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-and-reading-a-simple-linear-regression">
+     Running and reading a simple linear regression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpreting-the-results">
+     Interpreting the results
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#presenting-the-results">
+     Presenting the results
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#predicted-values-and-residuals">
+     Predicted values and residuals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#violin-plots">
+     Violin plots
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="regression-analysis">
+<h1>Regression Analysis<a class="headerlink" href="#regression-analysis" title="Permalink to this headline">¶</a></h1>
+<p>Regression analysis is a statistical technique that allows us to determine the relationship between two or more quantitative variables in order to predict a response or outcome variable from one or more of them. This methodology is frequently employed in a variety of fields, including business, social and behavioral sciences, biology, and many more.</p>
+<p>Here are a few examples of applications:</p>
+<ol class="simple">
+<li><p>In  business, the relationship between product sales and advertising expenditures can be used to forecast product sales.</p></li>
+<li><p>A financial firm may wish to know the top five causes that drive a customer to default in order to reduce risk in their portfolio.</p></li>
+<li><p>A automobile insurance firm might use expected claims to Insured Declared Value ratio to create a suggested premium table using linear regression. The risk might be calculated based on the car’s characteristics, the driver’s information, or demographics.</p></li>
+</ol>
+<p>The goal of regression is to create a model that expresses the relationship between a response <span class="math notranslate nohighlight">\({\displaystyle Y_{i}} \in  R^n\)</span> and a set of one or more (independent) variables <span class="math notranslate nohighlight">\({\displaystyle X_{i}} \in  R^n\)</span>. We can use the model to predict the response <span class="math notranslate nohighlight">\({\displaystyle Y_{i}}\)</span> based on the factors (or variables).</p>
+<p>The following elements are included in regression models:</p>
+<ul class="simple">
+<li><p>The unknown parameters, which are frequently denoted as a scalar or vector <span class="math notranslate nohighlight">\(\beta\)</span>.</p></li>
+<li><p>The independent variables, which are observed in data and are frequently expressed as a vector  <span class="math notranslate nohighlight">\({\displaystyle X_{i}}\)</span> (where  <span class="math notranslate nohighlight">\({\displaystyle i}\)</span> denotes a data row).</p></li>
+<li><p>The dependent variable, which can be seen in data and is frequently represented by the scalar <span class="math notranslate nohighlight">\(Y_{i}\)</span>.</p></li>
+<li><p>The error terms, which are not readily visible in data and are frequently represented by the scalar <span class="math notranslate nohighlight">\(e_{i}\)</span>.</p></li>
+</ul>
+<p>Most regression models propose that <span class="math notranslate nohighlight">\(Y_{i}\)</span> is a function of <span class="math notranslate nohighlight">\(X_{i}\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[{\displaystyle Y_{i}=f(X_{i},\beta )+e_{i}}.\]</div>
+<p>In other words, regression analysis aims to find the function <span class="math notranslate nohighlight">\(f(X_{i},\beta)\)</span> that best matches the data. The function’s form must be supplied in order to do regression analysis. The form of this function is sometimes based on knowledge of the relationship between <span class="math notranslate nohighlight">\(X_{i}\)</span> and <span class="math notranslate nohighlight">\(Y_{i}\)</span>. If such information is not available, a flexible or convenient form is adopted.</p>
+<section id="simple-linear-regression">
+<h2>Simple linear regression<a class="headerlink" href="#simple-linear-regression" title="Permalink to this headline">¶</a></h2>
+<p>The simplest model to consider is a linear model, in which the response <span class="math notranslate nohighlight">\({\displaystyle Y_{i}}\)</span> is linearly proportional to the variables <span class="math notranslate nohighlight">\({\displaystyle X_{i}}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[{\displaystyle Y_{i}=\beta _{0}+\beta _{1}X_{i}+e_{i}}\]</div>
+</section>
+<section id="insurance-premium-prediction-example">
+<h2>Insurance Premium Prediction: Example<a class="headerlink" href="#insurance-premium-prediction-example" title="Permalink to this headline">¶</a></h2>
+<p>For analysis, we used the Kaggle public dataset “Insurance Premium Prediction.”. There are 1338 samples and 7 features.</p>
+<p>We will learn how to predict insurance costs based on the features age, sex, bmi, children, smoking status, and region.</p>
+<p>Let us start by loading the data and performing a preliminary analysis with <a class="reference external" href="http://df.info">df.info</a> ()</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">m</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span><span class="p">,</span><span class="n">mean_absolute_error</span><span class="p">,</span><span class="n">r2_score</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">pearsonr</span><span class="p">,</span><span class="n">spearmanr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_5509</span><span class="o">/</span><span class="mf">3901859538.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;statsmodels&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/Data/insuranceKaggle.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Exploration of the dataset is always a good practice.</p>
+<p>We will use charges as the dependent variable and the other variables as independent variables, which means we will have to predict charges based on the independent variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 1338 entries, 0 to 1337
+Data columns (total 7 columns):
+ #   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   age       1338 non-null   int64  
+ 1   sex       1338 non-null   object 
+ 2   bmi       1338 non-null   float64
+ 3   children  1338 non-null   int64  
+ 4   smoker    1338 non-null   object 
+ 5   region    1338 non-null   object 
+ 6   charges   1338 non-null   float64
+dtypes: float64(2), int64(2), object(3)
+memory usage: 73.3+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>In out data set, types of variables are as follows:</p>
+<ul class="simple">
+<li><p>categorical variables: sex, smoker, region</p></li>
+<li><p>numerical variables: age, bmi, children, expenses</p></li>
+</ul>
+<p>There is no missing data among 1338 records.</p>
+<section id="exploratory-data-analysis">
+<h3>Exploratory data analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h3>
+<p>It is now time to experiment with the data and make some visualizations.</p>
+<p>In our dataset, a <strong>pairplot</strong> plots pairwise relationships. The pairplot function creates a grid of Axes in which each variable in the data is shared across a single row and a single column on the y-axis.</p>
+<p>A pairs plot shows the distribution of single variables as well as the relationships between them. Pair plots are a great way to detect trends for further study, and they’re simple to create in Python!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x125f8ba10&gt;
+</pre></div>
+</div>
+<img alt="_images/Chapter6_Regression-Copy1_10_1.png" src="_images/Chapter6_Regression-Copy1_10_1.png" />
+</div>
+</div>
+</section>
+<section id="make-a-research-question">
+<h3>Make a research question<a class="headerlink" href="#make-a-research-question" title="Permalink to this headline">¶</a></h3>
+<p>For our first regression analysis, we are interested in the following question.</p>
+<blockquote>
+<div><p>Is there an association between charges and age?</p>
+</div></blockquote>
+<p>The normal error regression model will be used to determine the linear relationship:
+$<span class="math notranslate nohighlight">\({\displaystyle Y_{i}=\beta _{0}+\beta _{1}X_{i}+e_{i}}\)</span>$</p>
+<p>We need to define a null hypothesis and an alternative hypothesis before we can run the numbers:</p>
+<p>H0 (null hypothesis): There is no linear relationship between charge and age;</p>
+<p>H1 (Alternative hypothesis): There is a linear relationship between charge and age.</p>
+<p>If this hypothesis is accepted, one should discard the <span class="math notranslate nohighlight">\(X\)</span> information and base inferences on the <span class="math notranslate nohighlight">\(Y\)</span> values alone (so <span class="math notranslate nohighlight">\(Y_i = \bar{Y}\)</span>).</p>
+</section>
+<section id="running-and-reading-a-simple-linear-regression">
+<h3>Running and reading a simple linear regression<a class="headerlink" href="#running-and-reading-a-simple-linear-regression" title="Permalink to this headline">¶</a></h3>
+<p><strong>statsmodels</strong> is a Python package that may be used to fit a variety of statistical models, run statistical tests, and explore and visualize data. Other libraries contain Bayesian methods and machine learning models, whereas Statsmodels contains more “traditional” frequentist statistical approaches.</p>
+<p>In statsmodels, there are various types of linear regression models, ranging from the most basic (e.g., ordinary least squares) to the most complicated (e.g., logistic regression) (e.g., iteratively reweighted least squares).</p>
+<p>In what follows, we will use Python’s statsmodels module to implement <strong>Ordinary Least Squares(OLS) method</strong> of linear regression.</p>
+<p>The main interfaces for linear models in statsmodels are array-based and formula-based. These can be accessible via the following API module imports:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model1</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;charges ~ age&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>smf calls the package Statsmodel</p></li>
+<li><p>ols command indicates that we’re employing an Ordinary Least Square (OLS) regression (a type linear regression)</p></li>
+<li><p>formula= is a formula that is used to write the dependent as well as all of the independent variables (s)</p></li>
+<li><p>dependent variable/outcome: first variable within the parenthesis before “~”: Our only dependent variable is the first one. This is our result, the variable that defines the type of regression to use and the one that will be linked to all other covariates.</p></li>
+<li><p>~ inside parenthesis: Creates a division between the outcome (dependent variable) on the left and the covariates (independent variables) on the right.</p></li>
+<li><p>independent covariates/independent variables: All other variables after the “,” inside parenthesis, are independent covariates/independent variables.</p></li>
+<li><p>The + symbol is used to differentiate various independent variables within the same model (helpful for multivariable models, aka many variables).</p></li>
+<li><p>,data= is used to specify the data frame’s name.</p></li>
+<li><p>fit() tell Python that we want to fit our function (“run the function”).</p></li>
+</ul>
+</section>
+<section id="interpreting-the-results">
+<h3>Interpreting the results<a class="headerlink" href="#interpreting-the-results" title="Permalink to this headline">¶</a></h3>
+<p>To view the results of the model, you can use <code class="docutils literal notranslate"><span class="pre">summary()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">model1</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                charges   R-squared:                       0.089
+Model:                            OLS   Adj. R-squared:                  0.089
+Method:                 Least Squares   F-statistic:                     131.2
+Date:                Tue, 22 Feb 2022   Prob (F-statistic):           4.89e-29
+Time:                        09:11:43   Log-Likelihood:                -14415.
+No. Observations:                1338   AIC:                         2.883e+04
+Df Residuals:                    1336   BIC:                         2.884e+04
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept   3165.8850    937.149      3.378      0.001    1327.440    5004.330
+age          257.7226     22.502     11.453      0.000     213.579     301.866
+==============================================================================
+Omnibus:                      399.600   Durbin-Watson:                   2.033
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              864.239
+Skew:                           1.733   Prob(JB):                    2.15e-188
+Kurtosis:                       4.869   Cond. No.                         124.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see some important general data about the model on the upper half of the output.</p>
+<p>On the left, we can observe</p>
+<ul class="simple">
+<li><p>The dependent variable is charges.</p></li>
+<li><p>We are running an ordinary least square (OLS) regression model.</p></li>
+<li><p>We included 1338 observations (patients).</p></li>
+</ul>
+<p>We can notice some key information about the model diagnosis in the right column:</p>
+<ul class="simple">
+<li><p><strong>Determination coefficient</strong> (R-squared) tells us the fraction (%) of variation in the response variable Y that can be explained by the predictor variable X. Its value goes from 0 (no predictability) to 1 (100 percent), indicating total predictability. A high R-squared means that the response variable may be predicted with less error.</p></li>
+</ul>
+<p>In our example, R-squared = 0.089, indicating that the model explains 9 percent of the outcome variability.</p>
+<p><strong>Note</strong> also that the low R-squared graph shows that even noisy, high-variability data may have a significant trend. The trend indicates that the predictor variable still provides information about the response even though data points fall further from the regression line.</p>
+<ul class="simple">
+<li><p><strong>The F-statistic value</strong> is the outcome of a test in which the null hypothesis is that all regression coefficients are equal to zero. To put it another way, the model has no predictive capability.</p></li>
+</ul>
+<p>Essentially, the F-test compares your model against a model with no predictor variables (the intercept alone model) to see if adding coefficients improved the model. If you get a significant result, it means that the coefficients you added to your model enhanced its fit.</p>
+<p>First, check your p-value. You can reject the null hypothesis if the p-value is small (less than your alpha level). Only then should you consider the f-value. If you don’t reject the null, ignore the f-value.</p>
+<p>Prob (F-statistic), which here is &lt;0.05, indicates that our linear regression model provides a better fit to the data than a model that contains no independent variables.</p>
+<p>Regarding the output on the bottom half, we will read the output one column at a time. We are looking at the association between our charges and our independent variable, age (first column),</p>
+<ul class="simple">
+<li><p><strong>Age coefficient</strong> represents the change in the output Y (charges) due to a change of one unit in age. The age coefficient in this case is  257.7226.</p></li>
+<li><p><strong>std err</strong> reflects the level of accuracy of the coefficients. The lower the standard error is, the higher is the level of accuracy.  The results shows the standard error of the coefficient of 22.502.</p></li>
+<li><p>P &gt;|t| is our p-value with a t-ratio (for a t-distribution) of 11.453 (fourth column). A <strong>p-value</strong> of less than 0.05 is considered to be statistically significant.</p></li>
+<li><p><strong>Confidence Interval</strong> represents the range in which the (age) coefficient is likely to fall, i.e. corresponding to a 95% confidence interval for the age coefficient between 213.579 and 301.866.</p></li>
+</ul>
+<p>For the Intercept, this is the y-intercept of the regression equation, with a value of 3165.8850. You can plug this into your regression equation if you want to predict charges across the range of age that you have observed:</p>
+<p><strong>Note:</strong> we will not partition our data into training and testing because we are conducting an observational study to observe/test an association rather than constructing a predictive model. As a result, do not be surprised if this method differs from what you’ll find in most data science classes.</p>
+</section>
+<section id="presenting-the-results">
+<h3>Presenting the results<a class="headerlink" href="#presenting-the-results" title="Permalink to this headline">¶</a></h3>
+<p>From our analysis, we found that the regression coefficients are
+$<span class="math notranslate nohighlight">\(\beta_0 = 3165.885006 \text{ and } \beta_1 = 257.722619.\)</span>$</p>
+<p>The estimated regression function is
+$<span class="math notranslate nohighlight">\( \hat{Y} = 3165.885 + 257.7226X. \)</span>$</p>
+<p>When reporting your results, include the estimated effect (i.e. the regression coefficient), standard error of the estimate, and the p-value, we should additionally explain what your regression coefficient means to your viewers by interpreting your your regression coefficient means:</p>
+<p>Age and charges have a significant relationship (p &lt; 0.001), with a 257.7226-unit (95% CI of <span class="math notranslate nohighlight">\(\beta_1\)</span>: 257.7226 <span class="math notranslate nohighlight">\(\pm\)</span> 22.502) increase in charges for each increase in age.</p>
+<p>It is also a good idea to provide a graph with your findings. You can plot the observations on the x and y axes and then add the regression line and regression function for a simple linear regression:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Model parameters</span>
+
+<span class="n">model1</span><span class="o">.</span><span class="n">params</span>
+
+<span class="n">model1</span><span class="o">.</span><span class="n">tvalues</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Intercept     3.378207
+age          11.453122
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="predicted-values-and-residuals">
+<h3>Predicted values and residuals<a class="headerlink" href="#predicted-values-and-residuals" title="Permalink to this headline">¶</a></h3>
+<p>We can compute predicted values given the estimated model parameters using <code class="docutils literal notranslate"><span class="pre">predict</span></code> function. In what follows, we calculate the predicted values and use them to calculate the residuals.</p>
+<p>Recall that the <span class="math notranslate nohighlight">\(i\)</span>th residual is the difference between the observed value <span class="math notranslate nohighlight">\(Y_i\)</span> and the corresponding fitted value <span class="math notranslate nohighlight">\(\hat{Y_i}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;age&#39;</span><span class="p">]]</span>
+<span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;charges&#39;</span><span class="p">]]</span>
+
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">model1</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;slr_result&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">predictions</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;slr_error&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">df</span><span class="p">[</span><span class="s1">&#39;charges&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;slr_result&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1333</th>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>1334</th>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>1335</th>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>1336</th>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>1337</th>
+      <td>61</td>
+    </tr>
+  </tbody>
+</table>
+<p>1338 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>sex</th>
+      <th>bmi</th>
+      <th>children</th>
+      <th>smoker</th>
+      <th>region</th>
+      <th>charges</th>
+      <th>slr_result</th>
+      <th>slr_error</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>19</td>
+      <td>female</td>
+      <td>27.900</td>
+      <td>0</td>
+      <td>yes</td>
+      <td>southwest</td>
+      <td>16884.92400</td>
+      <td>8062.614761</td>
+      <td>8822.309239</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18</td>
+      <td>male</td>
+      <td>33.770</td>
+      <td>1</td>
+      <td>no</td>
+      <td>southeast</td>
+      <td>1725.55230</td>
+      <td>7804.892142</td>
+      <td>-6079.339842</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>28</td>
+      <td>male</td>
+      <td>33.000</td>
+      <td>3</td>
+      <td>no</td>
+      <td>southeast</td>
+      <td>4449.46200</td>
+      <td>10382.118329</td>
+      <td>-5932.656329</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>33</td>
+      <td>male</td>
+      <td>22.705</td>
+      <td>0</td>
+      <td>no</td>
+      <td>northwest</td>
+      <td>21984.47061</td>
+      <td>11670.731422</td>
+      <td>10313.739188</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>32</td>
+      <td>male</td>
+      <td>28.880</td>
+      <td>0</td>
+      <td>no</td>
+      <td>northwest</td>
+      <td>3866.85520</td>
+      <td>11413.008803</td>
+      <td>-7546.153603</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1333</th>
+      <td>50</td>
+      <td>male</td>
+      <td>30.970</td>
+      <td>3</td>
+      <td>no</td>
+      <td>northwest</td>
+      <td>10600.54830</td>
+      <td>16052.015939</td>
+      <td>-5451.467639</td>
+    </tr>
+    <tr>
+      <th>1334</th>
+      <td>18</td>
+      <td>female</td>
+      <td>31.920</td>
+      <td>0</td>
+      <td>no</td>
+      <td>northeast</td>
+      <td>2205.98080</td>
+      <td>7804.892142</td>
+      <td>-5598.911342</td>
+    </tr>
+    <tr>
+      <th>1335</th>
+      <td>18</td>
+      <td>female</td>
+      <td>36.850</td>
+      <td>0</td>
+      <td>no</td>
+      <td>southeast</td>
+      <td>1629.83350</td>
+      <td>7804.892142</td>
+      <td>-6175.058642</td>
+    </tr>
+    <tr>
+      <th>1336</th>
+      <td>21</td>
+      <td>female</td>
+      <td>25.800</td>
+      <td>0</td>
+      <td>no</td>
+      <td>southwest</td>
+      <td>2007.94500</td>
+      <td>8578.059998</td>
+      <td>-6570.114998</td>
+    </tr>
+    <tr>
+      <th>1337</th>
+      <td>61</td>
+      <td>female</td>
+      <td>29.070</td>
+      <td>0</td>
+      <td>yes</td>
+      <td>northwest</td>
+      <td>29141.36030</td>
+      <td>18886.964745</td>
+      <td>10254.395555</td>
+    </tr>
+  </tbody>
+</table>
+<p>1338 rows × 9 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">y</span><span class="p">,</span><span class="s1">&#39;bo&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Actual Values&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">predictions</span><span class="p">,</span><span class="s1">&#39;go&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predicted Values&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Scatter plot: Actual Vs. Predicted Values&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;charges&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Actual Values&quot;</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Predicted Values&quot;</span> <span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Dist plot: Actual Vs. Predicted Values&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;slr_error&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Prediction Error&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Prediction Error&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `kdeplot` (an axes-level function for kernel density plots).
+/Users/Kaemyuijang/opt/anaconda3/lib/python3.7/site-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `kdeplot` (an axes-level function for kernel density plots).
+</pre></div>
+</div>
+<img alt="_images/Chapter6_Regression-Copy1_25_1.png" src="_images/Chapter6_Regression-Copy1_25_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">plotnine.data</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;charges&#39;</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;lm&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">labs</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Prediction error&#39;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Actual vs Predicted Values&#39;</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">scale_fill_manual</span><span class="p">(</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Actual values&#39;</span><span class="p">,</span><span class="s1">&#39;Predicted values&#39;</span><span class="p">],</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Actualvalues&#39;</span><span class="p">,</span><span class="s1">&#39;Predicted values&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter6_Regression-Copy1_26_0.png" src="_images/Chapter6_Regression-Copy1_26_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (309078585)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;charges&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;&quot;Actual value&quot;&#39;</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+    <span class="o">+</span> <span class="n">geom_smooth</span><span class="p">(</span><span class="n">mapping</span> <span class="o">=</span> <span class="n">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;&quot;Predicted value&quot;&#39;</span><span class="p">),</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;lm&#39;</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">labs</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Prediction error&#39;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Actual vs Predicted Values&#39;</span><span class="p">)</span>
+    <span class="c1">#+ scale_fill_manual(</span>
+    <span class="c1">#values = [&#39;Actual values&#39;,&#39;Predicted values&#39;],</span>
+    <span class="c1">#name = &quot; &quot;, labels = [&#39;Actual values&#39;,&#39;Predicted values&#39;] )</span>
+    <span class="o">+</span> <span class="n">scale_color_manual</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">],</span> <span class="c1"># Colors</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="c1"># Remove the legend title</span>
+    
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter6_Regression-Copy1_27_0.png" src="_images/Chapter6_Regression-Copy1_27_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (309909181)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;charges&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;&quot;Actual value&quot;&#39;</span><span class="p">))</span> 
+    <span class="o">+</span> <span class="n">scale_color_manual</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">],</span> <span class="c1"># Colors</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter6_Regression-Copy1_28_0.png" src="_images/Chapter6_Regression-Copy1_28_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (310016773)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;charges&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;&quot;Actual value&quot;&#39;</span><span class="p">))</span> 
+    <span class="o">+</span> <span class="n">geom_smooth</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;charges&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;&quot;Predicted value&quot;&#39;</span><span class="p">),</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;lm&#39;</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">scale_color_manual</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="s1">&#39;green&#39;</span><span class="p">],</span> <span class="c1"># Colors</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter6_Regression-Copy1_29_0.png" src="_images/Chapter6_Regression-Copy1_29_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (310011901)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;charges&#39;</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;&quot;Actual value&quot;&#39;</span><span class="p">))</span> 
+    <span class="o">+</span> <span class="n">geom_smooth</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;&quot;Predicted value&quot;&#39;</span><span class="p">),</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;lm&#39;</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">scale_color_manual</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="s1">&#39;green&#39;</span><span class="p">],</span> <span class="c1"># Colors</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter6_Regression-Copy1_30_0.png" src="_images/Chapter6_Regression-Copy1_30_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (313797561)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;charges&#39;</span><span class="p">))</span>
+    <span class="o">+</span>  <span class="n">geom_density</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">after_stat</span><span class="p">(</span><span class="s1">&#39;density&#39;</span><span class="p">)))</span>
+    <span class="o">+</span>  <span class="n">geom_density</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;slr_result&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">after_stat</span><span class="p">(</span><span class="s1">&#39;density&#39;</span><span class="p">)))</span>
+    <span class="o">+</span> <span class="n">theme_xkcd</span><span class="p">()</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter6_Regression-Copy1_31_0.png" src="_images/Chapter6_Regression-Copy1_31_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (313613309)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;df.index&#39;</span><span class="p">))</span>
+    <span class="o">+</span>  <span class="n">geom_point</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;slr_error&#39;</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Prediction error&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter6_Regression-Copy1_32_0.png" src="_images/Chapter6_Regression-Copy1_32_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (312165777)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercise</strong> In this exercise, we will use the gapminder dataset. Our aim is to determine a relationship between life expectancy and year?</p>
+<ol class="simple">
+<li><p>Plot life expectancy over time in a scatter plot.</p></li>
+<li><p>Is there a general trend in life expectancy over time (e.g., increasing or decreasing)? Is this a linear trend?</p></li>
+<li><p>How would you characterize the distribution of life expectancy for individual years among countries? Is the data skewed or not? Is it better to be unimodal or multimodal? Is it symmetrical around the center?</p></li>
+<li><p>Fit a linear regression model using statsmodels.</p></li>
+<li><p>Will you reject the null hypothesis of no association if I run a linear regression model of life expectancy vs. year (considering it as a continuous variable) and test for a relationship between year and life expectancy?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/Data/gapminder_full.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gapminder</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>population</th>
+      <th>continent</th>
+      <th>life_exp</th>
+      <th>gdp_cap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Afghanistan</td>
+      <td>1952</td>
+      <td>8425333</td>
+      <td>Asia</td>
+      <td>28.801</td>
+      <td>779.445314</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Afghanistan</td>
+      <td>1957</td>
+      <td>9240934</td>
+      <td>Asia</td>
+      <td>30.332</td>
+      <td>820.853030</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Afghanistan</td>
+      <td>1962</td>
+      <td>10267083</td>
+      <td>Asia</td>
+      <td>31.997</td>
+      <td>853.100710</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Afghanistan</td>
+      <td>1967</td>
+      <td>11537966</td>
+      <td>Asia</td>
+      <td>34.020</td>
+      <td>836.197138</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Afghanistan</td>
+      <td>1972</td>
+      <td>13079460</td>
+      <td>Asia</td>
+      <td>36.088</td>
+      <td>739.981106</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">gapminder</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span> <span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;life_exp&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_point</span><span class="p">()</span>  <span class="o">+</span>
+    <span class="n">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Life expectancy&#39;</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Life expectancy over time&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter6_Regression-Copy1_36_0.png" src="_images/Chapter6_Regression-Copy1_36_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (309721681)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">gapminder</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="s1">&#39;life_exp&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_histogram</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">after_stat</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)),</span> <span class="n">binwidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">geom_density</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">after_stat</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">facet_wrap</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter6_Regression-Copy1_37_0.png" src="_images/Chapter6_Regression-Copy1_37_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (308473473)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="violin-plots">
+<h3>Violin plots<a class="headerlink" href="#violin-plots" title="Permalink to this headline">¶</a></h3>
+<p>A <strong>violin plot</strong> displays the densities of different groups, allowing you to compare their distributions.</p>
+<p>Violin plots are similar to box plots in that they display the probability density of the data at various values, which is normally smoothed using a kernel density estimator. Typically, a violin plot will include all of the data found in a box plot: a marker for the data’s median; a box or marker representing the interquartile range; and, assuming the number of samples is not too large, all sample points.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># useful link: https://r-charts.com/distribution/violin-plot-mean-ggplot2/</span>
+
+<span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">gapminder</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span> <span class="s1">&#39;factor(year)&#39;</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;life_exp&#39;</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="s1">&#39;factor(year)&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">geom_violin</span><span class="p">()</span> <span class="o">+</span>
+    <span class="n">geom_point</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">stat_summary</span><span class="p">(</span><span class="n">fun_y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">,</span>
+               <span class="n">geom</span> <span class="o">=</span> <span class="s1">&#39;point&#39;</span><span class="p">,</span>
+               <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter6_Regression-Copy1_39_0.png" src="_images/Chapter6_Regression-Copy1_39_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (309827293)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">gapminder</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span> <span class="s1">&#39;factor(year)&#39;</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;life_exp&#39;</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="s1">&#39;factor(year)&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">geom_violin</span><span class="p">()</span> <span class="o">+</span>
+    <span class="n">stat_summary</span><span class="p">(</span><span class="n">mapping</span><span class="o">=</span><span class="n">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;&quot;Median&quot;&#39;</span><span class="p">),</span>
+                 <span class="n">fun_y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">,</span>
+                 <span class="n">geom</span> <span class="o">=</span> <span class="s1">&#39;point&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">stat_summary</span><span class="p">(</span><span class="n">mapping</span><span class="o">=</span><span class="n">aes</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;&quot;Mean&quot;&#39;</span><span class="p">),</span>
+                 <span class="n">fun_y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span>
+                 <span class="n">geom</span> <span class="o">=</span> <span class="s1">&#39;point&#39;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="n">scale_color_manual</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">],</span> <span class="c1"># Colors</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="c1"># Remove the legend title</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter6_Regression-Copy1_40_0.png" src="_images/Chapter6_Regression-Copy1_40_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (309393113)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">ggplot</span><span class="p">(</span><span class="n">gapminder</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span> <span class="s1">&#39;factor(year)&#39;</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;life_exp&#39;</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="s1">&#39;factor(year)&#39;</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">geom_violin</span><span class="p">()</span> <span class="o">+</span>
+    <span class="n">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span> <span class="o">+</span> 
+    <span class="n">stat_summary</span><span class="p">(</span><span class="n">fun_y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">,</span>
+                 <span class="n">fun_ymin</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span>  <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">25</span><span class="p">),</span>
+                 <span class="n">fun_ymax</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span>  <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">75</span><span class="p">),</span>
+               <span class="n">geom</span> <span class="o">=</span> <span class="s1">&#39;crossbar&#39;</span><span class="p">,</span>  <span class="c1"># try pointrange</span>
+               <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter6_Regression-Copy1_42_0.png" src="_images/Chapter6_Regression-Copy1_42_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ggplot: (312233373)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model2</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;life_exp ~ year&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">gapminder</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model2</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>        <td>life_exp</td>     <th>  R-squared:         </th> <td>   0.190</td> 
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.189</td> 
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   398.6</td> 
+</tr>
+<tr>
+  <th>Date:</th>             <td>Mon, 21 Feb 2022</td> <th>  Prob (F-statistic):</th> <td>7.55e-80</td> 
+</tr>
+<tr>
+  <th>Time:</th>                 <td>14:37:42</td>     <th>  Log-Likelihood:    </th> <td> -6597.9</td> 
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>  1704</td>      <th>  AIC:               </th> <td>1.320e+04</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>  1702</td>      <th>  BIC:               </th> <td>1.321e+04</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     1</td>      <th>                     </th>     <td> </td>    
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th> <td> -585.6522</td> <td>   32.314</td> <td>  -18.124</td> <td> 0.000</td> <td> -649.031</td> <td> -522.273</td>
+</tr>
+<tr>
+  <th>year</th>      <td>    0.3259</td> <td>    0.016</td> <td>   19.965</td> <td> 0.000</td> <td>    0.294</td> <td>    0.358</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>386.124</td> <th>  Durbin-Watson:     </th> <td>   0.197</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>  90.750</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.268</td>  <th>  Prob(JB):          </th> <td>1.97e-20</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 2.004</td>  <th>  Cond. No.          </th> <td>2.27e+05</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 2.27e+05. This might indicate that there are<br/>strong multicollinearity or other numerical problems.</div></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Pairote Satiracoo<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

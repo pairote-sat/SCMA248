@@ -97,23 +97,43 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter1-Introduction-to-Data-Science.html">
+  <a class="reference internal" href="../Chapter1_Introduction_to_Data_Science.html">
    1. Introduction to Data Science
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter2-Python-Basics.html">
+  <a class="reference internal" href="../Chapter2_Python_Basics.html">
    2. Python Basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter3-Data-Preparation.html">
-   3. Data Preparation
+  <a class="reference internal" href="../Chapter3_Data_Preparation.html">
+   3. Data Selection
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Chapter4_Data_Visualization.html">
-   4. Data Visualization
+   6. Data Visualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter5_Practical_Statistics.html">
+   7. Practical Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter6_Regression.html">
+   8. Regression Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter7_Introduction_Machine_Learning.html">
+   9. Machine learning: Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter8_Unsupervised_Learning.html">
+   10. Unsupervised Machine Learning: K-means Clustering
   </a>
  </li>
 </ul>
@@ -1354,16 +1374,197 @@ dtype: float64
 <section id="part-2">
 <h2>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>Create a table that shows the 2010 claims frequency distribution. The table should contain the number of policies, the number of claims and the proportion (broken down by the number of claims).</p></li>
+<li><p>Write Python code to generage a table that shows the 2010 claims frequency distribution. The table should contain the number of policies, the number of claims and the proportion (broken down by the number of claims).</p></li>
 </ol>
+<p>Goal: the table should tell us how many poicyholders and the (percentage) proportion of policyholders who did not have any claims, only one claim and so on.</p>
 <p>1.1. How many policyholders in the 2010 claims data have 9 or more claims?</p>
 <p>1.2. What is the percentage proportion of policyholders having exactly 3 claims?</p>
-<p>Goal: the table should tell us the (percentage) proportion of policyholders who did not have any claims, only one claim and so on.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">claims</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/Kaemyuijang/SCMA248/Data/ClaimsExperienceData.csv&#39;</span><span class="p">)</span>
+<span class="c1">#claims = pd.read_csv(&#39;/Users/Kaemyuijang/SCMA248/Data/ClaimsExperienceData.csv&#39;)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/ClaimsExperienceData.csv&#39;</span>
+<span class="n">claims</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">SSLCertVerificationError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py</span> in <span class="ni">do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1349</span>                 <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
+<span class="ne">-&gt; </span><span class="mi">1350</span>                           <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1351</span>             <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span> <span class="c1"># timeout error</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, body, headers, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1261</span>         <span class="sd">&quot;&quot;&quot;Send a complete request to the server.&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1262</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_send_request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span> 
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py</span> in <span class="ni">_send_request</span><span class="nt">(self, method, url, body, headers, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1307</span>             <span class="n">body</span> <span class="o">=</span> <span class="n">_encode</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s1">&#39;body&#39;</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1308</span>         <span class="bp">self</span><span class="o">.</span><span class="n">endheaders</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1309</span> 
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py</span> in <span class="ni">endheaders</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1256</span>             <span class="k">raise</span> <span class="n">CannotSendHeader</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1257</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_send_output</span><span class="p">(</span><span class="n">message_body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span> 
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py</span> in <span class="ni">_send_output</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1027</span>         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="p">[:]</span>
+<span class="ne">-&gt; </span><span class="mi">1028</span>         <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1029</span> 
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py</span> in <span class="ni">send</span><span class="nt">(self, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">967</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_open</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">968</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">969</span>             <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py</span> in <span class="ni">connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1431</span>             <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="o">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="p">,</span>
+<span class="ne">-&gt; </span><span class="mi">1432</span>                                                   <span class="n">server_hostname</span><span class="o">=</span><span class="n">server_hostname</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1433</span> 
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ssl.py</span> in <span class="ni">wrap_socket</span><span class="nt">(self, sock, server_side, do_handshake_on_connect, suppress_ragged_eofs, server_hostname, session)</span>
+<span class="g g-Whitespace">    </span><span class="mi">422</span>             <span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">423</span>             <span class="n">session</span><span class="o">=</span><span class="n">session</span>
+<span class="g g-Whitespace">    </span><span class="mi">424</span>         <span class="p">)</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ssl.py</span> in <span class="ni">_create</span><span class="nt">(cls, sock, server_side, do_handshake_on_connect, suppress_ragged_eofs, server_hostname, context, session)</span>
+<span class="g g-Whitespace">    </span><span class="mi">869</span>                         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;do_handshake_on_connect should not be specified for non-blocking sockets&quot;</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">870</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">do_handshake</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">871</span>             <span class="k">except</span> <span class="p">(</span><span class="ne">OSError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ssl.py</span> in <span class="ni">do_handshake</span><span class="nt">(self, block)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1138</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1139</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">do_handshake</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1140</span>         <span class="k">finally</span><span class="p">:</span>
+
+<span class="ne">SSLCertVerificationError</span>: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1091)
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">URLError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_5571</span><span class="o">/</span><span class="mf">3980151752.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#claims = pd.read_csv(&#39;/Users/Kaemyuijang/SCMA248/Data/ClaimsExperienceData.csv&#39;)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/pairote-sat/SCMA248/main/Data/ClaimsExperienceData.csv&#39;</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">claims</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span> 
+<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span> 
+<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span> 
+<span class="g g-Whitespace">    </span><span class="mi">588</span> 
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">480</span> 
+<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">482</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">483</span> 
+<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">809</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">810</span> 
+<span class="ne">--&gt; </span><span class="mi">811</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">812</span> 
+<span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1038</span>             <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1040</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1041</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> 
+<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># open handles</span>
+<span class="ne">---&gt; </span><span class="mi">51</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span> 
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">227</span>             <span class="n">memory_map</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">228</span>             <span class="n">storage_options</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="ne">--&gt; </span><span class="mi">229</span>             <span class="n">errors</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">231</span> 
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">612</span>         <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">613</span>         <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">614</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">615</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">616</span> 
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/io/common.py</span> in <span class="ni">_get_filepath_or_buffer</span><span class="nt">(filepath_or_buffer, encoding, compression, mode, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>         <span class="c1"># assuming storage_options is to be interpreted as headers</span>
+<span class="g g-Whitespace">    </span><span class="mi">311</span>         <span class="n">req_info</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">storage_options</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">312</span>         <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req_info</span><span class="p">)</span> <span class="k">as</span> <span class="n">req</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">313</span>             <span class="n">content_encoding</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Content-Encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">314</span>             <span class="k">if</span> <span class="n">content_encoding</span> <span class="o">==</span> <span class="s2">&quot;gzip&quot;</span><span class="p">:</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/io/common.py</span> in <span class="ni">urlopen</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">210</span>     <span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="g g-Whitespace">    </span><span class="mi">211</span> 
+<span class="ne">--&gt; </span><span class="mi">212</span>     <span class="k">return</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">213</span> 
+<span class="g g-Whitespace">    </span><span class="mi">214</span> 
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
+<span class="ne">--&gt; </span><span class="mi">222</span>     <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span> 
+<span class="g g-Whitespace">    </span><span class="mi">224</span> <span class="k">def</span> <span class="nf">install_opener</span><span class="p">(</span><span class="n">opener</span><span class="p">):</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py</span> in <span class="ni">open</span><span class="nt">(self, fullurl, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">523</span>             <span class="n">req</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">524</span> 
+<span class="ne">--&gt; </span><span class="mi">525</span>         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">526</span> 
+<span class="g g-Whitespace">    </span><span class="mi">527</span>         <span class="c1"># post-process response</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py</span> in <span class="ni">_open</span><span class="nt">(self, req, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">541</span>         <span class="n">protocol</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">type</span>
+<span class="g g-Whitespace">    </span><span class="mi">542</span>         <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle_open</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">protocol</span> <span class="o">+</span>
+<span class="ne">--&gt; </span><span class="mi">543</span>                                   <span class="s1">&#39;_open&#39;</span><span class="p">,</span> <span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">544</span>         <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">545</span>             <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py</span> in <span class="ni">_call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span>         <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span>             <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">503</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span>             <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span>                 <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py</span> in <span class="ni">https_open</span><span class="nt">(self, req)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1391</span>         <span class="k">def</span> <span class="nf">https_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1392</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_open</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span>
+<span class="ne">-&gt; </span><span class="mi">1393</span>                 <span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="p">,</span> <span class="n">check_hostname</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_check_hostname</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1394</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1395</span>         <span class="n">https_request</span> <span class="o">=</span> <span class="n">AbstractHTTPHandler</span><span class="o">.</span><span class="n">do_request_</span>
+
+<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py</span> in <span class="ni">do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1350</span>                           <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1351</span>             <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span> <span class="c1"># timeout error</span>
+<span class="ne">-&gt; </span><span class="mi">1352</span>                 <span class="k">raise</span> <span class="n">URLError</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1353</span>             <span class="n">r</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1354</span>         <span class="k">except</span><span class="p">:</span>
+
+<span class="ne">URLError</span>: &lt;urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1091)&gt;
 </pre></div>
 </div>
 </div>
@@ -1373,7 +1574,7 @@ dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claimsFreqDist</span> <span class="o">=</span> <span class="n">claims</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span><span class="s1">&#39;Freq&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;PolicyNum&#39;</span> <span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;Freq&#39;</span> <span class="p">:</span> <span class="s1">&#39;sum&#39;</span><span class="p">})</span>
 <span class="n">claimsFreqDist</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;PolicyNum&#39;</span><span class="p">:</span><span class="s1">&#39;NumPolicies&#39;</span><span class="p">,</span> <span class="s1">&#39;Freq&#39;</span><span class="p">:</span><span class="s1">&#39;NumClaims&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">claimsFreqDist</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">claimsFreqDist</span>
 </pre></div>
 </div>
 </div>
@@ -1434,8 +1635,41 @@ dtype: float64
       <td>13</td>
       <td>52</td>
     </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">2010</th>
+      <th>19</th>
+      <td>1</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>1</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>1</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>1</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <th>239</th>
+      <td>1</td>
+      <td>239</td>
+    </tr>
   </tbody>
 </table>
+<p>103 rows × 2 columns</p>
 </div></div></div>
 </div>
 <p>To determine the (percentage) proportion of policies for each claim frequency, we will first group the “Year” and “Freq”.   To calculate the percentage <strong>within each “Year” group</strong>, the following command can be used groupby(level=0).apply(lambda x: 100*x/x.sum())</p>
@@ -1447,7 +1681,8 @@ dtype: float64
 <span class="n">Table1</span> <span class="o">=</span> <span class="n">claims</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span><span class="s1">&#39;Freq&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;PolicyNum&#39;</span> <span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">100</span><span class="o">*</span><span class="n">x</span><span class="o">/</span><span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
 <span class="n">Table1</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;PolicyNum&#39;</span><span class="p">:</span><span class="s1">&#39;Percentage&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-<span class="n">Table1</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="mi">2010</span><span class="p">,</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">))]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="c1">#Table1.loc[(2010,slice(None))]</span>
+<span class="n">Table1</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">),</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">))]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1470,15 +1705,47 @@ dtype: float64
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th></th>
       <th>Percentage</th>
     </tr>
     <tr>
+      <th>Year</th>
       <th>Freq</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <th rowspan="7" valign="top">2009</th>
+      <th>16</th>
+      <td>0.089928</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0.089928</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0.089928</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>0.089928</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>0.089928</td>
+    </tr>
+    <tr>
+      <th>228</th>
+      <td>0.089928</td>
+    </tr>
+    <tr>
+      <th>263</th>
+      <td>0.089928</td>
+    </tr>
+    <tr>
+      <th rowspan="23" valign="top">2010</th>
       <th>0</th>
       <td>63.693694</td>
     </tr>
@@ -1498,6 +1765,78 @@ dtype: float64
       <th>4</th>
       <td>1.621622</td>
     </tr>
+    <tr>
+      <th>5</th>
+      <td>1.081081</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0.810811</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0.360360</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0.540541</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0.270270</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0.180180</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0.180180</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0.180180</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>239</th>
+      <td>0.090090</td>
+    </tr>
   </tbody>
 </table>
 </div></div></div>
@@ -1509,7 +1848,7 @@ dtype: float64
 
 <span class="c1">#claimsFreqDist</span>
 
-<span class="n">claimsFreqDist</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="mi">2010</span><span class="p">,</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">))]</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">claimsFreqDist</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="mi">2010</span><span class="p">,</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">))]</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1573,6 +1912,114 @@ dtype: float64
       <td>72</td>
       <td>18</td>
       <td>1.621622</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>60</td>
+      <td>12</td>
+      <td>1.081081</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>54</td>
+      <td>9</td>
+      <td>0.810811</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>28</td>
+      <td>4</td>
+      <td>0.360360</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>48</td>
+      <td>6</td>
+      <td>0.540541</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>9</td>
+      <td>1</td>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>30</td>
+      <td>3</td>
+      <td>0.270270</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>22</td>
+      <td>2</td>
+      <td>0.180180</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>13</td>
+      <td>1</td>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>28</td>
+      <td>2</td>
+      <td>0.180180</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>15</td>
+      <td>1</td>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>32</td>
+      <td>2</td>
+      <td>0.180180</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>17</td>
+      <td>1</td>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>18</td>
+      <td>1</td>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>19</td>
+      <td>1</td>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>30</td>
+      <td>1</td>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>39</td>
+      <td>1</td>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>103</td>
+      <td>1</td>
+      <td>0.090090</td>
+    </tr>
+    <tr>
+      <th>239</th>
+      <td>239</td>
+      <td>1</td>
+      <td>0.090090</td>
     </tr>
   </tbody>
 </table>
@@ -1660,11 +2107,16 @@ dtype: float64
 <span class="n">cond</span> <span class="o">=</span> <span class="p">(</span><span class="n">l0</span> <span class="o">==</span> <span class="mi">2010</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">l1</span> <span class="o">&gt;=</span> <span class="mi">9</span><span class="p">)</span>
 
 <span class="n">claimsFreqDist</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cond</span><span class="p">,</span><span class="s1">&#39;NumPolicies&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">ans1_1</span> <span class="o">=</span> <span class="n">claimsFreqDist</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cond</span><span class="p">,</span><span class="s1">&#39;NumPolicies&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ans: The number of policyholders in the 2010 claims data having 9 or more claims is&#39;</span>
+      <span class="p">,</span> <span class="n">ans1_1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ans: The number of policyholders in the 2010 claims data having 9 or more claims is 19
 </pre></div>
 </div>
 </div>
@@ -1687,13 +2139,16 @@ dtype: float64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claimsFreqDist</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;Year == 2010 &amp; Freq == 3&#39;</span><span class="p">)[</span><span class="s1">&#39;Percentage&#39;</span><span class="p">]</span>
+
+<span class="n">ans1_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">claimsFreqDist</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;Year == 2010 &amp; Freq == 3&#39;</span><span class="p">)[</span><span class="s1">&#39;Percentage&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ans: The percentage proportion of policyholders having exactly 3 claims:&#39;</span><span class="p">,</span> <span class="n">ans1_2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Year  Freq
-2010  3       3.603604
-Name: Percentage, dtype: float64
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ans: The percentage proportion of policyholders having exactly 3 claims: 3.6036036036036037
 </pre></div>
 </div>
 </div>
@@ -1899,7 +2354,7 @@ Name: Percentage, dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multi</span> <span class="o">=</span> <span class="n">claims</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span><span class="s1">&#39;Freq&#39;</span><span class="p">])</span>
 
-<span class="n">multi</span>
+<span class="n">multi</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1975,20 +2430,20 @@ Name: Percentage, dtype: float64
     <tr>
       <th>2006</th>
       <th>0</th>
-      <td>120002</td>
-      <td>3.123002</td>
-      <td>22714456.0</td>
-      <td>9313</td>
-      <td>1000.0</td>
+      <td>180775</td>
+      <td>-0.088613</td>
+      <td>915200.0</td>
+      <td>943</td>
+      <td>500.0</td>
       <td>0.00</td>
       <td>0.000000</td>
       <td>0.00</td>
-      <td>6.907755</td>
+      <td>6.214608</td>
       <td>1</td>
       <td>...</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2000,20 +2455,20 @@ Name: Percentage, dtype: float64
     <tr>
       <th>2007</th>
       <th>0</th>
-      <td>120002</td>
-      <td>3.220740</td>
-      <td>25046646.0</td>
-      <td>8767</td>
-      <td>1000.0</td>
+      <td>180775</td>
+      <td>-0.021734</td>
+      <td>978500.0</td>
+      <td>753</td>
+      <td>500.0</td>
       <td>0.00</td>
       <td>0.000000</td>
       <td>0.00</td>
-      <td>6.907755</td>
+      <td>6.214608</td>
       <td>1</td>
       <td>...</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2025,20 +2480,20 @@ Name: Percentage, dtype: float64
     <tr>
       <th>2008</th>
       <th>0</th>
-      <td>120002</td>
-      <td>3.037427</td>
-      <td>20851525.0</td>
-      <td>7090</td>
-      <td>1000.0</td>
+      <td>180775</td>
+      <td>0.011596</td>
+      <td>1011664.0</td>
+      <td>769</td>
+      <td>500.0</td>
       <td>0.00</td>
       <td>0.000000</td>
       <td>0.00</td>
-      <td>6.907755</td>
+      <td>6.214608</td>
       <td>1</td>
       <td>...</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2050,10 +2505,185 @@ Name: Percentage, dtype: float64
     <tr>
       <th>2009</th>
       <th>0</th>
-      <td>120002</td>
-      <td>3.084324</td>
-      <td>21852696.0</td>
-      <td>8522</td>
+      <td>180775</td>
+      <td>0.049213</td>
+      <td>1050444.0</td>
+      <td>799</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>0</th>
+      <td>180775</td>
+      <td>0.022723</td>
+      <td>1022983.0</td>
+      <td>717</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2006</th>
+      <th>0</th>
+      <td>180776</td>
+      <td>-2.571773</td>
+      <td>76400.0</td>
+      <td>101</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <th>0</th>
+      <td>180776</td>
+      <td>-2.511616</td>
+      <td>81137.0</td>
+      <td>72</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <th>0</th>
+      <td>180776</td>
+      <td>-2.451468</td>
+      <td>86167.0</td>
+      <td>68</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <th>0</th>
+      <td>180776</td>
+      <td>-2.436574</td>
+      <td>87460.0</td>
+      <td>69</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>0</th>
+      <td>180776</td>
+      <td>-2.420704</td>
+      <td>88859.0</td>
+      <td>64</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2006</th>
+      <th>0</th>
+      <td>180777</td>
+      <td>0.973993</td>
+      <td>2648500.0</td>
+      <td>3152</td>
       <td>1000.0</td>
       <td>0.00</td>
       <td>0.000000</td>
@@ -2062,8 +2692,8 @@ Name: Percentage, dtype: float64
       <td>1</td>
       <td>...</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2073,22 +2703,22 @@ Name: Percentage, dtype: float64
       <td>0</td>
     </tr>
     <tr>
-      <th rowspan="7" valign="top">2010</th>
-      <th>1</th>
-      <td>120002</td>
-      <td>3.157489</td>
-      <td>23511493.0</td>
-      <td>7994</td>
+      <th>2007</th>
+      <th>0</th>
+      <td>180777</td>
+      <td>1.119558</td>
+      <td>3063500.0</td>
+      <td>1807</td>
       <td>1000.0</td>
-      <td>6838.87</td>
-      <td>8.830378</td>
-      <td>6838.87</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
       <td>6.907755</td>
       <td>1</td>
       <td>...</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2098,30 +2728,831 @@ Name: Percentage, dtype: float64
       <td>0</td>
     </tr>
     <tr>
-      <th>...</th>
+      <th>2008</th>
+      <th>0</th>
+      <td>180777</td>
+      <td>2.114208</td>
+      <td>8283020.0</td>
+      <td>5384</td>
+      <td>1000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.907755</td>
+      <td>1</td>
       <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
+      <th>2009</th>
+      <th>0</th>
+      <td>180777</td>
+      <td>2.157580</td>
+      <td>8650181.0</td>
+      <td>5277</td>
+      <td>1000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.907755</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>1</th>
+      <td>180777</td>
+      <td>2.145404</td>
+      <td>8545496.0</td>
+      <td>5554</td>
+      <td>1000.0</td>
+      <td>20679.58</td>
+      <td>9.936902</td>
+      <td>20679.58</td>
+      <td>6.907755</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2006</th>
+      <th>0</th>
+      <td>180778</td>
+      <td>1.715362</td>
+      <td>5558687.0</td>
+      <td>5448</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <th>0</th>
+      <td>180778</td>
+      <td>1.407991</td>
+      <td>4087735.0</td>
+      <td>2903</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <th>0</th>
+      <td>180778</td>
+      <td>2.047009</td>
+      <td>7744705.0</td>
+      <td>3872</td>
+      <td>5000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>8.517193</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <th>0</th>
+      <td>180778</td>
+      <td>2.110863</td>
+      <td>8255364.0</td>
+      <td>3219</td>
+      <td>5000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>8.517193</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>0</th>
+      <td>180778</td>
+      <td>2.082594</td>
+      <td>8025258.0</td>
+      <td>3210</td>
+      <td>5000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>8.517193</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <th>1</th>
+      <td>180779</td>
+      <td>-1.107149</td>
+      <td>330500.0</td>
+      <td>427</td>
+      <td>500.0</td>
+      <td>1708.00</td>
+      <td>7.443078</td>
+      <td>1708.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <th>0</th>
+      <td>180779</td>
+      <td>0.901121</td>
+      <td>2462363.0</td>
+      <td>2118</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <th>0</th>
+      <td>180779</td>
+      <td>0.933579</td>
+      <td>2543596.0</td>
+      <td>2035</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>0</th>
+      <td>180779</td>
+      <td>0.839066</td>
+      <td>2314204.0</td>
+      <td>1829</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <th>0</th>
+      <td>180780</td>
+      <td>2.768237</td>
+      <td>15930517.0</td>
+      <td>8921</td>
+      <td>5000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>8.517193</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">2008</th>
+      <th>0</th>
+      <td>180780</td>
+      <td>2.768237</td>
+      <td>15930517.0</td>
+      <td>11629</td>
+      <td>5000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>8.517193</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>180781</td>
+      <td>-1.386294</td>
+      <td>250000.0</td>
+      <td>196</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <th>0</th>
+      <td>180781</td>
+      <td>-1.363864</td>
+      <td>255671.0</td>
+      <td>199</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>0</th>
+      <td>180781</td>
+      <td>-1.316026</td>
+      <td>268199.0</td>
+      <td>187</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <th>0</th>
+      <td>180782</td>
+      <td>-0.517565</td>
+      <td>595970.0</td>
+      <td>429</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <th>0</th>
+      <td>180782</td>
+      <td>-0.504327</td>
+      <td>603912.0</td>
+      <td>326</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>0</th>
+      <td>180782</td>
+      <td>-0.542029</td>
+      <td>581567.0</td>
+      <td>337</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <th>0</th>
+      <td>180783</td>
+      <td>-1.722629</td>
+      <td>178596.0</td>
+      <td>191</td>
+      <td>1000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.907755</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <th>1</th>
+      <td>180783</td>
+      <td>-1.684199</td>
+      <td>185593.0</td>
+      <td>143</td>
+      <td>1000.0</td>
+      <td>11905.40</td>
+      <td>9.384747</td>
+      <td>11905.40</td>
+      <td>6.907755</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>0</th>
+      <td>180783</td>
+      <td>-1.713239</td>
+      <td>180281.0</td>
+      <td>147</td>
+      <td>1000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.907755</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <th>0</th>
+      <td>180784</td>
+      <td>-0.693147</td>
+      <td>500000.0</td>
+      <td>160</td>
+      <td>1000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.907755</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <th>0</th>
+      <td>180784</td>
+      <td>-0.088831</td>
+      <td>915000.0</td>
+      <td>320</td>
+      <td>1000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.907755</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>0</th>
+      <td>180784</td>
+      <td>-0.049608</td>
+      <td>951602.0</td>
+      <td>362</td>
+      <td>1000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.907755</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <th>0</th>
+      <td>180785</td>
+      <td>0.000000</td>
+      <td>1000000.0</td>
+      <td>1120</td>
+      <td>1000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.907755</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <th>0</th>
+      <td>180785</td>
+      <td>0.893987</td>
+      <td>2444859.0</td>
+      <td>1076</td>
+      <td>1000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.907755</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>0</th>
+      <td>180785</td>
+      <td>0.844678</td>
+      <td>2327228.0</td>
+      <td>1094</td>
+      <td>1000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.907755</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <th>0</th>
+      <td>180786</td>
+      <td>1.963733</td>
+      <td>7125879.0</td>
+      <td>9192</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <th>0</th>
+      <td>180786</td>
+      <td>1.999797</td>
+      <td>7387558.0</td>
+      <td>5245</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <th>0</th>
+      <td>180787</td>
+      <td>-1.609438</td>
+      <td>200000.0</td>
+      <td>200</td>
+      <td>1000.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.907755</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2009</th>
+      <th>0</th>
+      <td>180787</td>
+      <td>-2.001133</td>
+      <td>135182.0</td>
+      <td>92</td>
+      <td>500.0</td>
+      <td>0.00</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>6.214608</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">2010</th>
       <th>0</th>
       <td>180787</td>
       <td>-1.255266</td>
@@ -2243,7 +3674,7 @@ Name: Percentage, dtype: float64
     </tr>
   </tbody>
 </table>
-<p>5639 rows × 21 columns</p>
+<p>50 rows × 21 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -3419,44 +4850,31 @@ Name: PolicyNum, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">--------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3360</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3361</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3362</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
-
-<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
-
-<span class="ne">KeyError</span>: &#39;Proportion&#39;
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">KeyError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">kl</span><span class="o">/</span><span class="n">h_r05n_j76n32kt0dwy7kynw0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_6094</span><span class="o">/</span><span class="mf">3493248267.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="p">(</span><span class="n">out2010</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="mi">2010</span><span class="p">,</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">)),:])[</span><span class="s1">&#39;Proportion&#39;</span><span class="p">]</span>
-
-<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3456</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3457</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3458</span>             <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3459</span>             <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">3460</span>                 <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
-
-<span class="nn">/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3361</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3362</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3363</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3364</span> 
-<span class="g g-Whitespace">   </span><span class="mi">3365</span>         <span class="k">if</span> <span class="n">is_scalar</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">and</span> <span class="n">isna</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hasnans</span><span class="p">:</span>
-
-<span class="ne">KeyError</span>: &#39;Proportion&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Year  Freq
+2010  0       63.693694
+      1       18.828829
+      2        7.747748
+      3        3.603604
+      4        1.621622
+      5        1.081081
+      6        0.810811
+      7        0.360360
+      8        0.540541
+      9        0.090090
+      10       0.270270
+      11       0.180180
+      13       0.090090
+      14       0.180180
+      15       0.090090
+      16       0.180180
+      17       0.090090
+      18       0.090090
+      19       0.090090
+      30       0.090090
+      39       0.090090
+      103      0.090090
+      239      0.090090
+Name: Proportion, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -5175,6 +6593,7 @@ Name: ClaimsAvg, Length: 5639, dtype: float64
 </div>
 </div>
 </div>
+<p>The information about the distribution of average claim amounts in year 2010 is given in the table below including count, mean, std, min, 25, 50, 75% percentiles and max.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#claimsFreqDist.query(&#39;Year == 2010 &amp; Freq &gt;= 1&#39;)</span>
@@ -5201,29 +6620,39 @@ Name: ClaimsAvg, dtype: float64
 </div>
 </div>
 </div>
+<p>2.1. What is the mean of the average claim amounts?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the mean of the average claim amounts</span>
 
 <span class="p">(</span><span class="n">claims</span><span class="p">[(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2010</span><span class="p">)</span> <span class="o">&amp;</span>  <span class="p">(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)][</span><span class="s1">&#39;ClaimsAvg&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">ans2_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">claims</span><span class="p">[(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2010</span><span class="p">)</span> <span class="o">&amp;</span>  <span class="p">(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)][</span><span class="s1">&#39;ClaimsAvg&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ans: The mean of the average claim amounts: &#39;</span><span class="p">,</span> <span class="n">ans2_1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>56331.94660006498
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ans: The mean of the average claim amounts:  56331.94660006498
 </pre></div>
 </div>
 </div>
 </div>
+<p>2.2 What is the third quartile of the average claim amounts?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the third quartile of the average claim amounts</span>
 <span class="p">(</span><span class="n">claims</span><span class="p">[(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2010</span><span class="p">)</span> <span class="o">&amp;</span>  <span class="p">(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)][</span><span class="s1">&#39;ClaimsAvg&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">q</span> <span class="o">=</span> <span class="mf">0.75</span><span class="p">)</span>
+
+<span class="n">ans2_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">claims</span><span class="p">[(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2010</span><span class="p">)</span> <span class="o">&amp;</span>  <span class="p">(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)][</span><span class="s1">&#39;ClaimsAvg&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">q</span> <span class="o">=</span> <span class="mf">0.75</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ans: the third quartile of the average claim amounts:&#39;</span><span class="p">,</span> <span class="n">ans2_2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11900.5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ans: the third quartile of the average claim amounts: 11900.5
 </pre></div>
 </div>
 </div>
@@ -5232,12 +6661,7 @@ Name: ClaimsAvg, dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the mean of the average claim amounts</span>
 
-<span class="p">(</span><span class="n">claims</span><span class="p">[(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2010</span><span class="p">)</span> <span class="o">&amp;</span>  <span class="p">(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)][</span><span class="s1">&#39;yAvg&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>56331.946600068
+<span class="c1"># (claims[(claims[&#39;Year&#39;]==2010) &amp;  (claims[&#39;Freq&#39;] &gt;= 1)][&#39;yAvg&#39;]).mean()</span>
 </pre></div>
 </div>
 </div>
@@ -5245,12 +6669,7 @@ Name: ClaimsAvg, dtype: float64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the third quartile of the average claim amounts</span>
-<span class="p">(</span><span class="n">claims</span><span class="p">[(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2010</span><span class="p">)</span> <span class="o">&amp;</span>  <span class="p">(</span><span class="n">claims</span><span class="p">[</span><span class="s1">&#39;Freq&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)][</span><span class="s1">&#39;yAvg&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">q</span> <span class="o">=</span> <span class="mf">0.75</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11900.5
+<span class="c1"># (claims[(claims[&#39;Year&#39;]==2010) &amp;  (claims[&#39;Freq&#39;] &gt;= 1)][&#39;yAvg&#39;]).quantile(q = 0.75)</span>
 </pre></div>
 </div>
 </div>
@@ -5356,81 +6775,10 @@ Name: ClaimsAvg, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">claims</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;Freq&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;yAvg&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;BCcov&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;PolicyNum&#39;</span><span class="p">:</span><span class="s1">&#39;count&#39;</span> <span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># claims.groupby(&#39;Year&#39;).agg({&#39;Freq&#39;:&#39;mean&#39;, &#39;yAvg&#39;:&#39;mean&#39;, &#39;BCcov&#39;:&#39;mean&#39;, &#39;PolicyNum&#39;:&#39;count&#39; })</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Freq</th>
-      <th>yAvg</th>
-      <th>BCcov</th>
-      <th>PolicyNum</th>
-    </tr>
-    <tr>
-      <th>Year</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2006</th>
-      <td>0.951473</td>
-      <td>9694.992379</td>
-      <td>3.249819e+07</td>
-      <td>1154</td>
-    </tr>
-    <tr>
-      <th>2007</th>
-      <td>1.166960</td>
-      <td>6543.947626</td>
-      <td>3.527595e+07</td>
-      <td>1138</td>
-    </tr>
-    <tr>
-      <th>2008</th>
-      <td>0.974222</td>
-      <td>5310.505387</td>
-      <td>3.726748e+07</td>
-      <td>1125</td>
-    </tr>
-    <tr>
-      <th>2009</th>
-      <td>1.219424</td>
-      <td>4571.949986</td>
-      <td>4.035538e+07</td>
-      <td>1112</td>
-    </tr>
-    <tr>
-      <th>2010</th>
-      <td>1.240541</td>
-      <td>20452.049081</td>
-      <td>4.124207e+07</td>
-      <td>1110</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </section>
 <section id="conclusion">
